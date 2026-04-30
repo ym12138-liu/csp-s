@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 六升七 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #E0F7FA 0%, #FFFDE7 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#006064; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#006064; }
+  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #00ACC1; }
+  .code-card .name { background: #FFEB3B; color: #006064; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 19px; line-height: 1.45; color: #B2EBF2; }
+  .code-card pre .kw { color: #FFEB3B; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 6px; font-size: 22px; color: #FFEB3B; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #006064, #FFEB3B); color: #FFFFFF; border-radius: 16px; box-shadow: 8px 8px 0 #1A1A1A; text-shadow: 2px 2px 0 #1A1A1A; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 4 段必默</span>
+    <h1>图论 + 哈希<br><em>抄五遍</em>能默</h1>
+
+    <div class="code-card">
+      <span class="name">1 · 邻接表 + BFS</span>
+<pre>vector&lt;<span class="kw">int</span>&gt; adj[N];
+queue&lt;<span class="kw">int</span>&gt; q; <span class="kw">bool</span> vis[N];
+q.push(s); vis[s] = <span class="kw">true</span>;
+<span class="kw">while</span> (!q.empty()) {
+    <span class="kw">int</span> u = q.front(); q.pop();
+    <span class="kw">for</span> (<span class="kw">int</span> v : adj[u])
+        <span class="kw">if</span> (!vis[v]) { vis[v]=<span class="kw">true</span>; q.push(v); }
+}</pre>
+      <div class="note">关键 · BFS 用 <b>队列 + 访问数组</b></div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · 邻接表 + DFS</span>
+<pre><span class="kw">void</span> dfs(<span class="kw">int</span> u) {
+    vis[u] = <span class="kw">true</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> v : adj[u])
+        <span class="kw">if</span> (!vis[v]) dfs(v);
+}</pre>
+      <div class="note">关键 · DFS = <b>递归 + 访问数组</b></div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 哈希表（链地址法）</span>
+<pre>vector&lt;<span class="kw">int</span>&gt; ht[P];
+<span class="kw">void</span> insert(<span class="kw">int</span> x) { ht[x % P].push_back(x); }
+<span class="kw">bool</span> find(<span class="kw">int</span> x) {
+    <span class="kw">for</span> (<span class="kw">int</span> v : ht[x % P])
+        <span class="kw">if</span> (v == x) <span class="kw">return</span> <span class="kw">true</span>;
+    <span class="kw">return</span> <span class="kw">false</span>;
+}</pre>
+      <div class="note">关键 · <b>P 必须取素数</b> · 防规律输入冲突</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · LCS（最长公共子序列）</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">1</span>; i &lt;= n; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="lit">1</span>; j &lt;= m; j++) {
+        <span class="kw">if</span> (a[i-<span class="lit">1</span>] == b[j-<span class="lit">1</span>])
+            dp[i][j] = dp[i-<span class="lit">1</span>][j-<span class="lit">1</span>] + <span class="lit">1</span>;
+        <span class="kw">else</span>
+            dp[i][j] = max(dp[i-<span class="lit">1</span>][j], dp[i][j-<span class="lit">1</span>]);
+    }</pre>
+      <div class="note">关键 · <b>相等加 1</b> / 不等取 max</div>
+    </div>
+
+    <div class="key">
+      <h2>这 4 段背完<br><b>七级核心 60% 已稳</b></h2>
+    </div>
+  </div>
+</body>
+</html>
