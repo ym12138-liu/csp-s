@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 一升二 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #E0F2F1; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #00897B, #1DE9B6); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #1DE9B6, #00897B); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#00897B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#004D40; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+
+  .compare {
+    margin-top: 28px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .col {
+    background:#FFF; border-radius:18px; padding: 20px 22px;
+    border: 4px solid #1A1A1A;
+  }
+  .col.j { box-shadow: 6px 6px 0 #00897B; }
+  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
+  .col h3 {
+    text-align: center; padding: 8px 0; border-radius: 8px;
+    margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900;
+  }
+  .col.j h3 { background: #00897B; }
+  .col.s h3 { background: #B71C1C; }
+  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #B2DFDB; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p code { background:#FFEB3B; color:#B71C1C; padding: 2px 8px; border-radius:4px; font-weight: 700; }
+
+  .gap-list {
+    margin-top: 22px;
+    background: #1A1A1A; color: #FFF; border-radius: 18px;
+    padding: 22px 26px;
+    box-shadow: 8px 8px 0 #FFEB3B;
+  }
+  .gap-list h2 { font-size:34px; font-weight:900; color:#FFEB3B; margin-bottom: 14px; }
+  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
+  .gap-row:last-child { border-bottom: none; }
+  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#1DE9B6; color:#1A1A1A; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFEB3B; }
+  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
+  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">COMPARE · 二级 vs 一级</span>
+    <h1>新增的<em>3 大模块</em><br>就是 50 分的差距</h1>
+
+    <div class="compare">
+      <div class="col j">
+        <h3>一级</h3>
+        <p>仅基本类型变量</p>
+        <p>单层 <code>for</code> / <code>while</code></p>
+        <p>简单 <code>if</code> 单条件</p>
+        <p>仅 <code>char</code> 字符</p>
+        <p>仅时事 + 历史</p>
+      </div>
+      <div class="col s">
+        <h3>二级</h3>
+        <p><b>新增一维数组</b></p>
+        <p><b>新增嵌套循环</b></p>
+        <p><b>多条件判断</b></p>
+        <p><b>新增字符串遍历</b></p>
+        <p><b>新增网络 + 存储</b></p>
+      </div>
+    </div>
+
+    <div class="gap-list">
+      <h2>一升二 · 必补 5 项</h2>
+      <div class="gap-row"><div class="n">1</div><div class="nm">一维数组（定义 / 遍历 / 求最值）</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">2</div><div class="nm">嵌套循环（双层 for / 图形输出）</div><span class="sc">≈50 分</span></div>
+      <div class="gap-row"><div class="n">3</div><div class="nm">多条件判断（漂亮数 / 自守数）</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">4</div><div class="nm">字符与 ASCII（'A'+1 等）</div><span class="sc">≈14 分</span></div>
+      <div class="gap-row"><div class="n">5</div><div class="nm">网络（IPv4 / TCP / 存储单位）</div><span class="sc">≈10 分</span></div>
+    </div>
+  </div>
+</body>
+</html>
