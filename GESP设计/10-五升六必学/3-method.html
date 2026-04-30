@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 五升六 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #FCE4EC 0%, #FFF8E1 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#880E4F; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#880E4F; }
+  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #C2185B; }
+  .code-card .name { background: #FFEB3B; color: #880E4F; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 19px; line-height: 1.45; color: #F8BBD0; }
+  .code-card pre .kw { color: #FFEB3B; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 6px; font-size: 22px; color: #FFEB3B; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #C2185B, #FFEB3B); color: #FFFFFF; border-radius: 16px; box-shadow: 8px 8px 0 #1A1A1A; text-shadow: 2px 2px 0 #1A1A1A; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 4 段必默</span>
+    <h1>二叉树 + DP<br><em>抄五遍</em>能默</h1>
+
+    <div class="code-card">
+      <span class="name">1 · 二叉树节点 + 三遍历</span>
+<pre><span class="kw">struct</span> TN { <span class="kw">int</span> v; TN *l, *r; };
+<span class="kw">void</span> pre(TN* p)  { <span class="kw">if</span>(!p) <span class="kw">return</span>; cout&lt;&lt;p-&gt;v; pre(p-&gt;l); pre(p-&gt;r); }
+<span class="kw">void</span> in(TN* p)   { <span class="kw">if</span>(!p) <span class="kw">return</span>; in(p-&gt;l); cout&lt;&lt;p-&gt;v; in(p-&gt;r); }
+<span class="kw">void</span> post(TN* p) { <span class="kw">if</span>(!p) <span class="kw">return</span>; post(p-&gt;l); post(p-&gt;r); cout&lt;&lt;p-&gt;v; }</pre>
+      <div class="note">关键 · <b>"中序找根分左右"</b>口诀</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · BST 插入</span>
+<pre>TN* insert(TN* r, <span class="kw">int</span> x) {
+    <span class="kw">if</span> (!r) <span class="kw">return</span> <span class="kw">new</span> TN{x, <span class="kw">nullptr</span>, <span class="kw">nullptr</span>};
+    <span class="kw">if</span> (x &lt; r-&gt;v) r-&gt;l = insert(r-&gt;l, x);
+    <span class="kw">else if</span> (x &gt; r-&gt;v) r-&gt;r = insert(r-&gt;r, x);
+    <span class="kw">return</span> r;
+}</pre>
+      <div class="note">关键 · <b>左小右大</b> · 中序遍历升序</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 0-1 背包（一维 dp）</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j = V; j &gt;= w[i]; j--)   <span class="cm">// 必须倒序</span>
+        dp[j] = max(dp[j], dp[j-w[i]] + v[i]);
+cout &lt;&lt; dp[V];</pre>
+      <div class="note">关键 · <b>第二层倒序</b>才能保证每个物品最多一次</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · OOP 类 + 继承 + 多态</span>
+<pre><span class="kw">class</span> Animal {
+<span class="kw">public</span>: <span class="kw">virtual</span> <span class="kw">void</span> sound() { cout &lt;&lt; <span class="lit">"动物叫"</span>; }
+};
+<span class="kw">class</span> Dog : <span class="kw">public</span> Animal {
+<span class="kw">public</span>: <span class="kw">void</span> sound() <span class="kw">override</span> { cout &lt;&lt; <span class="lit">"汪汪"</span>; }
+};</pre>
+      <div class="note">关键 · 三大特性 <b>封装 / 继承 / 多态</b></div>
+    </div>
+
+    <div class="key">
+      <h2>这 4 段背完<br><b>六级核心 60% 已稳</b></h2>
+    </div>
+  </div>
+</body>
+</html>
