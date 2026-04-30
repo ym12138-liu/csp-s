@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 旁听一节课</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFD93D; position: relative; }
+  body::before {
+    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
+    background: url("../../因诺信奥图片/DSC_2898.JPG") center/cover no-repeat;
+  }
+  body::after {
+    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.65) 70%, #FFD93D 100%);
+  }
+
+  .top-band { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; z-index: 5; }
+  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; box-shadow: 4px 4px 0 #1A1A1A; }
+  .right { margin-left: auto; color: #FFFFFF; font-size: 24px; font-weight: 800;
+    background: rgba(0,0,0,0.6); padding: 10px 18px; border-radius: 8px; }
+
+  .hero { position: absolute; top: 200px; left: 60px; right: 60px; z-index: 5; }
+  .hero .pre { color: #FFD93D; font-size: 30px; font-weight: 800;
+    letter-spacing: 3px; text-shadow: 3px 3px 0 #000; margin-bottom: 14px; }
+  .hero .big {
+    font-size: 100px; font-weight: 900; color: #FFFFFF;
+    line-height: 1; letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #000;
+  }
+  .hero .big em {
+    font-style: normal; color: #1A1A1A;
+    background: #FFD93D; padding: 0 14px;
+    display: inline-block; box-shadow: 6px 6px 0 #FFFFFF;
+    -webkit-text-fill-color: #1A1A1A;
+  }
+  .hero .sub { color: #FFFFFF; font-size: 28px; font-weight: 800;
+    margin-top: 22px; text-shadow: 3px 3px 0 #000; }
+
+  .observe {
+    position: absolute; top: 640px; left: 60px; right: 60px; z-index: 5;
+    background: #FFFFFF; border-radius: 18px;
+    padding: 22px 26px;
+    border: 4px solid #1A1A1A;
+    box-shadow: 8px 8px 0 #1A1A1A;
+  }
+  .observe .lbl {
+    background: #1A1A1A; color: #FFD93D;
+    padding: 6px 16px; border-radius: 6px;
+    font-size: 22px; font-weight: 900; letter-spacing: 1px;
+    display: inline-block; margin-bottom: 12px;
+  }
+  .observe h3 { font-size: 26px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .points { margin-top: 12px; }
+  .pt {
+    display: flex; align-items: center;
+    padding: 8px 0;
+    border-bottom: 2px dashed #FFD93D;
+    font-size: 19px; font-weight: 800; color: #424242;
+  }
+  .pt:last-child { border-bottom: none; }
+  .pt .ck {
+    flex: 0 0 32px; height: 32px; border-radius: 6px;
+    background: #FFD93D; color: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 900;
+    margin-right: 12px;
+    border: 2px solid #1A1A1A;
+  }
+  .pt b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+
+  .pull {
+    position: absolute; bottom: 100px; left: 60px; right: 60px; z-index: 5;
+    background: #1A1A1A; color: #FFFFFF;
+    padding: 20px 26px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+    text-align: center;
+  }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.3; }
+  .pull h2 b { color: #FFD93D; }
+  .pull p { color: #FFD93D; font-size: 18px; font-weight: 700; margin-top: 6px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #1A1A1A; display: flex; align-items: center; justify-content: center; z-index: 6; }
+  .footer-band .txt { color: #FFD93D; font-size: 24px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">CTA · 来旁听</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="hero">
+    <div class="pre">// 直接来教室·看真课</div>
+    <div class="big">家长<em>可旁听</em></div>
+    <div class="sub">不录像·不演课·真上课的样子</div>
+  </div>
+
+  <div class="observe">
+    <span class="lbl">家长旁听 · 看这 4 件事</span>
+    <h3>1 节课·真假立判</h3>
+    <div class="points">
+      <div class="pt"><div class="ck">1</div>老师有没有 <b>真讲清推导</b></div>
+      <div class="pt"><div class="ck">2</div>学生有没有 <b>动手敲代码</b></div>
+      <div class="pt"><div class="ck">3</div>遇到 bug 老师 <b>当场答 / 装糊涂</b></div>
+      <div class="pt"><div class="ck">4</div>下课有没有 <b>清晰反馈</b> 给家长</div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>主页私信"<b>旁听</b>"<br>预约最近一节·当家长当评委</h2>
+    <p>因诺信奥 · 不演课 · 真透明</p>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt"># 课堂 # 旁听 # 因诺信奥</span>
+  </div>
+</body>
+</html>

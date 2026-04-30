@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 启蒙体验课</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFD93D; position: relative; }
+  body::before {
+    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
+    background: url("../../因诺信奥图片/DSC_2885.JPG") center/cover no-repeat;
+  }
+  body::after {
+    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.65) 70%, #FFD93D 100%);
+  }
+
+  .top-band { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; z-index: 5; }
+  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; box-shadow: 4px 4px 0 #1A1A1A; }
+  .right { margin-left: auto; color: #FFFFFF; font-size: 24px; font-weight: 800;
+    background: rgba(0,0,0,0.6); padding: 10px 18px; border-radius: 8px; }
+
+  .hero { position: absolute; top: 200px; left: 60px; right: 60px; z-index: 5; }
+  .hero .pre { color: #FFD93D; font-size: 30px; font-weight: 800;
+    letter-spacing: 3px; text-shadow: 3px 3px 0 #000; margin-bottom: 14px; }
+  .hero .big {
+    font-size: 110px; font-weight: 900; color: #FFFFFF;
+    line-height: 1; letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #000;
+  }
+  .hero .big em {
+    font-style: normal; color: #1A1A1A;
+    background: #FFD93D; padding: 0 14px;
+    display: inline-block; box-shadow: 6px 6px 0 #FFFFFF;
+    -webkit-text-fill-color: #1A1A1A;
+  }
+  .hero .sub { color: #FFFFFF; font-size: 32px; font-weight: 800;
+    margin-top: 22px; text-shadow: 3px 3px 0 #000; }
+
+  .what {
+    position: absolute; top: 620px; left: 60px; right: 60px; z-index: 5;
+    background: #FFFFFF; border-radius: 18px;
+    padding: 22px 26px;
+    border: 4px solid #1A1A1A;
+    box-shadow: 8px 8px 0 #1A1A1A;
+  }
+  .what .lbl {
+    background: #1A1A1A; color: #FFD93D;
+    padding: 6px 16px; border-radius: 6px;
+    font-size: 22px; font-weight: 900; letter-spacing: 1px;
+    display: inline-block; margin-bottom: 12px;
+  }
+  .what h3 { font-size: 28px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .step-row { display: flex; gap: 12px; margin-top: 14px; }
+  .step {
+    flex: 1; background: #FFFBE5;
+    border: 3px solid #FFD93D; border-radius: 12px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .step .n {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #1A1A1A; color: #FFD93D;
+    font-size: 20px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 8px;
+  }
+  .step h4 { font-size: 22px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
+  .step p { font-size: 16px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.3; }
+
+  .pull {
+    position: absolute; bottom: 100px; left: 60px; right: 60px; z-index: 5;
+    background: #1A1A1A; color: #FFFFFF;
+    padding: 20px 26px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+    text-align: center;
+  }
+  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.3; }
+  .pull h2 b { color: #FFD93D; }
+  .pull p { color: #FFD93D; font-size: 18px; font-weight: 700; margin-top: 6px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #1A1A1A; display: flex; align-items: center; justify-content: center; z-index: 6; }
+  .footer-band .txt { color: #FFD93D; font-size: 24px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">CTA · 体验课</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="hero">
+    <div class="pre">// 不打字也能上手</div>
+    <div class="big">10 分钟<em>出动画</em></div>
+    <div class="sub">来一节 · 看娃喜不喜欢</div>
+  </div>
+
+  <div class="what">
+    <span class="lbl">体验课内容</span>
+    <h3>1 节课·娃能做出 1 个小动画</h3>
+    <div class="step-row">
+      <div class="step">
+        <div class="n">1</div>
+        <h4>认识 Scratch</h4>
+        <p>10 分钟<br>会拖积木</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h4>做"猫追老鼠"</h4>
+        <p>20 分钟<br>动起来</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h4>娃讲给家长</h4>
+        <p>10 分钟<br>能讲明白</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>主页私信"<b>启蒙体验</b>"<br>预约就近校区 · 不收钱</h2>
+    <p>因诺信奥 · 适合再聊后续</p>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt"># 少儿编程 # Scratch # 因诺信奥</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 师资</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #1A1A1A; position: relative; }
+
+  .photo {
+    position: absolute; top: 0; left: 0; right: 0; height: 800px;
+    background: url("../../因诺信奥图片/DSC_6068.JPG") center/cover no-repeat;
+  }
+  .photo::after {
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.45) 50%, rgba(26,26,26,0.95) 95%, #1A1A1A 100%);
+  }
+
+  .badge {
+    position: absolute; top: 60px; left: 60px; z-index: 5;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 14px 28px; border-radius: 100px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px;
+    box-shadow: 6px 6px 0 #000;
+  }
+  .right-tag {
+    position: absolute; top: 60px; right: 60px; z-index: 5;
+    background: rgba(255,217,61,0.95); color: #1A1A1A;
+    padding: 14px 24px; border-radius: 100px;
+    font-size: 24px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+  }
+
+  .title-block { position: absolute; top: 360px; left: 60px; right: 60px; z-index: 5; }
+  .pre { color: #FFD93D; font-size: 32px; font-weight: 800;
+    letter-spacing: 3px; margin-bottom: 14px; text-shadow: 3px 3px 0 #000; }
+  .big-text {
+    color: #FFFFFF; font-size: 90px; font-weight: 900;
+    line-height: 1.05; letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #000;
+  }
+  .big-text em {
+    font-style: normal; background: #FFD93D; color: #1A1A1A;
+    padding: 0 14px; box-shadow: 6px 6px 0 #FFFFFF;
+    -webkit-text-fill-color: #1A1A1A;
+  }
+  .sub {
+    color: #FFFFFF; font-size: 32px; font-weight: 800;
+    margin-top: 22px; text-shadow: 3px 3px 0 #000;
+  }
+
+  .tags-row {
+    position: absolute; top: 870px; left: 60px; right: 60px; z-index: 5;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .tag {
+    background: #FFFFFF; color: #1A1A1A;
+    padding: 10px 16px; border-radius: 10px;
+    font-size: 22px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+    box-shadow: 3px 3px 0 #FFD93D;
+  }
+  .tag.dark { background: #1A1A1A; color: #FFD93D; border-color: #FFD93D; }
+
+  .pull {
+    position: absolute; top: 1080px; left: 60px; right: 60px; z-index: 5;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 22px 28px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+  }
+  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; text-align: center; }
+  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #1A1A1A; z-index: 6;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    border-top: 4px solid #FFD93D; }
+  .brand { color: #FFFFFF; font-size: 30px; font-weight: 900; letter-spacing: 4px; }
+  .brand b { color: #FFD93D; }
+  .hash { color: #FFD93D; font-size: 18px; font-weight: 800; letter-spacing: 3px; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+
+  <div class="badge">大连 · 因诺信奥</div>
+  <div class="right-tag">师资真实可查</div>
+
+  <div class="title-block">
+    <div class="pre">// 真懂赛事 · 真带过娃</div>
+    <div class="big-text">不靠<em>包装</em></div>
+    <div class="big-text" style="margin-top:10px">靠<em>真课</em></div>
+    <div class="sub">每位老师·都带过完整一届赛季</div>
+  </div>
+
+  <div class="tags-row">
+    <span class="tag">写过完整真题</span>
+    <span class="tag dark">带过 CSP-J 学员</span>
+    <span class="tag">能讲清算法原理</span>
+    <span class="tag dark">不止讲题·会改代码</span>
+  </div>
+
+  <div class="pull">
+    <h2>不夸学历 · 不画背景<br><b>看老师讲过的课</b>·真本事说话</h2>
+  </div>
+
+  <div class="footer-band">
+    <div class="brand">因诺<b>信奥</b> · 大连</div>
+    <div class="hash"># 师资 # 信奥老师 # 大连</div>
+  </div>
+</body>
+</html>

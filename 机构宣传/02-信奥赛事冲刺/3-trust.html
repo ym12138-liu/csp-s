@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · CSP 备考路径</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #1A1A1A; position: relative; }
+
+  .top-band {
+    position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #FFD93D;
+    display: flex; align-items: center; padding: 0 60px;
+    border-bottom: 4px solid #1A1A1A;
+  }
+  .h-tag { background: #1A1A1A; color: #FFD93D; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .right { margin-left: auto; color: #1A1A1A; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
+
+  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
+  .title-area h1 {
+    font-size: 60px; font-weight: 900; color: #FFFFFF;
+    line-height: 1.1; letter-spacing: 1px;
+  }
+  .title-area h1 em {
+    font-style: normal; background: #FFD93D; color: #1A1A1A;
+    padding: 0 12px; box-shadow: 6px 6px 0 #FFFFFF;
+    display: inline-block;
+  }
+
+  .photo-strip {
+    position: absolute; top: 340px; left: 60px; right: 60px;
+    display: flex; gap: 14px;
+  }
+  .photo-strip .p {
+    flex: 1; height: 220px; border-radius: 12px; overflow: hidden;
+    border: 4px solid #FFD93D;
+  }
+  .p1 { background: url("../../因诺信奥图片/DSC_2843.JPG") center/cover no-repeat; }
+  .p2 { background: url("../../因诺信奥图片/DSC_2941.JPG") center/cover no-repeat; }
+  .p3 { background: url("../../因诺信奥图片/DSC_6665.JPG") center/cover no-repeat; }
+
+  .timeline {
+    position: absolute; top: 600px; left: 60px; right: 60px;
+  }
+  .timeline .lbl {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 8px 22px; border-radius: 8px;
+    font-size: 24px; font-weight: 900; letter-spacing: 2px;
+    display: inline-block; margin-bottom: 16px;
+  }
+  .stage {
+    background: #FFFFFF; border-radius: 14px;
+    padding: 14px 18px; margin-bottom: 12px;
+    border: 3px solid #FFD93D;
+    display: flex; align-items: center;
+  }
+  .stage .month {
+    flex: 0 0 130px; height: 60px; border-radius: 10px;
+    background: #FFD93D; color: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+    margin-right: 14px;
+    text-align: center; line-height: 1.1;
+  }
+  .stage .body { flex: 1; }
+  .stage .body h3 { font-size: 24px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
+  .stage .body p { font-size: 18px; color: #424242; font-weight: 700; margin-top: 4px; line-height: 1.3; }
+  .stage .body p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+
+  .pull {
+    position: absolute; top: 1110px; left: 60px; right: 60px;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 22px 28px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+  }
+  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; text-align: center; }
+  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
+
+  .footer-band {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #FFD93D; border-top: 4px solid #FFFFFF;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">PATH · 备考路径</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="title-area">
+    <h1>从 0 到<em>过线</em><br>6 个月路线图</h1>
+  </div>
+
+  <div class="photo-strip">
+    <div class="p p1"></div>
+    <div class="p p2"></div>
+    <div class="p p3"></div>
+  </div>
+
+  <div class="timeline">
+    <span class="lbl">每月 1 阶段·真题打标</span>
+    <div class="stage">
+      <div class="month">M1-M2</div>
+      <div class="body"><h3>C++ 基础 + 经典模板</h3><p>STL · 排序 · 二分 · 递归·<b>每周 1 模块</b></p></div>
+    </div>
+    <div class="stage">
+      <div class="month">M3-M4</div>
+      <div class="body"><h3>真题打标 + 错题归类</h3><p>2019-2025 真题逐题打标·<b>找最弱模块</b></p></div>
+    </div>
+    <div class="stage">
+      <div class="month">M5</div>
+      <div class="body"><h3>限时模考 + 阅读完善</h3><p>90 分钟模考·<b>考前找漏</b></p></div>
+    </div>
+    <div class="stage">
+      <div class="month">M6</div>
+      <div class="body"><h3>冲刺周 + 心态梳理</h3><p>真题套刷 + 错题最后过<b>1 遍</b></p></div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>每个月知道<br><b>本月练啥 · 月底测啥</b></h2>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt">不画饼·按月推进·看真进步</span>
+  </div>
+</body>
+</html>

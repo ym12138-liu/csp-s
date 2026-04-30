@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 一节课</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #1A1A1A; position: relative; }
+
+  .grid {
+    position: absolute; top: 0; left: 0; right: 0; height: 720px;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+  }
+  .grid > div { background-position: center; background-size: cover; background-repeat: no-repeat; }
+  .g1 { background-image: url("../../因诺信奥图片/DSC_2843.JPG"); }
+  .g2 { background-image: url("../../因诺信奥图片/DSC_2825.JPG"); }
+  .g3 { background-image: url("../../因诺信奥图片/DSC_6665.JPG"); }
+  .g4 { background-image: url("../../因诺信奥图片/DSC_2898.JPG"); }
+  .grid::after {
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.40) 60%, #1A1A1A 100%);
+  }
+
+  .badge { position: absolute; top: 60px; left: 60px; z-index: 5;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 14px 28px; border-radius: 100px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px;
+    box-shadow: 6px 6px 0 #000; }
+  .right-tag { position: absolute; top: 60px; right: 60px; z-index: 5;
+    background: rgba(255,217,61,0.95); color: #1A1A1A;
+    padding: 14px 24px; border-radius: 100px;
+    font-size: 24px; font-weight: 900;
+    border: 3px solid #1A1A1A; }
+
+  .title-block { position: absolute; top: 280px; left: 60px; right: 60px; z-index: 5; }
+  .pre { color: #FFD93D; font-size: 32px; font-weight: 800;
+    letter-spacing: 3px; margin-bottom: 14px; text-shadow: 3px 3px 0 #000; }
+  .big-text {
+    color: #FFFFFF; font-size: 96px; font-weight: 900;
+    line-height: 1.05; letter-spacing: 1px;
+    text-shadow: 5px 5px 0 #000;
+  }
+  .big-text em {
+    font-style: normal; background: #FFD93D; color: #1A1A1A;
+    padding: 0 14px; box-shadow: 6px 6px 0 #FFFFFF;
+    -webkit-text-fill-color: #1A1A1A;
+  }
+
+  .strip-flow {
+    position: absolute; top: 800px; left: 60px; right: 60px; z-index: 5;
+  }
+  .strip-flow .lbl {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 8px 22px; border-radius: 8px;
+    font-size: 22px; font-weight: 900; letter-spacing: 2px;
+    display: inline-block; margin-bottom: 14px;
+  }
+  .blocks { display: flex; gap: 8px; align-items: stretch; }
+  .blk {
+    flex: 1; background: #FFFFFF;
+    border-radius: 12px; padding: 14px 8px;
+    text-align: center;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #FFD93D;
+  }
+  .blk .min { font-size: 24px; font-weight: 900; color: #B71C1C; }
+  .blk .name { font-size: 18px; font-weight: 900; color: #1A1A1A; margin-top: 4px; }
+  .blocks .ar { color: #FFD93D; font-size: 24px; font-weight: 900; align-self: center; }
+
+  .pull {
+    position: absolute; top: 1080px; left: 60px; right: 60px; z-index: 5;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 22px 28px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+  }
+  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; text-align: center; }
+  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #1A1A1A; z-index: 6;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    border-top: 4px solid #FFD93D; }
+  .brand { color: #FFFFFF; font-size: 30px; font-weight: 900; letter-spacing: 4px; }
+  .brand b { color: #FFD93D; }
+  .hash { color: #FFD93D; font-size: 18px; font-weight: 800; letter-spacing: 3px; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+  </div>
+
+  <div class="badge">大连 · 因诺信奥</div>
+  <div class="right-tag">90 分钟一节课</div>
+
+  <div class="title-block">
+    <div class="pre">// 不只是听 · 不只是练</div>
+    <div class="big-text">一节课<em>4 段</em></div>
+    <div class="big-text" style="margin-top:10px">每段<em>各有用</em></div>
+  </div>
+
+  <div class="strip-flow">
+    <span class="lbl">90 分钟 · 4 个环节</span>
+    <div class="blocks">
+      <div class="blk"><div class="min">20'</div><div class="name">讲解</div></div>
+      <span class="ar">→</span>
+      <div class="blk"><div class="min">40'</div><div class="name">练习</div></div>
+      <span class="ar">→</span>
+      <div class="blk"><div class="min">20'</div><div class="name">点评</div></div>
+      <span class="ar">→</span>
+      <div class="blk"><div class="min">10'</div><div class="name">布置</div></div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>不水课·不堆讲<br><b>每分钟都对娃有用</b></h2>
+  </div>
+
+  <div class="footer-band">
+    <div class="brand">因诺<b>信奥</b> · 大连</div>
+    <div class="hash"># 课堂 # 上课流程 # 因诺信奥</div>
+  </div>
+</body>
+</html>
