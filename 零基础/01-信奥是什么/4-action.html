@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>信奥是什么 · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#1A1A1A; color:#FFF; position:relative; }
+  body::before {
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(255,138,101,0.5) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255,235,59,0.4) 0%, transparent 50%);
+  }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FFEB3B; color:#BF360C; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 84px; font-weight:900; margin-top:18px; line-height:1.05; }
+  h1 em { font-style:normal; color:#FFEB3B; }
+  .step {
+    background:#2C2C2C; border-radius: 18px;
+    padding: 22px 26px; margin-top: 18px;
+    border-left: 10px solid #FF8A65;
+    position: relative;
+  }
+  .step::before {
+    content: attr(data-n);
+    position:absolute; left: -28px; top: -16px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background:#FFEB3B; color:#BF360C;
+    font-weight:900; font-size:32px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 4px 4px 0 #1A1A1A;
+  }
+  .step h3 { font-size: 32px; color:#FFEB3B; font-weight:900; padding-left: 40px; }
+  .step p { font-size: 24px; color:#E0E0E0; margin-top: 6px; line-height: 1.5; }
+  .step p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #BF360C; }
+
+  .pull {
+    margin-top: 26px; padding: 24px 28px;
+    background: linear-gradient(135deg, #FF8A65, #FFEB3B);
+    color: #1A1A1A; border-radius: 18px;
+    box-shadow: 8px 8px 0 #FFFFFF;
+  }
+  .pull h2 { font-size: 38px; font-weight:900; line-height: 1.35; }
+  .pull h2 b { color: #B71C1C; }
+  .pull p { font-size: 22px; font-weight: 700; margin-top: 8px; }
+  .cta {
+    position:absolute; bottom:0; left:60px; right:60px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:24px; color:#FFEB3B; font-weight:700;
+  }
+  .pill { background:#FFEB3B; color:#BF360C; padding:10px 22px; border-radius:100px; font-weight:900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">家长 3 步走 · 不焦虑</span>
+    <h1>知道是啥之后<br><em>3 件事</em>就够了</h1>
+
+    <div class="step" data-n="1">
+      <h3>不急 · 看孩子兴趣</h3>
+      <p>娃不喜欢就别硬塞 · <b>编程跟钢琴一样要兴趣驱动</b><br>大连家长圈里坚持下来的 · 都是从兴趣开始的</p>
+    </div>
+
+    <div class="step" data-n="2">
+      <h3>先试 · Scratch 玩一玩</h3>
+      <p>免费工具 · 拖积木式编程 · <b>10 分钟做出第一个小动画</b><br>娃喜欢再考虑 Python / C++ · 不喜欢就当玩</p>
+    </div>
+
+    <div class="step" data-n="3">
+      <h3>再判 · 跟你娃节奏匹配吗</h3>
+      <p>玩 1 个月 Scratch 后看：<b>主动想做新东西</b>吗？<br>是 → 可以考虑学 Python / 报班<br>否 → 暂停 · 等等再说也不晚</p>
+    </div>
+
+    <div class="pull">
+      <h2>大连本地家长的话<br><b>"娃喜欢 · 从 Scratch 开始就够"</b></h2>
+      <p>不是每个娃都要走信奥 · 但每个娃都能玩玩编程</p>
+    </div>
+  </div>
+  <div class="cta">
+    <span>#信奥启蒙 #零基础 #大连娃</span>
+    <span class="pill">点赞收藏</span>
+  </div>
+</body>
+</html>
