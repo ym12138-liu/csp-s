@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>6 个月冲 CSP-J 60+ · 时间表</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #E0F2F1; color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#00897B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; }
+  h1 { font-size: 72px; font-weight: 900; margin-top:18px; line-height:1.1; color:#004D40; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+  .timeline {
+    margin-top: 35px;
+    position: relative;
+    padding-left: 60px;
+  }
+  .timeline::before {
+    content:""; position:absolute; left: 30px; top: 20px; bottom: 20px; width: 6px;
+    background: linear-gradient(180deg, #00BFA5, #FFEB3B); border-radius: 3px;
+  }
+  .stage {
+    background:#FFF; border-radius: 18px; padding: 18px 22px;
+    margin-bottom: 18px; position: relative;
+    border: 3px solid #1A1A1A; box-shadow: 6px 6px 0 #00897B;
+  }
+  .stage::before {
+    content: attr(data-week);
+    position: absolute; left: -78px; top: 18px;
+    width: 64px; height: 64px; border-radius: 50%;
+    background: #FF5E62; color: #FFF; font-weight: 900; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 3px 3px 0 #1A1A1A;
+    text-align: center;
+    line-height: 1.1;
+  }
+  .stage h3 { font-size:34px; font-weight: 900; color: #004D40; margin-bottom: 6px; }
+  .stage p { font-size: 24px; color: #424242; line-height: 1.45; }
+  .stage p b { color:#B71C1C; background:#FFF59D; padding: 0 6px; border-radius: 4px; }
+  .key {
+    margin-top: 24px; background: #1A1A1A; color: #1DE9B6;
+    padding: 22px 26px; border-radius: 16px;
+    box-shadow: 8px 8px 0 #FF5E62;
+  }
+  .key .lbl { font-size: 22px; color: #FFEB3B; letter-spacing: 2px; font-weight: 700; }
+  .key .txt { font-size: 32px; color: #FFF; font-weight: 800; line-height: 1.4; margin-top: 6px;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">ROADMAP · 6 个月时间表</span>
+    <h1>5 个阶段<br><em>每周 2-3 模块</em></h1>
+    <div class="timeline">
+      <div class="stage" data-week="W1-4"><h3>A · C++ 基础 + 数据结构</h3><p>变量 / 控制流 / 数组 / 字符串 / STL；手写 <b>栈 队列 链表</b></p></div>
+      <div class="stage" data-week="W5-10"><h3>B · 经典模板算法</h3><p>排序 / 二分 / 递归 / 枚举 / DFS·BFS / <b>一维 + 二维 DP</b></p></div>
+      <div class="stage" data-week="W11-13"><h3>C · 数学与离散</h3><p>排列组合 4 套路 / 数论 GCD 素数 / <b>鸽巢原理</b></p></div>
+      <div class="stage" data-week="W14-15"><h3>D · 数据结构进阶</h3><p>二叉树性质 + 三遍历转换 / 表达式 / <b>简单图论</b></p></div>
+      <div class="stage" data-week="W16-24"><h3>E · 真题套刷</h3><p>每周 1 套真题 + 错题分类；考前 2 周冲刺 <b>阅读 + 完善</b></p></div>
+    </div>
+    <div class="key">
+      <div class="lbl">关键节奏</div>
+      <div class="txt">平日 1 题 · 周末 1 套真题<br>每月 1 次模考 · 持续到考前</div>
+    </div>
+  </div>
+</body>
+</html>

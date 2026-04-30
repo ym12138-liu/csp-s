@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CSP-J 阅读程序 18 段 · 数据</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#E3F2FD; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#0D47A1,#42A5F5);}
+  body::after { content:""; position:absolute; bottom:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#42A5F5,#0D47A1);}
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; }
+  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#0D47A1; }
+  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#FFEB3B 60%); padding:0 6px;}
+  .grid { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { background:#FFF; border-radius: 16px; padding: 18px 20px; border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #0D47A1; }
+  .card .yr { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:4px 14px; border-radius:6px; font-size:22px; font-weight:900;}
+  .card h3 { font-size:28px; font-weight:900; margin-top:8px; color:#1A1A1A; line-height:1.25;}
+  .card .tag { display:inline-block; padding: 4px 12px; border-radius: 6px; font-size: 20px; font-weight: 700; margin-top:8px; margin-right: 6px;}
+  .t-dp { background:#FF5E62; color:#FFF;}
+  .t-rec { background:#FFEB3B; color:#0D47A1;}
+  .t-bfs { background:#26A69A; color:#FFF;}
+  .t-str { background:#AB47BC; color:#FFF;}
+  .t-bit { background:#FF7043; color:#FFF;}
+  .t-num { background:#5E35B1; color:#FFF;}
+  .legend { margin-top:22px; font-size:22px; color:#1A1A1A; font-weight:700; }
+  .legend span { display:inline-block; padding: 4px 12px; border-radius: 6px; margin-right: 6px; margin-bottom: 6px; }
+  .key { margin-top:22px; background:#1A1A1A; color:#FFEB3B; padding: 22px 26px; border-radius:16px; box-shadow:8px 8px 0 #FF5E62;}
+  .key .lbl { font-size:22px; letter-spacing:2px; font-weight:700; opacity:.85;}
+  .key h2 { font-size:32px; color:#FFF; font-weight:900; line-height:1.4; margin-top:6px; }
+  .key h2 b { color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CATALOG · 6 年阅读题</span>
+    <h1>每段都有<em>对应模型</em><br>认出来就赢了</h1>
+    <div class="grid">
+      <div class="card"><span class="yr">2019</span><h3>字符大小写按因数翻转</h3><span class="tag t-str">字符串</span><span class="tag t-num">因数</span></div>
+      <div class="card"><span class="yr">2019</span><h3>分治深度递归求带权和</h3><span class="tag t-rec">分治</span></div>
+      <div class="card"><span class="yr">2020</span><h3>替换密码 · CSP 编码表</h3><span class="tag t-str">字符映射</span></div>
+      <div class="card"><span class="yr">2020</span><h3>k 进制递增计数器</h3><span class="tag t-num">进制</span></div>
+      <div class="card"><span class="yr">2021</span><h3>popcount + lowbit</h3><span class="tag t-bit">位运算</span></div>
+      <div class="card"><span class="yr">2021</span><h3>欧拉筛 + 因子函数</h3><span class="tag t-num">数论筛</span></div>
+      <div class="card"><span class="yr">2022</span><h3>Morton 编码（位交错）</h3><span class="tag t-bit">位运算</span></div>
+      <div class="card"><span class="yr">2022</span><h3>鸡蛋掉落 · 递归 vs DP</h3><span class="tag t-dp">DP</span></div>
+      <div class="card"><span class="yr">2023</span><h3>LCS 判断字符串循环移位</h3><span class="tag t-dp">DP</span></div>
+      <div class="card"><span class="yr">2024</span><h3>爬楼梯最小代价 DP</h3><span class="tag t-dp">DP</span></div>
+      <div class="card"><span class="yr">2025</span><h3>排序 + 双指针 1D DP</h3><span class="tag t-dp">DP</span></div>
+      <div class="card"><span class="yr">2025</span><h3>LCS 二维 DP</h3><span class="tag t-dp">DP</span></div>
+    </div>
+    <div class="legend">
+      <span class="t-dp tag">DP</span><span class="t-rec tag">递归</span><span class="t-bfs tag">BFS</span><span class="t-str tag">字符串</span><span class="t-bit tag">位运算</span><span class="t-num tag">数论</span>
+    </div>
+    <div class="key">
+      <div class="lbl">PATTERN</div>
+      <h2>近 4 年 <b>DP 出现 5 次</b><br>不学 DP 阅读直接送 14 分</h2>
+    </div>
+  </div>
+</body>
+</html>

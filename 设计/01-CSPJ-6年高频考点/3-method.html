@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CSP-J 6年高频考点 · 趋势</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg,#FFF8E1 0%, #FFE0B2 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FF5E62; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; letter-spacing:1px;}
+  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#1A1A1A; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); }
+  .pie {
+    margin: 30px auto 20px;
+    width: 380px; height: 380px; border-radius:50%;
+    background:
+      conic-gradient(
+        #FF5E62 0 calc(63% * 360deg),
+        #FFC107 calc(63% * 360deg) calc(76% * 360deg),
+        #66BB6A calc(76% * 360deg) calc(88% * 360deg),
+        #5E35B1 calc(88% * 360deg) calc(94% * 360deg),
+        #1E88E5 calc(94% * 360deg) 360deg
+      );
+    box-shadow: 8px 8px 0 #1A1A1A;
+    position: relative;
+  }
+  .pie::after {
+    content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:160px; height:160px; border-radius:50%; background:#FFF8E1;
+    box-shadow: inset 0 0 0 4px #1A1A1A;
+  }
+  .pie-label {
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    text-align:center; z-index:2; font-weight:900;
+  }
+  .pie-label .big { font-size:64px; color:#B71C1C; line-height:1; }
+  .pie-label .sm { font-size:22px; color:#1A1A1A; margin-top:4px; }
+  .legend { display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; margin-top: 8px; padding: 0 20px; }
+  .leg { display:flex; align-items:center; font-size:28px; font-weight:700; }
+  .dot { width:24px; height:24px; border-radius:6px; margin-right:14px; border:2px solid #1A1A1A; }
+  .trend {
+    margin-top: 30px;
+    background: #1A1A1A; color:#FFEB3B; padding:24px 28px; border-radius:18px;
+    box-shadow: 8px 8px 0 #B71C1C;
+  }
+  .trend .lbl { font-size:24px; color:#FFAB91; letter-spacing:2px; font-weight:700; }
+  .trend .txt { font-size:32px; font-weight:800; color:#FFF; line-height:1.45; margin-top:8px; }
+  .trend .txt b { color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">PROPORTION · 大类占比</span>
+    <h1>算法 1 个人<br><em>占了一大半</em>的分</h1>
+    <div style="position:relative">
+      <div class="pie"></div>
+      <div class="pie-label"><div class="big">63%</div><div class="sm">算法类占比</div></div>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="dot" style="background:#FF5E62"></div>算法 ≈ 63%</div>
+      <div class="leg"><div class="dot" style="background:#FFC107"></div>数据结构 ≈ 13%</div>
+      <div class="leg"><div class="dot" style="background:#66BB6A"></div>数学 ≈ 11%</div>
+      <div class="leg"><div class="dot" style="background:#5E35B1"></div>计算机基础 ≈ 8%</div>
+      <div class="leg"><div class="dot" style="background:#1E88E5"></div>程序语言 ≈ 6%</div>
+    </div>
+    <div class="trend">
+      <div class="lbl">2024 / 2025 新趋势</div>
+      <div class="txt">DP 难度逐年升 · 一卷出现 <b>2 段 DP</b><br>C++ 语法考查加深 · 单选 <b>3-4 题</b>查语法</div>
+    </div>
+  </div>
+</body>
+</html>

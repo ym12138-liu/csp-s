@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CSP-J 6年高频考点 · 数据</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFF3E0; color: #1A1A1A; position: relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#FF5E62,#FF9966); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#FFC371,#FF5E62); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .head { margin-bottom: 30px; }
+  .head .kicker { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:8px 20px; border-radius:6px; font-size:24px; font-weight:700; }
+  .head h1 { font-size: 64px; font-weight: 900; color:#B71C1C; margin-top:14px; line-height:1.1; }
+  .head h1 span { background: linear-gradient(transparent 55%, #FFEB3B 55%); padding: 0 6px; }
+  .table {
+    background:#FFF; border-radius:24px; padding:28px 32px;
+    border:4px solid #1A1A1A;
+    box-shadow: 10px 10px 0 #B71C1C;
+  }
+  .row { display:flex; align-items:center; padding:14px 0; border-bottom: 2px dashed #FFCCBC; font-size:30px; }
+  .row:last-child { border-bottom: none; }
+  .rank {
+    flex: 0 0 64px; height: 64px; width: 64px; border-radius:50%;
+    background: #FF5E62; color:#fff; font-weight:900; font-size:32px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 3px 3px 0 #1A1A1A;
+  }
+  .row.gold .rank { background:#FFC107; color:#1A1A1A; }
+  .row.silver .rank { background:#FF9966; }
+  .row.bronze .rank { background:#FFAB91; }
+  .name { flex:1; padding-left:20px; font-weight:800; color:#1A1A1A; }
+  .freq { font-weight:700; color:#B71C1C; margin-right: 14px; font-size:26px; }
+  .bar {
+    flex: 0 0 200px; height: 22px; background:#FFE0B2; border-radius:11px; overflow:hidden;
+    border: 2px solid #1A1A1A;
+  }
+  .bar > span { display:block; height:100%; background: linear-gradient(90deg, #FF5E62, #FF9966); }
+  .footer { position:absolute; bottom:160px; left:60px; right:60px; font-size:26px; color:#6D4C41; font-weight:700; text-align:center; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <div class="head">
+      <span class="kicker">DATA · 6 年逐题统计</span>
+      <h1><span>TOP 10 必拿分</span><br>高 ROI 考点排行</h1>
+    </div>
+    <div class="table">
+      <div class="row gold"><div class="rank">1</div><div class="name">二叉树性质 + 三遍历</div><div class="freq">7/7 年</div><div class="bar"><span style="width:100%"></span></div></div>
+      <div class="row silver"><div class="rank">2</div><div class="name">排列组合 + 容斥</div><div class="freq">7/7 年</div><div class="bar"><span style="width:100%"></span></div></div>
+      <div class="row bronze"><div class="rank">3</div><div class="name">栈 / 队列 / 链表</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+      <div class="row"><div class="rank">4</div><div class="name">二分查找（含变体）</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+      <div class="row"><div class="rank">5</div><div class="name">DP（一维 + 二维）</div><div class="freq">4/7 年</div><div class="bar"><span style="width:64%"></span></div></div>
+      <div class="row"><div class="rank">6</div><div class="name">字符串处理</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+      <div class="row"><div class="rank">7</div><div class="name">递归 / 汉诺塔</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+      <div class="row"><div class="rank">8</div><div class="name">枚举 / 试除法</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+      <div class="row"><div class="rank">9</div><div class="name">BFS / Flood Fill</div><div class="freq">2/7 年</div><div class="bar"><span style="width:42%"></span></div></div>
+      <div class="row"><div class="rank">10</div><div class="name">位运算 / 进制</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+    </div>
+    <div class="footer">数据来源：本号自整理 2019–2025 年 7 套 CSP-J 真题</div>
+  </div>
+</body>
+</html>
