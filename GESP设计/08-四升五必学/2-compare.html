@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 四升五 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #E1F5FE; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #0277BD, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #FFEB3B, #0277BD); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#0277BD; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#0277BD; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .col { background:#FFF; border-radius:18px; padding: 20px 22px; border: 4px solid #1A1A1A; }
+  .col.j { box-shadow: 6px 6px 0 #00ACC1; }
+  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
+  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900; }
+  .col.j h3 { background: #00ACC1; }
+  .col.s h3 { background: #B71C1C; }
+  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #B3E5FC; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p code { background:#FFEB3B; color:#B71C1C; padding: 2px 8px; border-radius:4px; font-weight: 700; }
+  .gap-list { margin-top: 22px; background: #1A1A1A; color: #FFF; border-radius: 18px; padding: 22px 26px; box-shadow: 8px 8px 0 #FFEB3B; }
+  .gap-list h2 { font-size:34px; font-weight:900; color:#FFEB3B; margin-bottom: 14px; }
+  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
+  .gap-row:last-child { border-bottom: none; }
+  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#0277BD; color:#FFEB3B; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFEB3B; }
+  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
+  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">COMPARE · 五级 vs 四级</span>
+    <h1>新增<em>链表 + 数论</em><br>奔向 CSP-J 入门</h1>
+    <div class="compare">
+      <div class="col j">
+        <h3>四级</h3>
+        <p>仅数组 + 结构体</p>
+        <p>三种 O(n²) 排序</p>
+        <p>顺序查找</p>
+        <p>仅简单递归</p>
+        <p>不考数论</p>
+      </div>
+      <div class="col s">
+        <h3>五级</h3>
+        <p><b>新增链表（单/双/循环）</b></p>
+        <p><b>归并 + 快排 O(n log n)</b></p>
+        <p><b>二分查找 + 二分答案</b></p>
+        <p><b>新增贪心 / 分治</b></p>
+        <p><b>gcd / 素数筛 / 分解</b></p>
+      </div>
+    </div>
+    <div class="gap-list">
+      <h2>四升五 · 必补 5 项</h2>
+      <div class="gap-row"><div class="n">1</div><div class="nm">链表（单 / 双 / 循环 + 增删）</div><span class="sc">≈100 分</span></div>
+      <div class="gap-row"><div class="n">2</div><div class="nm">归并 + 快排 O(n log n)</div><span class="sc">≈54 分</span></div>
+      <div class="gap-row"><div class="n">3</div><div class="nm">二分查找 + 二分答案</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">4</div><div class="nm">数论（gcd / 素数筛 / 分解）</div><span class="sc">≈90 分</span></div>
+      <div class="gap-row"><div class="n">5</div><div class="nm">贪心 + 分治 + 高精度</div><span class="sc">≈50 分</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 四升五 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #E1F5FE 0%, #FFFDE7 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#0277BD; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#0277BD; }
+  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #0277BD; }
+  .code-card .name { background: #FFEB3B; color: #0277BD; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 19px; line-height: 1.45; color: #B3E5FC; }
+  .code-card pre .kw { color: #FFEB3B; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 6px; font-size: 22px; color: #FFEB3B; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #0277BD, #FFEB3B); color: #1A1A1A; border-radius: 16px; box-shadow: 8px 8px 0 #FFFFFF; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #B71C1C; background:#FFFFFF; padding: 0 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 4 段必默</span>
+    <h1>链表 + 二分 + 数论<br><em>抄五遍</em>能默</h1>
+
+    <div class="code-card">
+      <span class="name">1 · 单链表节点 + 头插</span>
+<pre><span class="kw">struct</span> Node { <span class="kw">int</span> v; Node* next; };
+Node* head = <span class="kw">nullptr</span>;
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="lit">0</span>; i&lt;n; i++) {
+    <span class="kw">int</span> x; cin&gt;&gt;x;
+    head = <span class="kw">new</span> Node{x, head};
+}</pre>
+      <div class="note">关键 · <b>头插法</b>顺序与输入相反</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · 二分查找</span>
+<pre><span class="kw">int</span> bs(<span class="kw">int</span> a[], <span class="kw">int</span> n, <span class="kw">int</span> x) {
+    <span class="kw">int</span> l=<span class="lit">0</span>, r=n-<span class="lit">1</span>;
+    <span class="kw">while</span> (l &lt;= r) {
+        <span class="kw">int</span> m = (l+r) &gt;&gt; <span class="lit">1</span>;
+        <span class="kw">if</span> (a[m] == x) <span class="kw">return</span> m;
+        <span class="kw">if</span> (a[m] &lt; x) l=m+<span class="lit">1</span>; <span class="kw">else</span> r=m-<span class="lit">1</span>;
+    }
+    <span class="kw">return</span> -<span class="lit">1</span>;
+}</pre>
+      <div class="note">关键 · <b>必须有序</b> · 找到返回下标</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 欧几里得 gcd</span>
+<pre><span class="kw">int</span> gcd(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+    <span class="kw">return</span> b ? gcd(b, a%b) : a;
+}
+<span class="kw">int</span> lcm(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+    <span class="kw">return</span> a / gcd(a,b) * b;  <span class="cm">// 先除后乘防溢出</span>
+}</pre>
+      <div class="note">关键 · 1 行递归 + lcm <b>先除后乘</b></div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · 埃氏筛素数</span>
+<pre><span class="kw">bool</span> comp[N];
+<span class="kw">for</span> (<span class="kw">int</span> i=<span class="lit">2</span>; (<span class="kw">long long</span>)i*i &lt;= n; i++)
+    <span class="kw">if</span> (!comp[i])
+        <span class="kw">for</span> (<span class="kw">int</span> j=i*i; j&lt;=n; j+=i)
+            comp[j] = <span class="kw">true</span>;
+<span class="cm">// comp[x] == false 即 x 是素数</span></pre>
+      <div class="note">关键 · 从 <b>i*i 开始</b>筛 · 复杂度 O(n log log n)</div>
+    </div>
+
+    <div class="key">
+      <h2>这 4 段背完<br><b>五级核心 60% 已稳</b></h2>
+    </div>
+  </div>
+</body>
+</html>
