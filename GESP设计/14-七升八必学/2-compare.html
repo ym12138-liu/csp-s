@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 七升八 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #E8EAF6; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #1A237E, #FFD700); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #FFD700, #1A237E); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#1A237E; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#1A237E; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFD700 60%); padding:0 6px; }
+  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .col { background:#FFF; border-radius:18px; padding: 20px 22px; border: 4px solid #1A1A1A; }
+  .col.j { box-shadow: 6px 6px 0 #3949AB; }
+  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
+  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900; }
+  .col.j h3 { background: #3949AB; }
+  .col.s h3 { background: #B71C1C; }
+  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #C5CAE9; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p code { background:#FFD700; color:#1A237E; padding: 2px 8px; border-radius:4px; font-weight: 700; }
+  .gap-list { margin-top: 22px; background: #1A1A1A; color: #FFF; border-radius: 18px; padding: 22px 26px; box-shadow: 8px 8px 0 #FFD700; }
+  .gap-list h2 { font-size:34px; font-weight:900; color:#FFD700; margin-bottom: 14px; }
+  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
+  .gap-row:last-child { border-bottom: none; }
+  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#3949AB; color:#FFD700; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFD700; }
+  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
+  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFD700; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">COMPARE · 八级 vs 七级</span>
+    <h1>新增<em>四大图算法</em><br>这就是顶级</h1>
+    <div class="compare">
+      <div class="col j">
+        <h3>七级</h3>
+        <p>图论 BFS / DFS</p>
+        <p>不考最短路</p>
+        <p>不考最小生成树</p>
+        <p>简单组合</p>
+        <p>简单 OOP</p>
+      </div>
+      <div class="col s">
+        <h3>八级</h3>
+        <p><b>Kruskal / Prim 必考</b></p>
+        <p><b>Dijkstra 单源最短路</b></p>
+        <p><b>Floyd 多源 O(n³)</b></p>
+        <p><b>排列组合 + 二项式</b></p>
+        <p><b>树形 DP + 区间 DP</b></p>
+      </div>
+    </div>
+    <div class="gap-list">
+      <h2>七升八 · 必补 5 项</h2>
+      <div class="gap-row"><div class="n">1</div><div class="nm">图论四大（Kruskal/Prim/Dijkstra/Floyd）</div><span class="sc">≈130 分</span></div>
+      <div class="gap-row"><div class="n">2</div><div class="nm">组合数学（排列 / 组合 / 二项式）</div><span class="sc">≈100 分</span></div>
+      <div class="gap-row"><div class="n">3</div><div class="nm">高级 DP（树形 / 区间 / 杨辉）</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">4</div><div class="nm">OOP 进阶（多构造 / 引用 / 继承权限）</div><span class="sc">≈50 分</span></div>
+      <div class="gap-row"><div class="n">5</div><div class="nm">卡特兰数 + 错排 + 概率</div><span class="sc">≈40 分</span></div>
+    </div>
+  </div>
+</body>
+</html>

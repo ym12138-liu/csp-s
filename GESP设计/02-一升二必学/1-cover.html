@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 一升二 · 封面</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body {
+    background: linear-gradient(160deg, #00BFA5 0%, #1DE9B6 50%, #FFEB3B 100%);
+    color:#1A1A1A; position:relative;
+  }
+  body::before {
+    content:""; position:absolute; top:80px; left:-100px;
+    width: 360px; height: 360px; border-radius:50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.45) 0%, transparent 70%);
+  }
+  body::after {
+    content:""; position:absolute; bottom:60px; right:-100px;
+    width: 400px; height: 400px; border-radius:50%;
+    background: radial-gradient(circle, rgba(255,235,59,0.55) 0%, transparent 70%);
+  }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
+  .badge {
+    display:inline-block; background:#1A1A1A; color:#1DE9B6;
+    padding:14px 32px; border-radius:100px; font-size:32px; font-weight:900;
+    letter-spacing: 3px; margin-bottom: 36px;
+    box-shadow: 6px 6px 0 #00897B;
+  }
+  .arrow-row {
+    display: flex; align-items: center; gap: 18px;
+    margin-bottom: 32px;
+  }
+  .lvl {
+    display:inline-block; background:#FFFFFF; padding: 10px 22px;
+    border-radius: 14px;
+    font-size: 44px; font-weight: 900; color: #00897B;
+    border: 4px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+  }
+  .lvl.b { background:#FFEB3B; color: #B71C1C;}
+  .arrow {
+    font-size: 60px; font-weight: 900; color: #1A1A1A;
+    text-shadow: 4px 4px 0 #FFFFFF;
+  }
+  .title {
+    font-size: 156px; font-weight:900; line-height:0.95; color:#1A1A1A;
+    text-shadow: 6px 6px 0 #FFFFFF;
+    letter-spacing: -4px;
+  }
+  .title em {
+    font-style:normal; color:#B71C1C;
+    background:#FFEB3B; padding: 0 14px;
+    box-shadow: 8px 8px 0 #1A1A1A;
+    display: inline-block;
+  }
+  .sub {
+    margin-top: 36px;
+    background: #1A1A1A; color: #1DE9B6;
+    padding: 18px 24px; border-radius: 14px;
+    box-shadow: 6px 6px 0 #B71C1C;
+    font-size: 36px; font-weight: 800;
+    display: inline-block;
+    line-height: 1.4;
+  }
+  .sub b { color: #FFEB3B; }
+  .footer {
+    position: absolute; bottom: 0; left: 70px; right: 70px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; color: #1A1A1A; font-weight: 900;
+  }
+  .stamp { background:#1A1A1A; color:#FFEB3B; padding:14px 24px; border-radius:8px; transform: rotate(-5deg); }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <div class="badge">大连家长接力 · 升级路线</div>
+    <div class="arrow-row">
+      <span class="lvl">一级</span>
+      <span class="arrow">▶</span>
+      <span class="lvl b">二级</span>
+    </div>
+    <div class="title">
+      升级<br>
+      必学 <em>3 块</em>
+    </div>
+    <div class="sub">
+      数组 + 嵌套循环 + 多条件<br>
+      <b>差距就这 3 块</b>
+    </div>
+  </div>
+  <div class="footer">
+    <span>#GESP升级 #信奥 #大连娃</span>
+    <span class="stamp">收藏照练</span>
+  </div>
+</body>
+</html>

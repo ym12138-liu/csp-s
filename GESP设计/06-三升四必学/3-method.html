@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 三升四 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #FFEBEE 0%, #FFF8E1 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#B71C1C; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#B71C1C; }
+  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #B71C1C; }
+  .code-card .name { background: #FFEB3B; color: #B71C1C; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 20px; line-height: 1.45; color: #FFE0B2; }
+  .code-card pre .kw { color: #FFEB3B; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 8px; font-size: 22px; color: #FFEB3B; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #B71C1C, #FFC107); color: #FFFFFF; border-radius: 16px; box-shadow: 8px 8px 0 #FFEB3B; text-shadow: 2px 2px 0 #1A1A1A; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 3 段必默</span>
+    <h1>指针 + 排序<br><em>抄五遍</em>能默</h1>
+
+    <div class="code-card">
+      <span class="name">1 · 指针基本三连</span>
+<pre><span class="kw">int</span> x = <span class="lit">10</span>;
+<span class="kw">int</span>* p = &amp;x;        <span class="cm">// 取地址</span>
+cout &lt;&lt; *p;            <span class="cm">// 解引用 = 10</span>
+*p = <span class="lit">20</span>;              <span class="cm">// 修改 → x 也变 20</span></pre>
+      <div class="note">关键 · <b>* 解引用 / & 取地址</b> · 大小固定 8 字节</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · 引用传递交换</span>
+<pre><span class="kw">void</span> swap(<span class="kw">int</span>&amp; a, <span class="kw">int</span>&amp; b) {
+    <span class="kw">int</span> t = a; a = b; b = t;
+}
+<span class="cm">// 调用 swap(x, y) 后 x 和 y 真的交换</span></pre>
+      <div class="note">关键 · 加 <b>&amp;</b> 才会修改原变量</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 三种排序</span>
+<pre><span class="cm">// 冒泡（稳定 · O(n²)）</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n-<span class="lit">1</span>; i++)
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="lit">0</span>; j &lt; n-<span class="lit">1</span>-i; j++)
+        <span class="kw">if</span> (a[j] &gt; a[j+<span class="lit">1</span>]) swap(a[j], a[j+<span class="lit">1</span>]);
+
+<span class="cm">// 选择（不稳 · O(n²)）</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n-<span class="lit">1</span>; i++) {
+    <span class="kw">int</span> mn = i;
+    <span class="kw">for</span> (<span class="kw">int</span> j = i+<span class="lit">1</span>; j &lt; n; j++)
+        <span class="kw">if</span> (a[j] &lt; a[mn]) mn = j;
+    swap(a[i], a[mn]);
+}</pre>
+      <div class="note">关键 · <b>稳:冒泡/插入</b> · <b>不稳:选择/快排</b></div>
+    </div>
+
+    <div class="key">
+      <h2>这 3 段背完<br><b>四级核心 50% 已稳</b></h2>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 一升二 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #FFFDE7 0%, #C8E6C9 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#00897B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#004D40; }
+  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+
+  .code-card {
+    background: #1A1A1A; color: #FFF; border-radius: 16px;
+    padding: 18px 22px; margin-top: 18px;
+    box-shadow: 6px 6px 0 #00897B;
+  }
+  .code-card .name {
+    background: #1DE9B6; color: #1A1A1A;
+    padding: 4px 14px; border-radius: 6px;
+    font-weight: 900; font-size: 22px;
+    display: inline-block; margin-bottom: 8px;
+  }
+  .code-card pre {
+    font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace;
+    font-size: 20px; line-height: 1.45;
+    color: #E8F5E9;
+  }
+  .code-card pre .kw { color: #1DE9B6; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note {
+    margin-top: 8px; font-size: 22px;
+    color: #FFEB3B; font-weight: 800;
+  }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+
+  .key {
+    margin-top: 22px; padding: 22px 26px;
+    background: linear-gradient(135deg, #00897B, #FFEB3B);
+    color: #1A1A1A; border-radius: 16px;
+    box-shadow: 8px 8px 0 #FFFFFF;
+  }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #B71C1C; background:#FFFFFF; padding: 0 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 3 段必默</span>
+    <h1>抄一遍能写<br>抄三遍 <em>能默</em></h1>
+
+    <div class="code-card">
+      <span class="name">1 · 数组遍历 + 计数</span>
+<pre><span class="kw">int</span> n, a[<span class="lit">1005</span>], cnt = <span class="lit">0</span>;
+cin &gt;&gt; n;
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; i++) cin &gt;&gt; a[i];
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; i++)
+    <span class="kw">if</span> (<span class="cm">/* 条件 */</span>) cnt++;
+cout &lt;&lt; cnt;</pre>
+      <div class="note">关键 · 数组下标 <b>从 0 开始</b>，开 1005 防越界</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · 嵌套循环输出三角形</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; i++) {
+    <span class="kw">for</span> (<span class="kw">int</span> j = <span class="lit">0</span>; j &lt;= i; j++)
+        cout &lt;&lt; <span class="lit">'*'</span>;
+    cout &lt;&lt; <span class="lit">'\n'</span>;
+}</pre>
+      <div class="note">关键 · 行数 i 决定每行星号数 <b>i+1</b> 个</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 多条件 · 漂亮数判定</span>
+<pre><span class="kw">bool</span> <span class="cm">/*pretty*/</span>(<span class="kw">int</span> n, <span class="kw">int</span> m) {
+    <span class="kw">if</span> (n % m == <span class="lit">0</span>) <span class="kw">return</span> <span class="kw">true</span>;
+    <span class="kw">int</span> s = <span class="lit">0</span>, x = n;
+    <span class="kw">while</span> (x) {
+        <span class="kw">if</span> (x % <span class="lit">10</span> == m) <span class="kw">return</span> <span class="kw">true</span>;
+        s += x % <span class="lit">10</span>;
+        x /= <span class="lit">10</span>;
+    }
+    <span class="kw">return</span> s % m == <span class="lit">0</span>;
+}</pre>
+      <div class="note">关键 · 三个条件 <b>任一</b>满足即为漂亮数</div>
+    </div>
+
+    <div class="key">
+      <h2>这 3 段背完<br><b>二级编程题 25 分稳拿</b></h2>
+    </div>
+  </div>
+</body>
+</html>

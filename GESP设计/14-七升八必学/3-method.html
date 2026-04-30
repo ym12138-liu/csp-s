@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 七升八 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #E8EAF6 0%, #FFF8E1 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#1A237E; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#1A237E; }
+  h1 em { font-style:normal; background:#FFD700; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #3949AB; }
+  .code-card .name { background: #FFD700; color: #1A237E; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 19px; line-height: 1.45; color: #C5CAE9; }
+  .code-card pre .kw { color: #FFD700; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 6px; font-size: 22px; color: #FFD700; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #1A237E, #FFD700); color: #FFFFFF; border-radius: 16px; box-shadow: 8px 8px 0 #1A1A1A; text-shadow: 2px 2px 0 #1A1A1A; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #FFD700; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 4 段必默</span>
+    <h1>四大图算法<br><em>抄五遍</em>能默</h1>
+
+    <div class="code-card">
+      <span class="name">1 · Kruskal 最小生成树</span>
+<pre>sort(edges.begin(), edges.end(), cmp);
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">1</span>; i &lt;= n; i++) fa[i] = i;
+<span class="kw">int</span> sum = <span class="lit">0</span>, cnt = <span class="lit">0</span>;
+<span class="kw">for</span> (<span class="kw">auto</span>&amp; e : edges) {
+    <span class="kw">int</span> fu=find(e.u), fv=find(e.v);
+    <span class="kw">if</span> (fu == fv) <span class="kw">continue</span>;
+    fa[fu] = fv; sum += e.w;
+    <span class="kw">if</span> (++cnt == n - <span class="lit">1</span>) <span class="kw">break</span>;
+}</pre>
+      <div class="note">关键 · <b>排序边 + 并查集</b> · O(m log m)</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · Dijkstra 堆优化</span>
+<pre>priority_queue&lt;pii, vector&lt;pii&gt;, greater&lt;&gt;&gt; pq;
+pq.push({<span class="lit">0</span>, s}); d[s] = <span class="lit">0</span>;
+<span class="kw">while</span> (!pq.empty()) {
+    <span class="kw">auto</span> [dv,u] = pq.top(); pq.pop();
+    <span class="kw">if</span> (dv &gt; d[u]) <span class="kw">continue</span>;
+    <span class="kw">for</span> (<span class="kw">auto</span> [v,w] : adj[u])
+        <span class="kw">if</span> (d[u]+w &lt; d[v]) {
+            d[v] = d[u]+w;
+            pq.push({d[v], v});
+        }
+}</pre>
+      <div class="note">关键 · 不能处理负权 · O((n+m) log n)</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · Floyd 多源最短路</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> k = <span class="lit">1</span>; k &lt;= n; k++)        <span class="cm">// k 必须最外层</span>
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">1</span>; i &lt;= n; i++)
+        <span class="kw">for</span> (<span class="kw">int</span> j = <span class="lit">1</span>; j &lt;= n; j++)
+            <span class="kw">if</span> (d[i][k]+d[k][j] &lt; d[i][j])
+                d[i][j] = d[i][k]+d[k][j];</pre>
+      <div class="note">关键 · <b>k 必须最外层</b> · O(n³) 全源</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · 树形 DP（最大独立集）</span>
+<pre><span class="kw">void</span> dfs(<span class="kw">int</span> u, <span class="kw">int</span> p) {
+    dp[u][<span class="lit">0</span>] = <span class="lit">0</span>;
+    dp[u][<span class="lit">1</span>] = w[u];
+    <span class="kw">for</span> (<span class="kw">int</span> v : adj[u]) <span class="kw">if</span> (v != p) {
+        dfs(v, u);
+        dp[u][<span class="lit">0</span>] += max(dp[v][<span class="lit">0</span>], dp[v][<span class="lit">1</span>]);
+        dp[u][<span class="lit">1</span>] += dp[v][<span class="lit">0</span>];
+    }
+}</pre>
+      <div class="note">关键 · <b>选 / 不选</b> 两个状态</div>
+    </div>
+
+    <div class="key">
+      <h2>这 4 段背完<br><b>八级核心 60% 已稳</b></h2>
+    </div>
+  </div>
+</body>
+</html>

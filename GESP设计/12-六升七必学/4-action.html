@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 六升七 · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#006064; color:#FFF; position:relative; }
+  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 80% 20%, rgba(0,229,255,0.5) 0%, transparent 50%), radial-gradient(circle at 10% 90%, rgba(255,235,59,0.35) 0%, transparent 50%); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FFEB3B; color:#006064; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 84px; font-weight:900; margin-top:18px; line-height:1.05; }
+  h1 em { font-style:normal; color:#FFEB3B; }
+  .week { background:#FFFFFF; color:#1A1A1A; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #00ACC1; position: relative; }
+  .week::before { content: attr(data-w); position:absolute; left: -28px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background: #FFEB3B; color: #006064; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 #1A1A1A; line-height: 1.1; text-align:center; }
+  .week h3 { font-size:30px; font-weight:900; color:#006064; padding-left: 40px; }
+  .week p { font-size:24px; line-height:1.5; color:#424242; margin-top: 6px; }
+  .week p code { background:#FFEB3B; color:#006064; padding:2px 10px; border-radius:4px; font-weight:700; }
+  .week p b { color:#B71C1C; }
+  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #00E5FF, #FFEB3B); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
+  .pull h2 { font-size: 38px; font-weight:900; line-height:1.35; }
+  .pull h2 b { color: #B71C1C; }
+  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
+  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; }
+  .pill { background:#FFEB3B; color:#006064; padding:10px 22px; border-radius:100px; font-weight:900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">PLAN · 20 周补差</span>
+    <h1>从六级到七级<br><em>20 周硬磨</em></h1>
+    <div class="week" data-w="W1-4"><h3>图论基础（重点 4 周）</h3><p>邻接表 / 矩阵 + BFS / DFS · <b>画 5 张图跑算法</b></p></div>
+    <div class="week" data-w="W5-6"><h3>哈希表</h3><p>哈希函数 + 链地址法 + 线性探测 · <code>素数 P</code></p></div>
+    <div class="week" data-w="W7-9"><h3>高级 DP（LCS）</h3><p>LCS + <b>滚动数组优化</b> · 完全背包</p></div>
+    <div class="week" data-w="W10"><h3>复杂度递推式</h3><p>主定理 · T(n)=2T(n/2)+n → O(n log n)</p></div>
+    <div class="week" data-w="W11-12"><h3>强连通 / 生成树</h3><p>n-1 条边 + 入度=出度 · 概念必背</p></div>
+    <div class="week" data-w="W13-14"><h3>Flood Fill 泛洪</h3><p>4 联通 BFS / DFS · 染色题</p></div>
+    <div class="week" data-w="W15-20"><h3>限时刷真题</h3><p>2024-2026 七级全部 · <b>稳定 70+ 进八级</b></p></div>
+    <div class="pull">
+      <h2>记一句话<br><b>图论 + 哈希 + 高级 DP = 七级 60+</b></h2>
+      <p>大连家长 20 周稳过 · 接近 CSP-S 初赛</p>
+    </div>
+  </div>
+  <div class="cta">
+    <span>#六升七 #图论 #大连娃</span>
+    <span class="pill">收藏</span>
+  </div>
+</body>
+</html>

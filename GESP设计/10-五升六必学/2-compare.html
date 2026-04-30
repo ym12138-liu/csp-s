@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 五升六 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FCE4EC; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #880E4F, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #FFEB3B, #880E4F); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#880E4F; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#880E4F; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .col { background:#FFF; border-radius:18px; padding: 20px 22px; border: 4px solid #1A1A1A; }
+  .col.j { box-shadow: 6px 6px 0 #C2185B; }
+  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
+  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900; }
+  .col.j h3 { background: #C2185B; }
+  .col.s h3 { background: #B71C1C; }
+  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #F8BBD0; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p code { background:#FFEB3B; color:#B71C1C; padding: 2px 8px; border-radius:4px; font-weight: 700; }
+  .gap-list { margin-top: 22px; background: #1A1A1A; color: #FFF; border-radius: 18px; padding: 22px 26px; box-shadow: 8px 8px 0 #FFEB3B; }
+  .gap-list h2 { font-size:34px; font-weight:900; color:#FFEB3B; margin-bottom: 14px; }
+  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
+  .gap-row:last-child { border-bottom: none; }
+  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#C2185B; color:#FFEB3B; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFEB3B; }
+  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
+  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">COMPARE · 六级 vs 五级</span>
+    <h1>新增<em>二叉树 + DP</em><br>核心数据结构关</h1>
+    <div class="compare">
+      <div class="col j">
+        <h3>五级</h3>
+        <p>面向过程 + 函数</p>
+        <p>仅链表 + 数组</p>
+        <p>不考树</p>
+        <p>不考 DP</p>
+        <p>不考 OOP</p>
+      </div>
+      <div class="col s">
+        <h3>六级</h3>
+        <p><b>新增 OOP（类 / 继承）</b></p>
+        <p><b>新增二叉树 + BST</b></p>
+        <p><b>新增 DFS / BFS</b></p>
+        <p><b>0-1 背包 + 爬楼梯</b></p>
+        <p><b>哈夫曼 + 格雷码</b></p>
+      </div>
+    </div>
+    <div class="gap-list">
+      <h2>五升六 · 必补 5 项</h2>
+      <div class="gap-row"><div class="n">1</div><div class="nm">二叉树（三种遍历 + 推导）</div><span class="sc">≈100 分</span></div>
+      <div class="gap-row"><div class="n">2</div><div class="nm">二叉搜索树 BST（插入 / 查找 / 验证）</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">3</div><div class="nm">面向对象 OOP（类 / 继承 / 多态）</div><span class="sc">≈80 分</span></div>
+      <div class="gap-row"><div class="n">4</div><div class="nm">DP 入门（0-1 背包 / 爬楼梯）</div><span class="sc">≈60 分</span></div>
+      <div class="gap-row"><div class="n">5</div><div class="nm">DFS / BFS + 哈夫曼编码</div><span class="sc">≈90 分</span></div>
+    </div>
+  </div>
+</body>
+</html>
