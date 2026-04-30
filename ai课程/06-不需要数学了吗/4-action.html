@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>不需要数学了吗 · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#1565C0; color:#FFFFFF; position:relative; }
+  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(230,81,0,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,235,59,0.45) 0%, transparent 50%); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FFEB3B; color:#1565C0; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#FFEB3B; }
+  h1 em { font-style:normal; color:#FFFFFF; }
+  .step { background:#FFFFFF; color:#1A1A1A; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #FFEB3B; box-shadow: 6px 6px 0 #E65100; position: relative; }
+  .step::before { content: attr(data-n); position:absolute; left: -22px; top: -16px; width: 56px; height: 56px; border-radius: 50%; background:#E65100; color:#FFEB3B; font-weight:900; font-size:28px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
+  .step h3 { font-size: 30px; color:#1565C0; font-weight:900; padding-left: 40px; }
+  .step p { font-size: 24px; color:#424242; margin-top: 6px; line-height: 1.5; font-weight: 700; }
+  .step p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #E65100; }
+  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #FFEB3B, #E65100); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
+  .pull h2 { font-size: 38px; font-weight:900; line-height: 1.35; }
+  .pull h2 b { color: #1565C0; }
+  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
+  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; }
+  .pill { background:#FFEB3B; color:#1565C0; padding:10px 22px; border-radius:100px; font-weight:900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">3 步保住数学</span>
+    <h1>3 步走<br>数学 <em>不掉队</em></h1>
+    <div class="step" data-n="1"><h3>每天 20 分钟思维题</h3><p>不刷题量 · 选 1 题<b>想 3 种解法</b><br>培养抽象能力 = AI 时代核心</p></div>
+    <div class="step" data-n="2"><h3>结合编程学数学</h3><p>学了"循环" → 用 Python 算 1+2+...+100<br>编程 + 数学 = <b>看得见的进步</b></p></div>
+    <div class="step" data-n="3"><h3>找数学 + AI 的小项目</h3><p>简单数据可视化 · 概率小实验<br>让娃<b>感受数学在 AI 里的作用</b></p></div>
+    <div class="pull">
+      <h2>大连家长真心话<br><b>"数学练好 · 才能跟 AI 同台"</b></h2>
+      <p>AI 越强 · 不懂数学的人差距越大</p>
+    </div>
+  </div>
+  <div class="cta">
+    <span># 数学 # AI # 大连娃</span>
+    <span class="pill">收藏</span>
+  </div>
+</body>
+</html>

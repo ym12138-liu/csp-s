@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>ChatGPT 娃怎么用 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#0A1F0A; color:#00FF41; position:relative; }
+  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(0,255,65,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.04) 1px, transparent 1px); background-size: 50px 50px; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#00FF41; color:#0A1F0A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace; }
+  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#00FF41; }
+  h1 em { font-style:normal; color:#FFEB3B; }
+  .row { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+  .col { background:#1A1A1A; border:2px solid #00FF41; border-radius: 14px; padding: 18px 20px; }
+  .col h3 { font-size: 26px; font-weight: 900; margin-bottom: 8px; padding: 6px 12px; border-radius: 6px; text-align: center; }
+  .col.bad h3 { background:#FF1744; color:#FFFFFF; }
+  .col.good h3 { background:#00FF41; color:#0A1F0A; }
+  .col p { font-size: 22px; color: #E0E0E0; line-height: 1.45; padding: 8px 0; border-bottom: 1px dashed #424242; }
+  .col p:last-child { border-bottom: none; }
+  .col p code { font-family: "SF Mono", monospace; background:#0A1F0A; color:#00FF41; padding: 2px 6px; border-radius: 4px; font-size: 18px; }
+  .case { margin-top: 22px; background: #1A1A1A; border:2px solid #FFEB3B; border-radius: 14px; padding: 18px 22px; box-shadow: 0 0 25px rgba(255,235,59,0.2); }
+  .case h2 { font-size: 28px; color: #FFEB3B; font-weight: 900; margin-bottom: 10px; }
+  .case .scene { font-size: 22px; color: #E0E0E0; line-height: 1.5; }
+  .case .scene b { background:#00FF41; color:#0A1F0A; padding: 0 6px; border-radius: 4px; font-weight: 900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">$ COMPARE / 烂用 vs 好用</span>
+    <h1>同样问 AI<em>结果差天地</em></h1>
+    <div class="row">
+      <div class="col bad">
+        <h3>× 烂用法</h3>
+        <p>"帮我写作文"</p>
+        <p>"答案是啥"</p>
+        <p>"写一段代码"</p>
+        <p>抄完就交 = <b>0 收获</b></p>
+      </div>
+      <div class="col good">
+        <h3>✓ 好用法</h3>
+        <p>"我写的作文哪里弱"</p>
+        <p>"这题为什么是这答案"</p>
+        <p>"我代码报错 · 帮我看哪错"</p>
+        <p>追问 → <b>真懂</b></p>
+      </div>
+    </div>
+
+    <div class="case">
+      <h2>// 关键差别</h2>
+      <div class="scene">烂用法 = 让 AI <b>替娃完成</b><br>好用法 = 让 AI <b>陪娃成长</b><br><br>同一个工具 · <b>用法决定价值</b></div>
+    </div>
+  </div>
+</body>
+</html>

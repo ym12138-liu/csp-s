@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>信奥 VS AI 课 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#FFF8E1; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #1A1A1A, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #1A1A1A); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#1A1A1A; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
+  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { background:#FFF; border-radius:18px; padding: 18px 22px; border: 4px solid #1A1A1A; }
+  .col.j { box-shadow: 6px 6px 0 #1976D2; }
+  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
+  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 28px; font-weight: 900; }
+  .col.j h3 { background: #1976D2; }
+  .col.s h3 { background: #B71C1C; }
+  .col p { font-size: 21px; line-height: 1.5; padding: 6px 0; border-bottom: 1px dashed #FFE082; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #B71C1C; }
+  .case { margin-top: 22px; background:#1A1A1A; color:#FFEB3B; border-radius: 16px; padding: 18px 22px; box-shadow: 6px 6px 0 #FFEB3B; }
+  .case h2 { font-size: 26px; color: #FFEB3B; font-weight: 900; margin-bottom: 10px; }
+  .case .row { display: flex; align-items: center; padding: 6px 0; font-size: 20px; color:#FFFFFF; }
+  .case .row .who { flex: 0 0 130px; font-weight: 900; color: #FFEB3B; }
+  .case .row .ans { color: #E0E0E0; font-weight: 700; }
+  .case .row .ans b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #1A1A1A; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">3 维度对比</span>
+    <h1>各有所长 <em>看娃</em></h1>
+    <div class="compare">
+      <div class="col j">
+        <h3>信奥</h3>
+        <p>练 <b>算法 / 数学</b> 思维</p>
+        <p>明确赛道 · 有省一 / NOIP</p>
+        <p>升学硬通货（顶级）</p>
+        <p>难度高 / 时间投入大</p>
+      </div>
+      <div class="col s">
+        <h3>AI 课</h3>
+        <p>练 <b>项目 / 应用</b> 思维</p>
+        <p>无统一赛事 · 自由探索</p>
+        <p>实用 · 升学加分弱</p>
+        <p>容易上手 / 兴趣驱动</p>
+      </div>
+    </div>
+    <div class="case">
+      <h2>// 3 种娃 · 不同选法</h2>
+      <div class="row"><div class="who">数学好 · 抽象强</div><div class="ans">→ <b>信奥</b> · 长期投入</div></div>
+      <div class="row"><div class="who">动手强 · 创意多</div><div class="ans">→ <b>AI 课</b> · 项目导向</div></div>
+      <div class="row"><div class="who">两个都喜欢</div><div class="ans">→ <b>先信奥后 AI</b> · 信奥练底子</div></div>
+    </div>
+  </div>
+</body>
+</html>
