@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>奥赛分得清吗 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#F3E5F5; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #4A148C, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #4A148C); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#4A148C; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#4A148C; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
+  .row { display:flex; align-items:center; padding: 18px 22px; background:#FFF; border-radius: 16px; margin-top: 16px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #4A148C; }
+  .row .name { flex: 0 0 130px; height: 90px; border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:900; color:#FFF; margin-right: 18px; box-shadow: 3px 3px 0 #1A1A1A; }
+  .n1 { background: #00897B; }
+  .n2 { background: #1976D2; }
+  .n3 { background: #E64A19; }
+  .n4 { background: #B71C1C; }
+  .row .name .v { font-size: 22px; line-height: 1; }
+  .row .name .l { font-size: 14px; opacity: 0.9; margin-top: 4px; }
+  .row .body { flex: 1; }
+  .row .body h3 { font-size: 26px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .row .body p { font-size: 21px; color: #424242; margin-top: 4px; line-height: 1.4; }
+  .row .body p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #4A148C; }
+
+  .key { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #BA68C8; }
+  .key .lbl { font-size: 22px; opacity: .85; letter-spacing: 2px; font-weight: 700; }
+  .key h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; margin-top: 6px; }
+  .key h2 b { color: #FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">4 个赛事 · 一行讲清</span>
+    <h1>4 个赛事<em>定位差异</em></h1>
+
+    <div class="row">
+      <div class="name n1"><div class="v">GESP</div><div class="l">能力认证</div></div>
+      <div class="body">
+        <h3>非赛事 · 8 级阶梯认证</h3>
+        <p>每年 4 次 · 60 分过关 · <b>不直接挂升学</b><br>培训机构常用做"水平测评"</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="name n2"><div class="v">CSP-J</div><div class="l">普及组</div></div>
+      <div class="body">
+        <h3>真正赛事 · 小学初中娃为主</h3>
+        <p>9 月初赛 + 10 月复赛 · <b>拿奖 = 信奥真起步</b><br>每年 20 万 + 报名</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="name n3"><div class="v">CSP-S</div><div class="l">提高组</div></div>
+      <div class="body">
+        <h3>真正赛事 · 初高中娃为主</h3>
+        <p>难度大幅升级 · <b>是 NOIP 入场券</b><br>拿奖才算"打进信奥圈"</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="name n4"><div class="v">NOIP</div><div class="l">联赛</div></div>
+      <div class="body">
+        <h3>顶级赛事 · 高中为主</h3>
+        <p>NOI 选手储备池 · <b>省一可冲强基</b><br>金银铜牌 = 顶级名校认可</p>
+      </div>
+    </div>
+
+    <div class="key">
+      <div class="lbl">CORE</div>
+      <h2>顺序：<b>GESP → CSP-J → CSP-S → NOIP</b><br>难度逐级翻倍</h2>
+    </div>
+  </div>
+</body>
+</html>
