@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>几岁开始学编程 · 分龄</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#E0F2F1; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #004D40, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #004D40); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#004D40; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#004D40; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
+
+  .row { display:flex; align-items:center; padding: 18px 22px; background:#FFF; border-radius: 16px; margin-top: 16px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #00897B; }
+  .row .age { flex: 0 0 110px; height: 90px; border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:900; color:#FFF; margin-right: 18px; box-shadow: 3px 3px 0 #1A1A1A; }
+  .age1 { background: #FF8A65; }
+  .age2 { background: #FFB74D; }
+  .age3 { background: #66BB6A; }
+  .age4 { background: #5C6BC0; }
+  .row .age .v { font-size: 26px; line-height: 1; }
+  .row .age .l { font-size: 14px; opacity: 0.9; margin-top: 4px; }
+  .row .body { flex: 1; }
+  .row .body h3 { font-size: 28px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .row .body p { font-size: 22px; color: #424242; margin-top: 4px; line-height: 1.4; }
+  .row .body p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #B71C1C; }
+
+  .key { margin-top: 24px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #00897B; }
+  .key .lbl { font-size: 22px; opacity: .85; letter-spacing: 2px; font-weight: 700; }
+  .key h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; margin-top: 6px; }
+  .key h2 b { color: #FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">分龄指南 · 大连家长版</span>
+    <h1>4 个阶段<br><em>玩法不一样</em></h1>
+
+    <div class="row">
+      <div class="age age1"><div class="v">4-6</div><div class="l">幼儿园</div></div>
+      <div class="body">
+        <h3>启蒙玩具阶段</h3>
+        <p>不动电脑 · 玩 <b>编程小车 / 积木机器人</b> · 培养"指令 → 结果"思维</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="age age2"><div class="v">7-9</div><div class="l">小学低</div></div>
+      <div class="body">
+        <h3>Scratch 拖积木阶段</h3>
+        <p>麻省理工免费工具 · <b>10 分钟出动画</b> · 主要练逻辑思维 / 趣味驱动</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="age age3"><div class="v">10-12</div><div class="l">小学高</div></div>
+      <div class="body">
+        <h3>Python / C++ 入门</h3>
+        <p>开始写真代码 · 推荐 <b>Python 先入门</b> · 想冲信奥转 C++</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="age age4"><div class="v">13+</div><div class="l">初中</div></div>
+      <div class="body">
+        <h3>C++ 算法 / 信奥赛道</h3>
+        <p>系统学算法 · 备考 <b>CSP-J / NOIP</b> · 信奥真正的赛季</p>
+      </div>
+    </div>
+
+    <div class="key">
+      <div class="lbl">CORE</div>
+      <h2>不是越早越好<br><b>"刚刚好"才是最好</b></h2>
+    </div>
+  </div>
+</body>
+</html>
