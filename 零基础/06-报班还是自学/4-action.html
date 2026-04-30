@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>报班还是自学 · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#006064; color:#FFF; position:relative; }
+  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(77,182,172,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,235,59,0.4) 0%, transparent 50%); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FFEB3B; color:#006064; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; }
+  h1 em { font-style:normal; color:#FFEB3B; }
+  .step { background:#2C2C2C; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 10px solid #4DB6AC; position: relative; }
+  .step::before { content: attr(data-n); position:absolute; left: -28px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background:#FFEB3B; color:#006064; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
+  .step h3 { font-size: 30px; color:#FFEB3B; font-weight:900; padding-left: 40px; }
+  .step p { font-size: 24px; color:#E0E0E0; margin-top: 6px; line-height: 1.5; }
+  .step p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #006064; }
+  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #4DB6AC, #FFEB3B); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
+  .pull h2 { font-size: 38px; font-weight:900; line-height: 1.35; }
+  .pull h2 b { color: #B71C1C; }
+  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
+  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; }
+  .pill { background:#FFEB3B; color:#006064; padding:10px 22px; border-radius:100px; font-weight:900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">家长省钱攻略 · 4 步选课</span>
+    <h1>报班 4 步走<br><em>不踩坑</em></h1>
+    <div class="step" data-n="1"><h3>试听 1-2 节</h3><p>免费体验 · 看老师讲不讲<b>思路</b>不是死灌代码</p></div>
+    <div class="step" data-n="2"><h3>先报 3 个月短期</h3><p>看娃<b>主动写代码</b>了吗 · 抗拒作业 = 放弃</p></div>
+    <div class="step" data-n="3"><h3>看作业反馈</h3><p>老师一周内<b>逐题点评</b>吗 · 没反馈就是水课</p></div>
+    <div class="step" data-n="4"><h3>3 个月再决定</h3><p>有效果 → 续报半年<br>没效果 → <b>立即停</b> · 转自学 + OI Wiki</p></div>
+    <div class="pull">
+      <h2>大连家长省钱秘诀<br><b>"短期试 · 长期续 · 没效果立刻停"</b></h2>
+      <p>别一次买全年 · 退费比报名难 10 倍</p>
+    </div>
+  </div>
+  <div class="cta">
+    <span>#编程报班 #避坑 #大连娃</span>
+    <span class="pill">收藏</span>
+  </div>
+</body>
+</html>

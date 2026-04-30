@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>报班还是自学 · 对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#E0F7FA; color:#1A1A1A; position:relative; }
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #006064, #FFEB3B); }
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #006064); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#006064; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#006064; }
+  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
+  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .col { background:#FFF; border-radius:18px; padding: 20px 22px; border: 4px solid #1A1A1A; }
+  .col.j { box-shadow: 6px 6px 0 #00ACC1; }
+  .col.s { box-shadow: 6px 6px 0 #FF9800; }
+  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900; }
+  .col.j h3 { background: #00ACC1; }
+  .col.s h3 { background: #FF9800; }
+  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #B2EBF2; color: #1A1A1A; font-weight: 700; }
+  .col p:last-child { border-bottom: none; }
+  .col p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #006064; }
+  .case { margin-top: 22px; background: #FFFFFF; border-radius: 16px; padding: 18px 22px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #006064; }
+  .case h3 { font-size: 28px; font-weight: 900; color: #006064; }
+  .case .row { display: flex; align-items: center; padding: 8px 0; font-size: 22px; }
+  .case .row .who { flex: 0 0 130px; font-weight: 900; color: #1A1A1A; }
+  .case .row .ans { color: #424242; font-weight: 700; }
+  .case .row .ans b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #B71C1C; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">3 种娃 · 3 种选法</span>
+    <h1>对比一下 <em>各有各好</em></h1>
+    <div class="compare">
+      <div class="col j">
+        <h3>报班</h3>
+        <p>有体系 / 老师纠错</p>
+        <p>同学一起学 <b>有动力</b></p>
+        <p>大连均价 <b>2-5 万 / 年</b></p>
+        <p>但容易"<b>过度包装</b>"</p>
+      </div>
+      <div class="col s">
+        <h3>自学</h3>
+        <p>免费 / 灵活</p>
+        <p>家长 / 娃要<b>有自驱力</b></p>
+        <p>资源：<b>OI Wiki + 洛谷</b></p>
+        <p>缺点：<b>遇坑没人答</b></p>
+      </div>
+    </div>
+    <div class="case">
+      <h3>3 种娃 · 怎么选</h3>
+      <div class="row"><div class="who">主动型娃</div><div class="ans">→ <b>自学就行</b> · 给资源就能上手</div></div>
+      <div class="row"><div class="who">需要陪伴型</div><div class="ans">→ <b>报班</b> · 老师同伴提供环境</div></div>
+      <div class="row"><div class="who">冲信奥型</div><div class="ans">→ <b>报班 + 自学</b>都要 · 单一不够</div></div>
+    </div>
+  </div>
+</body>
+</html>

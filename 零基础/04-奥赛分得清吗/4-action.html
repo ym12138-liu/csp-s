@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>奥赛分得清吗 · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#4A148C; color:#FFF; position:relative; }
+  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(186,104,200,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,235,59,0.4) 0%, transparent 50%); }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FFEB3B; color:#4A148C; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; }
+  h1 em { font-style:normal; color:#FFEB3B; }
+  .step { background:#2C2C2C; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 10px solid #BA68C8; position: relative; }
+  .step::before { content: attr(data-n); position:absolute; left: -28px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background:#FFEB3B; color:#4A148C; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
+  .step h3 { font-size: 32px; color:#FFEB3B; font-weight:900; padding-left: 40px; }
+  .step p { font-size: 24px; color:#E0E0E0; margin-top: 6px; line-height: 1.5; }
+  .step p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #4A148C; }
+  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #BA68C8, #FFEB3B); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
+  .pull h2 { font-size: 38px; font-weight:900; line-height: 1.35; }
+  .pull h2 b { color: #4A148C; }
+  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
+  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; }
+  .pill { background:#FFEB3B; color:#4A148C; padding:10px 22px; border-radius:100px; font-weight:900; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">家长 3 步看准定位</span>
+    <h1>3 步选对<br><em>属于自家娃的赛事</em></h1>
+
+    <div class="step" data-n="1">
+      <h3>第 1 步 · 算清娃的水平</h3>
+      <p>娃刚学编程 → <b>GESP 1-3 级</b>试试<br>已能写简单 C++ → 直接 <b>CSP-J 初赛</b></p>
+    </div>
+
+    <div class="step" data-n="2">
+      <h3>第 2 步 · 看升学需求</h3>
+      <p>不冲升学 → GESP / CSP-J <b>玩玩就好</b><br>冲强基计划 → 必须打到 <b>NOIP 省一以上</b></p>
+    </div>
+
+    <div class="step" data-n="3">
+      <h3>第 3 步 · 排时间表</h3>
+      <p>9 月 CSP 初赛 / 10 月复赛 = <b>每年信奥主赛季</b><br>3/6/9/12 月 GESP = 备考阶段测评</p>
+    </div>
+
+    <div class="pull">
+      <h2>大连家长一句话<br><b>"GESP 是阶梯 · CSP/NOIP 是赛场"</b></h2>
+      <p>分清定位 · 不会再被机构话术忽悠</p>
+    </div>
+  </div>
+  <div class="cta">
+    <span>#信奥赛事 #零基础 #大连娃</span>
+    <span class="pill">收藏</span>
+  </div>
+</body>
+</html>
