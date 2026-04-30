@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GESP 八升 CSP-S · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg, #FFEBEE 0%, #FFF8E1 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#B71C1C; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
+  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#B71C1C; }
+  h1 em { font-style:normal; background:#FFD700; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
+  .code-card { background: #1A1A1A; color: #FFF; border-radius: 16px; padding: 18px 22px; margin-top: 18px; box-shadow: 6px 6px 0 #B71C1C; }
+  .code-card .name { background: #FFD700; color: #B71C1C; padding: 4px 14px; border-radius: 6px; font-weight: 900; font-size: 22px; display: inline-block; margin-bottom: 8px; }
+  .code-card pre { font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace; font-size: 19px; line-height: 1.45; color: #FFCCBC; }
+  .code-card pre .kw { color: #FFD700; font-weight:700; }
+  .code-card pre .lit { color: #FF8A80; }
+  .code-card pre .cm { color: #9E9E9E; font-style: italic; }
+  .code-card .note { margin-top: 6px; font-size: 22px; color: #FFD700; font-weight: 800; }
+  .code-card .note b { color: #FFF; background: #B71C1C; padding: 0 6px; border-radius: 4px; }
+  .key { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #B71C1C, #FFD700); color: #FFFFFF; border-radius: 16px; box-shadow: 8px 8px 0 #1A1A1A; text-shadow: 2px 2px 0 #1A1A1A; }
+  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+  .key h2 b { color: #FFD700; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · CSP-S 必默 4 段</span>
+    <h1>过完八级<br>这 4 段 <em>必抄</em></h1>
+
+    <div class="code-card">
+      <span class="name">1 · 状压 DP（TSP 模板）</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> s = <span class="lit">0</span>; s &lt; (<span class="lit">1</span>&lt;&lt;n); ++s)
+    <span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; ++i) <span class="kw">if</span> (s&gt;&gt;i &amp; <span class="lit">1</span>)
+        <span class="kw">for</span> (<span class="kw">int</span> j = <span class="lit">0</span>; j &lt; n; ++j) <span class="kw">if</span> (s&gt;&gt;j &amp; <span class="lit">1</span>)
+            f[s][i] = min(f[s][i],
+                f[s^(<span class="lit">1</span>&lt;&lt;i)][j] + cost[j][i]);</pre>
+      <div class="note">关键 · n ≤ <b>20</b> 才能用 · 三重 for</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · KMP next 数组</span>
+<pre><span class="kw">void</span> getNext(<span class="kw">const</span> string&amp; p) {
+    nx[<span class="lit">0</span>] = <span class="lit">0</span>;
+    <span class="kw">for</span> (<span class="kw">int</span> i=<span class="lit">1</span>, k=<span class="lit">0</span>; i &lt; p.size(); ++i) {
+        <span class="kw">while</span> (k &amp;&amp; p[k] != p[i]) k = nx[k-<span class="lit">1</span>];
+        <span class="kw">if</span> (p[k] == p[i]) ++k;
+        nx[i] = k;
+    }
+}</pre>
+      <div class="note">关键 · next[i] = <b>P[0..i] 的最长公共前后缀长度</b></div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · 并查集（路径压缩）</span>
+<pre><span class="kw">int</span> fa[N];
+<span class="kw">int</span> find(<span class="kw">int</span> x) {
+    <span class="kw">return</span> fa[x] == x ? x : fa[x] = find(fa[x]);
+}
+<span class="kw">void</span> merge(<span class="kw">int</span> x, <span class="kw">int</span> y) {
+    fa[find(x)] = find(y);
+}</pre>
+      <div class="note">关键 · 路径压缩 · 几乎 O(α(n))</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · 拆点 / 分层最短路</span>
+<pre><span class="kw">struct</span> State { ll d; <span class="kw">int</span> u, used; };
+priority_queue&lt;State, vector&lt;State&gt;, greater&lt;&gt;&gt; pq;
+pq.push({<span class="lit">0</span>, s, <span class="lit">0</span>}); d[s][<span class="lit">0</span>] = <span class="lit">0</span>;
+<span class="kw">while</span> (!pq.empty()) {
+    <span class="kw">auto</span> [dv, u, used] = pq.top(); pq.pop();
+    <span class="cm">// 普通转移 + 用免费边转移</span>
+}</pre>
+      <div class="note">关键 · 状态多一维 <b>used</b> · 对应 CSP-S 2025 完善 1</div>
+    </div>
+
+    <div class="key">
+      <h2>这 4 段背完<br><b>CSP-S 初赛 60+ 起步</b></h2>
+    </div>
+  </div>
+</body>
+</html>
