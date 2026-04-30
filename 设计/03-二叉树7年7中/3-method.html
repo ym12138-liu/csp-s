@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>二叉树 7 年 7 中 · 方法</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg,#F3E5F5 0%, #FFCCBC 100%); color:#1A1A1A; position:relative; }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FF7043; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
+  h1 { font-size: 80px; font-weight: 900; margin-top:18px; line-height:1.05; color:#4A148C; }
+  h1 em { font-style:normal; background: #FFEB3B; padding:0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; transform:rotate(-1deg);}
+  .formula {
+    margin-top: 30px;
+    background: #1A1A1A; color: #FFF;
+    border-radius: 18px; padding: 24px 28px;
+    box-shadow: 8px 8px 0 #6A1B9A;
+  }
+  .formula .lbl { color: #FFEB3B; font-size: 22px; font-weight: 700; letter-spacing: 2px; }
+  .formula h2 { font-size: 36px; font-weight: 900; margin-top: 6px; line-height: 1.4; }
+  .formula .row { margin-top: 12px; font-size: 26px; line-height: 1.6; }
+  .formula code { background: #FF7043; color: #FFF; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-family: "PingFang SC", monospace; }
+
+  .trick {
+    margin-top: 24px;
+    background: #FFF; border-radius: 16px; padding: 22px 26px;
+    border: 4px solid #1A1A1A; box-shadow: 8px 8px 0 #FF7043;
+  }
+  .trick h3 { font-size: 36px; font-weight: 900; color: #B71C1C; }
+  .trick .step {
+    display: flex; align-items: flex-start;
+    margin-top: 10px;
+  }
+  .trick .step .n { flex:0 0 40px; height:40px; border-radius:50%; background:#FFEB3B; color:#1A1A1A; font-weight:900; font-size:24px; display:flex; align-items:center; justify-content:center; margin-right: 14px; box-shadow:2px 2px 0 #1A1A1A; }
+  .trick .step .t { font-size: 26px; line-height: 1.5; color: #1A1A1A; padding-top: 4px; }
+  .trick .step .t b { background:#FFEB3B; padding: 0 6px; border-radius:4px; font-weight: 800; }
+
+  .quote {
+    margin-top: 22px; padding: 18px 22px;
+    background: linear-gradient(135deg, #6A1B9A, #FF7043);
+    border-radius: 14px; color: #FFF;
+    font-size: 30px; font-weight: 900; line-height: 1.4;
+    text-shadow: 2px 2px 0 #1A1A1A;
+  }
+  .quote b { color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">METHOD · 三遍历口诀</span>
+    <h1>看到这题就是<br><em>送 4 分</em></h1>
+
+    <div class="formula">
+      <div class="lbl">CORE · 性质</div>
+      <h2>完全二叉树性质</h2>
+      <div class="row">高度 H = <code>floor(log₂ n) + 1</code></div>
+      <div class="row">节点 i 的左子 = <code>2i</code> · 右子 = <code>2i+1</code></div>
+      <div class="row">叶子数 ≈ n - <code>floor(n/2)</code></div>
+    </div>
+
+    <div class="trick">
+      <h3>遍历转换三步法</h3>
+      <div class="step"><div class="n">1</div><div class="t">先看<b>前序 / 后序</b>第一个或最后一个 = 根</div></div>
+      <div class="step"><div class="n">2</div><div class="t">在<b>中序</b>找到这个根 · 把序列切成左右两段</div></div>
+      <div class="step"><div class="n">3</div><div class="t"><b>递归</b>到左右子树 · 重复 1-2 直到结束</div></div>
+    </div>
+
+    <div class="quote">
+      记住一句话<br>
+      <b>"中序找根分左右 · 前后序认根"</b>
+    </div>
+  </div>
+</body>
+</html>

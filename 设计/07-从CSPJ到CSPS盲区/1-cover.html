@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>从 CSP-J 到 CSP-S 盲区 · 封面</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body {
+    background: linear-gradient(160deg, #B71C1C 0%, #FF5722 60%, #FFE0B2 100%);
+    color:#FFF; position:relative;
+  }
+  body::before {
+    content:""; position:absolute; bottom:-100px; right:-100px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,235,59,0.4) 0%, transparent 70%);
+  }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
+  .tag {
+    display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:14px 32px;
+    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom: 50px;
+    box-shadow: 6px 6px 0 #FFEB3B;
+  }
+  .pre {
+    font-size: 40px; font-weight:800; color:#FFEB3B;
+    margin-bottom: 12px;
+  }
+  .title-1 {
+    font-size: 96px; font-weight: 900; line-height: 1; color: #FFF;
+    text-shadow: 5px 5px 0 #1A1A1A;
+  }
+  .arrow {
+    margin: 18px 0;
+    font-size: 80px; color:#FFEB3B; font-weight:900;
+    text-shadow: 5px 5px 0 #1A1A1A;
+  }
+  .title-2 {
+    font-size: 144px; font-weight: 900; line-height: 1; color: #FFEB3B;
+    text-shadow: 8px 8px 0 #1A1A1A;
+  }
+  .gap {
+    margin-top: 36px;
+    background:#1A1A1A; color:#FFF;
+    padding: 22px 28px; border-radius: 16px;
+    box-shadow: 6px 6px 0 #FFEB3B;
+    font-size: 36px; font-weight: 800; line-height: 1.4;
+  }
+  .gap b { color:#FF5722; background:#FFEB3B; padding: 0 8px; border-radius:4px;}
+  .num5 {
+    position:absolute; top: 80px; right: 20px;
+    font-size: 200px; font-weight: 900;
+    color: rgba(255,235,59,0.25); line-height: 1;
+  }
+  .footer {
+    position:absolute; bottom:0; left:70px; right:70px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:28px; color:#FFEB3B; font-weight:800;
+  }
+  .stamp { background:#FFEB3B; color:#B71C1C; padding:14px 24px; border-radius:8px; transform:rotate(-5deg); font-weight:900;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <div class="num5">5</div>
+    <div class="tag">CSP-J 卷王进阶 · 必读</div>
+    <div class="pre">普及组刚拿奖 · 别松懈</div>
+    <div class="title-1">从 CSP-J</div>
+    <div class="arrow">▼</div>
+    <div class="title-2">卷到 S</div>
+    <div class="gap">
+      <b>5 块</b>知识盲区<br>不补就会被锤 30 分
+    </div>
+  </div>
+  <div class="footer">
+    <span>#CSP-S #提高组 #进阶</span>
+    <span class="stamp">收藏不亏</span>
+  </div>
+</body>
+</html>

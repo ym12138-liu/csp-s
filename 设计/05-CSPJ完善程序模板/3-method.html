@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CSP-J 完善程序模板 · 代码</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg,#FFF8E1 0%, #C8E6C9 100%); color:#1A1A1A; position:relative;}
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#2E7D32; color:#FFD54F; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
+  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#1B5E20;}
+  h1 em { font-style:normal; background:#FFD54F; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
+
+  .code-card {
+    background:#1A1A1A; color:#FFF; border-radius: 16px;
+    padding: 18px 22px; margin-top: 18px;
+    box-shadow: 6px 6px 0 #FF5E62;
+    position:relative;
+  }
+  .code-card .name {
+    background:#FFD54F; color:#1A1A1A;
+    padding: 4px 14px; border-radius: 6px;
+    font-weight: 900; font-size: 22px;
+    display:inline-block; margin-bottom: 8px;
+  }
+  .code-card pre {
+    font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace;
+    font-size: 20px; line-height: 1.4;
+    color: #E8F5E9;
+    overflow:hidden;
+  }
+  .code-card pre .kw { color:#FFD54F; font-weight:700;}
+  .code-card pre .fn { color:#81C784; font-weight:700;}
+  .code-card pre .cm { color:#9E9E9E; font-style: italic;}
+  .code-card pre .lit { color:#FF8A80;}
+  .code-card .note {
+    margin-top: 8px; font-size: 22px;
+    color: #FFD54F; font-weight: 700;
+  }
+  .code-card .note b { color:#FFF; background:#FF5E62; padding: 0 6px; border-radius: 4px;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CODE · 4 段必默</span>
+    <h1>抄一遍能写<br>抄三遍<em>能默</em></h1>
+
+    <div class="code-card">
+      <span class="name">1 · 二分查找（lower_bound）</span>
+<pre><span class="kw">int</span> <span class="fn">lb</span>(<span class="kw">int</span>* a, <span class="kw">int</span> n, <span class="kw">int</span> x) {
+    <span class="kw">int</span> l = <span class="lit">0</span>, r = n;
+    <span class="kw">while</span> (l < r) {
+        <span class="kw">int</span> mid = (l + r) >> <span class="lit">1</span>;
+        <span class="kw">if</span> (a[mid] < x) l = mid + <span class="lit">1</span>;
+        <span class="kw">else</span> r = mid;
+    }
+    <span class="kw">return</span> l;
+}</pre>
+      <div class="note">关键 · 半开区间 <b>[l, r)</b>；<b>l = mid+1, r = mid</b></div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">2 · 质因数分解</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">2</span>; (<span class="kw">long long</span>)i*i <= n; ++i)
+    <span class="kw">while</span> (n % i == <span class="lit">0</span>) {
+        cout << i << <span class="lit">' '</span>;
+        n /= i;
+    }
+<span class="kw">if</span> (n > <span class="lit">1</span>) cout << n;</pre>
+      <div class="note">关键 · 上界 <b>i*i ≤ n</b> · 剩余 n &gt; 1 一定是素数</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">3 · BFS Flood Fill</span>
+<pre>queue&lt;pii&gt; q; q.<span class="fn">push</span>({sx,sy});
+g[sx][sy] = NEW;
+<span class="kw">while</span> (!q.<span class="fn">empty</span>()) {
+    <span class="kw">auto</span> [x,y] = q.<span class="fn">front</span>(); q.<span class="fn">pop</span>();
+    <span class="kw">for</span> (<span class="kw">int</span> d=<span class="lit">0</span>; d&lt;<span class="lit">4</span>; ++d) {
+        <span class="kw">int</span> nx=x+dx[d], ny=y+dy[d];
+        <span class="kw">if</span> (g[nx][ny]==OLD) {
+            g[nx][ny]=NEW;
+            q.<span class="fn">push</span>({nx,ny});
+        }
+    }
+}</pre>
+      <div class="note">关键 · <b>染色再入队</b> · 防止重复访问</div>
+    </div>
+
+    <div class="code-card">
+      <span class="name">4 · 摩尔投票（2025 新）</span>
+<pre><span class="kw">int</span> cand = <span class="lit">0</span>, cnt = <span class="lit">0</span>;
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; ++i) {
+    <span class="kw">if</span> (cnt == <span class="lit">0</span>) cand = a[i], cnt = <span class="lit">1</span>;
+    <span class="kw">else if</span> (a[i] == cand) cnt++;
+    <span class="kw">else</span> cnt--;
+}</pre>
+      <div class="note">关键 · "<b>一对一抵消</b>"，多数派必有剩余</div>
+    </div>
+  </div>
+</body>
+</html>

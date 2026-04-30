@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CSP-S 最短路四连考 · 模板</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: linear-gradient(180deg,#E1F5FE 0%, #FFF59D 100%); color:#1A1A1A; position:relative;}
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#01579B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
+  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#01579B;}
+  h1 em { font-style:normal; background:#FFEB3B; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
+
+  .scene {
+    margin-top: 22px; background:#FFF; border-radius: 16px;
+    padding: 18px 22px; border-left: 10px solid #FF5722;
+    box-shadow: 5px 5px 0 #01579B;
+  }
+  .scene .lbl { font-size: 22px; color: #FF5722; font-weight: 800; letter-spacing: 1px;}
+  .scene p { font-size: 26px; color:#1A1A1A; font-weight: 700; line-height: 1.5; margin-top: 4px;}
+  .scene p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px;}
+
+  .code-card {
+    margin-top: 22px;
+    background:#1A1A1A; color:#FFF; border-radius: 16px;
+    padding: 18px 22px; box-shadow: 6px 6px 0 #FF5722;
+  }
+  .code-card .name {
+    background:#FFEB3B; color:#01579B;
+    padding: 4px 14px; border-radius: 6px;
+    font-weight: 900; font-size: 22px;
+    display:inline-block; margin-bottom: 8px;
+  }
+  .code-card pre {
+    font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace;
+    font-size: 19px; line-height: 1.45;
+    color: #E0F2F1;
+  }
+  .code-card pre .kw { color:#FFEB3B; font-weight:700;}
+  .code-card pre .fn { color:#81D4FA; font-weight:700;}
+  .code-card pre .lit { color:#FF8A80;}
+  .code-card pre .cm { color:#9E9E9E; font-style: italic;}
+  .key {
+    margin-top: 22px; padding: 22px 26px;
+    background: linear-gradient(135deg, #01579B, #FF5722);
+    color:#FFF; border-radius: 16px;
+    box-shadow: 8px 8px 0 #FFEB3B;
+  }
+  .key h2 { font-size:34px; font-weight:900; line-height:1.4; text-shadow:2px 2px 0 #1A1A1A;}
+  .key h2 b { color:#FFEB3B;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CORE · 拆点核心套路</span>
+    <h1>关键<em>1 句话</em><br>把状态加进图</h1>
+
+    <div class="scene">
+      <div class="lbl">SCENE · 大连家长能秒懂</div>
+      <p>从星海湾到东软 · <b>路上能用一次免费票</b><br>问最少多少钱 · 这就是分层最短路</p>
+    </div>
+
+    <div class="code-card">
+      <span class="name">分层 Dijkstra · 核心转移</span>
+<pre><span class="kw">struct</span> State { ll d; <span class="kw">int</span> u, used; };
+priority_queue&lt;State, ..., greater&lt;&gt;&gt; pq;
+pq.<span class="fn">push</span>({<span class="lit">0</span>, s, <span class="lit">0</span>});  d[s][<span class="lit">0</span>] = <span class="lit">0</span>;
+
+<span class="kw">while</span> (!pq.<span class="fn">empty</span>()) {
+    <span class="kw">auto</span> [d_, u, used] = pq.<span class="fn">top</span>(); pq.<span class="fn">pop</span>();
+    <span class="kw">if</span> (d_ &gt; d[u][used]) <span class="kw">continue</span>;
+    <span class="kw">for</span> (<span class="kw">auto</span> [v, w] : adj[u]) {
+        <span class="cm">// 1. 普通转移：层不变</span>
+        <span class="kw">if</span> (d[u][used] + w &lt; d[v][used]) ...;
+        <span class="cm">// 2. 用免费边：层从 0 跳到 1</span>
+        <span class="kw">if</span> (used == <span class="lit">0</span> &amp;&amp; d[u][<span class="lit">0</span>] &lt; d[v][<span class="lit">1</span>]) ...;
+    }
+}</pre>
+    </div>
+
+    <div class="key">
+      <h2>记一句话<br><b>"图变成 N×K 个点"</b></h2>
+    </div>
+  </div>
+</body>
+</html>

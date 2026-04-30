@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>信奥黑话词典 · 易混淆</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #0A0A0A; color: #FFEB3B; position:relative;}
+  body::before {
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255,235,59,0.15) 0%, transparent 60%);
+  }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#FF1744; color:#FFF; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace;}
+  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#FFEB3B;}
+  h1 em { font-style:normal; color:#00E5FF;}
+
+  .vs {
+    background: #2C2C2C;
+    border: 2px solid #FFEB3B;
+    border-radius: 16px; padding: 22px 26px;
+    margin-top: 22px;
+    box-shadow: 6px 6px 0 #FF1744;
+    position: relative;
+  }
+  .vs .pair {
+    display:flex; align-items: stretch; gap: 16px;
+  }
+  .vs .item { flex: 1; }
+  .vs .word {
+    font-family: "SF Mono", monospace;
+    font-size: 32px; font-weight: 900;
+    background: #FFEB3B; color: #1A1A1A;
+    padding: 6px 12px; border-radius: 6px; display: inline-block;
+    margin-bottom: 8px;
+  }
+  .vs .word.b { background: #00E5FF;}
+  .vs .item p {
+    font-size: 22px; line-height: 1.5;
+    color: #E0E0E0; font-weight: 600;
+  }
+  .vs .item p b { background:#FFEB3B; color:#1A1A1A; padding: 0 6px; border-radius:3px;}
+  .vs .vsign {
+    align-self: center;
+    color: #FF1744; font-size: 40px; font-weight: 900;
+    font-family: "SF Mono", monospace;
+  }
+
+  .pull {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #FFEB3B, #FF1744);
+    color: #0A0A0A;
+    padding: 22px 26px; border-radius: 12px;
+    font-family: "SF Mono", monospace;
+    box-shadow: 6px 6px 0 #FFEB3B, 0 0 30px rgba(255,235,59,0.4);
+  }
+  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4;}
+  .pull h2 b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">{ DIFF } 易混淆</span>
+    <h1>这几对<br><em>不要再搞错</em></h1>
+
+    <div class="vs">
+      <div class="pair">
+        <div class="item"><div class="word">子串</div><p>必须 <b>连续</b><br>"abc" 是 "xabcx" 的子串</p></div>
+        <div class="vsign">VS</div>
+        <div class="item"><div class="word b">子序列</div><p>可以 <b>跳着选</b><br>"abc" 是 "axbxc" 的子序列</p></div>
+      </div>
+    </div>
+
+    <div class="vs">
+      <div class="pair">
+        <div class="item"><div class="word">DFS</div><p>用 <b>栈 / 递归</b><br>找一条路径 / 全排列</p></div>
+        <div class="vsign">VS</div>
+        <div class="item"><div class="word b">BFS</div><p>用 <b>队列</b><br>找<b>最短步数</b> / 最近</p></div>
+      </div>
+    </div>
+
+    <div class="vs">
+      <div class="pair">
+        <div class="item"><div class="word">前缀和</div><p>用来 <b>查询区间</b> 的和<br>O(1) 查询</p></div>
+        <div class="vsign">VS</div>
+        <div class="item"><div class="word b">差分</div><p>用来 <b>修改区间</b> 的值<br>O(1) 修改</p></div>
+      </div>
+    </div>
+
+    <div class="vs">
+      <div class="pair">
+        <div class="item"><div class="word">Dijkstra</div><p><b>不能</b>处理负权<br>稳定 O((n+m)log n)</p></div>
+        <div class="vsign">VS</div>
+        <div class="item"><div class="word b">SPFA</div><p>能处理负权<br>但 <b>易被卡</b> 到 O(nm)</p></div>
+      </div>
+    </div>
+
+    <div class="pull">
+      <h2>家长一句话<br><b>"听不懂没关系 · 别说错就行"</b></h2>
+    </div>
+  </div>
+</body>
+</html>

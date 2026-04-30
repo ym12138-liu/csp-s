@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>排列组合 4 大套路 · 数据</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#FCE4EC; color:#1A1A1A; position:relative;}
+  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#4A148C,#E91E63);}
+  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#E91E63,#4A148C);}
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#4A148C; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
+  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#4A148C;}
+  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#FFEB3B 60%); padding:0 6px;}
+
+  .row {
+    display:flex; align-items:center; padding: 16px 22px; margin-top: 14px;
+    background:#FFF; border-radius: 16px;
+    border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #4A148C;
+  }
+  .row .icon {
+    flex: 0 0 76px; height:76px; border-radius: 16px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:900; font-size:28px; color:#FFF;
+    margin-right: 18px; box-shadow: 3px 3px 0 #1A1A1A;
+  }
+  .ic1 { background:#E91E63;}
+  .ic2 { background:#7B1FA2;}
+  .ic3 { background:#FF5722;}
+  .ic4 { background:#FBC02D; color:#4A148C;}
+  .row .text { flex: 1; }
+  .row .text h3 { font-size:30px; font-weight:900; color:#4A148C;}
+  .row .text p { font-size: 22px; color:#424242; margin-top:4px;}
+  .row .text p code { background:#FFEB3B; color:#4A148C; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-family:"PingFang SC", monospace;}
+  .row .freq { font-size:24px; font-weight:900; color:#B71C1C;}
+
+  .key { margin-top:22px; background:#1A1A1A; color:#FFEB3B; padding: 22px 26px; border-radius:16px; box-shadow:8px 8px 0 #E91E63;}
+  .key .lbl { font-size:22px; opacity:.85; letter-spacing:2px; font-weight:700;}
+  .key h2 { font-size:34px; font-weight:900; color:#FFF; line-height:1.4; margin-top:6px;}
+  .key h2 b { color:#FFEB3B; }
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">FREQUENCY · 7 年命中</span>
+    <h1>组合题<br><em>每年都来</em></h1>
+
+    <div class="row">
+      <div class="icon ic1">隔</div>
+      <div class="text"><h3>隔板法</h3><p>n 个相同球分到 k 盒每盒至少 1 → <code>C(n-1, k-1)</code></p></div>
+      <div class="freq">3 次</div>
+    </div>
+    <div class="row">
+      <div class="icon ic2">捆</div>
+      <div class="text"><h3>捆绑法</h3><p>相邻元素先看作整体 · 内部再排列 · 然后整体一起排</p></div>
+      <div class="freq">2 次</div>
+    </div>
+    <div class="row">
+      <div class="icon ic3">容</div>
+      <div class="text"><h3>容斥原理</h3><p><code>|A∪B∪C| = ΣA - ΣAB + ABC</code> · 部门选人 / 整除题型</p></div>
+      <div class="freq">2 次</div>
+    </div>
+    <div class="row">
+      <div class="icon ic4">错</div>
+      <div class="text"><h3>错排公式</h3><p><code>D(n) = (n-1)(D(n-1)+D(n-2))</code> · n 物全错位的方案</p></div>
+      <div class="freq">1 次</div>
+    </div>
+
+    <div class="row">
+      <div class="icon" style="background:#26A69A;">路</div>
+      <div class="text"><h3>路径计数（2025 新）</h3><p>m×n 网格只能向右下走 → <code>C(m+n, m)</code></p></div>
+      <div class="freq">1 次</div>
+    </div>
+    <div class="row">
+      <div class="icon" style="background:#3949AB;">鸽</div>
+      <div class="text"><h3>鸽巢原理</h3><p>n+1 个物体 n 个抽屉 · 必有抽屉 ≥ 2 物</p></div>
+      <div class="freq">1 次</div>
+    </div>
+
+    <div class="key">
+      <div class="lbl">DATA</div>
+      <h2>7 年累计 <b>≈ 16 分</b><br>不学就是送 8% 卷面分</h2>
+    </div>
+  </div>
+</body>
+</html>

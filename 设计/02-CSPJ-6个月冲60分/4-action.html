@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>6 个月冲 CSP-J 60+ · 行动</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background:#1A1A1A; color:#FFF; position:relative; }
+  body::before {
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(29,233,182,0.4) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(255,235,59,0.25) 0%, transparent 50%);
+  }
+  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
+  .h-tag { display:inline-block; background:#1DE9B6; color:#1A1A1A; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
+  h1 { font-size: 84px; font-weight: 900; margin-top:18px; line-height:1.05; }
+  h1 em { font-style:normal; color:#1DE9B6; }
+  .check {
+    background:#2C2C2C; border-radius: 16px; padding: 22px 26px;
+    margin-top: 18px; display: flex; align-items: center;
+    border-left: 8px solid #1DE9B6;
+  }
+  .check .box {
+    flex: 0 0 56px; height: 56px; border-radius: 10px;
+    background: #FFF; border: 4px solid #1A1A1A;
+    margin-right: 22px; position: relative;
+  }
+  .check .box::after {
+    content:""; position:absolute; top:8px; left:14px;
+    width:14px; height:28px; border:solid #FF5E62;
+    border-width: 0 6px 6px 0; transform:rotate(45deg);
+  }
+  .check .txt { flex:1; }
+  .check h3 { font-size:30px; font-weight:900; color:#FFEB3B; }
+  .check p { font-size:22px; color:#E0E0E0; margin-top: 4px; }
+  .check p code { background:#1DE9B6; color:#1A1A1A; padding:2px 8px; border-radius:4px; font-weight:700; }
+
+  .res {
+    margin-top: 26px; background:linear-gradient(135deg,#1DE9B6,#FFEB3B);
+    border-radius: 18px; padding: 22px 26px; color:#1A1A1A;
+    box-shadow: 8px 8px 0 #FF5E62;
+  }
+  .res h2 { font-size:36px; font-weight:900; }
+  .res .grid { margin-top: 12px; display:grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+  .res .item { font-size:24px; font-weight:800; }
+  .res .item b { color:#B71C1C; }
+  .cta {
+    position:absolute; bottom:0; left:60px; right:60px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:24px; color:#1DE9B6; font-weight:700;
+  }
+  .pill { background:#FFEB3B; color:#1A1A1A; padding:10px 22px; border-radius:100px; font-weight:800;}
+</style>
+</head>
+<body>
+  <div class="safe">
+    <span class="h-tag">CHECKLIST · 这周打钩</span>
+    <h1>本周必做<br><em>5 件事</em></h1>
+    <div class="check"><div class="box"></div><div class="txt"><h3>抄一遍 21 模块清单</h3><p>对照 <code>CSP-J必备基础算法.md</code> 抄下 #1 节的模块表</p></div></div>
+    <div class="check"><div class="box"></div><div class="txt"><h3>建一个错题本</h3><p>21 个模块每模块一栏 · 错一题打一个加号</p></div></div>
+    <div class="check"><div class="box"></div><div class="txt"><h3>3 道模板必刷</h3><p>洛谷 <code>P2249</code> 二分 · <code>P1030</code> 二叉树 · <code>P1048</code> 背包</p></div></div>
+    <div class="check"><div class="box"></div><div class="txt"><h3>限时刷 2024 真题</h3><p>90 分钟模考 · 找出 <b>5 个最弱考点</b></p></div></div>
+    <div class="check"><div class="box"></div><div class="txt"><h3>OI Wiki 入门 DP</h3><p>读"动态规划-入门"和"基础-枚举/搜索"两章</p></div></div>
+    <div class="res">
+      <h2>资源清单</h2>
+      <div class="grid">
+        <div class="item">书 · <b>一本通入门</b></div>
+        <div class="item">网 · <b>OI Wiki</b></div>
+        <div class="item">题 · 洛谷 P1000-P2999</div>
+        <div class="item">真题 · 本号汇总文档</div>
+      </div>
+    </div>
+  </div>
+  <div class="cta">
+    <span>#备考路线 #大连家长 #信奥</span>
+    <span class="pill">收藏开始</span>
+  </div>
+</body>
+</html>
