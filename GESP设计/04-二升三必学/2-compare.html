@@ -1,85 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 二升三 · 对比</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>二级升三级 · 5 项必补</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #F3E5F5; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #4A148C, #FF6E40); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #FF6E40, #4A148C); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#4A148C; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#4A148C; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
-
-  .compare {
-    margin-top: 28px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-  }
-  .col {
-    background:#FFF; border-radius:18px; padding: 20px 22px;
-    border: 4px solid #1A1A1A;
-  }
-  .col.j { box-shadow: 6px 6px 0 #7B1FA2; }
-  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
-  .col h3 {
-    text-align: center; padding: 8px 0; border-radius: 8px;
-    margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900;
-  }
-  .col.j h3 { background: #7B1FA2; }
-  .col.s h3 { background: #B71C1C; }
-  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #E1BEE7; color: #1A1A1A; font-weight: 700; }
-  .col p:last-child { border-bottom: none; }
-  .col p code { background:#FFEB3B; color:#B71C1C; padding: 2px 8px; border-radius:4px; font-weight: 700; }
-
-  .gap-list {
-    margin-top: 22px;
-    background: #1A1A1A; color: #FFF; border-radius: 18px;
-    padding: 22px 26px;
-    box-shadow: 8px 8px 0 #FF6E40;
-  }
-  .gap-list h2 { font-size:34px; font-weight:900; color:#FFEB3B; margin-bottom: 14px; }
-  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
-  .gap-row:last-child { border-bottom: none; }
-  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#FF6E40; color:#FFFFFF; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFEB3B; }
-  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
-  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">COMPARE · 三级 vs 二级</span>
-    <h1>新增<em>位运算 + 进制</em><br>这才是真挑战</h1>
-
-    <div class="compare">
-      <div class="col j">
-        <h3>二级</h3>
-        <p>仅基本字面量 010</p>
-        <p>不考位运算</p>
-        <p>仅 char 与 ASCII</p>
-        <p>无内置函数考查</p>
-        <p>无三目运算符</p>
-      </div>
-      <div class="col s">
-        <h3>三级</h3>
-        <p><b>2/8/10/16 互转</b></p>
-        <p><b>& | ^ ~ &lt;&lt; &gt;&gt;</b></p>
-        <p><b>原 / 反 / 补码</b></p>
-        <p><b>min/max/abs/pow</b></p>
-        <p><b>三目 a?b:c</b></p>
-      </div>
-    </div>
-
-    <div class="gap-list">
-      <h2>二升三 · 必补 5 项</h2>
-      <div class="gap-row"><div class="n">1</div><div class="nm">进制转换（2/8/10/16 互转）</div><span class="sc">≈30 分</span></div>
-      <div class="gap-row"><div class="n">2</div><div class="nm">位运算 6 个（& | ^ ~ << >>）</div><span class="sc">≈60 分</span></div>
-      <div class="gap-row"><div class="n">3</div><div class="nm">字符串处理（strcmp / 遍历）</div><span class="sc">≈30 分</span></div>
-      <div class="gap-row"><div class="n">4</div><div class="nm">C++ 内置函数（min/max/abs/pow）</div><span class="sc">≈30 分</span></div>
-      <div class="gap-row"><div class="n">5</div><div class="nm">三目 + 流程图 + 逻辑推理</div><span class="sc">≈22 分</span></div>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.list { position: absolute; top: 380px; left: 60px; right: 60px; }
+.row { display: flex; align-items: center; padding: 12px 20px;
+margin-bottom: 12px; border-radius: 12px;
+background: #FFFFFF; border: 3px solid #E3F2FD; }
+.row .num { flex: 0 0 50px; height: 50px; border-radius: 50%;
+background: #0D47A1; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 22px; font-weight: 900; margin-right: 16px; }
+.row .body { flex: 1; }
+.row .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.row .body p { font-size: 16px; color: #424242; margin-top: 2px; font-weight: 700; }
+.row .score { flex: 0 0 100px; text-align: right;
+font-size: 22px; font-weight: 900; color: #B71C1C; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">RANK · 5 项必补</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 新增 5 块·缺一不可</div><h1>三级<br>补这 <b>5 项</b></h1></div>
+<div class="list">
+<div class="row"><div class="num">1</div><div class="body"><h3>进制转换</h3><p>2/8/10/16 互转 + 短除法</p></div><div class="score">30 分</div></div><div class="row"><div class="num">2</div><div class="body"><h3>位运算 6 个</h3><p>& | ^ ~ << >></p></div><div class="score">60 分</div></div><div class="row"><div class="num">3</div><div class="body"><h3>字符串处理</h3><p>strcmp + 遍历</p></div><div class="score">30 分</div></div><div class="row"><div class="num">4</div><div class="body"><h3>C++ 内置函数</h3><p>min/max/abs/pow</p></div><div class="score">30 分</div></div><div class="row"><div class="num">5</div><div class="body"><h3>三目 + 流程图</h3><p>逻辑推理</p></div><div class="score">22 分</div></div>
+</div>
+<div class="pull"><h2>位运算 + 进制 = 三级 60+</h2></div>
+<div class="footer"><span class="txt">必补·不能跳</span></div>
+</body></html>

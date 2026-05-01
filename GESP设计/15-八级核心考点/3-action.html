@@ -1,50 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 八级核心考点 · 行动</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>GESP 八级 · 这周开始</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#1A1A1A; color:#FFF; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(74,20,140,0.6) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,215,0,0.5) 0%, transparent 50%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFD700; color:#4A148C; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 84px; font-weight:900; margin-top:18px; line-height:1.05; color:#FFD700; }
-  h1 em { font-style:normal; color:#FFFFFF; }
-  .check { background:#2C2C2C; border-radius: 18px; padding: 22px 26px; margin-top: 18px; display: flex; align-items: center; border-left: 10px solid #FFD700; }
-  .check .box { flex: 0 0 60px; height: 60px; border-radius:12px; background:#FFD700; border: 4px solid #1A1A1A; margin-right: 22px; position: relative; }
-  .check .box::after { content:""; position:absolute; top:8px; left:14px; width:14px; height:30px; border:solid #4A148C; border-width: 0 6px 6px 0; transform: rotate(45deg); }
-  .check h3 { font-size:32px; color:#FFD700; font-weight:900; }
-  .check p { font-size:24px; color:#E0E0E0; margin-top: 4px; line-height: 1.45; }
-  .check p code { background:#FFD700; color:#4A148C; padding:2px 10px; border-radius:4px; font-weight:700; }
-  .check p b { color:#CE93D8; }
-  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #FFD700, #4A148C); color:#FFFFFF; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; text-shadow: 2px 2px 0 #1A1A1A; }
-  .pull h2 { font-size: 38px; font-weight:900; line-height:1.4; }
-  .pull h2 b { color: #FFD700; }
-  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
-  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFD700; font-weight:700; }
-  .pill { background:#FFD700; color:#4A148C; padding:10px 22px; border-radius:100px; font-weight:900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">ACTION · 24 周冲顶</span>
-    <h1>24 周冲顶<br><em>冲 60 分</em></h1>
-    <div class="check"><div class="box"></div><div><h3>W1-5 · 四大图算法（重点）</h3><p>Kruskal/Prim/Dijkstra/Floyd · <b>各练 10 题</b></p></div></div>
-    <div class="check"><div class="box"></div><div><h3>W6-8 · 组合数学（3 周）</h3><p>排列 / 组合 / 二项式 / 杨辉三角 DP</p></div></div>
-    <div class="check"><div class="box"></div><div><h3>W9-11 · 高级 DP（3 周）</h3><p>树形 + 区间 + LCS 滚动数组</p></div></div>
-    <div class="check"><div class="box"></div><div><h3>W12-13 · OOP 进阶</h3><p>多构造 + 引用 + 继承访问权限</p></div></div>
-    <div class="check"><div class="box"></div><div><h3>W14-15 · 卡特兰 + 概率</h3><p>卡特兰 / 错排 + 古典 / 几何概率</p></div></div>
-    <div class="check"><div class="box"></div><div><h3>W16-24 · 限时刷真题</h3><p>2024-2026 八级全部 · <b>稳定 70+ 是顶</b></p></div></div>
-    <div class="pull">
-      <h2>一句话总结<br><b>四大图 + 组合 + 树 DP = 八级 60+</b></h2>
-      <p>大连家长 24 周冲顶 · GESP 顶级</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#GESP八级 #顶级 #大连娃</span>
-    <span class="pill">收藏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.acts { position: absolute; top: 400px; left: 60px; right: 60px; }
+.act { display: flex; padding: 16px 22px; margin-bottom: 14px;
+background: #E3F2FD; border-radius: 14px; border-left: 6px solid #0D47A1; }
+.act .num { flex: 0 0 60px; font-size: 36px; font-weight: 900; color: #0D47A1; }
+.act .body h3 { font-size: 24px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.act .body p { font-size: 16px; color: #424242; margin-top: 6px; font-weight: 700; line-height: 1.5; }
+.act .body p b { background: #FFF59D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">ACTION · 这周必做</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 不堆量 · 抓重点</div><h1>立刻能做的<br><b>3 件事</b></h1></div>
+<div class="acts">
+<div class="act"><div class="num">1</div><div class="body"><h3>建错题本</h3><p>八级 5 块各开 1 栏 · 错一道打一个加号 · <b>1 个月知道哪块最弱</b></p></div></div><div class="act"><div class="num">2</div><div class="body"><h3>限时刷 2025 真题</h3><p>90 分钟 1 套 · <b>找最弱模块</b> · 下周专项补</p></div></div><div class="act"><div class="num">3</div><div class="body"><h3>对照本号打标 PDF</h3><p>GESP 八级 历年真题逐题打过标 · <b>主页私信领</b></p></div></div>
+</div>
+<div class="pull"><h2>不报班也行 · <b>真题 + 文档</b>自学就够</h2></div>
+<div class="footer"><span class="txt">小班 3 人 · 因诺信奥</span></div>
+</body></html>
