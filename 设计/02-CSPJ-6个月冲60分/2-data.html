@@ -2,67 +2,81 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>6 个月冲 CSP-J 60+ · 时间表</title>
+<title>每日节奏 · 一周 5 件事</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #E0F2F1; color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#00897B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; }
-  h1 { font-size: 72px; font-weight: 900; margin-top:18px; line-height:1.1; color:#004D40; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+  .top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 200px; left: 60px; right: 60px; }
+  .h1-area .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+  .h1-area h1 { font-size: 64px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+  .h1-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+
   .timeline {
-    margin-top: 35px;
-    position: relative;
-    padding-left: 100px;
+    position: absolute; top: 460px; left: 60px; right: 60px;
+    padding-left: 130px;
   }
   .timeline::before {
-    content:""; position:absolute; left: -16px; top: 60px; bottom: 60px; width: 6px;
-    background: linear-gradient(180deg, #00BFA5, #FFEB3B); border-radius: 3px; z-index: 0;
+    content: ""; position: absolute; left: 60px; top: 30px; bottom: 30px; width: 4px;
+    background: #2196F3;
   }
-  .stage {
-    background:#FFF; border-radius: 18px; padding: 18px 22px;
-    margin-bottom: 18px; position: relative;
-    border: 3px solid #1A1A1A; box-shadow: 6px 6px 0 #00897B;
-  }
-  .stage::before {
-    content: attr(data-week);
-    position: absolute; left: -104px; top: 26px;
-    width: 90px; height: 50px; border-radius: 12px;
-    background: #FF5E62; color: #FFF; font-weight: 900; font-size: 20px;
+  .day { background: #E3F2FD; border-radius: 14px; padding: 14px 20px; margin-bottom: 14px; position: relative; }
+  .day::before {
+    content: attr(data-d);
+    position: absolute; left: -100px; top: 14px;
+    width: 86px; height: 36px; border-radius: 8px;
+    background: #0D47A1; color: #FFFFFF;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 3px 3px 0 #1A1A1A;
-    text-align: center;
-    line-height: 1.1;
-    z-index: 2;
+    font-size: 16px; font-weight: 900;
   }
-  .stage h3 { font-size:34px; font-weight: 900; color: #004D40; margin-bottom: 6px; }
-  .stage p { font-size: 24px; color: #424242; line-height: 1.45; }
-  .stage p b { color:#B71C1C; background:#FFF59D; padding: 0 6px; border-radius: 4px; }
-  .key {
-    margin-top: 24px; background: #1A1A1A; color: #1DE9B6;
-    padding: 22px 26px; border-radius: 16px;
-    box-shadow: 8px 8px 0 #FF5E62;
-  }
-  .key .lbl { font-size: 22px; color: #FFEB3B; letter-spacing: 2px; font-weight: 700; }
-  .key .txt { font-size: 32px; color: #FFF; font-weight: 800; line-height: 1.4; margin-top: 6px;}
+  .day h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+  .day p { font-size: 16px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.4; }
+  .day p b { background: #FFFFFF; color: #0D47A1; padding: 0 6px; border-radius: 4px; }
+
+  .pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3; letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+  .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">ROADMAP · 6 个月时间表</span>
-    <h1>5 个阶段<br><em>每周 2-3 模块</em></h1>
-    <div class="timeline">
-      <div class="stage" data-week="W1-4"><h3>A · C++ 基础 + 数据结构</h3><p>变量 / 控制流 / 数组 / 字符串 / STL；手写 <b>栈 队列 链表</b></p></div>
-      <div class="stage" data-week="W5-10"><h3>B · 经典模板算法</h3><p>排序 / 二分 / 递归 / 枚举 / DFS·BFS / <b>一维 + 二维 DP</b></p></div>
-      <div class="stage" data-week="W11-13"><h3>C · 数学与离散</h3><p>排列组合 4 套路 / 数论 GCD 素数 / <b>鸽巢原理</b></p></div>
-      <div class="stage" data-week="W14-15"><h3>D · 数据结构进阶</h3><p>二叉树性质 + 三遍历转换 / 表达式 / <b>简单图论</b></p></div>
-      <div class="stage" data-week="W16-24"><h3>E · 真题套刷</h3><p>每周 1 套真题 + 错题分类；考前 2 周冲刺 <b>阅读 + 完善</b></p></div>
-    </div>
-    <div class="key">
-      <div class="lbl">关键节奏</div>
-      <div class="txt">平日 1 题 · 周末 1 套真题<br>每月 1 次模考 · 持续到考前</div>
-    </div>
+  <div class="top">
+    <span class="badge">DAILY · 一周节奏</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <div class="pre">// 平日 1 题 · 周末 1 套 · 月度 1 模考</div>
+    <h1>每周 <b>5 件事</b><br>不堆不缺</h1>
+  </div>
+
+  <div class="timeline">
+    <div class="day" data-d="周一-周四"><h3>每日 1 题</h3><p>30 分钟 1 题 + <b>15 分钟订正</b> · 主刷 OI Wiki 推荐题</p></div>
+    <div class="day" data-d="周五"><h3>错题复盘</h3><p>把本周错的<b>整理成卡片</b> · 分类到 21 模块</p></div>
+    <div class="day" data-d="周六"><h3>限时真题</h3><p>90 分钟 1 套 <b>历年真题</b> · 不查任何资料</p></div>
+    <div class="day" data-d="周日"><h3>订正 + 模板</h3><p>每段阅读<b>识别算法</b> · 完善程序的空全部讲清</p></div>
+    <div class="day" data-d="月底"><h3>1 次模考</h3><p>限时 + 不查资料 · <b>对照打标</b>看哪块还在丢分</p></div>
+  </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>不上课外班也行 · <b>真题 + 文档</b>自学就够</h2>
+  </div>
+
+  <div class="footer">
+    <span class="txt">节奏稳 · 不焦虑</span>
   </div>
 </body>
 </html>

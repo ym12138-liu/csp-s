@@ -2,75 +2,93 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 完善程序模板 · 封面</title>
+<title>完善程序 · 8 个核心模板</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(160deg, #2E7D32 0%, #66BB6A 50%, #FFD54F 100%);
-    color:#1A1A1A; position:relative;
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+  .top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 200px; left: 60px; right: 60px; }
+  .h1-area .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+  .h1-area h1 { font-size: 64px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+  .h1-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+
+  .ladder {
+    position: absolute; top: 480px; left: 60px; right: 60px;
   }
-  body::before {
-    content:""; position:absolute; top:100px; right:-80px;
-    width: 360px; height: 360px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  .step {
+    display: flex; align-items: center;
+    padding: 12px 20px; margin-bottom: 8px;
+    border-radius: 10px;
   }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#1A1A1A; color:#FFD54F; padding:14px 32px;
-    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom:50px;
-    box-shadow: 6px 6px 0 #2E7D32;
+  .step .num {
+    flex: 0 0 60px; height: 50px; border-radius: 8px;
+    background: rgba(255,255,255,0.6); color: #0D47A1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 900;
+    margin-right: 16px;
   }
-  .pre { font-size:42px; font-weight:800; color:#1B5E20; margin-bottom:14px; }
-  .num {
-    font-size: 280px; font-weight: 900; line-height: 0.85;
-    color: #FFFFFF;
-    text-shadow: 12px 12px 0 #1B5E20;
+  .step .body { flex: 1; }
+  .step .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+  .step .body p { font-size: 16px; color: #1A1A1A; margin-top: 2px; font-weight: 700; opacity: 0.9; }
+  .step.s1 { background: #BBDEFB; }
+  .step.s2 { background: #B3E5FC; }
+  .step.s3 { background: #B2EBF2; }
+  .step.s4 { background: #B2DFDB; }
+  .step.s5 { background: #C8E6C9; }
+  .step.s6 { background: #DCEDC8; }
+  .step.s7 { background: #FFF9C4; }
+  .step.s8 { background: #FFCCBC; }
+
+  .pull {
+    position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #0D47A1; color: #FFFFFF;
+    padding: 22px 28px; border-radius: 16px;
   }
-  .title {
-    font-size: 96px; font-weight: 900;
-    color: #1A1A1A; line-height: 1.05; margin-top: 28px;
-  }
-  .title em {
-    font-style: normal;
-    background: #FF5E62; color:#FFF;
-    padding: 0 14px; display: inline-block;
-    box-shadow: 6px 6px 0 #1A1A1A;
-  }
-  .sub {
-    margin-top: 40px;
-    background: #1A1A1A; color: #FFD54F;
-    padding: 18px 24px; border-radius: 14px;
-    box-shadow: 6px 6px 0 #FF5E62;
-    font-size: 36px; font-weight: 800;
-    display:inline-block; line-height: 1.4;
-  }
-  .sub b { color:#FFFFFF; }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#1B5E20; font-weight:800;
-  }
-  .stamp { background:#1A1A1A; color:#FFD54F; padding:14px 24px; border-radius:8px; transform:rotate(-5deg); font-weight:900;}
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3; letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+  .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <div class="tag">完善程序 · 模板就够</div>
-    <div class="pre">不靠刷题量 · 靠肌肉记忆</div>
-    <div class="num">8</div>
-    <div class="title">
-      个必背<br>
-      <em>核心模板</em>
-    </div>
-    <div class="sub">
-      抄一遍能写 · 抄三遍能默<br>
-      <b>30 分稳拿 20+</b>
-    </div>
+  <div class="top">
+    <span class="badge">TEMPLATE · 8 个必背</span>
+    <span class="right">因诺信奥 · 大连</span>
   </div>
+
+  <div class="h1-area">
+    <div class="pre">// 完善程序 30 分 · 模板背熟就行</div>
+    <h1>抄一遍能写<br>抄三遍 <b>能默</b></h1>
+  </div>
+
+  <div class="ladder">
+    <div class="step s1"><div class="num">1</div><div class="body"><h3>二分查找 lower_bound</h3><p>2021 / 2023 / 2024 各一次</p></div></div>
+    <div class="step s2"><div class="num">2</div><div class="body"><h3>试除法分解质因数</h3><p>2020 / 2022 / 2024</p></div></div>
+    <div class="step s3"><div class="num">3</div><div class="body"><h3>BFS Flood Fill 四联通</h3><p>2022 出过</p></div></div>
+    <div class="step s4"><div class="num">4</div><div class="body"><h3>编辑距离 DP</h3><p>2023 二维 dp 字符串</p></div></div>
+    <div class="step s5"><div class="num">5</div><div class="body"><h3>计数排序 (双关键字稳定)</h3><p>2019</p></div></div>
+    <div class="step s6"><div class="num">6</div><div class="body"><h3>区间贪心 · 最小覆盖</h3><p>2020</p></div></div>
+    <div class="step s7"><div class="num">7</div><div class="body"><h3>汉诺塔递归三步法</h3><p>2024</p></div></div>
+    <div class="step s8"><div class="num">8</div><div class="body"><h3>RLE / 摩尔投票 (抵消思想)</h3><p>2025 新</p></div></div>
+  </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>每个模板 ≤ 20 行 · <b>3 天默熟</b>一个</h2>
+  </div>
+
   <div class="footer">
-    <span>#完善程序 #模板 #CSP-J</span>
-    <span class="stamp">收藏抄写</span>
+    <span class="txt">不靠刷题量 · 靠肌肉记忆</span>
   </div>
 </body>
 </html>

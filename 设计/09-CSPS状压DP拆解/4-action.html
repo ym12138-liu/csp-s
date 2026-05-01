@@ -1,91 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-S 状压 DP 拆解 · 行动</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>5 题阶梯</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#1A237E; color:#FFF; position:relative;}
-  body::before {
-    content:""; position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 20% 80%, rgba(198,255,0,0.4) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(170,0,255,0.4) 0%, transparent 50%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#C6FF00; color:#1A237E; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 84px; font-weight: 900; margin-top:18px; line-height:1.05;}
-  h1 em { font-style:normal; color:#C6FF00;}
-
-  .ex {
-    background:#FFF; color:#1A1A1A; border-radius: 18px;
-    padding: 22px 26px; margin-top: 18px;
-    border: 4px solid #C6FF00; box-shadow: 6px 6px 0 #AA00FF;
-  }
-  .ex .n { display:inline-block; background:#1A237E; color:#C6FF00; padding:6px 18px; border-radius:8px; font-weight:900; font-size:24px;}
-  .ex h3 { font-size:30px; font-weight:900; margin-top:8px; color:#1A237E;}
-  .ex code { background:#C6FF00; color:#1A237E; padding:2px 12px; border-radius:6px; font-weight:800; font-family:"PingFang SC", monospace;}
-  .ex p { font-size:24px; line-height:1.5; color:#424242; margin-top:6px;}
-  .ex p b { color:#AA00FF;}
-
-  .pull {
-    margin-top: 26px; padding: 24px 28px;
-    background: linear-gradient(135deg, #C6FF00, #AA00FF);
-    color:#FFF; border-radius: 18px;
-    box-shadow: 8px 8px 0 #FFFFFF;
-    text-shadow: 2px 2px 0 #1A1A1A;
-  }
-  .pull h2 { font-size: 38px; font-weight: 900; line-height: 1.35; }
-  .pull h2 b { color:#FFFF00;}
-  .pull p { font-size: 22px; font-weight:700; margin-top: 8px;}
-  .cta {
-    position:absolute; bottom:0; left:60px; right:60px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:24px; color:#C6FF00; font-weight:700;
-  }
-  .pill { background:#C6FF00; color:#1A237E; padding:10px 22px; border-radius:100px; font-weight:800;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">PRACTICE · 5 题阶梯</span>
-    <h1>从入门<br><em>到 AK</em></h1>
-
-    <div class="ex">
-      <span class="n">入门</span>
-      <h3>洛谷 <code>P1896</code> · 互不侵犯</h3>
-      <p>n×n 棋盘放国王 · <b>预处理合法行</b> · 经典状压入门</p>
-    </div>
-    <div class="ex">
-      <span class="n">基础</span>
-      <h3>洛谷 <code>P1879</code> · 玉米田</h3>
-      <p>每行哪些格子可放 · <b>位运算与</b>判断兼容性</p>
-    </div>
-    <div class="ex">
-      <span class="n">中等</span>
-      <h3>洛谷 <code>P3622</code> · 动物园</h3>
-      <p>环形 + 状压 · 难度抬升 · 但模板不变</p>
-    </div>
-    <div class="ex">
-      <span class="n">真题</span>
-      <h3>CSP-S 2020 完善 2</h3>
-      <p>子序列最大异或权和 · <b>本号 2020 分析</b>有逐空讲解</p>
-    </div>
-    <div class="ex">
-      <span class="n">真题</span>
-      <h3>CSP-S 2024 阅读 2</h3>
-      <p>双解法对比 · 必须能识别 <code>(j&lt;&lt;1)|bit</code> 这种状态构造</p>
-    </div>
-
-    <div class="pull">
-      <h2>状压不是玄学<br><b>只是 n ≤ 20 的暴搜</b></h2>
-      <p>5 题做完 · 见到状压 DP 不再发怵</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#状压DP #CSPS #大连</span>
-    <span class="pill">收藏开练</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #1B5E20; color: #FFFFFF; }
+.top { position: absolute; top: 60px; left: 60px; right: 60px;
+display: flex; align-items: center; }
+.top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+border-radius: 6px; font-size: 22px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+.h1 { position: absolute; top: 160px; left: 80px; right: 80px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+.h1 h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
+.list { position: absolute; top: 380px; left: 80px; right: 80px; }
+.q { display: flex; align-items: center; padding: 14px 22px;
+margin-bottom: 12px; border-radius: 6px;
+background: rgba(255,255,255,0.06); border-left: 6px solid #FFE082; }
+.q .lvl { flex: 0 0 70px; padding: 6px 0; text-align: center;
+font-size: 14px; font-weight: 900; color: #FFFFFF;
+background: #FF6B9D; border-radius: 4px; margin-right: 16px; }
+.q.q4 .lvl, .q.q5 .lvl { background: #B71C1C; }
+.q .body h3 { font-size: 22px; color: #FFFFFF; font-weight: 900; }
+.q .body p { font-size: 16px; color: #FFFFFF; opacity: 0.92; margin-top: 4px; }
+.q .body p .code { background: rgba(0,0,0,0.4); color: #FFE082;
+padding: 1px 8px; border-radius: 3px; font-family: Consolas, monospace; }
+.q .body p .high { background: #FFE082; color: #1B5E20; padding: 0 4px; font-weight: 900; }
+.bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+padding: 16px 22px; border-radius: 4px; }
+.bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+.bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+.bottom .txt b { color: #FFE082; }
+</style></head><body>
+<div class="top"><span class="badge">PRACTICE · 5 题阶梯</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><h1>从入门到 <b>AK</b><br>5 题阶梯</h1></div>
+<div class="list">
+<div class="q q1"><div class="lvl">入门</div><div class="body"><h3>洛谷 P1896 · 互不侵犯</h3><p>n×n 棋盘放国王 · 预处理合法行 · <span class="high">经典状压入门</span></p></div></div>
+<div class="q q2"><div class="lvl">基础</div><div class="body"><h3>洛谷 P1879 · 玉米田</h3><p>每行哪些格子可放 · <span class="code">位运算</span> 判断兼容性</p></div></div>
+<div class="q q3"><div class="lvl">中等</div><div class="body"><h3>洛谷 P3622 · 动物园</h3><p>环形 + 状压 · 难度抬升 · <span class="high">模板不变</span></p></div></div>
+<div class="q q4"><div class="lvl">真题</div><div class="body"><h3>CSP-S 2020 完善 2</h3><p>子序列最大异或权和 · 本号 2020 分析有逐空讲解</p></div></div>
+<div class="q q5"><div class="lvl">真题</div><div class="body"><h3>CSP-S 2024 阅读 2</h3><p>双解法对比 · 必须识别 <span class="code">(j&lt;&lt;1)|bit</span> 这种状态构造</p></div></div>
+</div>
+<div class="bottom"><div class="ttl">★ 圈内共识 ★</div>
+<div class="txt">大连 OI 圈讲过 100 次 · <b>"卡 S = 卡图论 + 状压 DP"</b></div></div>
+</body></html>

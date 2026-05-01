@@ -1,48 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>AI 时代 5 大能力 · 详解</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>MYTH · 4 件不是能力</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#F3E5F5; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #311B92, #FFD700); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFD700, #311B92); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#311B92; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#311B92; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFD700 60%); padding: 0 6px; }
-  .row { display:flex; align-items:center; padding: 16px 22px; background:#FFF; border-radius: 16px; margin-top: 14px; border: 4px solid #1A1A1A; box-shadow: 5px 5px 0 #7C4DFF; }
-  .row .icon { flex: 0 0 76px; height:76px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:32px; color:#FFFFFF; margin-right: 18px; box-shadow: 3px 3px 0 #1A1A1A; }
-  .ic1 { background:#E91E63;}
-  .ic2 { background:#FF5722;}
-  .ic3 { background:#4CAF50;}
-  .ic4 { background:#2196F3;}
-  .ic5 { background:#9C27B0;}
-  .row .body { flex: 1; }
-  .row .body h3 { font-size: 28px; font-weight: 900; color: #311B92; line-height: 1.2; }
-  .row .body p { font-size: 22px; color: #424242; margin-top: 4px; line-height: 1.4; }
-  .row .body p b { background:#FFD700; padding: 0 6px; border-radius: 4px; color: #311B92; }
-  .key { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFD700; border-radius: 16px; box-shadow: 8px 8px 0 #7C4DFF; }
-  .key h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .key h2 b { color: #FFD700; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">5 大能力 · 一一拆解</span>
-    <h1>5 个能力<em>AI 学不会</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="row"><div class="icon ic1">?</div><div class="body"><h3>1 · 提问力</h3><p>AI 答案好坏 = 提问质量 · <b>问得对才有好答案</b></p></div></div>
-    <div class="row"><div class="icon ic2">!</div><div class="body"><h3>2 · 判断力</h3><p>AI 会瞎编 · <b>娃要识别真假</b> · 批判性思维必备</p></div></div>
-    <div class="row"><div class="icon ic3">⇄</div><div class="body"><h3>3 · 迁移力</h3><p>跨领域用知识 · <b>数学解决编程 / 编程解决物理</b></p></div></div>
-    <div class="row"><div class="icon ic4">+</div><div class="body"><h3>4 · 创造力</h3><p>AI 只会"组合已有" · <b>真创新永远来自人</b></p></div></div>
-    <div class="row"><div class="icon ic5">@</div><div class="body"><h3>5 · 协作力</h3><p>AI 时代是<b>"团队 + 工具"</b>· 单打独斗已淘汰</p></div></div>
-
-    <div class="key">
-      <h2>核心 ·<br><b>这 5 项做得好<br>不论 AI 怎么进化都不怕</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.myths { position: absolute; top: 380px; left: 60px; right: 60px; }
+.myth { background: #FFFFFF; border: 3px solid #FFEBEE; border-left: 8px solid #B71C1C;
+padding: 14px 20px; margin-bottom: 14px; border-radius: 6px; position: relative; }
+.myth .x { position: absolute; top: -12px; left: -12px;
+width: 36px; height: 36px; border-radius: 50%;
+background: #B71C1C; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px; font-weight: 900; }
+.myth .lie { font-size: 20px; color: #B71C1C; font-weight: 900;
+text-decoration: line-through; padding-left: 36px; }
+.myth .truth { font-size: 17px; color: #1A1A1A; margin-top: 6px; font-weight: 700;
+line-height: 1.4; }
+.myth .truth b { background: #FFF59D; padding: 0 4px; color: #2E7D32; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">MYTH · 4 件不是能力</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 家长容易当成能力的事</div><h1>4 件事<br>家长容易<b>认错</b></h1></div>
+<div class="myths"><div class="myth"><div class="x">!</div><div class="lie">"背完了所有公式 = 能力强"</div><div class="truth">背诵 = AI 比人强 100 倍 · <b>已不算能力</b> · 会用知识解决问题才是真能力</div></div><div class="myth"><div class="x">!</div><div class="lie">"考试 100 分 = AI 时代赢家"</div><div class="truth">考试是"测对答案" · AI 时代要"<b>问对问题</b>" · 0 和 100 之间差一个时代</div></div><div class="myth"><div class="x">!</div><div class="lie">"会用 ChatGPT = 有 AI 能力"</div><div class="truth">用 AI = 第一步 · 不是终点 · <b>真正能力是判断 AI 答案</b></div></div><div class="myth"><div class="x">!</div><div class="lie">"娃听话守规矩 = 好"</div><div class="truth">AI 时代太听话 = <b>容易被替代</b> · 有想法 + 敢质疑 + 能创造 = 难替代</div></div></div>
+<div class="pull"><h2>考试分数 ≠ <b>AI 时代竞争力</b></h2></div>
+<div class="footer"><span class="txt">别把听话当美德</span></div>
+</body></html>

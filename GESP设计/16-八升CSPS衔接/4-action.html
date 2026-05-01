@@ -1,49 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 八升 CSP-S · 行动</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>GESP 八级升CSP-S · 这周开始</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#B71C1C; color:#FFF; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 80% 20%, rgba(255,215,0,0.5) 0%, transparent 50%), radial-gradient(circle at 10% 90%, rgba(255,111,0,0.5) 0%, transparent 50%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFD700; color:#B71C1C; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 84px; font-weight:900; margin-top:18px; line-height:1.05; }
-  h1 em { font-style:normal; color:#FFD700; }
-  .week { background:#FFFFFF; color:#1A1A1A; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #FF6F00; position: relative; }
-  .week::before { content: attr(data-w); position:absolute; left: -28px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background: #FFD700; color: #B71C1C; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 #1A1A1A; line-height: 1.1; text-align:center; }
-  .week h3 { font-size:30px; font-weight:900; color:#B71C1C; padding-left: 40px; }
-  .week p { font-size:24px; line-height:1.5; color:#424242; margin-top: 6px; }
-  .week p code { background:#FFD700; color:#B71C1C; padding:2px 10px; border-radius:4px; font-weight:700; }
-  .week p b { color:#B71C1C; }
-  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #FFD700, #FF6F00); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
-  .pull h2 { font-size: 38px; font-weight:900; line-height:1.35; }
-  .pull h2 b { color: #B71C1C; }
-  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
-  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFD700; font-weight:700; }
-  .pill { background:#FFD700; color:#B71C1C; padding:10px 22px; border-radius:100px; font-weight:900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">PLAN · 6 个月衔接</span>
-    <h1>八级毕业到 CSP-S<br><em>6 个月路线</em></h1>
-    <div class="week" data-w="M1"><h3>题型适应</h3><p>从 GESP 三段式 → CSP-S <b>阅读 + 完善</b>新题型 · 限时刷 2020-2021 真题</p></div>
-    <div class="week" data-w="M2"><h3>DP 进阶</h3><p>状压（TSP / 互不侵犯）· 区间（石子合并）· 计数（DAG 路径）</p></div>
-    <div class="week" data-w="M3"><h3>数据结构进阶</h3><p>线段树（区间求和 + 懒标记）+ Trie + 单调栈队列</p></div>
-    <div class="week" data-w="M4"><h3>位运算 + 数论进阶</h3><p>异或 / popcount / 状压 + exGCD / 模逆元 / 容斥</p></div>
-    <div class="week" data-w="M5"><h3>真题套刷</h3><p>CSP-S 2022-2024 三套 · <b>找最弱模块</b></p></div>
-    <div class="week" data-w="M6"><h3>真题冲刺</h3><p>CSP-S 2025 + 历年完善程序专项 · <b>稳定 70+</b></p></div>
-    <div class="pull">
-      <h2>记一句话<br><b>八级 ≠ 终点 · CSP-S 才是真赛场</b></h2>
-      <p>大连娃 6 个月衔接 · NOIP 之路开启</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#八升CSPS #信奥 #大连娃</span>
-    <span class="pill">收藏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.acts { position: absolute; top: 400px; left: 60px; right: 60px; }
+.act { display: flex; padding: 16px 22px; margin-bottom: 14px;
+background: #E3F2FD; border-radius: 14px; border-left: 6px solid #0D47A1; }
+.act .num { flex: 0 0 60px; font-size: 36px; font-weight: 900; color: #0D47A1; }
+.act .body h3 { font-size: 24px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.act .body p { font-size: 16px; color: #424242; margin-top: 6px; font-weight: 700; line-height: 1.5; }
+.act .body p b { background: #FFF59D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">ACTION · 这周必做</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 不堆量 · 抓重点</div><h1>立刻能做的<br><b>3 件事</b></h1></div>
+<div class="acts">
+<div class="act"><div class="num">1</div><div class="body"><h3>对照清单查缺</h3><p>本号八级升CSP-S必补 5 项 · 抄到本子上 · <b>逐项打勾</b></p></div></div><div class="act"><div class="num">2</div><div class="body"><h3>选 1 块最弱的开始</h3><p>5 项里挑娃最不熟的 · <b>第 1 周专攻</b></p></div></div><div class="act"><div class="num">3</div><div class="body"><h3>限时刷 2025 真题</h3><p>CSP-S真题 1 套 90 分钟 · 看新增项掉多少分</p></div></div>
+</div>
+<div class="pull"><h2>不报班也行 · <b>真题 + 文档</b>自学就够</h2></div>
+<div class="footer"><span class="txt">小班 3 人 · 因诺信奥</span></div>
+</body></html>

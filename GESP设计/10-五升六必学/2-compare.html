@@ -1,67 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 五升六 · 对比</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>五级升六级 · 5 项必补</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FCE4EC; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #880E4F, #FFEB3B); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(90deg, #FFEB3B, #880E4F); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#880E4F; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 68px; font-weight:900; margin-top:18px; line-height:1.1; color:#880E4F; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
-  .compare { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .col { background:#FFF; border-radius:18px; padding: 20px 22px; border: 4px solid #1A1A1A; }
-  .col.j { box-shadow: 6px 6px 0 #C2185B; }
-  .col.s { box-shadow: 6px 6px 0 #B71C1C; }
-  .col h3 { text-align: center; padding: 8px 0; border-radius: 8px; margin-bottom: 12px; color:#FFFFFF; font-size: 32px; font-weight: 900; }
-  .col.j h3 { background: #C2185B; }
-  .col.s h3 { background: #B71C1C; }
-  .col p { font-size: 22px; line-height: 1.55; padding: 8px 0; border-bottom: 1px dashed #F8BBD0; color: #1A1A1A; font-weight: 700; }
-  .col p:last-child { border-bottom: none; }
-  .col p code { background:#FFEB3B; color:#B71C1C; padding: 2px 8px; border-radius:4px; font-weight: 700; }
-  .gap-list { margin-top: 22px; background: #1A1A1A; color: #FFF; border-radius: 18px; padding: 22px 26px; box-shadow: 8px 8px 0 #FFEB3B; }
-  .gap-list h2 { font-size:34px; font-weight:900; color:#FFEB3B; margin-bottom: 14px; }
-  .gap-row { display:flex; align-items:center; padding: 10px 0; border-bottom: 1px solid #424242; }
-  .gap-row:last-child { border-bottom: none; }
-  .gap-row .n { flex:0 0 48px; height:48px; border-radius:50%; background:#C2185B; color:#FFEB3B; font-weight:900; font-size:22px; display:flex; align-items:center; justify-content:center; margin-right: 16px; box-shadow: 2px 2px 0 #FFEB3B; }
-  .gap-row .nm { flex:1; font-size:26px; font-weight:800; }
-  .gap-row .sc { font-size: 24px; font-weight:900; color:#FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">COMPARE · 六级 vs 五级</span>
-    <h1>新增<em>二叉树 + DP</em><br>核心数据结构关</h1>
-    <div class="compare">
-      <div class="col j">
-        <h3>五级</h3>
-        <p>面向过程 + 函数</p>
-        <p>仅链表 + 数组</p>
-        <p>不考树</p>
-        <p>不考 DP</p>
-        <p>不考 OOP</p>
-      </div>
-      <div class="col s">
-        <h3>六级</h3>
-        <p><b>新增 OOP（类 / 继承）</b></p>
-        <p><b>新增二叉树 + BST</b></p>
-        <p><b>新增 DFS / BFS</b></p>
-        <p><b>0-1 背包 + 爬楼梯</b></p>
-        <p><b>哈夫曼 + 格雷码</b></p>
-      </div>
-    </div>
-    <div class="gap-list">
-      <h2>五升六 · 必补 5 项</h2>
-      <div class="gap-row"><div class="n">1</div><div class="nm">二叉树（三种遍历 + 推导）</div><span class="sc">≈100 分</span></div>
-      <div class="gap-row"><div class="n">2</div><div class="nm">二叉搜索树 BST（插入 / 查找 / 验证）</div><span class="sc">≈60 分</span></div>
-      <div class="gap-row"><div class="n">3</div><div class="nm">面向对象 OOP（类 / 继承 / 多态）</div><span class="sc">≈80 分</span></div>
-      <div class="gap-row"><div class="n">4</div><div class="nm">DP 入门（0-1 背包 / 爬楼梯）</div><span class="sc">≈60 分</span></div>
-      <div class="gap-row"><div class="n">5</div><div class="nm">DFS / BFS + 哈夫曼编码</div><span class="sc">≈90 分</span></div>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.list { position: absolute; top: 380px; left: 60px; right: 60px; }
+.row { display: flex; align-items: center; padding: 12px 20px;
+margin-bottom: 12px; border-radius: 12px;
+background: #FFFFFF; border: 3px solid #E3F2FD; }
+.row .num { flex: 0 0 50px; height: 50px; border-radius: 50%;
+background: #0D47A1; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 22px; font-weight: 900; margin-right: 16px; }
+.row .body { flex: 1; }
+.row .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.row .body p { font-size: 16px; color: #424242; margin-top: 2px; font-weight: 700; }
+.row .score { flex: 0 0 100px; text-align: right;
+font-size: 22px; font-weight: 900; color: #B71C1C; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">RANK · 5 项必补</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 新增 5 块·缺一不可</div><h1>六级<br>补这 <b>5 项</b></h1></div>
+<div class="list">
+<div class="row"><div class="num">1</div><div class="body"><h3>二叉树</h3><p>三种遍历 + 推导</p></div><div class="score">100 分</div></div><div class="row"><div class="num">2</div><div class="body"><h3>BST</h3><p>插入 / 查找 / 验证</p></div><div class="score">60 分</div></div><div class="row"><div class="num">3</div><div class="body"><h3>OOP 类 / 继承 / 多态</h3><p>三大特性</p></div><div class="score">80 分</div></div><div class="row"><div class="num">4</div><div class="body"><h3>DP 入门</h3><p>0-1 背包 + 爬楼梯</p></div><div class="score">60 分</div></div><div class="row"><div class="num">5</div><div class="body"><h3>DFS / BFS + 哈夫曼</h3><p>树图遍历 + 编码</p></div><div class="score">90 分</div></div>
+</div>
+<div class="pull"><h2>二叉树 + DP = CSP-J 复赛核心</h2></div>
+<div class="footer"><span class="txt">必补·不能跳</span></div>
+</body></html>

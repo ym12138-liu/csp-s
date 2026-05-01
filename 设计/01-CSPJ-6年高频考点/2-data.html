@@ -2,62 +2,117 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 6年高频考点 · 数据</title>
+<title>CSP-J TOP 10 高频考点排行</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFF3E0; color: #1A1A1A; position: relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#FF5E62,#FF9966); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#FFC371,#FF5E62); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .head { margin-bottom: 30px; }
-  .head .kicker { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:8px 20px; border-radius:6px; font-size:24px; font-weight:700; }
-  .head h1 { font-size: 64px; font-weight: 900; color:#B71C1C; margin-top:14px; line-height:1.1; }
-  .head h1 span { background: linear-gradient(transparent 55%, #FFEB3B 55%); padding: 0 6px; }
-  .table {
-    background:#FFF; border-radius:24px; padding:28px 32px;
-    border:4px solid #1A1A1A;
-    box-shadow: 10px 10px 0 #B71C1C;
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+
+  .top {
+    position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px;
   }
-  .row { display:flex; align-items:center; padding:8px 0; border-bottom: 2px dashed #FFCCBC; font-size:30px; }
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 180px; left: 60px; right: 60px; }
+  .h1-area .pre { color: #2196F3; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
+  .h1-area h1 { font-size: 56px; font-weight: 900; color: #0D47A1;
+    line-height: 1.1; margin-top: 6px; }
+  .h1-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 10px;
+    border-radius: 6px; }
+
+  .ranks {
+    position: absolute; top: 380px; left: 60px; right: 60px;
+    background: #FFFFFF;
+  }
+  .row {
+    display: flex; align-items: center; padding: 6px 14px;
+    border-bottom: 2px solid #E3F2FD;
+  }
+  .row:nth-child(odd) { background: #F5F9FF; }
   .row:last-child { border-bottom: none; }
-  .rank {
-    flex: 0 0 56px; height: 56px; width: 56px; border-radius:50%;
-    background: #FF5E62; color:#fff; font-weight:900; font-size:28px;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: 3px 3px 0 #1A1A1A;
+  .row .rank {
+    flex: 0 0 50px; height: 50px; border-radius: 10px;
+    background: #E3F2FD; color: #0D47A1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 900;
+    margin-right: 14px;
   }
-  .row.gold .rank { background:#FFC107; color:#1A1A1A; }
-  .row.silver .rank { background:#FF9966; }
-  .row.bronze .rank { background:#FFAB91; }
-  .name { flex:1; padding-left:20px; font-weight:800; color:#1A1A1A; }
-  .freq { font-weight:700; color:#B71C1C; margin-right: 14px; font-size:26px; }
-  .bar {
-    flex: 0 0 200px; height: 22px; background:#FFE0B2; border-radius:11px; overflow:hidden;
-    border: 2px solid #1A1A1A;
+  .row.t1 .rank, .row.t2 .rank, .row.t3 .rank {
+    background: #0D47A1; color: #FFFFFF;
   }
-  .bar > span { display:block; height:100%; background: linear-gradient(90deg, #FF5E62, #FF9966); }
-  .footer { position:absolute; bottom:160px; left:60px; right:60px; font-size:26px; color:#6D4C41; font-weight:700; text-align:center; }
+  .row .name {
+    flex: 1; font-size: 24px; font-weight: 900; color: #1A1A1A;
+  }
+  .row .freq {
+    flex: 0 0 110px;
+    font-size: 22px; font-weight: 900; color: #0D47A1;
+    text-align: right; padding-right: 12px;
+  }
+  .row .bar {
+    flex: 0 0 220px; height: 18px;
+    background: #E3F2FD; border-radius: 9px; overflow: hidden;
+  }
+  .row .bar > span {
+    display: block; height: 100%;
+    background: #2196F3;
+  }
+  .row.t1 .bar > span, .row.t2 .bar > span, .row.t3 .bar > span {
+    background: #0D47A1;
+  }
+
+  .pull {
+    position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #0D47A1; color: #FFFFFF;
+    padding: 22px 28px; border-radius: 16px;
+  }
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3;
+    letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+
+  .footer {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center;
+  }
+  .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900;
+    letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <div class="head">
-      <span class="kicker">DATA · 7 年逐题统计 (2019–2025)</span>
-      <h1><span>TOP 10 必拿分</span><br>高 ROI 考点排行</h1>
-    </div>
-    <div class="table">
-      <div class="row gold"><div class="rank">1</div><div class="name">二叉树性质 + 三遍历</div><div class="freq">7/7 年</div><div class="bar"><span style="width:100%"></span></div></div>
-      <div class="row silver"><div class="rank">2</div><div class="name">排列组合 + 容斥</div><div class="freq">7/7 年</div><div class="bar"><span style="width:100%"></span></div></div>
-      <div class="row bronze"><div class="rank">3</div><div class="name">栈 / 队列 / 链表</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
-      <div class="row"><div class="rank">4</div><div class="name">二分查找（含变体）</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
-      <div class="row"><div class="rank">5</div><div class="name">DP（一维 + 二维）</div><div class="freq">4/7 年</div><div class="bar"><span style="width:64%"></span></div></div>
-      <div class="row"><div class="rank">6</div><div class="name">字符串处理</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
-      <div class="row"><div class="rank">7</div><div class="name">递归 / 汉诺塔</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
-      <div class="row"><div class="rank">8</div><div class="name">枚举 / 试除法</div><div class="freq">5/7 年</div><div class="bar"><span style="width:74%"></span></div></div>
-      <div class="row"><div class="rank">9</div><div class="name">BFS / Flood Fill</div><div class="freq">2/7 年</div><div class="bar"><span style="width:42%"></span></div></div>
-      <div class="row"><div class="rank">10</div><div class="name">位运算 / 进制</div><div class="freq">6/7 年</div><div class="bar"><span style="width:88%"></span></div></div>
-    </div>
+  <div class="top">
+    <span class="badge">RANK · TOP 10 高频考点</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <div class="pre">// 2019-2025 共 7 套 · 逐题打标统计</div>
+    <h1>这 10 块练完<br><b>初赛 60+</b> 不是问题</h1>
+  </div>
+
+  <div class="ranks">
+    <div class="row t1"><div class="rank">1</div><div class="name">二叉树性质 + 三遍历</div><div class="freq">7 / 7 年</div><div class="bar"><span style="width:100%"></span></div></div>
+    <div class="row t2"><div class="rank">2</div><div class="name">排列组合 + 容斥</div><div class="freq">7 / 7 年</div><div class="bar"><span style="width:100%"></span></div></div>
+    <div class="row t3"><div class="rank">3</div><div class="name">栈 / 队列 / 链表</div><div class="freq">6 / 7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+    <div class="row"><div class="rank">4</div><div class="name">二分查找(含变体)</div><div class="freq">5 / 7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+    <div class="row"><div class="rank">5</div><div class="name">DP 一维 + 二维</div><div class="freq">5 / 7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+    <div class="row"><div class="rank">6</div><div class="name">字符串处理</div><div class="freq">6 / 7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+    <div class="row"><div class="rank">7</div><div class="name">递归 / 汉诺塔</div><div class="freq">5 / 7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+    <div class="row"><div class="rank">8</div><div class="name">枚举 / 试除法</div><div class="freq">5 / 7 年</div><div class="bar"><span style="width:74%"></span></div></div>
+    <div class="row"><div class="rank">9</div><div class="name">BFS / Flood Fill</div><div class="freq">2 / 7 年</div><div class="bar"><span style="width:42%"></span></div></div>
+    <div class="row"><div class="rank">10</div><div class="name">位运算 / 进制</div><div class="freq">6 / 7 年</div><div class="bar"><span style="width:88%"></span></div></div>
+  </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>真题打过标·才知道<b>哪几块</b>反复出</h2>
+  </div>
+
+  <div class="footer">
+    <span class="txt">数据驱动 · 不靠感觉刷题</span>
   </div>
 </body>
 </html>

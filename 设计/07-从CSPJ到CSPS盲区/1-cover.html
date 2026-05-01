@@ -1,79 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>从 CSP-J 到 CSP-S 盲区 · 封面</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>从 CSPJ 到 CSPS · 5 块盲区</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(160deg, #B71C1C 0%, #FF5722 60%, #FFE0B2 100%);
-    color:#FFF; position:relative;
-  }
-  body::before {
-    content:""; position:absolute; bottom:-100px; right:-100px;
-    width: 500px; height: 500px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,235,59,0.4) 0%, transparent 70%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:14px 32px;
-    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom: 50px;
-    box-shadow: 6px 6px 0 #FFEB3B;
-  }
-  .pre {
-    font-size: 40px; font-weight:800; color:#FFEB3B;
-    margin-bottom: 12px;
-  }
-  .title-1 {
-    font-size: 96px; font-weight: 900; line-height: 1; color: #FFF;
-    text-shadow: 5px 5px 0 #1A1A1A;
-  }
-  .arrow {
-    margin: 18px 0;
-    font-size: 80px; color:#FFEB3B; font-weight:900;
-    text-shadow: 5px 5px 0 #1A1A1A;
-  }
-  .title-2 {
-    font-size: 144px; font-weight: 900; line-height: 1; color: #FFEB3B;
-    text-shadow: 8px 8px 0 #1A1A1A;
-  }
-  .gap {
-    margin-top: 36px;
-    background:#1A1A1A; color:#FFF;
-    padding: 22px 28px; border-radius: 16px;
-    box-shadow: 6px 6px 0 #FFEB3B;
-    font-size: 36px; font-weight: 800; line-height: 1.4;
-  }
-  .gap b { color:#FF5722; background:#FFEB3B; padding: 0 8px; border-radius:4px;}
-  .num5 {
-    position:absolute; top: 80px; right: 20px;
-    font-size: 200px; font-weight: 900;
-    color: rgba(255,235,59,0.25); line-height: 1;
-  }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#FFEB3B; font-weight:800;
-  }
-  .stamp { background:#FFEB3B; color:#B71C1C; padding:14px 24px; border-radius:8px; transform:rotate(-5deg); font-weight:900;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="num5">5</div>
-    <div class="tag">CSP-J 卷王进阶 · 必读</div>
-    <div class="pre">普及组刚拿奖 · 别松懈</div>
-    <div class="title-1">从 CSP-J</div>
-    <div class="arrow">▼</div>
-    <div class="title-2">卷到 S</div>
-    <div class="gap">
-      <b>5 块</b>知识盲区<br>不补就会被锤 30 分
-    </div>
-  </div>
-  <div class="footer">
-    <span>#CSP-S #提高组 #进阶</span>
-    <span class="stamp">收藏不亏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 64px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.vs { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; align-items: stretch; gap: 16px; }
+.col { flex: 1; padding: 18px 20px; border-radius: 14px; }
+.col.j { background: #E3F2FD; border: 3px solid #0D47A1; }
+.col.s { background: #FFEBEE; border: 3px solid #B71C1C; }
+.col h3 { font-size: 24px; font-weight: 900; text-align: center;
+padding: 8px 0; margin-bottom: 12px; border-radius: 6px; color: #FFFFFF; }
+.col.j h3 { background: #0D47A1; }
+.col.s h3 { background: #B71C1C; }
+.col p { font-size: 17px; padding: 6px 0; color: #1A1A1A; font-weight: 700;
+border-bottom: 1px dashed rgba(0,0,0,0.15); line-height: 1.4; }
+.col p:last-child { border-bottom: none; }
+.vs-mark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+font-size: 36px; font-weight: 900; color: #0D47A1;
+background: #FFFFFF; padding: 8px 14px; border-radius: 50%;
+border: 3px solid #0D47A1; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">COMPARE · J vs S</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 普及组拿过 60+ ≠ 提高组就能过</div><h1>本质差距<br>不是题量是<b>认知</b></h1></div>
+<div class="vs">
+<div class="col j"><h3>CSP-J 普及</h3>
+<p>会写就行 · O(n²) 多数过</p>
+<p>模拟 / 简单 DP / 基础搜索</p>
+<p>排列组合 / 简单进制</p>
+<p>120 分钟 / 100 分</p>
+<p>题型 = 单选 + 阅读 + 完善</p>
+</div>
+<div class="col s"><h3>CSP-S 提高</h3>
+<p>识模型 · 常需 O(n log n)</p>
+<p>状压 / 树形 / 计数 DP</p>
+<p>数论 (GCD / 逆元) + 容斥</p>
+<p>图论 / 最短路 / LCA</p>
+<p>数据结构 (堆 / 并查集 / 线段树)</p>
+</div>
+</div>
+<div class="pull"><h2>差距不在题量 · 在<b>识不识模型</b></h2></div>
+<div class="footer"><span class="txt">认知升级 · 才能跨档</span></div>
+</body></html>

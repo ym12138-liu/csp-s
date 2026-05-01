@@ -2,87 +2,90 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>6 个月冲 CSP-J 60+ · 方法</title>
+<title>21 模块清单 · 自查表</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#FFF59D 0%, #FFFDE7 60%, #B2DFDB 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#00897B; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#004D40; }
-  h1 em { font-style:normal; color:#B71C1C; }
-  .grid { margin-top:30px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .card {
-    background:#FFF; border-radius: 18px; padding: 22px;
-    border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #00897B;
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+  .top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 200px; left: 60px; right: 60px; }
+  .h1-area .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+  .h1-area h1 { font-size: 64px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+  .h1-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+
+  .modules {
+    position: absolute; top: 440px; left: 60px; right: 60px;
+    display: flex; flex-wrap: wrap; gap: 10px;
   }
-  .card .day { font-size:24px; font-weight:800; color:#FFF; background:#1A1A1A; display:inline-block; padding:4px 12px; border-radius:6px; }
-  .card h3 { font-size:30px; font-weight:900; margin-top:8px; color:#004D40; }
-  .card ul { margin-top:8px; padding-left: 22px; }
-  .card li { font-size:22px; line-height:1.55; color:#424242; }
-  .card li b { color:#B71C1C; }
-  .pull {
-    margin-top: 28px; padding: 22px 26px;
-    background:#1A1A1A; color:#FFEB3B; border-radius: 18px;
-    box-shadow: 8px 8px 0 #FF5E62;
+  .mod {
+    flex: 1 1 calc(33% - 8px);
+    background: #E3F2FD; border-left: 5px solid #0D47A1;
+    padding: 14px 14px;
+    border-radius: 8px;
   }
-  .pull .lbl { font-size:22px; letter-spacing:2px; font-weight:700; opacity:.85; }
-  .pull h2 { font-size:36px; color:#FFF; font-weight:900; line-height:1.4; margin-top:6px; }
-  .pull h2 b { color:#1DE9B6; }
-  .dalian {
-    margin-top: 22px; font-size:24px; font-weight:700; color:#004D40;
-    background: rgba(255,255,255,0.7); padding: 16px 22px; border-radius: 12px;
-    border-left: 8px solid #FF5E62;
-  }
+  .mod .num { font-size: 14px; color: #2196F3; font-weight: 900; }
+  .mod h3 { font-size: 18px; color: #0D47A1; font-weight: 900; margin-top: 4px; }
+  .mod p { font-size: 14px; color: #424242; font-weight: 700; margin-top: 4px; line-height: 1.3; }
+
+  .pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3; letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+  .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">DAILY · 一周节奏表</span>
-    <h1>每天 30 分钟<br>就够 <em>不要堆时间</em></h1>
-    <div class="grid">
-      <div class="card">
-        <span class="day">周一-周四</span>
-        <h3>每日一题</h3>
-        <ul>
-          <li>30 分钟 1 题 + <b>15 分钟订正</b></li>
-          <li>主刷 OI Wiki 推荐题</li>
-          <li>遇不会题不卡 · 看题解</li>
-        </ul>
-      </div>
-      <div class="card">
-        <span class="day">周五</span>
-        <h3>错题复盘</h3>
-        <ul>
-          <li>把本周的错题<b>整理成卡片</b></li>
-          <li>分类到 21 个模块</li>
-          <li>找最弱模块下周补</li>
-        </ul>
-      </div>
-      <div class="card">
-        <span class="day">周六</span>
-        <h3>限时真题</h3>
-        <ul>
-          <li>90 分钟 1 套<b>历年真题</b></li>
-          <li>考试氛围 · 不查任何资料</li>
-          <li>从 2019 卷往后顺序刷</li>
-        </ul>
-      </div>
-      <div class="card">
-        <span class="day">周日</span>
-        <h3>订正 + 模板</h3>
-        <ul>
-          <li>每段阅读程序<b>识别算法</b></li>
-          <li>完善程序的空全部讲清</li>
-          <li>抄写 1 个核心模板</li>
-        </ul>
-      </div>
-    </div>
-    <div class="pull">
-      <div class="lbl">FAQ · 大连家长高频问</div>
-      <h2>不上课外班行不行？<br>实测<b>真题 + 文档自学</b>就够</h2>
-    </div>
-    <div class="dalian">大连本地参考：海事大学旁很多 OI 学习圈，但<b>初赛阶段自学性价比最高</b></div>
+  <div class="top">
+    <span class="badge">CHECKLIST · 21 模块</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <div class="pre">// 自查表 · 哪块没过哪块练</div>
+    <h1>21 块<br>每块都得<b>过线</b></h1>
+  </div>
+
+  <div class="modules">
+    <div class="mod"><div class="num">01</div><h3>变量 + 输入输出</h3><p>cin/cout · printf %d</p></div>
+    <div class="mod"><div class="num">02</div><h3>控制流</h3><p>if / for / while / break</p></div>
+    <div class="mod"><div class="num">03</div><h3>一维数组</h3><p>遍历 / 求和 / 求最值</p></div>
+    <div class="mod"><div class="num">04</div><h3>二维数组</h3><p>行优先 + 棋盘</p></div>
+    <div class="mod"><div class="num">05</div><h3>字符串</h3><p>遍历 / strlen / strcmp</p></div>
+    <div class="mod"><div class="num">06</div><h3>STL 容器</h3><p>vector / set / map</p></div>
+    <div class="mod"><div class="num">07</div><h3>栈队列</h3><p>括号匹配 / 撤销</p></div>
+    <div class="mod"><div class="num">08</div><h3>链表</h3><p>头插 / 尾插 / 删除</p></div>
+    <div class="mod"><div class="num">09</div><h3>排序 3 种</h3><p>冒泡 / 选择 / 插入</p></div>
+    <div class="mod"><div class="num">10</div><h3>归并 + 快排</h3><p>O(n log n) 默写</p></div>
+    <div class="mod"><div class="num">11</div><h3>二分查找</h3><p>lower_bound · 半开区间</p></div>
+    <div class="mod"><div class="num">12</div><h3>枚举 + 试除</h3><p>i*i ≤ n</p></div>
+    <div class="mod"><div class="num">13</div><h3>递归</h3><p>汉诺塔 / 全排列</p></div>
+    <div class="mod"><div class="num">14</div><h3>DFS / BFS</h3><p>队列 / 栈 / 染色</p></div>
+    <div class="mod"><div class="num">15</div><h3>一维 DP</h3><p>爬楼梯 / 最长上升</p></div>
+    <div class="mod"><div class="num">16</div><h3>二维 DP</h3><p>0-1 背包 / LCS</p></div>
+    <div class="mod"><div class="num">17</div><h3>排列组合</h3><p>4 套路 + 容斥</p></div>
+    <div class="mod"><div class="num">18</div><h3>数论</h3><p>GCD / 素数 / 因数分解</p></div>
+    <div class="mod"><div class="num">19</div><h3>位运算</h3><p>& | ^ ~ << >></p></div>
+    <div class="mod"><div class="num">20</div><h3>二叉树</h3><p>三遍历 + 性质</p></div>
+    <div class="mod"><div class="num">21</div><h3>简单图论</h3><p>邻接表 + Flood Fill</p></div>
+  </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>每块过 1 关 · <b>21 关全过</b>初赛 60+ 没问题</h2>
+  </div>
+
+  <div class="footer">
+    <span class="txt">逐项打钩 · 不漏一块</span>
   </div>
 </body>
 </html>

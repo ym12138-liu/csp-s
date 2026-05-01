@@ -1,51 +1,46 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 五级核心考点 · 数据</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>GESP 五级 5 块占分</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#E8F5E9; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #1B5E20, #FFEB3B); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #1B5E20); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#1B5E20; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#1B5E20; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
-  .row { display:flex; align-items:center; padding: 18px 22px; background:#FFF; border-radius: 16px; margin-top: 16px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #1B5E20; }
-  .row .icon { flex: 0 0 76px; height:76px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:36px; color:#FFF; margin-right: 20px; box-shadow: 3px 3px 0 #1A1A1A; }
-  .ic1 { background:#E91E63;}
-  .ic2 { background:#FF5722;}
-  .ic3 { background:#4CAF50;}
-  .ic4 { background:#2196F3;}
-  .ic5 { background:#9C27B0;}
-  .row .body { flex: 1; }
-  .row .body h3 { font-size:30px; font-weight:900; color:#1A1A1A; line-height:1.2;}
-  .row .body p { font-size:22px; color:#666; margin-top:4px;}
-  .row .body p code { background:#FFEB3B; color:#1B5E20; padding: 2px 8px; border-radius:4px; font-weight:700; }
-  .row .score { text-align: center; flex: 0 0 100px; background:#FFEB3B; color:#1B5E20; padding: 8px 12px; border-radius: 12px; font-weight: 900; line-height: 1.1; border: 3px solid #1A1A1A; }
-  .row .score .v { font-size: 32px; }
-  .row .score .l { font-size: 18px; opacity: 0.8; }
-  .key { margin-top: 24px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #1B5E20; }
-  .key .lbl { font-size:22px; opacity:.85; letter-spacing:2px; font-weight:700; }
-  .key h2 { font-size:34px; color:#FFFFFF; font-weight:900; line-height:1.4; margin-top:6px; }
-  .key h2 b { color:#FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">TOP 5 · 必拿分模块</span>
-    <h1>这 5 块<em>占 80% 分</em></h1>
-    <div class="row"><div class="icon ic1">1</div><div class="body"><h3>链表（编程题主战场）</h3><p>单链表 / 双 / 循环 + 增删查</p></div><div class="score"><div class="v">≈100</div><div class="l">分</div></div></div>
-    <div class="row"><div class="icon ic2">2</div><div class="body"><h3>二分查找 + 二分答案</h3><p>切木头 / 跳石头 · <b>编程题热门</b></p></div><div class="score"><div class="v">≈60</div><div class="l">分</div></div></div>
-    <div class="row"><div class="icon ic3">3</div><div class="body"><h3>归并 + 快速排序</h3><p>O(n log n) · <b>稳定性</b>必背</p></div><div class="score"><div class="v">≈54</div><div class="l">分</div></div></div>
-    <div class="row"><div class="icon ic4">4</div><div class="body"><h3>数论基础</h3><p>gcd / lcm / 唯一分解 / 素数筛</p></div><div class="score"><div class="v">≈90</div><div class="l">分</div></div></div>
-    <div class="row"><div class="icon ic5">5</div><div class="body"><h3>贪心 + 高精度</h3><p>饼干 / 任务调度 + 大数加减</p></div><div class="score"><div class="v">≈50</div><div class="l">分</div></div></div>
-    <div class="key">
-      <div class="lbl">DATA · 10 套真题统计</div>
-      <h2>掌握这 5 块 · <b>冲到 80 分</b><br>链表不熟练很难过线</h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 180px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
+.h1 h1 { font-size: 56px; font-weight: 900; color: #0D47A1; line-height: 1.1; margin-top: 6px; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 10px; border-radius: 6px; }
+.ranks { position: absolute; top: 380px; left: 60px; right: 60px; background: #FFFFFF; }
+.row { display: flex; align-items: center; padding: 10px 14px;
+border-bottom: 2px solid #E3F2FD; }
+.row:nth-child(odd) { background: #F5F9FF; }
+.row:last-child { border-bottom: none; }
+.row .rank { flex: 0 0 50px; height: 50px; border-radius: 10px;
+background: #0D47A1; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 24px; font-weight: 900; margin-right: 14px; }
+.row .name { flex: 1; }
+.row .name h3 { font-size: 22px; font-weight: 900; color: #1A1A1A; }
+.row .name p { font-size: 14px; color: #424242; margin-top: 2px; font-weight: 700; }
+.row .score { flex: 0 0 100px; text-align: right;
+font-size: 22px; font-weight: 900; color: #2196F3; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3; letter-spacing: 2px; margin-bottom: 6px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">RANK · 5 块占分</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 10 套真题统计</div><h1>这 5 块练完<br><b>60+ 没问题</b></h1></div>
+<div class="ranks">
+<div class="row"><div class="rank">1</div><div class="name"><h3>链表</h3><p>单链表 / 双链表 / 循环·编程题主战场</p></div><div class="score">100 分</div></div><div class="row"><div class="rank">2</div><div class="name"><h3>二分查找 + 二分答案</h3><p>切木头 / 跳石头·热门</p></div><div class="score">60 分</div></div><div class="row"><div class="rank">3</div><div class="name"><h3>归并 + 快排</h3><p>O(n log n) 稳定性必背</p></div><div class="score">54 分</div></div><div class="row"><div class="rank">4</div><div class="name"><h3>数论基础</h3><p>gcd / lcm / 素数筛 / 分解</p></div><div class="score">90 分</div></div><div class="row"><div class="rank">5</div><div class="name"><h3>贪心 + 高精度</h3><p>饼干 + 高精度加减</p></div><div class="score">50 分</div></div>
+</div>
+<div class="pull"><div class="lbl">CORE</div><h2>掌握这 5 块·冲到 80 分·链表不熟练很难过线</h2></div>
+<div class="footer"><span class="txt">练这 5 块·稳过线</span></div>
+</body></html>

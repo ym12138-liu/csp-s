@@ -1,56 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>ChatGPT 娃怎么用 · 对比</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>RULE · 4 条铁律</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#0A1F0A; color:#00FF41; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(0,255,65,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.04) 1px, transparent 1px); background-size: 50px 50px; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#00FF41; color:#0A1F0A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#00FF41; }
-  h1 em { font-style:normal; color:#FFEB3B; }
-  .row { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
-  .col { background:#1A1A1A; border:2px solid #00FF41; border-radius: 14px; padding: 18px 20px; }
-  .col h3 { font-size: 26px; font-weight: 900; margin-bottom: 8px; padding: 6px 12px; border-radius: 6px; text-align: center; }
-  .col.bad h3 { background:#FF1744; color:#FFFFFF; }
-  .col.good h3 { background:#00FF41; color:#0A1F0A; }
-  .col p { font-size: 22px; color: #E0E0E0; line-height: 1.45; padding: 8px 0; border-bottom: 1px dashed #424242; }
-  .col p:last-child { border-bottom: none; }
-  .col p code { font-family: "SF Mono", monospace; background:#0A1F0A; color:#00FF41; padding: 2px 6px; border-radius: 4px; font-size: 18px; }
-  .case { margin-top: 22px; background: #1A1A1A; border:2px solid #FFEB3B; border-radius: 14px; padding: 18px 22px; box-shadow: 0 0 25px rgba(255,235,59,0.2); }
-  .case h2 { font-size: 28px; color: #FFEB3B; font-weight: 900; margin-bottom: 10px; }
-  .case .scene { font-size: 22px; color: #E0E0E0; line-height: 1.5; }
-  .case .scene b { background:#00FF41; color:#0A1F0A; padding: 0 6px; border-radius: 4px; font-weight: 900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">$ COMPARE / 烂用 vs 好用</span>
-    <h1>同样问 AI<em>结果差天地</em></h1>
-    <div class="row">
-      <div class="col bad">
-        <h3>[错] 烂用法</h3>
-        <p>"帮我写作文"</p>
-        <p>"答案是啥"</p>
-        <p>"写一段代码"</p>
-        <p>抄完就交 = <b>0 收获</b></p>
-      </div>
-      <div class="col good">
-        <h3>[对] 好用法</h3>
-        <p>"我写的作文哪里弱"</p>
-        <p>"这题为什么是这答案"</p>
-        <p>"我代码报错 · 帮我看哪错"</p>
-        <p>追问 → <b>真懂</b></p>
-      </div>
-    </div>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="case">
-      <h2>// 关键差别</h2>
-      <div class="scene">烂用法 = 让 AI <b>替娃完成</b><br>好用法 = 让 AI <b>陪娃成长</b><br><br>同一个工具 · <b>用法决定价值</b></div>
-    </div>
-  </div>
-</body>
-</html>
+.myths { position: absolute; top: 380px; left: 60px; right: 60px; }
+.myth { background: #FFFFFF; border: 3px solid #FFEBEE; border-left: 8px solid #B71C1C;
+padding: 14px 20px; margin-bottom: 14px; border-radius: 6px; position: relative; }
+.myth .x { position: absolute; top: -12px; left: -12px;
+width: 36px; height: 36px; border-radius: 50%;
+background: #B71C1C; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px; font-weight: 900; }
+.myth .lie { font-size: 20px; color: #B71C1C; font-weight: 900;
+text-decoration: line-through; padding-left: 36px; }
+.myth .truth { font-size: 17px; color: #1A1A1A; margin-top: 6px; font-weight: 700;
+line-height: 1.4; }
+.myth .truth b { background: #FFF59D; padding: 0 4px; color: #2E7D32; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">RULE · 4 条铁律</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 守住底线 · AI 才是助手</div><h1>娃用 AI<br>4 条<b>铁律</b></h1></div>
+<div class="myths"><div class="myth"><div class="x">!</div><div class="lie">"先自己想 · 再问 AI"</div><div class="truth">遇到题先自己想 5 分钟 · <b>抄答案前思维必然萎缩</b></div></div><div class="myth"><div class="x">!</div><div class="lie">"问"为什么"不问"是什么""</div><div class="truth">"为什么这么算"比"答案是啥"<b>有用 10 倍</b> · 培养追问的习惯</div></div><div class="myth"><div class="x">!</div><div class="lie">"必须验证 · AI 会瞎编"</div><div class="truth">AI 不全对 · 10% 答案是错的 · 娃要会查证 · <b>别全信</b></div></div><div class="myth"><div class="x">!</div><div class="lie">"家长陪用 · 不要单飞"</div><div class="truth">低龄娃<b>家长一起玩</b> · 避免娃用 AI 抄作业偷懒</div></div></div>
+<div class="pull"><h2>AI 是<b>助手</b> · 不是替身</h2></div>
+<div class="footer"><span class="txt">守住底线</span></div>
+</body></html>

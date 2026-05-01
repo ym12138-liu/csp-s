@@ -2,78 +2,78 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 阅读程序 18 段 · 封面</title>
+<title>阅读程序 18 段 · 模型对照</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(180deg, #1976D2 0%, #42A5F5 50%, #80DEEA 100%);
-    color:#FFF; position:relative;
-  }
-  body::before {
-    content:""; position:absolute; top:120px; right:-100px;
-    width: 460px; height: 460px; border-radius: 50%;
-    background: radial-gradient(circle, #FFEB3B 0%, rgba(255,235,59,0.2) 60%, transparent 80%);
-  }
-  body::after {
-    content:""; position:absolute; bottom:200px; left:-80px;
-    width: 320px; height: 320px; border-radius: 50%;
-    background: rgba(255,255,255,0.25);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#FFEB3B; color:#0D47A1; padding:14px 32px;
-    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom: 50px;
-    box-shadow: 6px 6px 0 #1A1A1A;
-  }
-  .num18 {
-    font-size: 320px; font-weight: 900; line-height: 0.85;
-    color: #FFEB3B;
-    text-shadow: 12px 12px 0 #0D47A1;
-    letter-spacing: -10px;
-  }
-  .title {
-    font-size: 80px; font-weight: 900;
-    color: #FFF; line-height: 1.05; margin-top: 24px;
-    text-shadow: 5px 5px 0 #0D47A1;
-  }
-  .title em {
-    font-style: normal;
-    background: #FF5E62; padding: 0 14px; display: inline-block;
-    box-shadow: 6px 6px 0 #1A1A1A;
-  }
-  .sub {
-    margin-top: 30px;
-    background: #FFF; color: #0D47A1; font-weight: 800;
-    padding: 18px 24px; border-radius: 14px;
-    border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #FFEB3B;
-    font-size: 36px; display:inline-block; line-height: 1.4;
-  }
-  .sub b { color: #B71C1C; }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#FFF; font-weight:800;
-  }
-  .stamp { background:#FFEB3B; color:#0D47A1; padding:14px 24px; border-radius:8px; transform:rotate(-5deg); font-weight:900;}
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 64px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 14px; }
+
+  .stats { position: absolute; top: 460px; left: 80px; right: 80px;
+    display: flex; gap: 16px; }
+  .stat { flex: 1; background: rgba(255,255,255,0.08); border: 2px dashed #FFE082;
+    padding: 18px 14px; border-radius: 10px; text-align: center; }
+  .stat .v { font-size: 60px; font-weight: 900; color: #FFE082; line-height: 1; }
+  .stat .l { font-size: 18px; color: #FFFFFF; margin-top: 8px; font-weight: 700; }
+
+  .body-area { position: absolute; top: 720px; left: 80px; right: 80px; }
+  .body-area .star { color: #FF6B9D; font-size: 22px; }
+  .body-area .lbl { font-size: 26px; font-weight: 900; color: #FFE082;
+    margin-bottom: 14px; letter-spacing: 1px; }
+  .body-area p { font-size: 22px; color: #FFFFFF; line-height: 1.7;
+    margin-bottom: 8px; font-weight: 500; }
+  .body-area .circle { color: #FF6B9D; border-bottom: 3px solid #FF6B9D;
+    padding: 0 6px; font-weight: 900; }
+  .body-area .high { background: #FFE082; color: #1B5E20; padding: 0 6px;
+    border-radius: 3px; font-weight: 900; }
+  .body-area .quote { color: #FFE082; font-size: 20px; font-style: italic;
+    margin-top: 14px; line-height: 1.6; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <div class="tag">阅读程序 · 算法清单</div>
-    <div class="num18">18</div>
-    <div class="title">
-      段算法<br>
-      背完<em>吊打 90%</em>
-    </div>
-    <div class="sub">
-      7 年真题逐段标注<br>
-      <b>每段对应一个经典模型</b>
-    </div>
+  <div class="top">
+    <span class="badge">老师手记 · 阅读题观察</span>
+    <span class="right">因诺信奥 · 大连</span>
   </div>
-  <div class="footer">
-    <span>#CSP-J #阅读程序 #大连娃</span>
-    <span class="stamp">收藏不亏</span>
+
+  <div class="h1-area">
+    <h1>每段代码<br>都对应一个<br><b>算法模型</b></h1>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">7</div><div class="l">年真题</div></div>
+    <div class="stat"><div class="v">18</div><div class="l">段代码</div></div>
+    <div class="stat"><div class="v">5</div><div class="l">类模型</div></div>
+  </div>
+
+  <div class="body-area">
+    <div class="lbl"><span class="star">★</span> 一句话总结</div>
+    <p>识别模型 = <span class="circle">5 倍效率</span></p>
+    <p>看到 <span class="high">dp[i] = max/min(...)</span> 直接 DP</p>
+    <p>看到函数 <span class="high">solve(left) + solve(right)</span> 直接分治</p>
+    <p>看到 <span class="high">str[i] - 'A'</span> 几乎确定字符串变体</p>
+    <div class="quote">"先扫算法骨架,再去抠每一行实现 — 速度翻倍。"</div>
+  </div>
+
+  <div class="bottom">
+    <div class="ttl">★ 这帖讲什么 ★</div>
+    <div class="txt">7 年 18 段阅读题 / <b>对应模型清单</b> / 一眼识别套路</div>
   </div>
 </body>
 </html>

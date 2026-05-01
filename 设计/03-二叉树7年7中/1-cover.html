@@ -2,80 +2,79 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>二叉树 7 年 7 中 · 封面</title>
+<title>二叉树 · 7 年 7 中</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(165deg, #6A1B9A 0%, #AB47BC 45%, #FF7043 100%);
-    color: #FFF; position:relative;
-  }
-  body::before {
-    content:""; position:absolute; bottom:120px; left:-80px;
-    width: 360px; height: 360px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,193,7,0.4) 0%, transparent 70%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#FFEB3B; color:#4A148C; padding:14px 32px;
-    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom: 50px;
-    box-shadow: 6px 6px 0 #1A1A1A;
-  }
-  .nine {
-    font-size: 280px; font-weight: 900; line-height: 0.85;
-    color: #FFEB3B;
-    text-shadow: 10px 10px 0 #1A1A1A;
-    letter-spacing: -10px;
-  }
-  .nine .slash { color: #FFF; }
-  .title {
-    font-size: 92px; font-weight: 900;
-    color: #FFF; line-height: 1.05; margin-top: 30px;
-    text-shadow: 5px 5px 0 #4A148C;
-  }
-  .title .hl {
-    background: #FF7043; padding: 0 14px;
-    box-shadow: 6px 6px 0 #1A1A1A;
-    display: inline-block;
-  }
-  .sub {
-    margin-top: 36px;
-    font-size: 38px; font-weight: 800;
-    background: #FFF; color: #1A1A1A;
-    padding: 18px 24px; border-radius: 14px;
-    border: 4px solid #1A1A1A;
-    box-shadow: 6px 6px 0 #FFEB3B;
-    display: inline-block;
-    line-height: 1.4;
-  }
-  .sub b { color: #B71C1C; }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#FFF; font-weight:800;
-  }
-  .stamp {
-    background:#FFEB3B; color:#4A148C; padding:14px 24px; border-radius:8px;
-    transform:rotate(-5deg); font-weight:900;
-  }
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; letter-spacing: 1px; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800;
+    letter-spacing: 1px; }
+
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 64px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 14px; border-radius: 4px; }
+
+  .stat-row { position: absolute; top: 460px; left: 80px; right: 80px;
+    display: flex; gap: 16px; }
+  .stat { flex: 1; background: rgba(255,255,255,0.08); border: 2px dashed #FFE082;
+    padding: 18px 14px; border-radius: 10px; text-align: center; }
+  .stat .v { font-size: 60px; font-weight: 900; color: #FFE082; line-height: 1; }
+  .stat .l { font-size: 18px; color: #FFFFFF; margin-top: 8px; font-weight: 700; }
+
+  .body-area { position: absolute; top: 700px; left: 80px; right: 80px; }
+  .body-area .star { color: #FF6B9D; font-size: 22px; }
+  .body-area .lbl { font-size: 26px; font-weight: 900; color: #FFE082;
+    margin-bottom: 14px; letter-spacing: 2px; }
+  .body-area p { font-size: 22px; color: #FFFFFF; line-height: 1.7;
+    margin-bottom: 8px; font-weight: 500; }
+  .body-area .circle { color: #FF6B9D; border-bottom: 3px solid #FF6B9D;
+    padding: 0 6px; font-weight: 900; }
+  .body-area .high { background: #FFE082; color: #1B5E20; padding: 0 6px;
+    border-radius: 3px; font-weight: 900; }
+  .body-area .quote { color: #FFE082; font-size: 22px; font-style: italic;
+    margin-top: 14px; line-height: 1.6; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <div class="tag">单选必拿题 · 多拿 4 分</div>
-    <div class="nine">7<span class="slash">/</span>7</div>
-    <div class="title">
-      <span class="hl">二叉树</span><br>
-      性质题
-    </div>
-    <div class="sub">
-      2019-2025 <b>每一年都考</b><br>
-      不会的话初赛 60+ 很难够
-    </div>
+  <div class="top">
+    <span class="badge">老师手记 · CSP-J 真题观察</span>
+    <span class="right">因诺信奥 · 大连</span>
   </div>
-  <div class="footer">
-    <span>#CSP-J #信奥必背</span>
-    <span class="stamp">收藏背诵</span>
+
+  <div class="h1-area">
+    <h1>这一块<br>2019 到 2025<br><b>每年都在考</b></h1>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="v">7</div><div class="l">年都考过</div></div>
+    <div class="stat"><div class="v">7</div><div class="l">单选必出</div></div>
+    <div class="stat"><div class="v">16</div><div class="l">分上下</div></div>
+  </div>
+
+  <div class="body-area">
+    <div class="lbl"><span class="star">★</span> 不夸张 <span class="star">★</span></div>
+    <p>这一块就是 <span class="circle">二叉树性质</span> 题。</p>
+    <p>每年单选 1-2 道,合起来就是<span class="high">16 分上下</span>。</p>
+    <p>不学这块 = 直接送出去 16 分,</p>
+    <p>然后再用编程题硬凑回来,<span class="circle">成本太高</span>。</p>
+    <div class="quote">"我家娃背了三遍遍历转换,初赛单选稳了。"<br>—— 一位三年级娃妈</div>
+  </div>
+
+  <div class="bottom">
+    <div class="ttl">★ 这帖讲什么 ★</div>
+    <div class="txt">7 年都考的 <b>二叉树性质</b> 究竟考啥 / 怎么练 / 多久能拿稳</div>
   </div>
 </body>
 </html>

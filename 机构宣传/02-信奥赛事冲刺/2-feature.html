@@ -1,153 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · CSP 备考体系</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>VS · 普及 vs 提高</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFFBE5; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band {
-    position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #1A1A1A;
-    display: flex; align-items: center; padding: 0 60px;
-  }
-  .h-tag {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px;
-  }
-  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 {
-    font-size: 64px; font-weight: 900; color: #1A1A1A;
-    line-height: 1.1; letter-spacing: 1px;
-  }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D;
-    padding: 0 12px; box-shadow: 6px 6px 0 #1A1A1A;
-    display: inline-block;
-  }
-
-  .vs-row {
-    position: absolute; top: 360px; left: 60px; right: 60px;
-    display: flex; gap: 18px;
-  }
-  .col {
-    flex: 1; background: #FFFFFF;
-    border: 4px solid #1A1A1A; border-radius: 16px;
-    padding: 18px 18px 16px;
-    box-shadow: 6px 6px 0 #FFD93D;
-  }
-  .col .head {
-    background: #1A1A1A; color: #FFD93D;
-    padding: 10px 14px; border-radius: 8px;
-    text-align: center;
-    font-size: 28px; font-weight: 900; letter-spacing: 1px;
-    margin-bottom: 12px;
-  }
-  .col-s .head { background: #B71C1C; color: #FFD93D; }
-  .col p {
-    font-size: 19px; color: #424242; font-weight: 700;
-    padding: 6px 4px; border-bottom: 2px dashed #FFD93D;
-    line-height: 1.3;
-  }
-  .col p:last-child { border-bottom: none; }
-  .col p b { background: #FFD93D; padding: 0 4px; border-radius: 3px; color: #B71C1C; }
-
-  .modules-area {
-    position: absolute; top: 760px; left: 60px; right: 60px;
-  }
-  .modules-area .lbl {
-    background: #1A1A1A; color: #FFD93D;
-    padding: 8px 22px; border-radius: 8px;
-    font-size: 24px; font-weight: 900; letter-spacing: 2px;
-    display: inline-block; margin-bottom: 14px;
-  }
-  .module-row { display: flex; flex-wrap: wrap; gap: 10px; }
-  .mod {
-    background: #FFFFFF; color: #1A1A1A;
-    padding: 10px 18px; border-radius: 10px;
-    font-size: 22px; font-weight: 900;
-    border: 3px solid #1A1A1A;
-    box-shadow: 3px 3px 0 #FFD93D;
-  }
-  .mod.hot { background: #FFD93D; }
-  .mod.s { background: #1A1A1A; color: #FFD93D; border-color: #FFD93D; }
-
-  .pull {
-    position: absolute; top: 1090px; left: 60px; right: 60px;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 22px 28px; border-radius: 16px;
-    border: 4px solid #FFD93D;
-    box-shadow: 8px 8px 0 #FFD93D;
-  }
-  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
-    background: #FFD93D;
-    display: flex; align-items: center; justify-content: center;
-    border-top: 4px solid #1A1A1A;
-  }
-  .footer-band .txt { color: #1A1A1A; font-size: 28px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">SYSTEM · 备考体系</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>普及组 vs <em>提高组</em><br>清楚知道在练啥</h1>
-  </div>
-
-  <div class="vs-row">
-    <div class="col col-j">
-      <div class="head">CSP-J 普及</div>
-      <p>对应 <b>初一前</b> 水平</p>
-      <p>题量小 · 模块清晰</p>
-      <p><b>21 块</b>真题模块</p>
-      <p>2 道阅读 + 完善 + 编程</p>
-      <p>过线 ≈ 60 / 100</p>
-    </div>
-    <div class="col col-s">
-      <div class="head">CSP-S 提高</div>
-      <p>对应 <b>高一前</b> 水平</p>
-      <p>难度跳一档 · 算法硬核</p>
-      <p>图论 / 状压 / 树形 DP</p>
-      <p>5 块 CSP-J 没碰过的</p>
-      <p>过线 ≈ 70-90 因省份</p>
-    </div>
-  </div>
-
-  <div class="modules-area">
-    <span class="lbl">每周一块·按真题打标推进</span>
-    <div class="module-row">
-      <span class="mod hot">二叉树</span>
-      <span class="mod hot">DP</span>
-      <span class="mod">排列组合</span>
-      <span class="mod">递归</span>
-      <span class="mod">字符串</span>
-      <span class="mod">BFS</span>
-      <span class="mod">位运算</span>
-      <span class="mod s">图论</span>
-      <span class="mod s">最短路</span>
-      <span class="mod s">状压 DP</span>
-      <span class="mod s">线段树</span>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>核心 ·<br><b>每周打 1 块</b> · 月底自测打标 · <b>哪弱补哪</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">真题驱动 · 不堆量 · 看真进步</span>
-  </div>
-</body>
-</html>
+.vs { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; align-items: stretch; gap: 16px; }
+.col { flex: 1; padding: 18px 20px; border-radius: 14px; }
+.col.l { background: #E3F2FD; border: 3px solid #0D47A1; }
+.col.r { background: #FFEBEE; border: 3px solid #B71C1C; }
+.col h3 { font-size: 22px; font-weight: 900; text-align: center;
+padding: 8px 0; margin-bottom: 12px; border-radius: 6px; color: #FFFFFF; }
+.col.l h3 { background: #0D47A1; }
+.col.r h3 { background: #B71C1C; }
+.col p { font-size: 16px; padding: 6px 0; color: #1A1A1A; font-weight: 700;
+border-bottom: 1px dashed rgba(0,0,0,0.15); line-height: 1.4; }
+.col p:last-child { border-bottom: none; }
+</style></head><body><div class="top"><span class="badge">VS · 普及 vs 提高</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 两件事 · 别搞混</div><h1>普及 vs 提高<br>清楚<b>在练啥</b></h1></div>
+<div class="vs">
+<div class="col l"><h3>CSP-J 普及</h3><p>对应初一前水平</p><p>题量小 · 模块清晰</p><p>21 块真题模块</p><p>2 阅读 + 完善 + 编程</p><p>过线 ≈ 60 / 100</p></div>
+<div class="col r"><h3>CSP-S 提高</h3><p>对应高一前水平</p><p>难度跳一档</p><p>图论 / 状压 DP / 树形 DP</p><p>5 块 J 没碰过的</p><p>过线 ≈ 70-90 因省份</p></div>
+</div>
+<div class="pull"><h2>不堆题海 · <b>按真题模块</b>逐个补</h2></div>
+<div class="footer"><span class="txt">不报全年 · 短期试听</span></div>
+</body></html>

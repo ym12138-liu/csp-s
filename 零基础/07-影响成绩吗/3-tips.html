@@ -1,36 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>影响成绩吗 · 提示</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>MYTH · 3 个错配</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#BBDEFB 0%, #FFF59D 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#0D47A1; }
-  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
-  .myth { background:#FFFFFF; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #1976D2; position: relative; }
-  .myth .x { position: absolute; top: -16px; left: -16px; width: 56px; height: 56px; border-radius:50%; background:#B71C1C; color:#FFEB3B; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
-  .myth .lie { font-size: 28px; color: #B71C1C; font-weight: 900; text-decoration: line-through; padding-left: 50px; }
-  .myth .truth { font-size: 26px; color: #1A1A1A; font-weight: 700; line-height: 1.5; margin-top: 8px; }
-  .myth .truth b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #0D47A1; }
-  .pull { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #1976D2; }
-  .pull h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { color: #FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">误区扫荡 · 别极端</span>
-    <h1>关于时间<br>这 3 句话 <em>是误传</em></h1>
-    <div class="myth"><div class="x">×</div><div class="lie">编程跟主科绝对冲突</div><div class="truth">编程练的<b>逻辑思维</b>跟数理是<b>同源</b><br>合理时间反而会促进数学物理</div></div>
-    <div class="myth"><div class="x">×</div><div class="lie">为了信奥放弃语文英语</div><div class="truth">信奥 ≠ 升学保底 · <b>主科基本盘不能丢</b><br>主科崩了 · 信奥拿奖也没用</div></div>
-    <div class="myth"><div class="x">×</div><div class="lie">每天必须学 2 小时编程</div><div class="truth">小学每天 <b>30 分钟 + 周末 1 小时</b>就够<br>初中再视情况加量 · 不是越多越好</div></div>
-    <div class="pull">
-      <h2>大连家长真心话<br><b>"主科是 1 · 编程是 0 · 没 1 不行"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.myths { position: absolute; top: 380px; left: 60px; right: 60px; }
+.myth { background: #FFFFFF; border: 3px solid #FFEBEE; border-left: 8px solid #B71C1C;
+padding: 14px 20px; margin-bottom: 14px; border-radius: 6px; position: relative; }
+.myth .x { position: absolute; top: -12px; left: -12px;
+width: 36px; height: 36px; border-radius: 50%;
+background: #B71C1C; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px; font-weight: 900; }
+.myth .lie { font-size: 20px; color: #B71C1C; font-weight: 900;
+text-decoration: line-through; padding-left: 36px; }
+.myth .truth { font-size: 17px; color: #1A1A1A; margin-top: 6px; font-weight: 700;
+line-height: 1.4; }
+.myth .truth b { background: #FFF59D; padding: 0 4px; color: #2E7D32; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">MYTH · 3 个错配</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 时间分配上别犯</div><h1>3 句话<br>是<b>误传</b></h1></div>
+<div class="myths"><div class="myth"><div class="x">!</div><div class="lie">"编程跟主科绝对冲突"</div><div class="truth">编程练的逻辑思维跟数理是<b>同源的</b> · 合理时间反而会促进数学物理</div></div><div class="myth"><div class="x">!</div><div class="lie">"为了信奥放弃语文英语"</div><div class="truth">信奥不是升学保底 · <b>主科基本盘不能丢</b> · 主科崩了信奥拿奖也没用</div></div><div class="myth"><div class="x">!</div><div class="lie">"每天必须学 2 小时编程"</div><div class="truth">小学每天 30 分钟 + 周末 1 小时就够 · 初中再视情况加量 · <b>不是越多越好</b></div></div></div>
+<div class="pull"><h2>主科是 1 · 编程是 0 · <b>没 1 不行</b></h2></div>
+<div class="footer"><span class="txt">别本末倒置</span></div>
+</body></html>

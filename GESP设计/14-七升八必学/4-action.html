@@ -1,50 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>GESP 七升八 · 行动</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>GESP 七级升八级 · 这周开始</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#1A237E; color:#FFF; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 80% 20%, rgba(255,215,0,0.5) 0%, transparent 50%), radial-gradient(circle at 10% 90%, rgba(57,73,171,0.5) 0%, transparent 50%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFD700; color:#1A237E; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 84px; font-weight:900; margin-top:18px; line-height:1.05; }
-  h1 em { font-style:normal; color:#FFD700; }
-  .week { background:#FFFFFF; color:#1A1A1A; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #3949AB; position: relative; }
-  .week::before { content: attr(data-w); position:absolute; left: -28px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background: #FFD700; color: #1A237E; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 #1A1A1A; line-height: 1.1; text-align:center; }
-  .week h3 { font-size:30px; font-weight:900; color:#1A237E; padding-left: 40px; }
-  .week p { font-size:24px; line-height:1.5; color:#424242; margin-top: 6px; }
-  .week p code { background:#FFD700; color:#1A237E; padding:2px 10px; border-radius:4px; font-weight:700; }
-  .week p b { color:#B71C1C; }
-  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #3949AB, #FFD700); color:#FFFFFF; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; text-shadow: 2px 2px 0 #1A1A1A; }
-  .pull h2 { font-size: 38px; font-weight:900; line-height:1.35; }
-  .pull h2 b { color: #FFD700; }
-  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
-  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFD700; font-weight:700; }
-  .pill { background:#FFD700; color:#1A237E; padding:10px 22px; border-radius:100px; font-weight:900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">PLAN · 24 周冲顶</span>
-    <h1>从七级到八级<br><em>24 周冲顶</em></h1>
-    <div class="week" data-w="W1-5"><h3>四大图算法（重点 5 周）</h3><p>Kruskal + Prim + Dijkstra + Floyd · <b>各练 10 题</b></p></div>
-    <div class="week" data-w="W6-8"><h3>组合数学（3 周）</h3><p>排列 / 组合 / 二项式 / 加法乘法原理</p></div>
-    <div class="week" data-w="W9-11"><h3>高级 DP（3 周）</h3><p>树形 DP + 区间 DP + 杨辉三角</p></div>
-    <div class="week" data-w="W12-13"><h3>OOP 进阶</h3><p>多构造 / 引用 / 继承访问权限</p></div>
-    <div class="week" data-w="W14"><h3>排序最坏 + 卡特兰</h3><p>快排最坏 O(n²) + 卡特兰 / 错排</p></div>
-    <div class="week" data-w="W15"><h3>概率论</h3><p>古典概率 + 几何概率</p></div>
-    <div class="week" data-w="W16-24"><h3>限时刷真题</h3><p>2024-2026 八级全部 · <b>稳定 70+ 是顶</b></p></div>
-    <div class="pull">
-      <h2>记一句话<br><b>四大图算法 + 组合 + 树 DP = 八级 60+</b></h2>
-      <p>大连家长 24 周冲顶 · GESP 顶级</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#七升八 #顶级 #大连娃</span>
-    <span class="pill">收藏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.acts { position: absolute; top: 400px; left: 60px; right: 60px; }
+.act { display: flex; padding: 16px 22px; margin-bottom: 14px;
+background: #E3F2FD; border-radius: 14px; border-left: 6px solid #0D47A1; }
+.act .num { flex: 0 0 60px; font-size: 36px; font-weight: 900; color: #0D47A1; }
+.act .body h3 { font-size: 24px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.act .body p { font-size: 16px; color: #424242; margin-top: 6px; font-weight: 700; line-height: 1.5; }
+.act .body p b { background: #FFF59D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">ACTION · 这周必做</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 不堆量 · 抓重点</div><h1>立刻能做的<br><b>3 件事</b></h1></div>
+<div class="acts">
+<div class="act"><div class="num">1</div><div class="body"><h3>对照清单查缺</h3><p>本号七级升八级必补 5 项 · 抄到本子上 · <b>逐项打勾</b></p></div></div><div class="act"><div class="num">2</div><div class="body"><h3>选 1 块最弱的开始</h3><p>5 项里挑娃最不熟的 · <b>第 1 周专攻</b></p></div></div><div class="act"><div class="num">3</div><div class="body"><h3>限时刷 2025 真题</h3><p>八级真题 1 套 90 分钟 · 看新增项掉多少分</p></div></div>
+</div>
+<div class="pull"><h2>不报班也行 · <b>真题 + 文档</b>自学就够</h2></div>
+<div class="footer"><span class="txt">小班 3 人 · 因诺信奥</span></div>
+</body></html>

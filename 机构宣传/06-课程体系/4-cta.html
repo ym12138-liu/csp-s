@@ -1,122 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · 路径定制</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>CTA · 路径定制</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFD93D; position: relative; }
-  body::before {
-    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
-    background: url("../../因诺信奥图片/DSC_2843.JPG") center/cover no-repeat;
-  }
-  body::after {
-    content:""; position:absolute; top:0; left:0; right:0; height: 580px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.65) 70%, #FFD93D 100%);
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 60px; left: 60px; right: 60px;
-    display: flex; align-items: center; z-index: 5; }
-  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; box-shadow: 4px 4px 0 #1A1A1A; }
-  .right { margin-left: auto; color: #FFFFFF; font-size: 24px; font-weight: 800;
-    background: rgba(0,0,0,0.6); padding: 10px 18px; border-radius: 8px; }
-
-  .hero { position: absolute; top: 200px; left: 60px; right: 60px; z-index: 5; }
-  .hero .pre { color: #FFD93D; font-size: 30px; font-weight: 800;
-    letter-spacing: 3px; text-shadow: 3px 3px 0 #000; margin-bottom: 14px; }
-  .hero .big {
-    font-size: 100px; font-weight: 900; color: #FFFFFF;
-    line-height: 1; letter-spacing: 1px;
-    text-shadow: 5px 5px 0 #000;
-  }
-  .hero .big em {
-    font-style: normal; color: #1A1A1A;
-    background: #FFD93D; padding: 0 14px;
-    display: inline-block; box-shadow: 6px 6px 0 #FFFFFF;
-    -webkit-text-fill-color: #1A1A1A;
-  }
-  .hero .sub { color: #FFFFFF; font-size: 28px; font-weight: 800;
-    margin-top: 22px; text-shadow: 3px 3px 0 #000; }
-
-  .input {
-    position: absolute; top: 640px; left: 60px; right: 60px; z-index: 5;
-    background: #FFFFFF; border-radius: 18px;
-    padding: 22px 26px;
-    border: 4px solid #1A1A1A;
-    box-shadow: 8px 8px 0 #1A1A1A;
-  }
-  .input .lbl {
-    background: #1A1A1A; color: #FFD93D;
-    padding: 6px 16px; border-radius: 6px;
-    font-size: 22px; font-weight: 900; letter-spacing: 1px;
-    display: inline-block; margin-bottom: 12px;
-  }
-  .input h3 { font-size: 28px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
-  .qs { margin-top: 14px; }
-  .q {
-    display: flex; align-items: center;
-    padding: 8px 0;
-    border-bottom: 2px dashed #FFD93D;
-    font-size: 20px; font-weight: 800; color: #424242;
-  }
-  .q:last-child { border-bottom: none; }
-  .q .icon {
-    flex: 0 0 36px; height: 36px; border-radius: 50%;
-    background: #FFD93D; color: #1A1A1A;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px; font-weight: 900;
-    margin-right: 12px;
-    border: 2px solid #1A1A1A;
-  }
-
-  .pull {
-    position: absolute; bottom: 100px; left: 60px; right: 60px; z-index: 5;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 20px 26px; border-radius: 16px;
-    border: 4px solid #FFFFFF;
-    box-shadow: 8px 8px 0 #FFFFFF;
-    text-align: center;
-  }
-  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.3; }
-  .pull h2 b { color: #FFD93D; }
-  .pull p { color: #FFD93D; font-size: 18px; font-weight: 700; margin-top: 6px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-    background: #1A1A1A; display: flex; align-items: center; justify-content: center; z-index: 6; }
-  .footer-band .txt { color: #FFD93D; font-size: 24px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">CTA · 路径定制</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="hero">
-    <div class="pre">// 不知道娃从哪开始?</div>
-    <div class="big">3 个<em>问题</em></div>
-    <div class="sub">告诉我们 · 帮你画路径图</div>
-  </div>
-
-  <div class="input">
-    <span class="lbl">家长 3 答 · 老师定制</span>
-    <h3>不报班·先把路径捋清</h3>
-    <div class="qs">
-      <div class="q"><div class="icon">1</div>娃几岁 · 几年级?</div>
-      <div class="q"><div class="icon">2</div>有没有编程 / 数学基础?</div>
-      <div class="q"><div class="icon">3</div>目标是 GESP 还是 CSP?</div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>主页私信"<b>定路径</b>"<br>3 答得 1 张专属路径图</h2>
-    <p>因诺信奥 · 不报班·先把账算清</p>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt"># 课程体系 # 路径定制 # 因诺信奥</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">CTA · 路径定制</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 3 答得 1 张专属图</div><h1>3 答<br>得<b>路径图</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>Q1</h3><p>娃几岁 / 几年级?</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>Q2</h3><p>有没有编程 / 数学基础?</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>Q3</h3><p>目标是 GESP 还是 CSP?</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>结果</h3><p>主页私信"<b>定路径</b>" · 3 答得 1 张专属路径图</p></div></div>
+<div class="pull"><h2>不报班 · 也<b>先把账算清</b></h2></div>
+<div class="footer"><span class="txt">不画饼 · 看真路</span></div>
+</body></html>

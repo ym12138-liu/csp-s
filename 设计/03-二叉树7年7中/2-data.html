@@ -2,78 +2,98 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>二叉树 7 年 7 中 · 数据</title>
+<title>二叉树 · 7 年命中表</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFF3E0; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#6A1B9A,#FF7043); }
-  body::after  { content:""; position:absolute; bottom:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#FF7043,#6A1B9A); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#6A1B9A; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; }
-  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#4A148C; }
-  h1 em { font-style:normal; background:linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
-  .yrs {
-    margin-top: 30px;
-    display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px;
-  }
-  .yr {
-    background:#FFF; border-radius: 12px; text-align:center; padding: 14px 0;
-    border: 3px solid #1A1A1A; box-shadow: 4px 4px 0 #6A1B9A;
-  }
-  .yr .y { font-size: 24px; font-weight: 900; color: #6A1B9A; }
-  .yr .v { font-size: 36px; font-weight: 900; color: #B71C1C; line-height: 1; margin-top: 4px; }
-  .topics {
-    margin-top: 30px;
-  }
-  .topic {
-    display: flex; align-items: center;
-    background: #FFF; border-radius: 14px;
-    padding: 16px 20px; margin-bottom: 12px;
-    border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #FF7043;
-  }
-  .topic .num {
-    flex: 0 0 56px; height: 56px; border-radius: 50%;
-    background: #6A1B9A; color: #FFEB3B; font-weight: 900; font-size: 28px;
-    display:flex; align-items:center; justify-content:center;
-    margin-right: 18px;
-  }
-  .topic .name { font-size: 28px; font-weight: 800; color: #1A1A1A; flex: 1; }
-  .topic .tag { font-size: 22px; font-weight: 700; color: #FFF; background: #FF7043; padding: 4px 14px; border-radius: 6px; }
-  .key {
-    margin-top: 28px; background: #1A1A1A; color: #FFEB3B;
-    padding: 22px 26px; border-radius: 16px;
-    box-shadow: 8px 8px 0 #FF7043;
-  }
-  .key .lbl { font-size: 22px; letter-spacing: 2px; font-weight: 700; opacity: .85; }
-  .key .txt { font-size: 32px; color: #FFF; font-weight: 800; line-height: 1.4; margin-top: 6px; }
-  .key .txt b { color: #FFEB3B; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 56px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
+
+  .table { position: absolute; top: 380px; left: 80px; right: 80px;
+    background: rgba(255,255,255,0.06); border-radius: 8px; padding: 18px; }
+  .table table { width: 100%; border-collapse: collapse; }
+  .table th { color: #FFE082; font-size: 22px; font-weight: 900; padding: 10px 4px; text-align: left;
+    border-bottom: 2px solid #FFE082; }
+  .table th.year { text-align: center; width: 56px; }
+  .table td { color: #FFFFFF; font-size: 18px; padding: 12px 4px;
+    border-bottom: 1px dashed rgba(255,255,255,0.2); }
+  .table td:first-child { font-weight: 700; }
+  .table td.hit { text-align: center; color: #FF6B9D; font-weight: 900; font-size: 22px; }
+
+  .body-area { position: absolute; top: 980px; left: 80px; right: 80px; }
+  .body-area .star { color: #FF6B9D; }
+  .body-area .lbl { font-size: 24px; font-weight: 900; color: #FFE082; margin-bottom: 12px; }
+  .body-area p { font-size: 22px; color: #FFFFFF; line-height: 1.7; font-weight: 500; }
+  .body-area .high { background: #FFE082; color: #1B5E20; padding: 0 6px; font-weight: 900; }
+  .body-area .circle { color: #FF6B9D; border-bottom: 3px solid #FF6B9D; padding: 0 6px; font-weight: 900; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">FREQUENCY · 历年命中</span>
-    <h1>每一年<em>都有它</em>的身影</h1>
-    <div class="yrs">
-      <div class="yr"><div class="y">2019</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2020</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2021</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2022</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2023</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2024</div><div class="v">中</div></div>
-      <div class="yr"><div class="y">2025</div><div class="v">中</div></div>
-    </div>
-    <div class="topics">
-      <div class="topic"><div class="num">1</div><div class="name">完全二叉树高度 · 节点数</div><span class="tag">必背</span></div>
-      <div class="topic"><div class="num">2</div><div class="name">三种遍历转换（前 中 后）</div><span class="tag">必背</span></div>
-      <div class="topic"><div class="num">3</div><div class="name">数组顺序存储 · 父子下标</div><span class="tag">高频</span></div>
-      <div class="topic"><div class="num">4</div><div class="name">叶子节点数计算</div><span class="tag">2025</span></div>
-      <div class="topic"><div class="num">5</div><div class="name">三叉树 / 完全 k 叉树</div><span class="tag">2023</span></div>
-    </div>
-    <div class="key">
-      <div class="lbl">DATA · 7 年统计</div>
-      <div class="txt">单选 1-2 题 · 累计 <b>≈ 16 分</b><br>不学就送分给别人</div>
-    </div>
+  <div class="top">
+    <span class="badge">老师手记 · 7 年命中表</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <h1>每一年<br>都有它的<b>身影</b></h1>
+  </div>
+
+  <div class="table">
+    <table>
+      <tr>
+        <th>考点</th>
+        <th class="year">19</th><th class="year">20</th><th class="year">21</th>
+        <th class="year">22</th><th class="year">23</th><th class="year">24</th>
+        <th class="year">25</th>
+      </tr>
+      <tr><td>完全二叉树高度 / 节点数</td>
+        <td class="hit">★</td><td class="hit">★</td><td class="hit">★</td>
+        <td></td><td class="hit">★</td><td></td><td></td>
+      </tr>
+      <tr><td>三种遍历转换 (前 中 后)</td>
+        <td class="hit">★</td><td></td><td class="hit">★</td>
+        <td class="hit">★</td><td class="hit">★</td><td class="hit">★</td><td class="hit">★</td>
+      </tr>
+      <tr><td>数组顺序存储 / 父子下标</td>
+        <td></td><td></td><td></td>
+        <td></td><td class="hit">★</td><td class="hit">★</td><td></td>
+      </tr>
+      <tr><td>叶子节点数计算</td>
+        <td></td><td></td><td></td>
+        <td></td><td></td><td></td><td class="hit">★</td>
+      </tr>
+      <tr><td>三叉树 / 完全 k 叉树</td>
+        <td></td><td></td><td></td>
+        <td></td><td class="hit">★</td><td></td><td></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="body-area">
+    <div class="lbl"><span class="star">★</span> 一句话总结</div>
+    <p><span class="circle">中序找根分左右</span>,前后序认根。</p>
+    <p>三遍历转换会了 = <span class="high">7 年单选稳吃 8 分</span>。</p>
+  </div>
+
+  <div class="bottom">
+    <div class="ttl">★ 想清楚 ★</div>
+    <div class="txt">不是题难,是<b>不识考法</b>。识完套路 2 分钟一题</div>
   </div>
 </body>
 </html>

@@ -1,130 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · 老师标准</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>STANDARD · 5 条红线</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFFBE5; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #1A1A1A; display: flex; align-items: center; padding: 0 60px; }
-  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
-  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 { font-size: 60px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D; padding: 0 12px;
-    box-shadow: 6px 6px 0 #1A1A1A; display: inline-block;
-  }
-
-  .photo {
-    position: absolute; top: 360px; left: 60px; right: 60px; height: 300px;
-    border-radius: 16px; overflow: hidden;
-    background: url("../../因诺信奥图片/DSC_2843.JPG") center/cover no-repeat;
-    border: 4px solid #1A1A1A;
-    box-shadow: 8px 8px 0 #FFD93D;
-  }
-
-  .standards { position: absolute; top: 700px; left: 60px; right: 60px; }
-  .standards .lbl {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 8px 22px; border-radius: 8px;
-    font-size: 24px; font-weight: 900; letter-spacing: 2px;
-    display: inline-block; margin-bottom: 14px;
-  }
-  .row { display: flex; gap: 14px; margin-bottom: 8px; }
-  .std {
-    flex: 1; background: #FFFFFF;
-    border-radius: 12px; padding: 10px 14px;
-    border: 3px solid #1A1A1A;
-    box-shadow: 3px 3px 0 #1A1A1A;
-    display: flex; align-items: center;
-  }
-  .std .num {
-    flex: 0 0 50px; height: 50px; border-radius: 10px;
-    background: #FFD93D; color: #1A1A1A;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px; font-weight: 900;
-    border: 3px solid #1A1A1A;
-    margin-right: 14px;
-  }
-  .std .body h3 { font-size: 20px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
-  .std .body p { font-size: 14px; font-weight: 700; color: #424242; margin-top: 2px; line-height: 1.25; }
-  .std .body p b { background: #FFD93D; padding: 0 4px; border-radius: 3px; color: #B71C1C; }
-
-  .pull {
-    position: absolute; bottom: 100px; left: 60px; right: 60px;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 20px 26px; border-radius: 16px;
-    border: 4px solid #FFD93D;
-    box-shadow: 8px 8px 0 #FFD93D;
-    text-align: center;
-  }
-  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-    background: #FFD93D; border-top: 4px solid #1A1A1A;
-    display: flex; align-items: center; justify-content: center; }
-  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">STANDARD · 老师 5 个标准</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>5 条<em>红线</em><br>不达标不上岗</h1>
-  </div>
-
-  <div class="photo"></div>
-
-  <div class="standards">
-    <span class="lbl">家长可以问·我们也能答</span>
-    <div class="row">
-      <div class="std">
-        <div class="num">1</div>
-        <div class="body"><h3>能现场写出 CSP-J 真题完整代码</h3><p>不背模板·<b>当场调通</b></p></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="std">
-        <div class="num">2</div>
-        <div class="body"><h3>带过完整一届赛季</h3><p>从初赛到复赛·<b>知道难点在哪</b></p></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="std">
-        <div class="num">3</div>
-        <div class="body"><h3>能讲清算法"为什么这么写"</h3><p>不照本宣科·<b>讲到学生听懂</b></p></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="std">
-        <div class="num">4</div>
-        <div class="body"><h3>会改学生代码 · 能找出 bug</h3><p>不只讲思路·<b>动手能力强</b></p></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="std">
-        <div class="num">5</div>
-        <div class="body"><h3>每周备课 · 持续学新知识</h3><p>跟进 2025 大纲·<b>不掉队</b></p></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>5 条标准<br><b>每位老师都对得起这 5 条</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">不夸大·不包装·真本事</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">STANDARD · 5 条红线</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 老师上岗硬标准</div><h1>老师 <b>5 条</b> 红线<br>不达标不上岗</h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>能现场写 CSP-J 真题完整代码</h3><p>不背模板 · <b>当场调通</b></p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>带过完整一届赛季</h3><p>从初赛到复赛 · <b>知道难点在哪</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>能讲清算法"为什么这么写"</h3><p>不照本宣科 · <b>讲到学生听懂</b></p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>会改学生代码 · 能找出 bug</h3><p>不只讲思路 · <b>动手能力强</b></p></div><div class="card" style="border-color:#FCE4EC"><div class="num">5</div><h3>每周备课 · 跟进新大纲</h3><p>2025 年的考点跟 2020 年不一样 · <b>不掉队</b></p></div></div>
+<div class="pull"><h2>5 条 · <b>每位老师都对得起</b></h2></div>
+<div class="footer"><span class="txt">不夸大 · 不包装</span></div>
+</body></html>

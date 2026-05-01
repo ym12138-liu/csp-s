@@ -1,35 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>家长零基础陪学 · 封面</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>ROLE · 4 招陪学</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(135deg, #FF6F00 0%, #FFCA28 50%, #FFFDE7 100%); color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:-100px; right:-100px; width:460px; height:460px; border-radius:50%; background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, transparent 70%); }
-  body::after { content:""; position:absolute; bottom:-80px; left:-80px; width:380px; height:380px; border-radius:50%; background: radial-gradient(circle, rgba(255,235,59,0.55) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .badge { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:14px 32px; border-radius:100px; font-size:32px; font-weight:900; letter-spacing:2px; margin-bottom: 50px; box-shadow: 6px 6px 0 #E65100; }
-  .pre { font-size: 42px; font-weight: 800; color: #BF360C; margin-bottom: 18px; }
-  .title { font-size: 144px; font-weight:900; line-height:0.95; color:#1A1A1A; text-shadow: 6px 6px 0 #FFFFFF; letter-spacing: -4px; }
-  .title em { font-style:normal; background: #1A1A1A; color:#FFEB3B; padding: 0 16px; display: inline-block; box-shadow: 8px 8px 0 #FFFFFF; }
-  .sub { margin-top: 36px; background:#FFFFFF; color:#BF360C; padding: 18px 26px; border-radius: 14px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #E65100; font-size: 36px; font-weight: 800; line-height: 1.4; display: inline-block; }
-  .sub b { color: #B71C1C; }
-  .footer { position:absolute; bottom:0; left:70px; right:70px; display:flex; justify-content:space-between; align-items:center; font-size:28px; color:#1A1A1A; font-weight:900; }
-  .stamp { background:#1A1A1A; color:#FFEB3B; padding:14px 24px; border-radius:8px; transform: rotate(-5deg); }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="badge">大连家长不焦虑系列 · 启蒙第 9 篇</div>
-    <div class="pre">"家长不会写代码 · 怎么陪？"</div>
-    <div class="title">不懂代码<br>也能 <em>陪学</em></div>
-    <div class="sub">不需要学 C++<br><b>4 种陪学方法立刻能用</b></div>
-  </div>
-  <div class="footer">
-    <span>#家长陪学 #零基础 #大连</span>
-    <span class="stamp">收藏不亏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">ROLE · 4 招陪学</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 家长不会代码也能陪</div><h1>家长不会代码<br>也能<b>陪学</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>当"代码听众"</h3><p>娃讲他写的代码 · 你假装不懂 · <b>多问"为什么"</b> · 讲懂了娃自己也理清了</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>当"运行测试员"</h3><p>娃说他的程序能算 · 你<b>出 5 个测试数据</b>验证 · 娃要解释每个数据为什么对</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>当"时间管理员"</h3><p>不懂代码也能管时间 · 每周计算编程时长 · <b>5 小时内 = 健康</b> · 超过就提醒</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>当"成果记录员"</h3><p>娃做的项目 / 解的题 · <b>拍照存档</b> · 3 个月后回看 · 娃自己看到进步</p></div></div>
+<div class="pull"><h2>陪学不是教 · 是 "<b>听 / 测 / 管 / 记</b>"</h2></div>
+<div class="footer"><span class="txt">不需要懂技术</span></div>
+</body></html>

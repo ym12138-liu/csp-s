@@ -1,64 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>大连娃 3 个坑 · 提示</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>STEP · 避坑 3 步</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#B3E5FC 0%, #FFF59D 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#01579B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#01579B; }
-  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
-  .signal { background:#FFFFFF; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #B71C1C; position: relative; }
-  .signal .x { position: absolute; top: -16px; left: -16px; width: 56px; height: 56px; border-radius:50%; background:#B71C1C; color:#FFEB3B; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
-  .signal h3 { font-size: 28px; color: #B71C1C; font-weight: 900; padding-left: 50px; }
-  .signal p { font-size: 24px; color: #1A1A1A; font-weight: 700; line-height: 1.5; margin-top: 8px; }
-  .signal p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #B71C1C; }
-  .pull { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #B71C1C; }
-  .pull h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { color: #FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">5 个红色信号 · 立刻撤</span>
-    <h1>遇到这 5 个<br><em>立刻撤</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="signal">
-      <div class="x">!</div>
-      <h3>1. 娃哭着说"不想学了"</h3>
-      <p>持续 2 周以上的抗拒 = <b>方法或节奏不对</b><br>立即停下评估 · 不要硬压</p>
-    </div>
-
-    <div class="signal">
-      <div class="x">!</div>
-      <h3>2. 机构催"必须报全年"</h3>
-      <p>正规机构会让你<b>试听 + 短期报名</b><br>催全年 = 业绩压力 · 不是为你好</p>
-    </div>
-
-    <div class="signal">
-      <div class="x">!</div>
-      <h3>3. 老师只让背模板</h3>
-      <p>不讲原理 / 只让抄代码 = <b>水课</b><br>娃考前过一次 / 考后忘光</p>
-    </div>
-
-    <div class="signal">
-      <div class="x">!</div>
-      <h3>4. 主科成绩 1 个月内下滑</h3>
-      <p>排名掉 5 名以上 = 时间分配出问题<br><b>立即减编程时间</b> 1 个月看变化</p>
-    </div>
-
-    <div class="signal">
-      <div class="x">!</div>
-      <h3>5. 娃晚上 10 点后还在写代码</h3>
-      <p>睡眠不足 = <b>第二天学校效率崩</b><br>编程不该挤掉睡眠 · 时间管理出错</p>
-    </div>
-
-    <div class="pull">
-      <h2>大连家长真心话<br><b>"任一信号亮起 · 当周就调整"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.stages { position: absolute; top: 400px; left: 60px; right: 60px; }
+.stage { display: flex; padding: 14px 22px; margin-bottom: 12px; border-radius: 12px; }
+.stage .lvl { flex: 0 0 100px; font-size: 26px; font-weight: 900; color: #0D47A1; padding-top: 4px; }
+.stage .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.stage .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; line-height: 1.4; }
+.stage .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">STEP · 避坑 3 步</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 看广告别冲动 · 走这 3 步</div><h1>避坑<br>就<b>3 步</b></h1></div>
+<div class="stages"><div class="stage" style="background:#FCE4EC"><div class="lvl">第 1 步</div><div class="body"><h3>不急下决定</h3><p>看到广告别立马报 · <b>问 3 个老家长再说</b> · 大连家长群是免费咨询所</p></div></div><div class="stage" style="background:#FFF8E1"><div class="lvl">第 2 步</div><div class="body"><h3>给 3 个月观察期</h3><p>不论选啥都给 3 个月观察期 · 不行就<b>立刻调整</b> · 别死磕</p></div></div><div class="stage" style="background:#E8F5E9"><div class="lvl">第 3 步</div><div class="body"><h3>关注娃 / 不关注名次</h3><p>娃<b>主动想学</b> = 路线对 · 抗拒 / 哭闹 = 立即停下找问题</p></div></div></div>
+<div class="pull"><h2>焦虑买单 · 平静观察 · <b>才不踩坑</b></h2></div>
+<div class="footer"><span class="txt">娃的成长 · 是马拉松</span></div>
+</body></html>

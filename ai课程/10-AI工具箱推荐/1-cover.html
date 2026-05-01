@@ -1,46 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>AI 工具箱推荐 · 封面</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>TOOL · 5 个 AI 工具</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(135deg, #FF1744 0%, #00E5FF 33%, #FFEB3B 66%, #00FF41 100%); color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:-100px; right:-100px; width:460px; height:460px; border-radius:50%; background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%); }
-  body::after { content:""; position:absolute; bottom:-80px; left:-80px; width:380px; height:380px; border-radius:50%; background: radial-gradient(circle, rgba(255,235,59,0.6) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .badge { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:14px 32px; border-radius:100px; font-size:30px; font-weight:900; letter-spacing:3px; margin-bottom: 50px; box-shadow: 6px 6px 0 #FF1744; }
-  .pre { font-size: 42px; font-weight: 800; color: #1A1A1A; margin-bottom: 18px; }
-  .title { font-size: 144px; font-weight:900; line-height:0.95; color:#FFFFFF; text-shadow: 6px 6px 0 #1A1A1A; letter-spacing: -4px; }
-  .title em { font-style:normal; background: #1A1A1A; color:#FFEB3B; padding: 0 16px; display: inline-block; box-shadow: 8px 8px 0 #FFFFFF; }
-  .tools-row { margin-top: 36px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-  .t { background:#FFFFFF; color:#1A1A1A; border: 4px solid #1A1A1A; border-radius: 12px; padding: 14px 4px; text-align: center; box-shadow: 4px 4px 0 #1A1A1A; font-weight: 900; }
-  .t .v { font-size: 22px; line-height: 1; color: #1A1A1A; }
-  .t .l { font-size: 14px; opacity: 0.85; margin-top: 4px; color: #424242; }
-  .sub { margin-top: 36px; background:#1A1A1A; color:#FFEB3B; padding: 18px 26px; border-radius: 14px; box-shadow: 6px 6px 0 #FFFFFF; font-size: 36px; font-weight: 800; line-height: 1.4; display: inline-block; border: 4px solid #FFEB3B; }
-  .sub b { color: #FFFFFF; }
-  .footer { position:absolute; bottom:0; left:70px; right:70px; display:flex; justify-content:space-between; align-items:center; font-size:28px; color:#1A1A1A; font-weight:900; }
-  .stamp { background:#1A1A1A; color:#FFEB3B; padding:14px 24px; border-radius:8px; transform: rotate(-5deg); }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="badge">大连家长 AI 系列 · 第 10 篇 · 收官</div>
-    <div class="pre">"娃要玩 AI · 用啥工具？"</div>
-    <div class="title">AI<br><em>工具箱</em></div>
-    <div class="tools-row">
-      <div class="t"><div class="v">DeepSeek</div><div class="l">国产首选</div></div>
-      <div class="t"><div class="v">ChatGPT</div><div class="l">英文之王</div></div>
-      <div class="t"><div class="v">Claude</div><div class="l">写作之神</div></div>
-      <div class="t"><div class="v">通义</div><div class="l">学习神器</div></div>
-      <div class="t"><div class="v">Scratch</div><div class="l">编程启蒙</div></div>
-    </div>
-    <div class="sub">5 个工具<br><b>大部分免费 · 不报班</b></div>
-  </div>
-  <div class="footer">
-    <span># AI 工具箱 # 0 基础 # 大连娃</span>
-    <span class="stamp">收官收藏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.stages { position: absolute; top: 400px; left: 60px; right: 60px; }
+.stage { display: flex; padding: 14px 22px; margin-bottom: 12px; border-radius: 12px; }
+.stage .lvl { flex: 0 0 100px; font-size: 26px; font-weight: 900; color: #0D47A1; padding-top: 4px; }
+.stage .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.stage .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; line-height: 1.4; }
+.stage .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">TOOL · 5 个 AI 工具</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 大连家长真实在用</div><h1>AI 工具箱<br><b>5 个工具</b></h1></div>
+<div class="stages"><div class="stage" style="background:#FCE4EC"><div class="lvl">DeepSeek</div><div class="body"><h3>日常问答 / 国产首选</h3><p>免费 · 中文最懂 · 大连家长 90% 在用</p></div></div><div class="stage" style="background:#FFF8E1"><div class="lvl">通义千问</div><div class="body"><h3>作业辅导 / 教学型</h3><p>阿里出品 · 适合讲题 / 解题思路 · 免费</p></div></div><div class="stage" style="background:#E8F5E9"><div class="lvl">Claude</div><div class="body"><h3>写作 / 代码 / 质量高</h3><p>逻辑严谨 · 写作 + 编程都强 · 国内直连不便</p></div></div><div class="stage" style="background:#E3F2FD"><div class="lvl">ChatGPT</div><div class="body"><h3>英文学习 / 国际信息</h3><p>英文回答最好 · 国内直连不便 + 部分付费</p></div></div><div class="stage" style="background:#F3E5F5"><div class="lvl">Scratch</div><div class="body"><h3>编程启蒙必备</h3><p>不是 AI 但启蒙必备 · 免费 · 拖积木编程</p></div></div></div>
+<div class="pull"><h2>国内 = <b>DeepSeek + 通义 + Scratch</b> · 免费够用</h2></div>
+<div class="footer"><span class="txt">不需要翻墙 · 也能玩 AI</span></div>
+</body></html>

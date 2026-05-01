@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>不需要数学了吗 · 提示</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>STEP · 数学不掉队</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#FFE0B2 0%, #BBDEFB 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#E65100; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#E65100; }
-  h1 em { font-style:normal; background:#FFEB3B; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
-  .myth { background:#FFFFFF; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 12px solid #1565C0; position: relative; }
-  .myth .x { position: absolute; top: -16px; left: -16px; width: 56px; height: 56px; border-radius:50%; background:#E65100; color:#FFEB3B; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 4px 4px 0 #1A1A1A; }
-  .myth .lie { font-size: 26px; color: #B71C1C; font-weight: 900; padding-left: 50px; }
-  .myth .truth { font-size: 24px; color: #1A1A1A; font-weight: 700; line-height: 1.5; margin-top: 8px; }
-  .myth .truth b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #E65100; }
-  .pull { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #1565C0; }
-  .pull h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { color: #FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">家长 4 个误解 · 别再听</span>
-    <h1>这 4 句<br><em>都是谎</em></h1>
-    <div class="myth"><div class="x">×</div><div class="lie">"AI 帮算 · 数学随便学"</div><div class="truth">AI 算结果 ≠ 你理解过程<br>不懂过程 → <b>看不懂 AI 哪步错</b></div></div>
-    <div class="myth"><div class="x">×</div><div class="lie">"小学数学已经够了"</div><div class="truth">基础是底子 · 但 AI 时代核心算法<br>需要<b>初中代数 + 高中函数</b>打基础</div></div>
-    <div class="myth"><div class="x">×</div><div class="lie">"奥数太难 · 对 AI 没用"</div><div class="truth">奥数练的是<b>抽象建模能力</b><br>这恰恰是 AI 工程师的核心素养</div></div>
-    <div class="myth"><div class="x">×</div><div class="lie">"读文科逃避数学 · AI 时代也行"</div><div class="truth">文科 + AI 一样要数学 · <b>数据分析 / 心理统计 / 经济学</b>都要数学</div></div>
-    <div class="pull">
-      <h2>大连家长真心话<br><b>"AI 时代 = 数学比以前更重要"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.stages { position: absolute; top: 400px; left: 60px; right: 60px; }
+.stage { display: flex; padding: 14px 22px; margin-bottom: 12px; border-radius: 12px; }
+.stage .lvl { flex: 0 0 100px; font-size: 26px; font-weight: 900; color: #0D47A1; padding-top: 4px; }
+.stage .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.stage .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; line-height: 1.4; }
+.stage .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">STEP · 数学不掉队</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 3 步走 · 跟上 AI</div><h1>3 步走<br>数学<b>不掉队</b></h1></div>
+<div class="stages"><div class="stage" style="background:#FCE4EC"><div class="lvl">第 1 步</div><div class="body"><h3>每天 20 分钟思维题</h3><p>不刷题量 · 选 1 题想 3 种解法 · <b>培养抽象能力</b></p></div></div><div class="stage" style="background:#FFF8E1"><div class="lvl">第 2 步</div><div class="body"><h3>结合编程学数学</h3><p>学了"循环"用 Python 算 1+2+...+100 · <b>看得见的进步</b></p></div></div><div class="stage" style="background:#E8F5E9"><div class="lvl">第 3 步</div><div class="body"><h3>找数学 + AI 的小项目</h3><p>简单数据可视化 / 概率小实验 · <b>感受数学在 AI 里的作用</b></p></div></div></div>
+<div class="pull"><h2>数学练好 · 才能<b>跟 AI 同台</b></h2></div>
+<div class="footer"><span class="txt">AI 越强 · 数学差距越大</span></div>
+</body></html>

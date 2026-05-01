@@ -1,130 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · 课程体系</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>SYSTEM · 5 阶段</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #1A1A1A; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .photo {
-    position: absolute; top: 0; left: 0; right: 0; height: 720px;
-    background: url("../../因诺信奥图片/DSC_2825.JPG") center/cover no-repeat;
-  }
-  .photo::after {
-    content:""; position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.45) 50%, rgba(26,26,26,0.95) 95%, #1A1A1A 100%);
-  }
-
-  .badge { position: absolute; top: 60px; left: 60px; z-index: 5;
-    background: #FFD93D; color: #1A1A1A;
-    padding: 14px 28px; border-radius: 100px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px;
-    box-shadow: 6px 6px 0 #000; }
-  .right-tag { position: absolute; top: 60px; right: 60px; z-index: 5;
-    background: rgba(255,217,61,0.95); color: #1A1A1A;
-    padding: 14px 24px; border-radius: 100px;
-    font-size: 24px; font-weight: 900;
-    border: 3px solid #1A1A1A; }
-
-  .title-block { position: absolute; top: 280px; left: 60px; right: 60px; z-index: 5; }
-  .pre { color: #FFD93D; font-size: 32px; font-weight: 800;
-    letter-spacing: 3px; margin-bottom: 14px; text-shadow: 3px 3px 0 #000; }
-  .big-text {
-    color: #FFFFFF; font-size: 96px; font-weight: 900;
-    line-height: 1.05; letter-spacing: 1px;
-    text-shadow: 5px 5px 0 #000;
-  }
-  .big-text em {
-    font-style: normal; background: #FFD93D; color: #1A1A1A;
-    padding: 0 14px; box-shadow: 6px 6px 0 #FFFFFF;
-    -webkit-text-fill-color: #1A1A1A;
-  }
-
-  .roadmap-strip {
-    position: absolute; top: 770px; left: 60px; right: 60px; z-index: 5;
-  }
-  .strip {
-    background: #FFFFFF; border-radius: 16px;
-    padding: 18px 22px;
-    border: 4px solid #FFD93D;
-    box-shadow: 6px 6px 0 #FFD93D;
-  }
-  .strip .lbl {
-    background: #1A1A1A; color: #FFD93D;
-    padding: 4px 14px; border-radius: 6px;
-    font-size: 18px; font-weight: 900;
-    display: inline-block; margin-bottom: 10px;
-  }
-  .stages { display: flex; align-items: center; gap: 8px; }
-  .stage {
-    flex: 1; background: #FFFBE5;
-    border: 3px solid #1A1A1A; border-radius: 10px;
-    padding: 10px 6px; text-align: center;
-  }
-  .stage.adv { background: #FFD93D; }
-  .stage.top { background: #1A1A1A; color: #FFD93D; border-color: #FFD93D; }
-  .stage h4 { font-size: 18px; font-weight: 900; line-height: 1; }
-  .stage p { font-size: 12px; font-weight: 700; margin-top: 4px; line-height: 1.2; }
-  .stages .ar { color: #1A1A1A; font-size: 24px; font-weight: 900; flex: 0 0 auto; }
-
-  .pull {
-    position: absolute; top: 1080px; left: 60px; right: 60px; z-index: 5;
-    background: #FFD93D; color: #1A1A1A;
-    padding: 22px 28px; border-radius: 16px;
-    border: 4px solid #FFFFFF;
-    box-shadow: 8px 8px 0 #FFFFFF;
-  }
-  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; text-align: center; }
-  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
-    background: #1A1A1A; z-index: 6;
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
-    border-top: 4px solid #FFD93D; }
-  .brand { color: #FFFFFF; font-size: 30px; font-weight: 900; letter-spacing: 4px; }
-  .brand b { color: #FFD93D; }
-  .hash { color: #FFD93D; font-size: 18px; font-weight: 800; letter-spacing: 3px; margin-top: 4px; }
-</style>
-</head>
-<body>
-  <div class="photo"></div>
-
-  <div class="badge">大连 · 因诺信奥</div>
-  <div class="right-tag">完整路径图</div>
-
-  <div class="title-block">
-    <div class="pre">// 从 0 到 NOIP · 一条线</div>
-    <div class="big-text">5 个<em>阶段</em></div>
-    <div class="big-text" style="margin-top:10px"><em>0 跳级</em></div>
-  </div>
-
-  <div class="roadmap-strip">
-    <div class="strip">
-      <span class="lbl">完整路径 · 7-16 岁</span>
-      <div class="stages">
-        <div class="stage"><h4>启蒙</h4><p>Scratch</p></div>
-        <span class="ar">→</span>
-        <div class="stage adv"><h4>过渡</h4><p>Python</p></div>
-        <span class="ar">→</span>
-        <div class="stage adv"><h4>GESP</h4><p>1-8 级</p></div>
-        <span class="ar">→</span>
-        <div class="stage top"><h4>CSP-J</h4><p>普及</p></div>
-        <span class="ar">→</span>
-        <div class="stage top"><h4>CSP-S</h4><p>提高</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>跟着体系走<br><b>家长不焦虑·娃不掉队</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <div class="brand">因诺<b>信奥</b> · 大连</div>
-    <div class="hash"># 课程体系 # 路径图 # 因诺信奥</div>
-  </div>
-</body>
-</html>
+.stages { position: absolute; top: 400px; left: 60px; right: 60px; }
+.stage { display: flex; padding: 14px 22px; margin-bottom: 12px; border-radius: 12px; }
+.stage .lvl { flex: 0 0 100px; font-size: 26px; font-weight: 900; color: #0D47A1; padding-top: 4px; }
+.stage .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.stage .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; line-height: 1.4; }
+.stage .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">SYSTEM · 5 阶段</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 从 0 到 NOIP 一条线</div><h1>5 阶段<br><b>0 跳级</b></h1></div>
+<div class="stages"><div class="stage" style="background:#FCE4EC"><div class="lvl">阶段 1</div><div class="body"><h3>启蒙 (7-9 岁)</h3><p>Scratch 拖积木 · 主练逻辑思维</p></div></div><div class="stage" style="background:#FFF8E1"><div class="lvl">阶段 2</div><div class="body"><h3>过渡 (9-11 岁)</h3><p>Python 真代码 · 慢慢上难度</p></div></div><div class="stage" style="background:#E8F5E9"><div class="lvl">阶段 3</div><div class="body"><h3>GESP 1-8 级</h3><p>考级路 · 每升一级一份证书</p></div></div><div class="stage" style="background:#E3F2FD"><div class="lvl">阶段 4</div><div class="body"><h3>CSP-J 普及</h3><p>21 模块逐题打标 · 过线 60+</p></div></div><div class="stage" style="background:#F3E5F5"><div class="lvl">阶段 5</div><div class="body"><h3>CSP-S 提高</h3><p>图论 / 状压 / 树形 DP · 冲省一</p></div></div></div>
+<div class="pull"><h2><b>每个阶段 ≈ 1 年节奏</b> · 娃想超前就让超前</h2></div>
+<div class="footer"><span class="txt">不主动催 · 也不掉队</span></div>
+</body></html>

@@ -1,93 +1,44 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>排列组合 4 大套路 · 行动</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>5 道经典题</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#4A148C; color:#FFF; position:relative;}
-  body::before {
-    content:""; position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(233,30,99,0.5) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255,235,59,0.3) 0%, transparent 50%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFEB3B; color:#4A148C; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 84px; font-weight: 900; margin-top:18px; line-height:1.05;}
-  h1 em { font-style:normal; color:#FFEB3B;}
-
-  .step {
-    background:#FFF; color:#1A1A1A; border-radius: 18px;
-    padding: 22px 26px; margin-top: 18px;
-    border-left: 12px solid #E91E63;
-    position:relative;
-  }
-  .step::before {
-    content: attr(data-n);
-    position: absolute; left: -28px; top: -16px;
-    width: 56px; height: 56px; border-radius: 50%;
-    background: #FFEB3B; color: #4A148C; font-weight: 900; font-size: 28px;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: 4px 4px 0 #1A1A1A;
-  }
-  .step h3 { font-size:32px; font-weight:900; color:#4A148C; padding-left: 36px;}
-  .step p { font-size:24px; line-height:1.5; color:#424242; margin-top:6px;}
-  .step p code { background:#FFEB3B; color:#4A148C; padding: 2px 10px; border-radius: 4px; font-weight: 700;}
-  .step p b { color:#B71C1C; }
-
-  .pull {
-    margin-top: 26px; padding: 24px 28px;
-    background: linear-gradient(135deg, #FFEB3B, #FFC1E3);
-    color:#1A1A1A; border-radius: 18px;
-    box-shadow: 8px 8px 0 #FF5E62;
-  }
-  .pull h2 { font-size: 38px; font-weight: 900; line-height: 1.35; }
-  .pull h2 b { color:#4A148C;}
-  .pull p { font-size:22px; font-weight:700; margin-top:8px;}
-  .cta {
-    position:absolute; bottom:0; left:60px; right:60px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:24px; color:#FFEB3B; font-weight:700;
-  }
-  .pill { background:#FFEB3B; color:#4A148C; padding:10px 22px; border-radius:100px; font-weight:800;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">PRACTICE · 5 道经典</span>
-    <h1>背完<br>立刻 <em>开练</em></h1>
-
-    <div class="step" data-n="1">
-      <h3>球放盒</h3>
-      <p>n 同球放 k 同盒 / 不同盒 · 至少 1 / 可空 · <b>4 种组合都要会</b></p>
-    </div>
-    <div class="step" data-n="2">
-      <h3>站队问题</h3>
-      <p>必相邻 = 捆绑 · 不相邻 = 插空 · <b>双胞胎相邻必考</b>（CSP-J 2020）</p>
-    </div>
-    <div class="step" data-n="3">
-      <h3>整除计数</h3>
-      <p>1~N 中被某数整除 / 不被整除 · <b>容斥三集合公式必默</b></p>
-    </div>
-    <div class="step" data-n="4">
-      <h3>路径计数</h3>
-      <p>从大连星海湾 (0,0) 到东港 (4,5) 只能向右上 → <code>C(9,4)=126</code> 条路径</p>
-    </div>
-    <div class="step" data-n="5">
-      <h3>错排经典</h3>
-      <p>5 人寄信都送错 → D(5)=44 · <b>背下 D(1)~D(6)</b></p>
-    </div>
-
-    <div class="pull">
-      <h2>5 道做完<br><b>组合题再不丢分</b></h2>
-      <p>对应本号 CSP-J 2019-2025 单选 7/10/12/13 各题</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#数学 #信奥 #大连娃</span>
-    <span class="pill">收藏开练</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.qs { position: absolute; top: 380px; left: 60px; right: 60px; }
+.q { display: flex; align-items: center; padding: 12px 20px;
+margin-bottom: 12px; border-radius: 12px;
+background: #E3F2FD; border-left: 6px solid #0D47A1; }
+.q .num { flex: 0 0 60px; font-size: 28px; font-weight: 900; color: #0D47A1; }
+.q .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.q .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; }
+.q .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">PRACTICE · 5 道经典</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 4 大套路 · 一题一练</div><h1>背完<br>立刻 <b>开练</b></h1></div>
+<div class="qs">
+<div class="q"><div class="num">1</div><div class="body"><h3>球放盒</h3><p>n 同球放 k 同盒 / 不同盒 / 至少 1 / 可空 · <b>4 种组合都要会</b></p></div></div>
+<div class="q"><div class="num">2</div><div class="body"><h3>站队问题</h3><p>必相邻 = 捆绑 · 不相邻 = 插空 · <b>双胞胎相邻必考</b> (CSP-J 2020)</p></div></div>
+<div class="q"><div class="num">3</div><div class="body"><h3>整除计数</h3><p>1~N 中某数整除 / 不被整除 · <b>容斥三集合公式必默</b></p></div></div>
+<div class="q"><div class="num">4</div><div class="body"><h3>路径计数</h3><p>从 (0,0) 到 (m,n) 只能向右上 → <b>C(m+n, m)</b> 条路径</p></div></div>
+<div class="q"><div class="num">5</div><div class="body"><h3>错排经典</h3><p>5 人寄信送错 → D(5) = 44 · 必背 <b>D(1)~D(6)</b></p></div></div>
+</div>
+<div class="pull"><h2>5 道做完 · 组合题再不丢分<br>对照本号 CSP-J 2019-2025 单选 7/10/12/13 各题</h2></div>
+<div class="footer"><span class="txt">练完 · 单选必拿</span></div>
+</body></html>

@@ -1,53 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>AI 时代还学编程吗 · 内容</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>REASON · 3 个理由</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#0A0A0A; color:#FFEB3B; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px); background-size: 50px 50px; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFEB3B; color:#0A0A0A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#FFEB3B; }
-  h1 em { font-style:normal; color:#00E5FF; }
-  .reason { background:#1A1A1A; border: 2px solid #00E5FF; border-radius:14px; padding: 20px 24px; margin-top: 18px; box-shadow: 0 0 20px rgba(0,229,255,0.3); position: relative; }
-  .reason .num { position:absolute; top: -16px; left: -16px; width: 56px; height: 56px; border-radius:50%; background:#FFEB3B; color:#0A0A0A; font-weight:900; font-size: 28px; display:flex; align-items:center; justify-content:center; box-shadow: 0 0 20px rgba(255,235,59,0.6); font-family:"SF Mono",monospace; }
-  .reason h3 { font-size: 32px; color: #00E5FF; font-weight: 900; padding-left: 50px; }
-  .reason p { font-size: 24px; color: #E0E0E0; line-height: 1.5; margin-top: 8px; font-weight: 700; }
-  .reason p b { background:#FFEB3B; color:#0A0A0A; padding: 0 8px; border-radius:4px; }
-  .key { margin-top: 24px; padding: 22px 26px; background: linear-gradient(135deg, #7C4DFF, #00E5FF); color: #0A0A0A; border-radius: 12px; font-family: "SF Mono", monospace; box-shadow: 0 0 40px rgba(124,77,255,0.5); }
-  .key h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
-  .key h2 b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">{ NEW.era } 3 个新理由</span>
-    <h1>AI 时代<em>反而</em><br>更要学编程</h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="reason">
-      <div class="num">1</div>
-      <h3>读懂 AI = 这个时代的新识字</h3>
-      <p>不会 AI 的孩子 · <b>10 年后像不会用电脑的人</b><br>编程 = 跟 AI 沟通的"母语"</p>
-    </div>
-
-    <div class="reason">
-      <div class="num">2</div>
-      <h3>会用 AI ≠ 学不学编程的区别</h3>
-      <p>会用 AI 的人 = <b>用工具的人</b><br>会编程的人 = <b>能造工具的人</b> · 价值差 100 倍</p>
-    </div>
-
-    <div class="reason">
-      <div class="num">3</div>
-      <h3>AI 替代的是"重复" · 不是"创造"</h3>
-      <p>AI 替代<b>抄代码 / 套模板</b>的工作<br>但<b>解决新问题</b> · 仍然要懂编程的人</p>
-    </div>
-
-    <div class="key">
-      <h2>核心一句话<br><b>// AI 时代 = 编程更值钱 · 不是不值</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">REASON · 3 个理由</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 为什么 AI 时代反而更要学</div><h1>AI 时代<br>反而<b>更要学</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>读懂 AI = 新识字</h3><p>不会 AI 的孩子 10 年后像不会用电脑的人 · <b>编程 = 跟 AI 沟通的"母语"</b></p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>会编程价值 ×100</h3><p>会用 AI 的人 = 用工具的人 · 会编程的人 = 能造工具的人 · <b>价值差 100 倍</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>AI 替代的是"重复"</h3><p>AI 替代抄代码 / 套模板 · <b>解决新问题仍然要懂编程的人</b></p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>总结一句</h3><p>AI 时代 = 编程更值钱 · <b>不是不值</b></p></div></div>
+<div class="pull"><h2>AI 时代 = 编程更值钱 · <b>不是不学</b></h2></div>
+<div class="footer"><span class="txt">想清楚 · 才不踩坑</span></div>
+</body></html>

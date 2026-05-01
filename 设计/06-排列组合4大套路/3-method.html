@@ -1,78 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>排列组合 4 大套路 · 公式</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>排列组合 · 4 步识别套路</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#F3E5F5 0%, #FCE4EC 100%); color:#1A1A1A; position:relative;}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#E91E63; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#4A148C;}
-  h1 em { font-style:normal; background:#FFEB3B; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
-
-  .card {
-    margin-top: 22px;
-    background:#FFF; border-radius: 18px; padding: 22px 26px;
-    border: 4px solid #1A1A1A; box-shadow: 7px 7px 0 #E91E63;
-  }
-  .card h3 { font-size: 36px; font-weight: 900; color:#4A148C; margin-bottom: 8px;}
-  .formula {
-    background:#1A1A1A; color:#FFEB3B;
-    padding: 12px 20px; border-radius: 10px;
-    font-family: "PingFang SC", monospace;
-    font-size: 28px; font-weight: 800; line-height:1.3;
-    margin: 8px 0;
-  }
-  .ex {
-    font-size: 22px; color:#424242; line-height:1.5;
-    background:#FCE4EC; padding: 10px 16px; border-radius: 8px;
-    border-left: 6px solid #E91E63;
-  }
-  .ex b { color:#B71C1C; }
-
-  .quote {
-    margin-top: 22px; padding: 22px 26px;
-    background: linear-gradient(135deg,#4A148C,#E91E63);
-    color:#FFF; border-radius: 16px; box-shadow: 8px 8px 0 #FFEB3B;
-  }
-  .quote h2 { font-size: 36px; font-weight:900; line-height:1.4; text-shadow: 2px 2px 0 #1A1A1A;}
-  .quote h2 b { color:#FFEB3B;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">FORMULA · 4 大公式</span>
-    <h1>背下来<em>就送分</em></h1>
-
-    <div class="card">
-      <h3>1 · 隔板法</h3>
-      <div class="formula">n 同球 → k 不同盒 (≥1)：C(n-1, k-1)</div>
-      <div class="ex"><b>真题：</b>10 名额分到 7 班每班至少 1 → C(9,6) = 84（CSP-J 2020）</div>
-    </div>
-
-    <div class="card">
-      <h3>2 · 捆绑法</h3>
-      <div class="formula">相邻整体 × 内部排列 × 整体排列</div>
-      <div class="ex"><b>真题：</b>5 男 3 女 · 3 女相邻 → 6! × 3! = 4320（CSP-J 2024）</div>
-    </div>
-
-    <div class="card">
-      <h3>3 · 容斥原理</h3>
-      <div class="formula">|A∪B∪C| = ΣA - ΣAB + ABC</div>
-      <div class="ex"><b>真题：</b>1~1000 不被 2/3/5 整除的数 = 1000 - (500+333+200) + (166+100+66) - 33（CSP-S 2025）</div>
-    </div>
-
-    <div class="card">
-      <h3>4 · 错排公式</h3>
-      <div class="formula">D(n) = (n-1)(D(n-1) + D(n-2))</div>
-      <div class="ex"><b>记忆：</b>D(1)=0 · D(2)=1 · D(3)=2 · D(4)=9 · D(5)=44</div>
-    </div>
-
-    <div class="quote">
-      <h2>三招记牢<br><b>"分东西用隔板 · 抱团用捆绑"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.steps { position: absolute; top: 380px; left: 60px; right: 60px; }
+.s { display: flex; align-items: center; padding: 14px 18px;
+margin-bottom: 12px; border-radius: 12px; }
+.s .key { flex: 0 0 240px; font-size: 18px; font-weight: 900; color: #0D47A1; }
+.s .arrow { flex: 0 0 30px; font-size: 22px; color: #2196F3; font-weight: 900; text-align: center; }
+.s .ans { flex: 1; font-size: 20px; font-weight: 900; color: #FFFFFF;
+padding: 6px 14px; border-radius: 6px; }
+.s.s1 { background: #FCE4EC; } .s.s1 .ans { background: #C2185B; }
+.s.s2 { background: #FFF8E1; } .s.s2 .ans { background: #F57F17; }
+.s.s3 { background: #E8F5E9; } .s.s3 .ans { background: #2E7D32; }
+.s.s4 { background: #E3F2FD; } .s.s4 .ans { background: #0D47A1; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">METHOD · 4 步识别</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 看到题型 · 立刻套对应公式</div><h1>识别套路<br><b>4 个关键词</b></h1></div>
+<div class="steps">
+<div class="s s1"><div class="key">"分到盒子 / 至少 1 个"</div><div class="arrow">→</div><div class="ans">隔板法 C(n-1, k-1)</div></div>
+<div class="s s2"><div class="key">"必相邻 / 不分开"</div><div class="arrow">→</div><div class="ans">捆绑法 整体 × 内部</div></div>
+<div class="s s3"><div class="key">"被 X 或 Y 整除"</div><div class="arrow">→</div><div class="ans">容斥 ΣA - ΣAB + ABC</div></div>
+<div class="s s4"><div class="key">"全错位 / 都不对"</div><div class="arrow">→</div><div class="ans">错排 D(n) 公式</div></div>
+</div>
+<div class="pull"><h2>记住 4 个关键词 · <b>看题秒识套路</b></h2></div>
+<div class="footer"><span class="txt">不背公式 · 背关键词</span></div>
+</body></html>

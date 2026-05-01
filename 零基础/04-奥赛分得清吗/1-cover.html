@@ -1,48 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>奥赛分得清吗 · 封面</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>COMPARE · 4 个赛事</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(135deg, #6A1B9A 0%, #BA68C8 50%, #FFEB3B 100%); color:#FFF; position:relative; }
-  body::before { content:""; position:absolute; top:-100px; right:-100px; width:460px; height:460px; border-radius:50%; background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%); }
-  body::after { content:""; position:absolute; bottom:-80px; left:-80px; width:380px; height:380px; border-radius:50%; background: radial-gradient(circle, rgba(255,235,59,0.6) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .badge { display:inline-block; background:#1A1A1A; color:#FFEB3B; padding:14px 32px; border-radius:100px; font-size:32px; font-weight:900; letter-spacing:2px; margin-bottom: 50px; box-shadow: 6px 6px 0 #4A148C; }
-  .pre { font-size: 42px; font-weight: 800; color: #FFEB3B; margin-bottom: 18px; }
-  .title { font-size: 132px; font-weight:900; line-height:0.95; color:#FFFFFF; text-shadow: 6px 6px 0 #4A148C; letter-spacing: -4px; }
-  .title em { font-style:normal; background: #FFEB3B; color:#4A148C; padding: 0 16px; display: inline-block; box-shadow: 8px 8px 0 #1A1A1A; }
-  .race-row { margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .race-card { background:#FFF; border: 4px solid #1A1A1A; border-radius: 14px; padding: 14px 6px; text-align: center; box-shadow: 4px 4px 0 #4A148C; }
-  .race-card .v { font-size: 26px; font-weight: 900; color: #4A148C; line-height: 1.1; }
-  .race-card .l { font-size: 16px; font-weight: 700; color: #1A1A1A; margin-top: 4px; }
-  .sub { margin-top: 36px; background:#FFFFFF; color:#4A148C; padding: 18px 26px; border-radius: 14px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #FFEB3B; font-size: 36px; font-weight: 800; line-height: 1.4; display: inline-block; }
-  .sub b { color: #B71C1C; }
-  .footer { position:absolute; bottom:0; left:70px; right:70px; display:flex; justify-content:space-between; align-items:center; font-size:28px; color:#FFEB3B; font-weight:900; }
-  .stamp { background:#FFEB3B; color:#4A148C; padding:14px 24px; border-radius:8px; transform: rotate(-5deg); }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="badge">大连家长不焦虑系列 · 启蒙第 4 篇</div>
-    <div class="pre">"GESP？CSP-J？NOIP？傻傻分不清"</div>
-    <div class="title">
-      4 个赛事<br>
-      <em>一图说清</em>
-    </div>
-    <div class="race-row">
-      <div class="race-card"><div class="v">GESP</div><div class="l">能力认证</div></div>
-      <div class="race-card"><div class="v">CSP-J</div><div class="l">普及组</div></div>
-      <div class="race-card"><div class="v">CSP-S</div><div class="l">提高组</div></div>
-      <div class="race-card"><div class="v">NOIP</div><div class="l">联赛</div></div>
-    </div>
-    <div class="sub">不是同一个赛<br><b>定位完全不同</b></div>
-  </div>
-  <div class="footer">
-    <span>#信奥赛事 #零基础 #大连娃</span>
-    <span class="stamp">收藏不亏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.stages { position: absolute; top: 400px; left: 60px; right: 60px; }
+.stage { display: flex; padding: 14px 22px; margin-bottom: 12px; border-radius: 12px; }
+.stage .lvl { flex: 0 0 100px; font-size: 26px; font-weight: 900; color: #0D47A1; padding-top: 4px; }
+.stage .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.stage .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; line-height: 1.4; }
+.stage .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">COMPARE · 4 个赛事</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// GESP / CSP / NOIP 别再混</div><h1>4 个赛事<br><b>定位</b>不同</h1></div>
+<div class="stages"><div class="stage" style="background:#FCE4EC"><div class="lvl">GESP</div><div class="body"><h3>能力认证</h3><p>8 阶梯渐进 · 每年 4 次 · 60 分过关</p></div></div><div class="stage" style="background:#FFF8E1"><div class="lvl">CSP-J</div><div class="body"><h3>普及组</h3><p>初中娃为主 · 9 月初 + 10 月复 · 信奥真起步</p></div></div><div class="stage" style="background:#E8F5E9"><div class="lvl">CSP-S</div><div class="body"><h3>提高组</h3><p>初高中为主 · 难度大幅升级 · NOIP 入场券</p></div></div><div class="stage" style="background:#E3F2FD"><div class="lvl">NOIP</div><div class="body"><h3>联赛</h3><p>高中为主 · NOI 选手储备池 · 省一可冲强基</p></div></div></div>
+<div class="pull"><h2><b>4 个赛事定位完全不同</b> · 别按一种思路报</h2></div>
+<div class="footer"><span class="txt">看清楚 · 才不被忽悠</span></div>
+</body></html>
