@@ -2,61 +2,90 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 阅读程序 18 段 · 数据</title>
+<title>18 段对照表</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#E3F2FD; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#0D47A1,#42A5F5);}
-  body::after { content:""; position:absolute; bottom:0; height:80px; left:0; right:0; background:linear-gradient(90deg,#42A5F5,#0D47A1);}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; }
-  h1 { font-size: 52px; font-weight: 900; margin-top:10px; line-height:1.1; color:#0D47A1; }
-  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#FFEB3B 60%); padding:0 6px;}
-  .grid { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .card { background:#FFF; border-radius: 12px; padding: 10px 14px; border: 3px solid #1A1A1A; box-shadow: 3px 3px 0 #0D47A1; }
-  .card .yr { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:3px 12px; border-radius:6px; font-size:20px; font-weight:900;}
-  .card h3 { font-size:24px; font-weight:900; margin-top:6px; color:#1A1A1A; line-height:1.2;}
-  .card .tag { display:inline-block; padding: 3px 10px; border-radius: 6px; font-size: 18px; font-weight: 700; margin-top:6px; margin-right: 4px;}
-  .t-dp { background:#FF5E62; color:#FFF;}
-  .t-rec { background:#FFEB3B; color:#0D47A1;}
-  .t-bfs { background:#26A69A; color:#FFF;}
-  .t-str { background:#AB47BC; color:#FFF;}
-  .t-bit { background:#FF7043; color:#FFF;}
-  .t-num { background:#5E35B1; color:#FFF;}
-  .legend { margin-top:14px; font-size:20px; color:#1A1A1A; font-weight:700; }
-  .legend span { display:inline-block; padding: 3px 10px; border-radius: 6px; margin-right: 4px; margin-bottom: 4px; }
-  .key { margin-top:14px; background:#1A1A1A; color:#FFEB3B; padding: 16px 22px; border-radius:14px; box-shadow:6px 6px 0 #FF5E62;}
-  .key .lbl { font-size:20px; letter-spacing:2px; font-weight:700; opacity:.85;}
-  .key h2 { font-size:28px; color:#FFF; font-weight:900; line-height:1.4; margin-top:4px; }
-  .key h2 b { color:#FFEB3B; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 56px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
+
+  .table-wrap { position: absolute; top: 360px; left: 80px; right: 80px;
+    background: rgba(255,255,255,0.06); border-radius: 8px; padding: 16px 20px; }
+  .table-wrap .row { display: flex; align-items: center;
+    padding: 10px 0; border-bottom: 1px dashed rgba(255,255,255,0.18);
+    font-size: 19px; color: #FFFFFF; }
+  .table-wrap .row:last-child { border-bottom: none; }
+  .table-wrap .yr { flex: 0 0 70px; color: #FFE082; font-weight: 900; }
+  .table-wrap .tp { flex: 1; font-weight: 600; }
+  .table-wrap .tag { flex: 0 0 100px; text-align: right; }
+  .table-wrap .tag span {
+    background: #FF6B9D; color: #FFFFFF;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 16px; font-weight: 900;
+  }
+  .table-wrap .tag span.dp { background: #FF6B9D; }
+  .table-wrap .tag span.rec { background: #FFE082; color: #1B5E20; }
+  .table-wrap .tag span.str { background: #BBDEFB; color: #1B5E20; }
+  .table-wrap .tag span.bit { background: #FFCCBC; color: #1B5E20; }
+  .table-wrap .tag span.num { background: #C5E1A5; color: #1B5E20; }
+
+  .pull { position: absolute; bottom: 200px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border: 2px dashed #FFE082;
+    padding: 18px 24px; border-radius: 6px; }
+  .pull h3 { font-size: 24px; color: #FFE082; font-weight: 900; margin-bottom: 6px; }
+  .pull p { font-size: 22px; color: #FFFFFF; line-height: 1.6; font-weight: 500; }
+  .pull .high { background: #FFE082; color: #1B5E20; padding: 0 6px; font-weight: 900; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">CATALOG · 7 年阅读题</span>
-    <h1>每段都有<em>对应模型</em><br>认出来就赢了</h1>
-    <div class="grid">
-      <div class="card"><span class="yr">2019</span><h3>字符大小写按因数翻转</h3><span class="tag t-str">字符串</span><span class="tag t-num">因数</span></div>
-      <div class="card"><span class="yr">2019</span><h3>分治深度递归求带权和</h3><span class="tag t-rec">分治</span></div>
-      <div class="card"><span class="yr">2020</span><h3>替换密码 · CSP 编码表</h3><span class="tag t-str">字符映射</span></div>
-      <div class="card"><span class="yr">2020</span><h3>k 进制递增计数器</h3><span class="tag t-num">进制</span></div>
-      <div class="card"><span class="yr">2021</span><h3>popcount + lowbit</h3><span class="tag t-bit">位运算</span></div>
-      <div class="card"><span class="yr">2021</span><h3>欧拉筛 + 因子函数</h3><span class="tag t-num">数论筛</span></div>
-      <div class="card"><span class="yr">2022</span><h3>Morton 编码（位交错）</h3><span class="tag t-bit">位运算</span></div>
-      <div class="card"><span class="yr">2022</span><h3>鸡蛋掉落 · 递归 vs DP</h3><span class="tag t-dp">DP</span></div>
-      <div class="card"><span class="yr">2023</span><h3>LCS 判断字符串循环移位</h3><span class="tag t-dp">DP</span></div>
-      <div class="card"><span class="yr">2024</span><h3>爬楼梯最小代价 DP</h3><span class="tag t-dp">DP</span></div>
-      <div class="card"><span class="yr">2025</span><h3>排序 + 双指针 1D DP</h3><span class="tag t-dp">DP</span></div>
-      <div class="card"><span class="yr">2025</span><h3>LCS 二维 DP</h3><span class="tag t-dp">DP</span></div>
-    </div>
-    <div class="legend">
-      <span class="t-dp tag">DP</span><span class="t-rec tag">递归</span><span class="t-bfs tag">BFS</span><span class="t-str tag">字符串</span><span class="t-bit tag">位运算</span><span class="t-num tag">数论</span>
-    </div>
-    <div class="key">
-      <div class="lbl">PATTERN</div>
-      <h2>近 4 年 <b>DP 出现 5 次</b><br>不学 DP 阅读直接送 14 分</h2>
-    </div>
+  <div class="top">
+    <span class="badge">老师手记 · 18 段对照</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <h1>18 段代码<br>每段一个<b>套路</b></h1>
+  </div>
+
+  <div class="table-wrap">
+    <div class="row"><div class="yr">2019</div><div class="tp">字符大小写按因数翻转</div><div class="tag"><span class="str">字符串</span></div></div>
+    <div class="row"><div class="yr">2019</div><div class="tp">分治深度递归求带权和</div><div class="tag"><span class="rec">分治</span></div></div>
+    <div class="row"><div class="yr">2020</div><div class="tp">替换密码 · CSP 编码表</div><div class="tag"><span class="str">字符串</span></div></div>
+    <div class="row"><div class="yr">2020</div><div class="tp">k 进制递增计数器</div><div class="tag"><span class="num">数论</span></div></div>
+    <div class="row"><div class="yr">2021</div><div class="tp">popcount + lowbit</div><div class="tag"><span class="bit">位运算</span></div></div>
+    <div class="row"><div class="yr">2021</div><div class="tp">欧拉筛 + 因子函数</div><div class="tag"><span class="num">数论</span></div></div>
+    <div class="row"><div class="yr">2022</div><div class="tp">Morton 编码 (位交错)</div><div class="tag"><span class="bit">位运算</span></div></div>
+    <div class="row"><div class="yr">2022</div><div class="tp">鸡蛋掉落 · 递归 vs DP</div><div class="tag"><span class="dp">DP</span></div></div>
+    <div class="row"><div class="yr">2023</div><div class="tp">LCS 判断字符串循环移位</div><div class="tag"><span class="dp">DP</span></div></div>
+    <div class="row"><div class="yr">2024</div><div class="tp">爬楼梯最小代价 DP</div><div class="tag"><span class="dp">DP</span></div></div>
+    <div class="row"><div class="yr">2025</div><div class="tp">排序 + 双指针 1D DP</div><div class="tag"><span class="dp">DP</span></div></div>
+    <div class="row"><div class="yr">2025</div><div class="tp">LCS 二维 DP</div><div class="tag"><span class="dp">DP</span></div></div>
+  </div>
+
+  <div class="pull">
+    <h3>★ 趋势观察 ★</h3>
+    <p>近 4 年 <span class="high">DP 出现 5 次</span> · 不学 DP 阅读题直接送 14 分</p>
+  </div>
+
+  <div class="bottom">
+    <div class="ttl">★ 一句话 ★</div>
+    <div class="txt">阅读题<b>不是看代码</b>,是<b>识算法</b>。识完套路 5 倍效率</div>
   </div>
 </body>
 </html>

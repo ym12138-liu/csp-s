@@ -2,86 +2,103 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 6年高频考点 · 封面</title>
+<title>CSP-J 7 年真题打标·10 个考点跑不了</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(135deg, #FF5E62 0%, #FF9966 60%, #FFC371 100%);
-    position: relative;
-    color: #1A1A1A;
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+  .top {
+    position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px;
   }
-  body::before {
-    content: ""; position: absolute; top: -120px; right: -120px;
-    width: 480px; height: 480px; border-radius: 50%;
-    background: radial-gradient(circle, #FFF59D 0%, rgba(255,235,59,0) 70%);
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px;
+    font-weight: 800; letter-spacing: 1px; }
+
+  .title-area { position: absolute; top: 200px; left: 60px; right: 60px; }
+  .title-area .pre { color: #2196F3; font-size: 26px; font-weight: 800;
+    letter-spacing: 3px; margin-bottom: 10px; }
+  .title-area h1 { font-size: 68px; font-weight: 900; color: #0D47A1;
+    line-height: 1.1; letter-spacing: 1px; }
+  .title-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px;
+    border-radius: 6px; }
+
+  .big-num {
+    position: absolute; top: 480px; left: 60px;
+    width: 460px; height: 460px;
+    background: #0D47A1; color: #FFFFFF;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 24px;
+    font-size: 280px; font-weight: 900; line-height: 1;
+    letter-spacing: -8px;
   }
-  body::after {
-    content: ""; position: absolute; bottom: -100px; left: -100px;
-    width: 380px; height: 380px; border-radius: 50%;
-    background: radial-gradient(circle, #FFCDD2 0%, rgba(255,205,210,0) 70%);
+  .big-num .pct { font-size: 100px; vertical-align: middle; margin-left: 10px; }
+
+  .desc {
+    position: absolute; top: 480px; right: 60px;
+    width: 480px; height: 460px;
+    display: flex; flex-direction: column; justify-content: center;
   }
-  .safe { position: absolute; top: 150px; bottom: 150px; left: 0; right: 0; padding: 0 70px; }
-  .tag {
-    display: inline-block; background: #1A1A1A; color: #FFEB3B;
-    padding: 14px 32px; border-radius: 100px; font-size: 32px; font-weight: 800;
-    letter-spacing: 2px; margin-bottom: 60px;
-    box-shadow: 8px 8px 0 #B71C1C;
+  .desc .lead { font-size: 32px; font-weight: 900; color: #1A1A1A;
+    line-height: 1.3; }
+  .desc .lead em { font-style: normal; background: #E3F2FD; color: #0D47A1;
+    padding: 0 6px; border-radius: 4px; }
+  .desc .meta { margin-top: 20px; }
+  .desc .meta-row { display: flex; align-items: center; padding: 10px 0;
+    border-bottom: 2px solid #E3F2FD; font-size: 22px; font-weight: 700; color: #424242; }
+  .desc .meta-row .k { flex: 0 0 100px; color: #2196F3; font-weight: 900; }
+  .desc .meta-row .v { flex: 1; color: #1A1A1A; }
+  .desc .meta-row:last-child { border-bottom: none; }
+
+  .pull {
+    position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #E3F2FD; color: #0D47A1;
+    padding: 24px 30px; border-radius: 16px;
+    border-left: 8px solid #0D47A1;
   }
-  .title {
-    font-size: 124px; font-weight: 900; line-height: 1.05;
-    color: #1A1A1A; letter-spacing: -2px;
-    text-shadow: 6px 6px 0 #FFFFFF;
-    margin-bottom: 40px;
-  }
-  .title .hl {
-    background: linear-gradient(transparent 60%, #FFEB3B 60%);
-    padding: 0 8px;
-  }
-  .num {
-    display: inline-block;
-    color: #B71C1C; font-size: 200px; font-weight: 900;
-    line-height: 1; vertical-align: middle;
-  }
-  .sub {
-    font-size: 44px; font-weight: 700; color: #4A148C;
-    line-height: 1.4; margin-top: 30px;
-  }
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3;
+    letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
+
   .footer {
-    position: absolute; bottom: 0; left: 70px; right: 70px;
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 28px; color: #1A1A1A; font-weight: 700;
+    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center;
   }
-  .stamp {
-    background: #1A1A1A; color: #FFF; padding: 12px 24px; border-radius: 8px;
-    font-size: 26px; transform: rotate(-4deg);
-  }
-  .badge-box {
-    display: inline-block; background: #FFFFFF; padding: 18px 32px;
-    border-radius: 16px; box-shadow: 6px 6px 0 #1A1A1A;
-    border: 4px solid #1A1A1A; margin-top: 40px;
-  }
-  .badge-box .t { font-size: 30px; font-weight: 700; color: #B71C1C; }
-  .badge-box .v { font-size: 56px; font-weight: 900; color: #1A1A1A; line-height: 1; }
+  .footer .txt { color: #FFFFFF; font-size: 24px; font-weight: 900;
+    letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <div class="tag">大连家长亲测 · 备考干货</div>
-    <div class="title">
-      原来 <span class="hl">60%</span> 的题<br>
-      都在考<br>
-      这 <span class="num">10</span> 个考点
-    </div>
-    <div class="sub">CSP-J 7 年真题逐题打标 · 看完不再瞎刷</div>
-    <div class="badge-box">
-      <div class="t">数据范围</div>
-      <div class="v">2019 — 2025 / 700 分</div>
+  <div class="top">
+    <span class="badge">DATA · 7 年真题打标</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="title-area">
+    <div class="pre">// CSP-J 2019-2025 真题打过一遍后</div>
+    <h1>这 <b>10 个考点</b><br>跑不了</h1>
+  </div>
+
+  <div class="big-num">7<span class="pct">年</span></div>
+
+  <div class="desc">
+    <div class="lead">每年都在考的<em>就那 10 块</em>,其余的当扫盲就行。</div>
+    <div class="meta">
+      <div class="meta-row"><span class="k">范围</span><span class="v">2019 — 2025 共 7 套</span></div>
+      <div class="meta-row"><span class="k">总分</span><span class="v">700 分逐题打标</span></div>
+      <div class="meta-row"><span class="k">小班</span><span class="v">3 人 / 真题驱动</span></div>
     </div>
   </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>不堆量·不海刷·只练高频考点</h2>
+  </div>
+
   <div class="footer">
-    <span>#信奥备考 #CSP-J #大连</span>
-    <span class="stamp">收藏防丢</span>
+    <span class="txt">真题驱动 · 看真进步</span>
   </div>
 </body>
 </html>

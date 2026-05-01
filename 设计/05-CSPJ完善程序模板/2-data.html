@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-J 完善程序模板 · 清单</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>完善程序 · 7 年命中</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#F1F8E9; color:#1A1A1A; position:relative;}
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#1B5E20,#FFD54F);}
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#FFD54F,#1B5E20);}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#1B5E20; color:#FFD54F; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#1B5E20;}
-  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#FFD54F 60%); padding:0 6px;}
-  .grid { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .item {
-    background:#FFF; border-radius: 18px; padding: 18px 22px;
-    border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #2E7D32;
-    position: relative;
-  }
-  .item .badge {
-    position:absolute; top:-16px; left:-16px;
-    background:#FF5E62; color:#FFF; font-weight:900; font-size:24px;
-    width:48px; height:48px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: 3px 3px 0 #1A1A1A;
-  }
-  .item h3 { font-size:30px; font-weight:900; color:#1B5E20; margin-top:8px; line-height:1.2; }
-  .item .yr { font-size:20px; font-weight:700; color:#FF5E62; margin-top:6px;}
-  .item p { font-size:22px; line-height:1.45; color:#424242; margin-top:6px;}
-  .key { margin-top:24px; background:#1A1A1A; color:#FFD54F; padding: 22px 26px; border-radius:16px; box-shadow:8px 8px 0 #FF5E62;}
-  .key .lbl { font-size:22px; opacity:.85; letter-spacing:2px; font-weight:700;}
-  .key h2 { font-size:34px; font-weight:900; color:#FFF; line-height:1.4; margin-top:6px;}
-  .key h2 b { color:#FFD54F; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">CATALOG · 7 年完善程序</span>
-    <h1>每年都<em>命中</em><br>这 8 个模板</h1>
-    <div class="grid">
-      <div class="item"><div class="badge">1</div><h3>二分查找</h3><div class="yr">2021 · 2023 · 2024</div><p>含缺失元素 / 试根</p></div>
-      <div class="item"><div class="badge">2</div><h3>试除法分解</h3><div class="yr">2020 · 2022 · 2024</div><p>因数枚举 / 质因数</p></div>
-      <div class="item"><div class="badge">3</div><h3>BFS Flood Fill</h3><div class="yr">2022</div><p>四联通棋盘染色</p></div>
-      <div class="item"><div class="badge">4</div><h3>编辑距离 DP</h3><div class="yr">2023</div><p>二维 dp 字符串</p></div>
-      <div class="item"><div class="badge">5</div><h3>计数排序</h3><div class="yr">2019</div><p>双关键字稳定</p></div>
-      <div class="item"><div class="badge">6</div><h3>区间贪心</h3><div class="yr">2020</div><p>最小覆盖问题</p></div>
-      <div class="item"><div class="badge">7</div><h3>汉诺塔递归</h3><div class="yr">2024</div><p>分治三步法</p></div>
-      <div class="item"><div class="badge">8</div><h3>RLE / 摩尔投票</h3><div class="yr">2025</div><p>字符串 + 抵消思想</p></div>
-    </div>
-    <div class="key">
-      <div class="lbl">CORE</div>
-      <h2>每个模板都<b>≤ 20 行</b><br>3 天能默熟一个</h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.grid { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 12px; }
+.cell { flex: 1 1 calc(50% - 6px);
+padding: 14px 16px; border-radius: 10px; }
+.cell .num { font-size: 16px; font-weight: 900; color: #0D47A1; }
+.cell h3 { font-size: 20px; font-weight: 900; color: #0D47A1; margin-top: 4px; }
+.cell .yr { font-size: 14px; color: #424242; margin-top: 2px; font-weight: 700; }
+.cell.c1 { background: #BBDEFB; }
+.cell.c2 { background: #B3E5FC; }
+.cell.c3 { background: #B2EBF2; }
+.cell.c4 { background: #B2DFDB; }
+.cell.c5 { background: #C8E6C9; }
+.cell.c6 { background: #DCEDC8; }
+.cell.c7 { background: #FFF9C4; }
+.cell.c8 { background: #FFCCBC; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3; letter-spacing: 2px; margin-bottom: 6px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">CATALOG · 7 年完善程序</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 历年命中分布</div><h1>每年都<b>命中</b><br>这 8 个模板</h1></div>
+<div class="grid">
+<div class="cell c1"><div class="num">1</div><h3>二分查找</h3><div class="yr">2021 · 2023 · 2024</div></div>
+<div class="cell c2"><div class="num">2</div><h3>试除法分解</h3><div class="yr">2020 · 2022 · 2024</div></div>
+<div class="cell c3"><div class="num">3</div><h3>BFS Flood Fill</h3><div class="yr">2022</div></div>
+<div class="cell c4"><div class="num">4</div><h3>编辑距离 DP</h3><div class="yr">2023</div></div>
+<div class="cell c5"><div class="num">5</div><h3>计数排序</h3><div class="yr">2019</div></div>
+<div class="cell c6"><div class="num">6</div><h3>区间贪心</h3><div class="yr">2020</div></div>
+<div class="cell c7"><div class="num">7</div><h3>汉诺塔递归</h3><div class="yr">2024</div></div>
+<div class="cell c8"><div class="num">8</div><h3>RLE / 摩尔投票</h3><div class="yr">2025 新</div></div>
+</div>
+<div class="pull"><div class="lbl">CORE</div><h2>每个模板都 ≤ <b>20 行</b> · 3 天能默熟一个</h2></div>
+<div class="footer"><span class="txt">分类清晰 · 不漏一个</span></div>
+</body></html>

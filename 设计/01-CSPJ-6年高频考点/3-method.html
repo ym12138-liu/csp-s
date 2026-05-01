@@ -2,72 +2,138 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 6年高频考点 · 趋势</title>
+<title>大类占比 · 算法 1 个人占了一大半</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#FFF8E1 0%, #FFE0B2 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FF5E62; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px; letter-spacing:1px;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#1A1A1A; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); }
-  .pie {
-    margin: 30px auto 20px;
-    width: 380px; height: 380px; border-radius:50%;
-    background:
-      conic-gradient(
-        #FF5E62 0 calc(63% * 360deg),
-        #FFC107 calc(63% * 360deg) calc(76% * 360deg),
-        #66BB6A calc(76% * 360deg) calc(88% * 360deg),
-        #5E35B1 calc(88% * 360deg) calc(94% * 360deg),
-        #1E88E5 calc(94% * 360deg) 360deg
-      );
-    box-shadow: 8px 8px 0 #1A1A1A;
-    position: relative;
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF; color: #1A1A1A; }
+
+  .top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+  .top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+    border-radius: 8px; font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+
+  .h1-area { position: absolute; top: 180px; left: 60px; right: 60px; }
+  .h1-area .pre { color: #2196F3; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
+  .h1-area h1 { font-size: 56px; font-weight: 900; color: #0D47A1;
+    line-height: 1.1; margin-top: 6px; }
+  .h1-area h1 b { background: #2196F3; color: #FFFFFF; padding: 0 10px; border-radius: 6px; }
+
+  .bars {
+    position: absolute; top: 380px; left: 60px;
+    width: 360px;
   }
-  .pie::after {
-    content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    width:160px; height:160px; border-radius:50%; background:#FFF8E1;
-    box-shadow: inset 0 0 0 4px #1A1A1A;
+  .bar-row { margin-bottom: 18px; }
+  .bar-row .lab {
+    display: flex; justify-content: space-between;
+    font-size: 22px; font-weight: 900; margin-bottom: 6px;
   }
-  .pie-label {
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    text-align:center; z-index:2; font-weight:900;
+  .bar-row .lab .name { color: #1A1A1A; }
+  .bar-row .lab .pct { color: #0D47A1; }
+  .bar-row .track {
+    height: 24px; background: #E3F2FD; border-radius: 12px; overflow: hidden;
   }
-  .pie-label .big { font-size:64px; color:#B71C1C; line-height:1; }
-  .pie-label .sm { font-size:22px; color:#1A1A1A; margin-top:4px; }
-  .legend { display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; margin-top: 8px; padding: 0 20px; }
-  .leg { display:flex; align-items:center; font-size:28px; font-weight:700; }
-  .dot { width:24px; height:24px; border-radius:6px; margin-right:14px; border:2px solid #1A1A1A; }
+  .bar-row .track > span { display: block; height: 100%; }
+  .bar-row.b1 .track > span { background: #0D47A1; }
+  .bar-row.b2 .track > span { background: #2196F3; }
+  .bar-row.b3 .track > span { background: #64B5F6; }
+  .bar-row.b4 .track > span { background: #90CAF9; }
+  .bar-row.b5 .track > span { background: #BBDEFB; }
+
+  .big-pct {
+    position: absolute; top: 380px; right: 60px;
+    width: 480px; height: 380px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: #0D47A1; color: #FFFFFF;
+    border-radius: 24px;
+  }
+  .big-pct .num { font-size: 200px; font-weight: 900; line-height: 1; letter-spacing: -6px; }
+  .big-pct .num sup { font-size: 80px; vertical-align: middle; margin-left: 10px; font-weight: 900; }
+  .big-pct .ttl { font-size: 28px; font-weight: 900; margin-top: 12px; letter-spacing: 2px; }
+  .legend .item {
+    display: flex; align-items: center; padding: 14px 0;
+    border-bottom: 2px solid #E3F2FD;
+  }
+  .legend .item:last-child { border-bottom: none; }
+  .legend .swatch {
+    flex: 0 0 28px; height: 28px; border-radius: 6px; margin-right: 16px;
+  }
+  .legend .label {
+    flex: 1; font-size: 22px; font-weight: 900; color: #1A1A1A;
+  }
+  .legend .pct {
+    font-size: 22px; font-weight: 900; color: #0D47A1;
+  }
+  .s1 { background: #0D47A1; }
+  .s2 { background: #2196F3; }
+  .s3 { background: #64B5F6; }
+  .s4 { background: #90CAF9; }
+  .s5 { background: #BBDEFB; }
+
   .trend {
-    margin-top: 30px;
-    background: #1A1A1A; color:#FFEB3B; padding:24px 28px; border-radius:18px;
-    box-shadow: 8px 8px 0 #B71C1C;
+    position: absolute; top: 850px; left: 60px; right: 60px;
+    background: #E3F2FD; border-radius: 16px; padding: 22px 28px;
   }
-  .trend .lbl { font-size:24px; color:#FFAB91; letter-spacing:2px; font-weight:700; }
-  .trend .txt { font-size:32px; font-weight:800; color:#FFF; line-height:1.45; margin-top:8px; }
-  .trend .txt b { color:#FFEB3B; }
+  .trend .lbl { font-size: 22px; font-weight: 900; color: #2196F3;
+    letter-spacing: 2px; margin-bottom: 8px; }
+  .trend h3 { font-size: 26px; font-weight: 900; color: #0D47A1; line-height: 1.4; }
+  .trend p { font-size: 20px; font-weight: 700; color: #424242; margin-top: 8px; line-height: 1.5; }
+  .trend p b { background: #0D47A1; color: #FFFFFF; padding: 0 6px; border-radius: 4px; }
+
+  .pull {
+    position: absolute; bottom: 200px; left: 60px; right: 60px;
+    background: #0D47A1; color: #FFFFFF;
+    padding: 22px 28px; border-radius: 16px;
+  }
+  .pull .lbl { font-size: 22px; font-weight: 900; color: #2196F3;
+    letter-spacing: 2px; margin-bottom: 6px; }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+
+  .footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+  .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">PROPORTION · 大类占比</span>
-    <h1>算法 1 个人<br><em>占了一大半</em>的分</h1>
-    <div style="position:relative">
-      <div class="pie"></div>
-      <div class="pie-label"><div class="big">63%</div><div class="sm">算法类占比</div></div>
-    </div>
-    <div class="legend">
-      <div class="leg"><div class="dot" style="background:#FF5E62"></div>算法 ≈ 63%</div>
-      <div class="leg"><div class="dot" style="background:#FFC107"></div>数据结构 ≈ 13%</div>
-      <div class="leg"><div class="dot" style="background:#66BB6A"></div>数学 ≈ 11%</div>
-      <div class="leg"><div class="dot" style="background:#5E35B1"></div>计算机基础 ≈ 8%</div>
-      <div class="leg"><div class="dot" style="background:#1E88E5"></div>程序语言 ≈ 6%</div>
-    </div>
-    <div class="trend">
-      <div class="lbl">2024 / 2025 新趋势</div>
-      <div class="txt">DP 难度逐年升 · 一卷出现 <b>2 段 DP</b><br>C++ 语法考查加深 · 单选 <b>3-4 题</b>查语法</div>
-    </div>
+  <div class="top">
+    <span class="badge">PROPORTION · 大类占比</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="h1-area">
+    <div class="pre">// 7 套真题 · 模块归类后</div>
+    <h1>算法这 1 类<br>占了 <b>大半张卷</b></h1>
+  </div>
+
+  <div class="bars">
+    <div class="bar-row b1"><div class="lab"><span class="name">算法</span><span class="pct">63%</span></div><div class="track"><span style="width:100%"></span></div></div>
+    <div class="bar-row b2"><div class="lab"><span class="name">数据结构</span><span class="pct">13%</span></div><div class="track"><span style="width:21%"></span></div></div>
+    <div class="bar-row b3"><div class="lab"><span class="name">数学</span><span class="pct">11%</span></div><div class="track"><span style="width:17%"></span></div></div>
+    <div class="bar-row b4"><div class="lab"><span class="name">计算机基础</span><span class="pct">8%</span></div><div class="track"><span style="width:13%"></span></div></div>
+    <div class="bar-row b5"><div class="lab"><span class="name">程序语言</span><span class="pct">6%</span></div><div class="track"><span style="width:10%"></span></div></div>
+  </div>
+
+  <div class="big-pct">
+    <div class="num">63<sup>%</sup></div>
+    <div class="ttl">算法类占比</div>
+  </div>
+
+  <div class="trend">
+    <div class="lbl">2024-2025 新趋势</div>
+    <h3>DP 这一块·近年权重明显加重</h3>
+    <p>一卷出 <b>2 段 DP</b> 已经成常态 · C++ 语法考查也在变深 · 2025 单选 3-4 题查语法细节</p>
+  </div>
+
+  <div class="pull">
+    <div class="lbl">CORE</div>
+    <h2>会算法 · 才能拿 <b>大半张卷</b> 的分</h2>
+  </div>
+
+  <div class="footer">
+    <span class="txt">大类占比 · 一目了然</span>
   </div>
 </body>
 </html>

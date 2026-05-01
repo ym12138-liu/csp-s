@@ -2,79 +2,86 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>二叉树 7 年 7 中 · 行动</title>
+<title>二叉树 · 3 道必练</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#1A1A1A; color:#FFF; position:relative; }
-  body::before {
-    content:""; position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(171,71,188,0.5) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255,112,67,0.4) 0%, transparent 50%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FF7043; color:#FFF; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 84px; font-weight: 900; margin-top:18px; line-height:1.05; }
-  h1 em { font-style:normal; color:#FFEB3B; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
 
-  .ex {
-    background:#FFF; color:#1A1A1A; border-radius: 18px;
-    padding: 22px 26px; margin-top: 22px;
-    border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #FF7043;
-  }
-  .ex .n { display:inline-block; background:#6A1B9A; color:#FFEB3B; padding:6px 18px; border-radius:8px; font-weight:900; font-size:26px;}
-  .ex h3 { font-size:32px; font-weight:900; margin-top:8px; color:#1A1A1A; }
-  .ex code { background:#FFEB3B; color:#1A1A1A; padding:2px 12px; border-radius:6px; font-weight:800; font-family:"PingFang SC", monospace;}
-  .ex p { font-size:24px; line-height:1.5; color:#424242; margin-top:6px;}
-  .ex p b { color:#B71C1C; }
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 60px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
 
-  .pull {
-    margin-top: 26px; padding: 24px 28px;
-    background: linear-gradient(135deg, #FFEB3B, #FF7043);
-    color:#1A1A1A; border-radius: 18px;
-    box-shadow: 8px 8px 0 #6A1B9A;
+  .qs { position: absolute; top: 380px; left: 80px; right: 80px; }
+  .q-card {
+    background: rgba(255,255,255,0.06); border-left: 6px solid #FFE082;
+    padding: 16px 22px; margin-bottom: 16px; border-radius: 4px;
   }
-  .pull h2 { font-size:42px; font-weight:900; line-height:1.3; }
-  .pull h2 b { color: #6A1B9A; }
-  .pull p { font-size: 24px; font-weight:700; margin-top:8px; }
-  .cta {
-    position:absolute; bottom:0; left:60px; right:60px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:24px; color:#FFEB3B; font-weight:700;
+  .q-card .num { display: inline-block;
+    background: #FF6B9D; color: #FFFFFF;
+    padding: 4px 14px; border-radius: 6px;
+    font-size: 18px; font-weight: 900; margin-bottom: 8px; }
+  .q-card h3 { font-size: 26px; color: #FFFFFF; font-weight: 900;
+    margin-bottom: 6px; }
+  .q-card h3 .code {
+    background: #FFE082; color: #1B5E20;
+    padding: 2px 10px; border-radius: 4px;
+    font-family: Consolas, monospace;
   }
-  .pill { background:#FFEB3B; color:#1A1A1A; padding:10px 22px; border-radius:100px; font-weight:800;}
+  .q-card p { font-size: 20px; color: #FFFFFF; line-height: 1.6;
+    font-weight: 500; opacity: 0.92; }
+  .q-card p .high { background: #FFE082; color: #1B5E20; padding: 0 6px; font-weight: 900; }
+  .q-card p .circle { color: #FF6B9D; border-bottom: 2px solid #FF6B9D;
+    padding: 0 4px; font-weight: 900; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">PRACTICE · 3 道必刷</span>
-    <h1>背完模板<br>立刻 <em>开练</em></h1>
+  <div class="top">
+    <span class="badge">老师手记 · 3 道必练</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
 
-    <div class="ex">
-      <span class="n">题 1</span>
-      <h3>洛谷 <code>P1030</code> · 求先序遍历</h3>
-      <p>给定 <b>中序 + 后序</b> · 输出前序<br>三步法练手 · 5 分钟出结果</p>
+  <div class="h1-area">
+    <h1>背完模板<br>立刻 <b>开练</b></h1>
+  </div>
+
+  <div class="qs">
+    <div class="q-card">
+      <div class="num">题 1</div>
+      <h3>洛谷 <span class="code">P1030</span> · 求先序遍历</h3>
+      <p>给定<span class="circle">中序 + 后序</span> · 输出前序<br>
+      三步法练手 · <span class="high">5 分钟出结果</span></p>
     </div>
-    <div class="ex">
-      <span class="n">题 2</span>
-      <h3>洛谷 <code>P1827</code> · 美国血统</h3>
-      <p>给定<b>前序 + 中序</b> · 输出后序<br>同款套路 · 反过来练一次</p>
+    <div class="q-card">
+      <div class="num">题 2</div>
+      <h3>洛谷 <span class="code">P1827</span> · 美国血统</h3>
+      <p>给定<span class="circle">前序 + 中序</span> · 输出后序<br>
+      同款套路 · 反过来练一次</p>
     </div>
-    <div class="ex">
-      <span class="n">题 3</span>
+    <div class="q-card">
+      <div class="num">题 3</div>
       <h3>历年真题 · CSP-J 2024 单选 12</h3>
-      <p>前+中→后 标准题 · 限时 <b>2 分钟</b>做完<br>对照本号 2024 分析订正</p>
-    </div>
-
-    <div class="pull">
-      <h2>记住口诀<br><b>"中序找根分左右"</b></h2>
-      <p>这一题 4 分 · 三个月之内别再丢</p>
+      <p>前 + 中 → 后 标准题 · 限时 <span class="high">2 分钟</span> 做完<br>
+      对照本号 2024 分析订正</p>
     </div>
   </div>
-  <div class="cta">
-    <span>#二叉树 #信奥 #大连娃</span>
-    <span class="pill">收藏开练</span>
+
+  <div class="bottom">
+    <div class="ttl">★ 记住这句口诀 ★</div>
+    <div class="txt"><b>"中序找根分左右"</b> — 这 4 分 · 三个月之内别再丢</div>
   </div>
 </body>
 </html>

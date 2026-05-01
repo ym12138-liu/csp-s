@@ -2,66 +2,85 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>CSP-J 阅读程序 18 段 · 方法</title>
+<title>5 行就识别算法</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#FFFDE7 0%, #BBDEFB 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#0D47A1; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#0D47A1; }
-  h1 em { font-style:normal; background:#FFEB3B; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
+  html, body { width: 1080px; height: 1440px; overflow: hidden;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #1B5E20; color: #FFFFFF; }
+  .top { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+    border-radius: 6px; font-size: 22px; font-weight: 900; }
+  .top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
 
-  .pat {
-    margin-top: 26px;
-    background:#FFF; border-radius: 18px; padding: 22px 26px;
-    border: 4px solid #1A1A1A; box-shadow: 7px 7px 0 #0D47A1;
-  }
-  .pat .h { display:flex; align-items:center; margin-bottom: 10px; }
-  .pat .icon { flex: 0 0 64px; height:64px; border-radius: 12px; background:#FF5E62; color:#FFF; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 3px 3px 0 #1A1A1A; margin-right: 18px;}
-  .pat .icon.dp { background:#FF5E62; }
-  .pat .icon.rec { background:#FFEB3B; color:#0D47A1;}
-  .pat .icon.str { background:#AB47BC; }
-  .pat h3 { font-size: 34px; font-weight: 900; color:#0D47A1; }
-  .pat p { font-size: 24px; line-height: 1.55; color:#1A1A1A;}
-  .pat p code { background:#FFEB3B; color:#0D47A1; padding: 2px 10px; border-radius:4px; font-weight:700; font-family:"PingFang SC", monospace;}
+  .h1-area { position: absolute; top: 160px; left: 80px; right: 80px; }
+  .h1-area h1 { font-size: 60px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+  .h1-area h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
 
-  .quote {
-    margin-top: 26px; padding: 22px 26px;
-    background: linear-gradient(135deg,#0D47A1, #FF5E62);
-    color:#FFF; border-radius: 16px; box-shadow: 8px 8px 0 #FFEB3B;
+  .cards { position: absolute; top: 380px; left: 80px; right: 80px; }
+  .card {
+    background: rgba(255,255,255,0.06); border-left: 6px solid #FFE082;
+    padding: 14px 22px; margin-bottom: 14px; border-radius: 4px;
   }
-  .quote .lbl { font-size:22px; opacity:.9; letter-spacing:2px; font-weight:700;}
-  .quote h2 { font-size: 36px; font-weight:900; line-height:1.4; margin-top:6px; text-shadow:2px 2px 0 #1A1A1A;}
+  .card .name {
+    background: #FF6B9D; color: #FFFFFF;
+    padding: 4px 12px; border-radius: 4px;
+    font-size: 18px; font-weight: 900;
+    display: inline-block; margin-bottom: 8px;
+  }
+  .card h3 { font-size: 24px; color: #FFFFFF; font-weight: 900; margin-bottom: 6px; }
+  .card .code {
+    background: rgba(0,0,0,0.4); color: #FFE082;
+    padding: 8px 14px; border-radius: 4px;
+    font-family: Consolas, monospace; font-size: 18px;
+    margin: 8px 0;
+  }
+  .card p { font-size: 18px; color: #FFFFFF; line-height: 1.5; opacity: 0.92; }
+  .card p .high { background: #FFE082; color: #1B5E20; padding: 0 6px; font-weight: 900; }
+
+  .bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+    background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+    padding: 16px 22px; border-radius: 4px; }
+  .bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+  .bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+  .bottom .txt b { color: #FFE082; }
 </style>
 </head>
 <body>
-  <div class="safe">
-    <span class="h-tag">METHOD · 1 分钟识别</span>
-    <h1>看 5 行<br>就知道<em>是什么算法</em></h1>
+  <div class="top">
+    <span class="badge">老师手记 · 看 5 行识算法</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
 
-    <div class="pat">
-      <div class="h"><div class="icon dp">DP</div><h3>识别 DP</h3></div>
-      <p>看到 <code>dp[i] = max/min(dp[i-1], ...)</code> · 二维就是 <code>dp[i][j]</code>。</p>
-      <p>关键词：<b>状态 / 转移 / 边界</b>。多半是爬楼梯 / LCS / 编辑距离一类。</p>
-    </div>
+  <div class="h1-area">
+    <h1>看 5 行<br>就知道是<b>什么算法</b></h1>
+  </div>
 
-    <div class="pat">
-      <div class="h"><div class="icon rec">REC</div><h3>识别递归 / 分治</h3></div>
-      <p>函数<b>调用自己</b> · 有 <code>if (n==0) return ...</code> 的边界条件。</p>
-      <p>看是不是 <code>solve(left) + solve(right)</code> 这种二分模式 = 分治。</p>
+  <div class="cards">
+    <div class="card">
+      <span class="name">DP 识别</span>
+      <h3>看到状态转移就是 DP</h3>
+      <div class="code">dp[i] = max/min(dp[i-1], ...)  ·  二维就是 dp[i][j]</div>
+      <p>关键词:状态 / 转移 / 边界 · 多半是<span class="high">爬楼梯 / LCS / 编辑距离</span></p>
     </div>
+    <div class="card">
+      <span class="name">REC 识别递归 / 分治</span>
+      <h3>函数调用自己 = 递归</h3>
+      <div class="code">if (n==0) return ...  ·  return solve(left) + solve(right)</div>
+      <p>看是不是<span class="high">二分模式</span> · 是的就是分治</p>
+    </div>
+    <div class="card">
+      <span class="name">STR 识别字符串处理</span>
+      <h3>遇到 ASCII 算术几乎确定</h3>
+      <div class="code">str[i] - 'A'  ·  isdigit  ·  str.size()</div>
+      <p>注意:<span class="high">Base64 / RLE / 字符映射</span> 都是这一类的变体</p>
+    </div>
+  </div>
 
-    <div class="pat">
-      <div class="h"><div class="icon str">STR</div><h3>识别字符串处理</h3></div>
-      <p>遇到 <code>str[i] - 'A'</code>、<code>isdigit</code>、<code>str.size()</code> 几乎确定。</p>
-      <p>注意：Base64 / RLE / 字符映射都是这一类的<b>变体</b>。</p>
-    </div>
-
-    <div class="quote">
-      <div class="lbl">CORE</div>
-      <h2>读题先扫"算法骨架"<br>再去抠每行实现</h2>
-    </div>
+  <div class="bottom">
+    <div class="ttl">★ 答题节奏 ★</div>
+    <div class="txt">读题先扫<b>"算法骨架"</b>,再去抠每一行实现 — 速度翻倍</div>
   </div>
 </body>
 </html>

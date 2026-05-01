@@ -1,103 +1,84 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-J 完善程序模板 · 代码</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>4 段必默 · 模板代码</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#FFF8E1 0%, #C8E6C9 100%); color:#1A1A1A; position:relative;}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#2E7D32; color:#FFD54F; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 44px; font-weight: 900; margin-top:10px; line-height:1.05; color:#1B5E20;}
-  h1 em { font-style:normal; background:#FFD54F; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.code-card { position: absolute; left: 60px; right: 60px;
+background: #E3F2FD; border-left: 6px solid #0D47A1;
+padding: 14px 22px; border-radius: 6px; }
+.cc1 { top: 380px; }
+.cc2 { top: 580px; }
+.cc3 { top: 800px; }
+.cc4 { top: 980px; }
+.code-card .name { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 4px;
+font-size: 17px; font-weight: 900; margin-bottom: 8px; }
+.code-card pre { font-family: Consolas, "Microsoft YaHei", monospace;
+font-size: 15px; line-height: 1.4; color: #1A1A1A; white-space: pre-wrap; }
+.code-card pre .kw { color: #0D47A1; font-weight: 700; }
+.code-card .key { font-size: 16px; color: #B71C1C; font-weight: 700; margin-top: 6px; }
+.code-card .key b { background: #FFEB3B; padding: 0 4px; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 18px 26px; border-radius: 16px; }
+.pull h2 { font-size: 24px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">CODE · 4 段必默</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 抄一遍能写 / 抄三遍能默</div><h1>4 段核心 <b>模板</b></h1></div>
 
-  .code-card {
-    background:#1A1A1A; color:#FFF; border-radius: 14px;
-    padding: 8px 14px; margin-top: 10px;
-    box-shadow: 5px 5px 0 #FF5E62;
-    position:relative;
-  }
-  .code-card .name {
-    background:#FFD54F; color:#1A1A1A;
-    padding: 3px 12px; border-radius: 6px;
-    font-weight: 900; font-size: 20px;
-    display:inline-block; margin-bottom: 6px;
-  }
-  .code-card pre {
-    font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace;
-    font-size: 15px; line-height: 1.3;
-    color: #E8F5E9;
-    overflow:hidden;
-  }
-  .code-card pre .kw { color:#FFD54F; font-weight:700;}
-  .code-card pre .fn { color:#81C784; font-weight:700;}
-  .code-card pre .cm { color:#9E9E9E; font-style: italic;}
-  .code-card pre .lit { color:#FF8A80;}
-  .code-card .note {
-    margin-top: 6px; font-size: 18px;
-    color: #FFD54F; font-weight: 700;
-  }
-  .code-card .note b { color:#FFF; background:#FF5E62; padding: 0 6px; border-radius: 4px;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">CODE · 4 段必默</span>
-    <h1>抄一遍能写<br>抄三遍<em>能默</em></h1>
-
-    <div class="code-card">
-      <span class="name">1 · 二分查找（lower_bound）</span>
-<pre><span class="kw">int</span> <span class="fn">lb</span>(<span class="kw">int</span>* a, <span class="kw">int</span> n, <span class="kw">int</span> x) {
-    <span class="kw">int</span> l = <span class="lit">0</span>, r = n;
-    <span class="kw">while</span> (l < r) {
-        <span class="kw">int</span> mid = (l + r) >> <span class="lit">1</span>;
-        <span class="kw">if</span> (a[mid] < x) l = mid + <span class="lit">1</span>;
-        <span class="kw">else</span> r = mid;
-    }
-    <span class="kw">return</span> l;
+<div class="code-card cc1">
+<span class="name">1 · 二分查找 lower_bound</span>
+<pre><span class="kw">int</span> lb(<span class="kw">int</span>* a, <span class="kw">int</span> n, <span class="kw">int</span> x) {
+  <span class="kw">int</span> l = 0, r = n;
+  <span class="kw">while</span> (l &lt; r) { <span class="kw">int</span> m = (l+r)&gt;&gt;1;
+    <span class="kw">if</span> (a[m] &lt; x) l = m+1; <span class="kw">else</span> r = m;
+  } <span class="kw">return</span> l;
 }</pre>
-      <div class="note">关键 · 半开区间 <b>[l, r)</b>；<b>l = mid+1, r = mid</b></div>
-    </div>
+<div class="key">关键 · 半开区间 <b>[l, r)</b> · l = mid+1 / r = mid</div>
+</div>
 
-    <div class="code-card">
-      <span class="name">2 · 质因数分解</span>
-<pre><span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">2</span>; (<span class="kw">long long</span>)i*i <= n; ++i)
-    <span class="kw">while</span> (n % i == <span class="lit">0</span>) {
-        cout << i << <span class="lit">' '</span>;
-        n /= i;
-    }
-<span class="kw">if</span> (n > <span class="lit">1</span>) cout << n;</pre>
-      <div class="note">关键 · 上界 <b>i*i ≤ n</b> · 剩余 n &gt; 1 一定是素数</div>
-    </div>
+<div class="code-card cc2">
+<span class="name">2 · 试除法 + BFS Flood Fill</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i=2; (long long)i*i &lt;= n; ++i)
+  <span class="kw">while</span> (n%i == 0) { cout&lt;&lt;i&lt;&lt;' '; n /= i; }
+<span class="kw">if</span> (n &gt; 1) cout &lt;&lt; n;</pre>
+<div class="key">关键 · 上界 <b>i*i ≤ n</b> · 剩余 n &gt; 1 必为素数</div>
+</div>
 
-    <div class="code-card">
-      <span class="name">3 · BFS Flood Fill</span>
-<pre>queue&lt;pii&gt; q; q.<span class="fn">push</span>({sx,sy});
-g[sx][sy] = NEW;
-<span class="kw">while</span> (!q.<span class="fn">empty</span>()) {
-    <span class="kw">auto</span> [x,y] = q.<span class="fn">front</span>(); q.<span class="fn">pop</span>();
-    <span class="kw">for</span> (<span class="kw">int</span> d=<span class="lit">0</span>; d&lt;<span class="lit">4</span>; ++d) {
-        <span class="kw">int</span> nx=x+dx[d], ny=y+dy[d];
-        <span class="kw">if</span> (g[nx][ny]==OLD) {
-            g[nx][ny]=NEW;
-            q.<span class="fn">push</span>({nx,ny});
-        }
-    }
+<div class="code-card cc3">
+<span class="name">3 · 编辑距离 DP (二维)</span>
+<pre><span class="kw">for</span> (<span class="kw">int</span> i=1; i&lt;=n; i++)
+  <span class="kw">for</span> (<span class="kw">int</span> j=1; j&lt;=m; j++)
+    f[i][j] = a[i]==b[j] ? f[i-1][j-1]
+            : 1 + min({f[i-1][j], f[i][j-1], f[i-1][j-1]});</pre>
+<div class="key">关键 · 字符相同<b>跨过</b> · 不同<b>3 选 1 加 1</b></div>
+</div>
+
+<div class="code-card cc4">
+<span class="name">4 · 摩尔投票 (2025 新)</span>
+<pre><span class="kw">int</span> cand = 0, cnt = 0;
+<span class="kw">for</span> (<span class="kw">int</span> i=0; i&lt;n; i++) {
+  <span class="kw">if</span> (cnt == 0) { cand = a[i]; cnt = 1; }
+  <span class="kw">else if</span> (a[i] == cand) cnt++; <span class="kw">else</span> cnt--;
 }</pre>
-      <div class="note">关键 · <b>染色再入队</b> · 防止重复访问</div>
-    </div>
+<div class="key">关键 · "<b>一对一抵消</b>" · 多数派必有剩余</div>
+</div>
 
-    <div class="code-card">
-      <span class="name">4 · 摩尔投票（2025 新）</span>
-<pre><span class="kw">int</span> cand = <span class="lit">0</span>, cnt = <span class="lit">0</span>;
-<span class="kw">for</span> (<span class="kw">int</span> i = <span class="lit">0</span>; i &lt; n; ++i) {
-    <span class="kw">if</span> (cnt == <span class="lit">0</span>) cand = a[i], cnt = <span class="lit">1</span>;
-    <span class="kw">else if</span> (a[i] == cand) cnt++;
-    <span class="kw">else</span> cnt--;
-}</pre>
-      <div class="note">关键 · "<b>一对一抵消</b>"，多数派必有剩余</div>
-    </div>
-  </div>
-</body>
-</html>
+<div class="pull"><h2>4 段背完 · 完善程序<b>稳吃 20 分</b></h2></div>
+<div class="footer"><span class="txt">肌肉记忆 · 比刷题量管用</span></div>
+</body></html>
