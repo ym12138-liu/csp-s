@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 学情可视</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #1A1A1A; position: relative; }
+
+  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #FFD93D; display: flex; align-items: center; padding: 0 60px;
+    border-bottom: 4px solid #1A1A1A; }
+  .h-tag { background: #1A1A1A; color: #FFD93D; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .right { margin-left: auto; color: #1A1A1A; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
+
+  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
+  .title-area h1 { font-size: 60px; font-weight: 900; color: #FFFFFF; line-height: 1.1; }
+  .title-area h1 em {
+    font-style: normal; background: #FFD93D; color: #1A1A1A;
+    padding: 0 12px; box-shadow: 6px 6px 0 #FFFFFF;
+    display: inline-block;
+  }
+
+  .photo-l {
+    position: absolute; top: 360px; left: 60px; width: 460px; height: 320px;
+    border-radius: 14px; overflow: hidden;
+    background: url("../../因诺信奥图片/DSC_2898.JPG") center/cover no-repeat;
+    border: 4px solid #FFD93D;
+  }
+  .photo-r {
+    position: absolute; top: 360px; right: 60px; width: 460px; height: 320px;
+    border-radius: 14px; overflow: hidden;
+    background: url("../../因诺信奥图片/DSC_6665.JPG") center/cover no-repeat;
+    border: 4px solid #FFD93D;
+  }
+
+  .system { position: absolute; top: 720px; left: 60px; right: 60px; }
+  .system .lbl {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 8px 22px; border-radius: 8px;
+    font-size: 24px; font-weight: 900; letter-spacing: 2px;
+    display: inline-block; margin-bottom: 14px;
+  }
+  .row { display: flex; gap: 14px; margin-bottom: 12px; }
+  .item {
+    flex: 1; background: #FFFFFF;
+    border-radius: 14px; padding: 14px 16px;
+    border: 3px solid #FFD93D;
+    box-shadow: 4px 4px 0 #FFD93D;
+  }
+  .item h3 {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 4px 12px; border-radius: 6px;
+    font-size: 18px; font-weight: 900;
+    display: inline-block; margin-bottom: 6px;
+  }
+  .item p {
+    font-size: 16px; color: #424242; font-weight: 700;
+    line-height: 1.4;
+  }
+  .item p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+
+  .pull {
+    position: absolute; bottom: 100px; left: 60px; right: 60px;
+    background: #FFD93D; color: #1A1A1A;
+    padding: 22px 28px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+    text-align: center;
+  }
+  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #FFD93D; border-top: 4px solid #FFFFFF;
+    display: flex; align-items: center; justify-content: center; }
+  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">SYSTEM · 学情可视</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="title-area">
+    <h1>家长能<em>看见</em><br>娃练到哪</h1>
+  </div>
+
+  <div class="photo-l"></div>
+  <div class="photo-r"></div>
+
+  <div class="system">
+    <span class="lbl">每周·每月·每学期 都看得到</span>
+    <div class="row">
+      <div class="item">
+        <h3>每节课</h3>
+        <p>当堂代码 + <b>课堂表现</b><br>家长群同步</p>
+      </div>
+      <div class="item">
+        <h3>每周</h3>
+        <p>错题汇总 + <b>下周重点</b><br>清单形式</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item">
+        <h3>每月</h3>
+        <p>1 次 <b>模考打标</b><br>找最弱模块</p>
+      </div>
+      <div class="item">
+        <h3>每学期</h3>
+        <p>1 次 <b>升级评估</b><br>能不能进下一阶段</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>不当甩手机构<br><b>家长每周都能看见进步</b></h2>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt">透明·可查·可问</span>
+  </div>
+</body>
+</html>

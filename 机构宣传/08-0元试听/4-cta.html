@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 3 步预约</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFD93D; position: relative; }
+
+  .top-band { position: absolute; top: 60px; left: 60px; right: 60px;
+    display: flex; align-items: center; }
+  .h-tag { background: #1A1A1A; color: #FFD93D; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .right { margin-left: auto; color: #1A1A1A; font-size: 24px; font-weight: 900; letter-spacing: 2px;
+    background: rgba(255,255,255,0.95); padding: 10px 20px; border-radius: 8px;
+    border: 3px solid #1A1A1A; }
+
+  .hero { position: absolute; top: 220px; left: 60px; right: 60px; text-align: center; }
+  .hero .pre {
+    background: #1A1A1A; color: #FFD93D;
+    display: inline-block;
+    padding: 8px 22px; border-radius: 8px;
+    font-size: 26px; font-weight: 900; letter-spacing: 4px;
+    box-shadow: 4px 4px 0 #FFFFFF;
+  }
+  .hero h1 {
+    font-size: 130px; font-weight: 900; color: #1A1A1A;
+    line-height: 1; letter-spacing: -2px;
+    margin-top: 20px;
+    text-shadow: 8px 8px 0 #FFFFFF;
+  }
+
+  .steps { position: absolute; top: 540px; left: 60px; right: 60px; }
+  .step {
+    background: #FFFFFF; border-radius: 16px;
+    padding: 18px 22px; margin-bottom: 14px;
+    border: 4px solid #1A1A1A;
+    box-shadow: 6px 6px 0 #1A1A1A;
+    display: flex; align-items: center;
+  }
+  .step .n {
+    flex: 0 0 70px; height: 70px; border-radius: 50%;
+    background: #1A1A1A; color: #FFD93D;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; font-weight: 900;
+    margin-right: 16px;
+    border: 4px solid #FFD93D;
+  }
+  .step .body { flex: 1; }
+  .step .body h3 { font-size: 26px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .step .body p { font-size: 17px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.3; }
+  .step .body p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+  .step .check {
+    flex: 0 0 50px; height: 50px; border-radius: 12px;
+    background: #FFD93D; color: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+  }
+
+  .pull {
+    position: absolute; bottom: 100px; left: 60px; right: 60px;
+    background: #1A1A1A; color: #FFFFFF;
+    padding: 22px 28px; border-radius: 16px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 8px 8px 0 #FFFFFF;
+    text-align: center;
+  }
+  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.3; }
+  .pull h2 b { color: #FFD93D; }
+  .pull p { color: #FFD93D; font-size: 18px; font-weight: 700; margin-top: 6px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #1A1A1A; display: flex; align-items: center; justify-content: center; }
+  .footer-band .txt { color: #FFD93D; font-size: 24px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">CTA · 3 步预约</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="hero">
+    <div class="pre">$ BOOK · 怎么约</div>
+    <h1>3 步搞定</h1>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="n">1</div>
+      <div class="body">
+        <h3>主页私信"试听"</h3>
+        <p>留下娃 <b>年龄 + 基础</b>·班主任 <b>2 小时内</b>回</p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <div class="body">
+        <h3>选近的校区+合适班型</h3>
+        <p>大连 <b>多校区</b>·选最近的·选对级别</p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <div class="body">
+        <h3>到校上课+课后沟通</h3>
+        <p>娃听 90 分钟·家长听 30 分钟<b>沟通诊断</b></p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>就这 3 步<br><b>不画饼·不催卖卡</b></h2>
+    <p>因诺信奥 · 大连家长别犹豫</p>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt"># 0 元试听 # 大连 # 因诺信奥</span>
+  </div>
+</body>
+</html>

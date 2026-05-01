@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 阶段详解</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFFBE5; position: relative; }
+
+  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #1A1A1A; display: flex; align-items: center; padding: 0 60px; }
+  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
+
+  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
+  .title-area h1 { font-size: 60px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
+  .title-area h1 em {
+    font-style: normal; background: #FFD93D; padding: 0 12px;
+    box-shadow: 6px 6px 0 #1A1A1A; display: inline-block;
+  }
+
+  .stages-list { position: absolute; top: 360px; left: 60px; right: 60px; }
+  .stg {
+    background: #FFFFFF; border-radius: 14px;
+    padding: 14px 18px; margin-bottom: 12px;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #FFD93D;
+    display: flex; align-items: center;
+  }
+  .stg .ord {
+    flex: 0 0 80px; height: 70px; border-radius: 12px;
+    background: #FFD93D; color: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 38px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+    margin-right: 16px;
+  }
+  .stg.adv .ord { background: #1A1A1A; color: #FFD93D; }
+  .stg .body { flex: 1; }
+  .stg .body .top {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 4px;
+  }
+  .stg .body .top .age {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 3px 10px; border-radius: 6px;
+    font-size: 16px; font-weight: 900;
+  }
+  .stg .body .top .freq {
+    color: #424242; font-size: 14px; font-weight: 700;
+  }
+  .stg .body h3 { font-size: 24px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
+  .stg .body p { font-size: 16px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.3; }
+  .stg .body p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+
+  .pull {
+    position: absolute; bottom: 100px; left: 60px; right: 60px;
+    background: #1A1A1A; color: #FFFFFF;
+    padding: 20px 26px; border-radius: 16px;
+    border: 4px solid #FFD93D;
+    box-shadow: 8px 8px 0 #FFD93D;
+    text-align: center;
+  }
+  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
+
+  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: #FFD93D; border-top: 4px solid #1A1A1A;
+    display: flex; align-items: center; justify-content: center; }
+  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">DETAIL · 5 阶段详解</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="title-area">
+    <h1>每个阶段<em>练啥</em><br>多久升级</h1>
+  </div>
+
+  <div class="stages-list">
+    <div class="stg">
+      <div class="ord">①</div>
+      <div class="body">
+        <div class="top"><span class="age">7-9 岁</span><span class="freq">每周 1 节·1.5 小时</span></div>
+        <h3>启蒙 · Scratch 拖积木</h3>
+        <p>动画 / 小游戏·练 <b>逻辑思维</b>·不打字也能学</p>
+      </div>
+    </div>
+    <div class="stg">
+      <div class="ord">②</div>
+      <div class="body">
+        <div class="top"><span class="age">9-11 岁</span><span class="freq">每周 1-2 节·1.5 小时</span></div>
+        <h3>过渡 · Python 真代码</h3>
+        <p>语法简洁·从拖积木到 <b>真敲代码</b></p>
+      </div>
+    </div>
+    <div class="stg adv">
+      <div class="ord">③</div>
+      <div class="body">
+        <div class="top"><span class="age">10-13 岁</span><span class="freq">每周 1-2 节·按级推进</span></div>
+        <h3>GESP 1-8 级 · 考级路</h3>
+        <p>表达式 → 排序 → 树·<b>每级一证</b></p>
+      </div>
+    </div>
+    <div class="stg adv">
+      <div class="ord">④</div>
+      <div class="body">
+        <div class="top"><span class="age">11-14 岁</span><span class="freq">每周 2 节·密度上升</span></div>
+        <h3>CSP-J 普及 · 真题驱动</h3>
+        <p>21 模块逐题打标·<b>过线 60+</b></p>
+      </div>
+    </div>
+    <div class="stg adv">
+      <div class="ord">⑤</div>
+      <div class="body">
+        <div class="top"><span class="age">14-16 岁</span><span class="freq">每周 2-3 节·进阶</span></div>
+        <h3>CSP-S 提高 · 算法硬核</h3>
+        <p>图论 / 状压 DP / 树形 DP·<b>冲省一</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <h2>不超前 · 不跳级<br><b>每个阶段 = 一年节奏</b></h2>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt">阶段清晰·节奏稳·不返工</span>
+  </div>
+</body>
+</html>

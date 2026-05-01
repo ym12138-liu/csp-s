@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>因诺信奥 · 五大亮点</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { background: #FFFBE5; position: relative; }
+
+  .top-band {
+    position: absolute; top: 0; left: 0; right: 0; height: 150px;
+    background: #1A1A1A;
+    display: flex; align-items: center; padding: 0 60px;
+  }
+  .top-band .h-tag {
+    background: #FFD93D; color: #1A1A1A;
+    padding: 12px 24px; border-radius: 8px;
+    font-size: 28px; font-weight: 900; letter-spacing: 2px;
+  }
+  .top-band .right {
+    margin-left: auto; color: #FFD93D;
+    font-size: 24px; font-weight: 800; letter-spacing: 2px;
+  }
+
+  .title-area {
+    position: absolute; top: 180px; left: 60px; right: 60px;
+  }
+  .title-area h1 {
+    font-size: 68px; font-weight: 900; color: #1A1A1A;
+    line-height: 1.1; letter-spacing: 1px;
+  }
+  .title-area h1 em {
+    font-style: normal; background: #FFD93D;
+    padding: 0 12px; box-shadow: 6px 6px 0 #1A1A1A;
+    display: inline-block;
+  }
+
+  .photo {
+    position: absolute; top: 380px; left: 60px; right: 60px; height: 280px;
+    border-radius: 16px; overflow: hidden;
+    background: url("../../因诺信奥图片/DSC_2885.JPG") center/cover no-repeat;
+    border: 4px solid #1A1A1A;
+    box-shadow: 8px 8px 0 #FFD93D;
+  }
+
+  .features {
+    position: absolute; top: 700px; left: 60px; right: 60px;
+  }
+  .row {
+    display: flex; gap: 16px; margin-bottom: 16px;
+  }
+  .feat {
+    flex: 1; min-width: 0;
+    background: #FFFFFF; border: 4px solid #1A1A1A;
+    border-radius: 14px; padding: 16px 18px;
+    box-shadow: 5px 5px 0 #1A1A1A;
+    display: flex; align-items: center;
+  }
+  .feat .num {
+    flex: 0 0 64px; height: 64px;
+    background: #FFD93D; color: #1A1A1A;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; font-weight: 900;
+    border: 3px solid #1A1A1A;
+    margin-right: 12px;
+  }
+  .feat .body { flex: 1; }
+  .feat .body h3 {
+    font-size: 24px; font-weight: 900; color: #1A1A1A;
+    line-height: 1.1;
+  }
+  .feat .body p {
+    font-size: 16px; font-weight: 700; color: #424242;
+    margin-top: 4px; line-height: 1.3;
+  }
+  .feat .body p b { color: #B71C1C; background: #FFD93D; padding: 0 4px; border-radius: 3px; }
+
+  .feat-wide {
+    background: #1A1A1A;
+    border-color: #FFD93D;
+  }
+  .feat-wide .num { background: #FFD93D; }
+  .feat-wide .body h3 { color: #FFD93D; }
+  .feat-wide .body p { color: #FFFFFF; }
+
+  .footer-band {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    background: #FFD93D;
+    display: flex; align-items: center; justify-content: center;
+    border-top: 4px solid #1A1A1A;
+  }
+  .footer-band .txt {
+    color: #1A1A1A; font-size: 30px; font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .footer-band .txt b { background: #1A1A1A; color: #FFD93D; padding: 4px 14px; border-radius: 6px; margin: 0 6px; }
+</style>
+</head>
+<body>
+  <div class="top-band">
+    <span class="h-tag">FEATURE · 5 大亮点</span>
+    <span class="right">因诺信奥 · 大连</span>
+  </div>
+
+  <div class="title-area">
+    <h1>为什么<em>选因诺</em><br>5 个真实理由</h1>
+  </div>
+
+  <div class="photo"></div>
+
+  <div class="features">
+    <div class="row">
+      <div class="feat">
+        <div class="num">1</div>
+        <div class="body"><h3>小班教学</h3><p>每班 <b>≤ 12 人</b>·盯到位</p></div>
+      </div>
+      <div class="feat">
+        <div class="num">2</div>
+        <div class="body"><h3>真题驱动</h3><p><b>7 年真题</b>逐题打标</p></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="feat">
+        <div class="num">3</div>
+        <div class="body"><h3>分级清晰</h3><p>启蒙 → GESP → CSP</p></div>
+      </div>
+      <div class="feat">
+        <div class="num">4</div>
+        <div class="body"><h3>1 对 1 答疑</h3><p>课后<b>不留死角</b></p></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="feat feat-wide">
+        <div class="num">5</div>
+        <div class="body"><h3>家长反馈群</h3><p>每周作业 + 月度学情·<b>看得见进步</b></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-band">
+    <span class="txt">5 大亮点 ·<b>0 元试听</b>体验</span>
+  </div>
+</body>
+</html>

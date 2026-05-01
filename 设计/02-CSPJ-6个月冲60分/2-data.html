@@ -14,11 +14,11 @@
   .timeline {
     margin-top: 35px;
     position: relative;
-    padding-left: 60px;
+    padding-left: 100px;
   }
   .timeline::before {
-    content:""; position:absolute; left: 30px; top: 20px; bottom: 20px; width: 6px;
-    background: linear-gradient(180deg, #00BFA5, #FFEB3B); border-radius: 3px;
+    content:""; position:absolute; left: -16px; top: 60px; bottom: 60px; width: 6px;
+    background: linear-gradient(180deg, #00BFA5, #FFEB3B); border-radius: 3px; z-index: 0;
   }
   .stage {
     background:#FFF; border-radius: 18px; padding: 18px 22px;
@@ -27,13 +27,14 @@
   }
   .stage::before {
     content: attr(data-week);
-    position: absolute; left: -78px; top: 18px;
-    width: 64px; height: 64px; border-radius: 50%;
-    background: #FF5E62; color: #FFF; font-weight: 900; font-size: 22px;
+    position: absolute; left: -104px; top: 26px;
+    width: 90px; height: 50px; border-radius: 12px;
+    background: #FF5E62; color: #FFF; font-weight: 900; font-size: 20px;
     display: flex; align-items: center; justify-content: center;
     box-shadow: 3px 3px 0 #1A1A1A;
     text-align: center;
     line-height: 1.1;
+    z-index: 2;
   }
   .stage h3 { font-size:34px; font-weight: 900; color: #004D40; margin-bottom: 6px; }
   .stage p { font-size: 24px; color: #424242; line-height: 1.45; }
