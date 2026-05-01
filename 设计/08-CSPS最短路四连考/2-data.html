@@ -1,81 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-S 最短路四连考 · 数据</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>4 年最短路真题对照</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#E1F5FE; color:#1A1A1A; position:relative;}
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#01579B,#039BE5);}
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#039BE5,#01579B);}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#01579B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#01579B;}
-  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#FFEB3B 60%); padding:0 6px;}
-
-  .timeline {
-    margin-top: 30px; display: grid; grid-template-columns: 1fr; gap: 16px;
-  }
-  .case {
-    display: flex; background:#FFF; border-radius: 18px;
-    border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #01579B;
-    overflow: hidden;
-  }
-  .case .yr {
-    flex: 0 0 130px;
-    background: linear-gradient(135deg, #01579B, #039BE5);
-    color:#FFEB3B; font-weight:900;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-  }
-  .case .yr .y { font-size: 36px;}
-  .case .yr .t { font-size: 18px; opacity:.85; margin-top: 4px;}
-  .case .body { flex: 1; padding: 18px 22px;}
-  .case .body h3 { font-size: 28px; font-weight: 900; color: #01579B;}
-  .case .body p { font-size: 22px; color: #424242; line-height: 1.45; margin-top: 4px;}
-  .case .body p code { background:#FFEB3B; color:#01579B; padding: 2px 8px; border-radius: 4px; font-weight: 700;}
-
-  .stat {
-    margin-top: 24px;
-    display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
-  }
-  .stat .it {
-    background:#01579B; color:#FFF; padding: 18px 16px;
-    border-radius: 14px; text-align:center;
-    box-shadow: 4px 4px 0 #1A1A1A;
-  }
-  .stat .it .v { font-size: 56px; font-weight: 900; color: #FFEB3B; line-height: 1;}
-  .stat .it .l { font-size: 22px; color: #B3E5FC; margin-top: 6px;}
-  .key {
-    margin-top: 22px; background: #1A1A1A; color: #FFEB3B;
-    padding: 22px 26px; border-radius: 16px;
-    box-shadow: 8px 8px 0 #FF5722;
-  }
-  .key h2 { font-size: 30px; font-weight:900; color:#FFF; line-height:1.4;}
-  .key h2 b { color:#FFEB3B;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">DATA · 4 连考时间线</span>
-    <h1>每次都是<em>大题</em><br>不是单选送分</h1>
-
-    <div class="timeline">
-      <div class="case"><div class="yr"><div class="y">2020</div><div class="t">单选 14</div></div><div class="body"><h3>Dijkstra 复杂度</h3><p>堆优化 = <code>O((n+m)log n)</code> · 基本概念</p></div></div>
-      <div class="case"><div class="yr"><div class="y">2021</div><div class="t">单选 15</div></div><div class="body"><h3>有向图 A→J 最短路</h3><p>简单图 · 手算 dijkstra · 拿满分</p></div></div>
-      <div class="case"><div class="yr"><div class="y">2024</div><div class="t">完善 2</div></div><div class="body"><h3>次短路（拆点 Dijkstra）</h3><p>15 分大题 · <code>dis2</code> 数组 + 链式前向星</p></div></div>
-      <div class="case"><div class="yr"><div class="y">2025</div><div class="t">完善 1</div></div><div class="body"><h3>带"免费边"特殊最短路</h3><p>15 分 · <b>分层 Dijkstra</b> · used 0/1 双层状态</p></div></div>
-    </div>
-
-    <div class="stat">
-      <div class="it"><div class="v">4</div><div class="l">连考年份</div></div>
-      <div class="it"><div class="v">36+</div><div class="l">累计分值</div></div>
-      <div class="it"><div class="v">2</div><div class="l">完善大题</div></div>
-    </div>
-
-    <div class="key">
-      <h2>提示 · <b>2024 与 2025 同型反复</b><br>这模板已经成"必送分"</h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.list { position: absolute; top: 380px; left: 60px; right: 60px; }
+.row { display: flex; align-items: center; padding: 14px 20px;
+margin-bottom: 12px; border-radius: 12px;
+background: #FFFFFF; border: 3px solid #E3F2FD; }
+.row:nth-child(odd) { background: #F5F9FF; }
+.row .yr { flex: 0 0 90px; font-size: 24px; font-weight: 900; color: #0D47A1;
+text-align: center; padding: 8px 0; background: #E3F2FD; border-radius: 8px; margin-right: 16px; }
+.row .body { flex: 1; }
+.row .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.row .body p { font-size: 16px; color: #424242; margin-top: 2px; font-weight: 700; }
+.row .score { flex: 0 0 90px; text-align: right;
+font-size: 22px; font-weight: 900; color: #B71C1C; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">RANK · 4 年真题</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 题型轮换 · 套路不变</div><h1>4 年 4 题<br><b>都是 Dijkstra</b></h1></div>
+<div class="list">
+<div class="row"><div class="yr">2020</div><div class="body"><h3>单选 14 · 复杂度计算</h3><p>堆优化 = O((n+m) log n)</p></div><div class="score">2 分</div></div>
+<div class="row"><div class="yr">2021</div><div class="body"><h3>单选 15 · 有向图最短路</h3><p>简单图手算就能拿满</p></div><div class="score">2 分</div></div>
+<div class="row"><div class="yr">2024</div><div class="body"><h3>完善 2 · 次短路拆点</h3><p>需要 dis2 数组 + 链式前向星</p></div><div class="score">15 分</div></div>
+<div class="row"><div class="yr">2025</div><div class="body"><h3>完善 1 · 带"免费票"特殊最短路</h3><p>分层 Dijkstra · used 0/1 双层状态</p></div><div class="score">15 分</div></div>
+</div>
+<div class="pull"><h2>合计 ≈ <b>34 分</b> · 模板背熟<b>稳吃</b></h2></div>
+<div class="footer"><span class="txt">套路反复出 · 必背</span></div>
+</body></html>

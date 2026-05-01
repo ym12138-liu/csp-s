@@ -1,83 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-S 状压 DP 拆解 · 封面</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>状压 DP · n ≤ 20 通关密码</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: linear-gradient(160deg, #1A237E 0%, #5E35B1 50%, #AA00FF 100%);
-    color:#FFF; position:relative;
-  }
-  body::before {
-    content:""; position:absolute; top:120px; right:-100px;
-    width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(198,255,0,0.4) 0%, transparent 70%);
-  }
-  body::after {
-    content:""; position:absolute; bottom:200px; left:-100px;
-    width: 320px; height: 320px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#C6FF00; color:#1A237E; padding:14px 32px;
-    border-radius:100px; font-size:30px; font-weight:900; letter-spacing:2px; margin-bottom:50px;
-    box-shadow: 6px 6px 0 #1A1A1A;
-  }
-  .pre {
-    font-family: "SF Mono", "Consolas", monospace;
-    font-size: 36px; color: #C6FF00; font-weight: 900;
-    margin-bottom: 18px;
-    background: rgba(0,0,0,0.4); padding: 6px 16px; border-radius: 8px;
-    display:inline-block;
-  }
-  .title {
-    font-size: 200px; font-weight: 900; line-height: 0.9;
-    color: #FFF; letter-spacing: -8px;
-    text-shadow: 8px 8px 0 #1A237E;
-  }
-  .title em {
-    font-style:normal;
-    background: #C6FF00; color: #1A237E;
-    padding: 0 16px; display:inline-block;
-    box-shadow: 8px 8px 0 #1A1A1A;
-  }
-  .sub {
-    margin-top: 36px;
-    background: #1A1A1A; color: #C6FF00;
-    padding: 18px 24px; border-radius: 14px;
-    box-shadow: 6px 6px 0 #C6FF00;
-    font-size: 32px; font-weight: 800; display:inline-block;
-    line-height: 1.4;
-    border: 4px solid #C6FF00;
-  }
-  .sub b { color:#FFF; }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#C6FF00; font-weight:800;
-  }
-  .stamp { background:#C6FF00; color:#1A237E; padding:14px 24px; border-radius:8px; transform:rotate(-5deg); font-weight:900;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="tag">CSP-S 难度天花板 · 卷王专属</div>
-    <div class="pre">f[s][i] = max(f[s^(1&lt;&lt;i)][j] + cost)</div>
-    <div class="title">
-      状压<br>
-      <em>DP</em>
-    </div>
-    <div class="sub">
-      2020 / 2025 真题硬核拆解<br>
-      <b>看完别再被它锤</b>
-    </div>
-  </div>
-  <div class="footer">
-    <span>#CSPS #DP #大连卷王</span>
-    <span class="stamp">收藏拆解</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #1B5E20; color: #FFFFFF; }
+.top { position: absolute; top: 60px; left: 60px; right: 60px;
+display: flex; align-items: center; }
+.top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+border-radius: 6px; font-size: 22px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+.h1 { position: absolute; top: 160px; left: 80px; right: 80px; }
+.h1 h1 { font-size: 64px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+.h1 h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 14px; }
+.stat-row { position: absolute; top: 460px; left: 80px; right: 80px;
+display: flex; gap: 16px; }
+.stat { flex: 1; background: rgba(255,255,255,0.08); border: 2px dashed #FFE082;
+padding: 18px 14px; border-radius: 10px; text-align: center; }
+.stat .v { font-size: 50px; font-weight: 900; color: #FFE082; line-height: 1; }
+.stat .l { font-size: 17px; color: #FFFFFF; margin-top: 8px; font-weight: 700; }
+.body-area { position: absolute; top: 700px; left: 80px; right: 80px; }
+.body-area .star { color: #FF6B9D; }
+.body-area .lbl { font-size: 26px; font-weight: 900; color: #FFE082;
+margin-bottom: 14px; letter-spacing: 1px; }
+.body-area p { font-size: 22px; color: #FFFFFF; line-height: 1.7; font-weight: 500; }
+.body-area .high { background: #FFE082; color: #1B5E20; padding: 0 6px;
+border-radius: 3px; font-weight: 900; }
+.body-area .circle { color: #FF6B9D; border-bottom: 3px solid #FF6B9D;
+padding: 0 6px; font-weight: 900; }
+.bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+padding: 16px 22px; border-radius: 4px; }
+.bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+.bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+.bottom .txt b { color: #FFE082; }
+</style></head><body>
+<div class="top"><span class="badge">老师手记 · 状压 DP</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><h1>看到 <b>n ≤ 20</b><br>条件反射 → 状压</h1></div>
+<div class="stat-row">
+<div class="stat"><div class="v">2²⁰</div><div class="l">状态空间</div></div>
+<div class="stat"><div class="v">2 次</div><div class="l">CSP-S 真题</div></div>
+<div class="stat"><div class="v">14 分</div><div class="l">不会就送</div></div>
+</div>
+<div class="body-area">
+<div class="lbl"><span class="star">★</span> 通关密码 <span class="star">★</span></div>
+<p><span class="circle">n ≤ 20</span> = 一半是状压题</p>
+<p>状态可表示成 <span class="high">选 / 没选</span> 的 0/1 组合</p>
+<p>把"集合"压成一个 <span class="high">二进制数 s</span> · 第 i 位为 1 表示选了 i</p>
+<p>历年硬核拆解 · CSP-S <span class="high">2020 完善 2 + 2024 阅读 2</span></p>
+</div>
+<div class="bottom"><div class="ttl">★ 这帖讲什么 ★</div>
+<div class="txt">状压 <b>3 步法</b> + TSP 标准模板 + <b>5 题阶梯</b></div></div>
+</body></html>

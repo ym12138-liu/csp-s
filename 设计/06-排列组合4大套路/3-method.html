@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>排列组合 · 4 步识别套路</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.steps { position: absolute; top: 380px; left: 60px; right: 60px; }
+.s { display: flex; align-items: center; padding: 14px 18px;
+margin-bottom: 12px; border-radius: 12px; }
+.s .key { flex: 0 0 240px; font-size: 18px; font-weight: 900; color: #0D47A1; }
+.s .arrow { flex: 0 0 30px; font-size: 22px; color: #2196F3; font-weight: 900; text-align: center; }
+.s .ans { flex: 1; font-size: 20px; font-weight: 900; color: #FFFFFF;
+padding: 6px 14px; border-radius: 6px; }
+.s.s1 { background: #FCE4EC; } .s.s1 .ans { background: #C2185B; }
+.s.s2 { background: #FFF8E1; } .s.s2 .ans { background: #F57F17; }
+.s.s3 { background: #E8F5E9; } .s.s3 .ans { background: #2E7D32; }
+.s.s4 { background: #E3F2FD; } .s.s4 .ans { background: #0D47A1; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">METHOD · 4 步识别</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 看到题型 · 立刻套对应公式</div><h1>识别套路<br><b>4 个关键词</b></h1></div>
+<div class="steps">
+<div class="s s1"><div class="key">"分到盒子 / 至少 1 个"</div><div class="arrow">→</div><div class="ans">隔板法 C(n-1, k-1)</div></div>
+<div class="s s2"><div class="key">"必相邻 / 不分开"</div><div class="arrow">→</div><div class="ans">捆绑法 整体 × 内部</div></div>
+<div class="s s3"><div class="key">"被 X 或 Y 整除"</div><div class="arrow">→</div><div class="ans">容斥 ΣA - ΣAB + ABC</div></div>
+<div class="s s4"><div class="key">"全错位 / 都不对"</div><div class="arrow">→</div><div class="ans">错排 D(n) 公式</div></div>
+</div>
+<div class="pull"><h2>记住 4 个关键词 · <b>看题秒识套路</b></h2></div>
+<div class="footer"><span class="txt">不背公式 · 背关键词</span></div>
+</body></html>

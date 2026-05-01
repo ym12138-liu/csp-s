@@ -1,85 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-S 状压 DP 拆解 · 数据</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>历年状压拆解</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#EDE7F6; color:#1A1A1A; position:relative;}
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#1A237E,#AA00FF);}
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(90deg,#AA00FF,#1A237E);}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#1A237E; color:#C6FF00; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#1A237E;}
-  h1 em { font-style:normal; background:linear-gradient(transparent 60%,#C6FF00 60%); padding:0 6px;}
-
-  .case {
-    background:#FFF; border-radius: 20px;
-    padding: 22px 26px; margin-top: 18px;
-    border: 4px solid #1A1A1A; box-shadow: 7px 7px 0 #5E35B1;
-    position: relative;
-  }
-  .case .yr {
-    position: absolute; top: -18px; left: 22px;
-    background: #AA00FF; color: #C6FF00;
-    padding: 8px 22px; border-radius: 8px;
-    font-weight:900; font-size: 24px;
-    box-shadow: 4px 4px 0 #1A1A1A;
-  }
-  .case h3 { font-size: 32px; font-weight: 900; color: #1A237E; margin-top: 8px; }
-  .case .meta { display: flex; gap: 12px; margin-top: 10px; flex-wrap:wrap; }
-  .case .pill {
-    background:#1A237E; color:#C6FF00;
-    padding: 6px 14px; border-radius: 100px;
-    font-size: 20px; font-weight: 700;
-  }
-  .case .pill.h { background:#FF1744; color:#FFF;}
-  .case p { font-size: 22px; color:#424242; line-height: 1.5; margin-top: 10px;}
-  .case p code { background:#C6FF00; color:#1A237E; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-family: "PingFang SC", monospace;}
-  .case p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px;}
-
-  .key {
-    margin-top: 22px;
-    background:#1A1A1A; color:#C6FF00; border-radius: 16px;
-    padding: 22px 26px; box-shadow: 8px 8px 0 #AA00FF;
-  }
-  .key h2 { font-size: 32px; font-weight: 900; color: #FFF; line-height: 1.4; }
-  .key h2 b { color: #C6FF00; }
-  .key .lbl { font-size: 22px; opacity: .85; letter-spacing: 2px; font-weight: 700; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">CASE · 真题拆解</span>
-    <h1>历年状压 DP<br><em>都长这样</em></h1>
-
-    <div class="case">
-      <span class="yr">2020 完善 2</span>
-      <h3>子序列最大异或权和</h3>
-      <div class="meta">
-        <span class="pill h">高难</span>
-        <span class="pill">15 分</span>
-        <span class="pill">popcount</span>
-      </div>
-      <p>状态：<code>Max[x][y]</code> · x = 当前序列下个位置高 8 位 · y = 上个位置低 8 位<br>把 16 位异或拆成 <b>前/后 8 位</b>分别压位 → MS = (1&lt;&lt;8)-1</p>
-    </div>
-
-    <div class="case">
-      <span class="yr">2024 阅读 2</span>
-      <h3>子集生成数字之和</h3>
-      <div class="meta">
-        <span class="pill h">高难</span>
-        <span class="pill">14 分</span>
-        <span class="pill">位 DP</span>
-      </div>
-      <p>状态：<code>dp[k]</code> 表示当前数字组合对应的方案数<br>转移：<code>dp[k] += dp[j]</code>，其中 <code>k = (j&lt;&lt;1) | bit</code><br>解法 2 直接枚举 <code>(1&lt;&lt;n)</code> 的所有子集做对照 · <b>双解法对比</b></p>
-    </div>
-
-    <div class="key">
-      <div class="lbl">PATTERN</div>
-      <h2>共同点 · <b>状态空间 ≤ 2²⁰</b><br>不会就直接送 14-15 分</h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #1B5E20; color: #FFFFFF; }
+.top { position: absolute; top: 60px; left: 60px; right: 60px;
+display: flex; align-items: center; }
+.top .badge { background: #FCE4EC; color: #1B5E20; padding: 8px 18px;
+border-radius: 6px; font-size: 22px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFE082; font-size: 20px; font-weight: 800; }
+.h1 { position: absolute; top: 160px; left: 80px; right: 80px; }
+.h1 h1 { font-size: 56px; font-weight: 900; color: #FFFFFF; line-height: 1.15; }
+.h1 h1 b { background: #FCE4EC; color: #1B5E20; padding: 0 12px; }
+.case-list { position: absolute; top: 360px; left: 80px; right: 80px; }
+.case { background: rgba(255,255,255,0.06); border-left: 6px solid #FFE082;
+padding: 14px 22px; margin-bottom: 14px; border-radius: 4px; }
+.case .yr { display: inline-block;
+background: #FF6B9D; color: #FFFFFF;
+padding: 4px 14px; border-radius: 4px;
+font-size: 16px; font-weight: 900; margin-bottom: 6px; }
+.case h3 { font-size: 22px; color: #FFFFFF; font-weight: 900; margin-bottom: 6px; }
+.case p { font-size: 18px; color: #FFFFFF; line-height: 1.5; opacity: 0.92; }
+.case p .high { background: #FFE082; color: #1B5E20; padding: 0 6px; font-weight: 900; }
+.case p .code { background: rgba(0,0,0,0.4); color: #FFE082;
+padding: 1px 8px; border-radius: 3px; font-family: Consolas, monospace; }
+.bottom { position: absolute; bottom: 80px; left: 80px; right: 80px;
+background: rgba(252, 228, 236, 0.15); border-left: 6px solid #FF6B9D;
+padding: 16px 22px; border-radius: 4px; }
+.bottom .ttl { font-size: 22px; color: #FFE082; font-weight: 900; margin-bottom: 4px; }
+.bottom .txt { font-size: 22px; color: #FFFFFF; font-weight: 700; line-height: 1.5; }
+.bottom .txt b { color: #FFE082; }
+</style></head><body>
+<div class="top"><span class="badge">老师手记 · 历年硬核题</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><h1>历年状压 DP<br>都长 <b>这样</b></h1></div>
+<div class="case-list">
+<div class="case"><span class="yr">2020 完善 2 · 15 分</span>
+<h3>子序列最大异或权和</h3>
+<p>状态 <span class="code">Max[x][y]</span> · x = 当前序列下个位置高 8 位 · y = 上个位置低 8 位<br>
+关键 · 把 16 位异或拆成 <span class="high">前/后 8 位分别压位</span> → MS = (1&lt;&lt;8)-1</p></div>
+<div class="case"><span class="yr">2024 阅读 2 · 14 分</span>
+<h3>子集生成数字之和</h3>
+<p>状态 <span class="code">dp[k]</span> 表示当前数字组合对应的方案数<br>
+转移 <span class="code">dp[k] += dp[j]</span> 其中 <span class="code">k = (j&lt;&lt;1) | bit</span><br>
+解法 2 直接枚举 <span class="high">(1&lt;&lt;n)</span> 的所有子集做对照 · 双解法对比</p></div>
+<div class="case"><span class="yr">PATTERN · 共同点</span>
+<h3>状态空间 ≤ 2²⁰</h3>
+<p>看到 <span class="code">n ≤ 20</span> 就该想状压 · <span class="high">不会就直接送 14-15 分</span></p></div>
+</div>
+<div class="bottom"><div class="ttl">★ 想清楚 ★</div>
+<div class="txt">状压不是难 · 是<b>不识标志</b>。识完套路 = 半道入门</div></div>
+</body></html>

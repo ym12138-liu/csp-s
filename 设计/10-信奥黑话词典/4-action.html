@@ -1,112 +1,48 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥黑话词典 · 用法</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>家长 5 步学黑话</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #0A0A0A; color: #FFEB3B; position:relative;}
-  body::before {
-    content:""; position:absolute; inset:0;
-    background-image:
-      linear-gradient(rgba(255,235,59,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,235,59,0.04) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-  body::after {
-    content:""; position:absolute; bottom:0; left:0; right:0; height:60%;
-    background: radial-gradient(ellipse at center bottom, rgba(255,23,68,0.25) 0%, transparent 70%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#00E5FF; color:#0A0A0A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace;}
-  h1 { font-size: 84px; font-weight: 900; margin-top:18px; line-height:1.05; color:#FFEB3B;}
-  h1 em { font-style:normal; color:#FF1744;}
-
-  .scene {
-    background:#2C2C2C;
-    border: 2px solid #FFEB3B;
-    border-radius: 14px; padding: 18px 22px;
-    margin-top: 16px;
-    box-shadow: 5px 5px 0 #FF1744;
-  }
-  .scene .lbl {
-    font-family: "SF Mono", monospace; color: #00E5FF;
-    font-size: 22px; font-weight: 900;
-  }
-  .scene .q {
-    font-size: 26px; color: #E0E0E0; font-weight: 700;
-    margin-top: 6px; line-height: 1.4;
-  }
-  .scene .a {
-    font-size: 26px; font-weight: 900;
-    color: #FFEB3B; margin-top: 8px; line-height: 1.4;
-    background: rgba(255,235,59,0.12);
-    padding: 10px 14px; border-radius: 8px;
-    border-left: 6px solid #FFEB3B;
-  }
-  .scene .a code {
-    background:#FFEB3B; color:#0A0A0A; padding: 2px 10px; border-radius:4px;
-    font-weight: 900;
-  }
-
-  .pull {
-    margin-top: 24px;
-    background: linear-gradient(135deg, #FFEB3B, #FF1744);
-    color: #0A0A0A;
-    padding: 22px 28px; border-radius: 12px;
-    font-family: "SF Mono", monospace;
-    box-shadow: 0 0 40px rgba(255,235,59,0.5), 6px 6px 0 #FFFFFF;
-  }
-  .pull .lbl { font-size:22px; font-weight: 900; opacity:.85;}
-  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4; margin-top: 6px;}
-  .pull h2 b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px; }
-
-  .cta {
-    position:absolute; bottom:0; left:60px; right:60px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:24px; color:#FFEB3B; font-weight:700; font-family:"SF Mono",monospace;
-  }
-  .pill { background:#FFEB3B; color:#0A0A0A; padding:10px 22px; border-radius:6px; font-weight:900;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">{ HOW } 怎么用</span>
-    <h1>家长黑话<br><em>速成场景</em></h1>
-
-    <div class="scene">
-      <div class="lbl">// SCENE 1 · 大连娃放学回家</div>
-      <div class="q">娃说："今天那道题我用了<b>记忆化搜索</b>"</div>
-      <div class="a">家长答 → "嗯，<code>DP</code> 的另一种写法对吧？"</div>
-    </div>
-
-    <div class="scene">
-      <div class="lbl">// SCENE 2 · 信奥群里讨论</div>
-      <div class="q">群友说："这题 n=20，绝对是<b>状压</b>"</div>
-      <div class="a">家长答 → "对，<code>n ≤ 20</code> 就用 bitmask"</div>
-    </div>
-
-    <div class="scene">
-      <div class="lbl">// SCENE 3 · 教练开家长会</div>
-      <div class="q">教练说："你家娃 <b>LCA</b> 板子还不熟"</div>
-      <div class="a">家长答 → "回家就让他练<code>倍增 LCA</code>"</div>
-    </div>
-
-    <div class="scene">
-      <div class="lbl">// SCENE 4 · 海事大学旁的奶茶店</div>
-      <div class="q">娃说："今天碰到一道<b>MITM</b>题"</div>
-      <div class="a">家长答 → "<code>2ⁿ 跑不动就分两半</code>，没毛病"</div>
-    </div>
-
-    <div class="pull">
-      <div class="lbl">// END</div>
-      <h2>会黑话不重要<br><b>但听得懂娃在说什么 · 很重要</b></h2>
-    </div>
-  </div>
-  <div class="cta">
-    <span># 词典 # 大连家长 # 信奥</span>
-    <span class="pill">{ 收藏 }</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.steps { position: absolute; top: 380px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.step { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 3px solid #E3F2FD;
+padding: 16px 20px; border-radius: 12px; }
+.step .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 14px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.step h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.step p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.step p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">ACTION · 5 步速成</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 家长不用真懂 · 知道在说啥就行</div><h1>5 步<br>跟上 <b>娃的赛道</b></h1></div>
+<div class="steps">
+<div class="step"><span class="num">1</span><h3>每周记 3 个新词</h3><p>跟着本号词典 · 一周 3 个 · <b>4 周认全</b> 12 个</p></div>
+<div class="step"><span class="num">2</span><h3>问"是这意思吗"</h3><p>娃讲完算法 · 你重复 1 遍他纠正 · <b>反复 3 次记得牢</b></p></div>
+<div class="step"><span class="num">3</span><h3>记关键场景</h3><p>看到 <b>n ≤ 20</b> · 看到 <b>"最长上升"</b> · 立刻条件反射</p></div>
+<div class="step"><span class="num">4</span><h3>不懂就承认</h3><p>"妈妈不懂这块 · 你给我讲讲" · <b>娃讲一遍他自己也懂</b></p></div>
+<div class="step"><span class="num">5</span><h3>陪去信奥群泡 1 周</h3><p>大连家长群 / 海事大学 OI 圈 · 听别人聊就行 · <b>不必发言</b></p></div>
+</div>
+<div class="pull"><h2>不会黑话没关系 · <b>能听懂娃在说啥就够</b></h2></div>
+<div class="footer"><span class="txt">陪伴 ≠ 干涉</span></div>
+</body></html>

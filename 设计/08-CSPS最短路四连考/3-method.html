@@ -1,87 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>CSP-S 最短路四连考 · 模板</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>分层 Dijkstra 模板</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#E1F5FE 0%, #FFF59D 100%); color:#1A1A1A; position:relative;}
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#01579B; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:800; font-size:28px;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#01579B;}
-  h1 em { font-style:normal; background:#FFEB3B; padding:0 8px; box-shadow:4px 4px 0 #1A1A1A; display:inline-block;}
-
-  .scene {
-    margin-top: 22px; background:#FFF; border-radius: 16px;
-    padding: 18px 22px; border-left: 10px solid #FF5722;
-    box-shadow: 5px 5px 0 #01579B;
-  }
-  .scene .lbl { font-size: 22px; color: #FF5722; font-weight: 800; letter-spacing: 1px;}
-  .scene p { font-size: 26px; color:#1A1A1A; font-weight: 700; line-height: 1.5; margin-top: 4px;}
-  .scene p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px;}
-
-  .code-card {
-    margin-top: 22px;
-    background:#1A1A1A; color:#FFF; border-radius: 16px;
-    padding: 18px 22px; box-shadow: 6px 6px 0 #FF5722;
-  }
-  .code-card .name {
-    background:#FFEB3B; color:#01579B;
-    padding: 4px 14px; border-radius: 6px;
-    font-weight: 900; font-size: 22px;
-    display:inline-block; margin-bottom: 8px;
-  }
-  .code-card pre {
-    font-family: "SF Mono", "Consolas", "Microsoft YaHei", monospace;
-    font-size: 19px; line-height: 1.45;
-    color: #E0F2F1;
-  }
-  .code-card pre .kw { color:#FFEB3B; font-weight:700;}
-  .code-card pre .fn { color:#81D4FA; font-weight:700;}
-  .code-card pre .lit { color:#FF8A80;}
-  .code-card pre .cm { color:#9E9E9E; font-style: italic;}
-  .key {
-    margin-top: 22px; padding: 22px 26px;
-    background: linear-gradient(135deg, #01579B, #FF5722);
-    color:#FFF; border-radius: 16px;
-    box-shadow: 8px 8px 0 #FFEB3B;
-  }
-  .key h2 { font-size:34px; font-weight:900; line-height:1.4; text-shadow:2px 2px 0 #1A1A1A;}
-  .key h2 b { color:#FFEB3B;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">CORE · 拆点核心套路</span>
-    <h1>关键<em>1 句话</em><br>把状态加进图</h1>
-
-    <div class="scene">
-      <div class="lbl">SCENE · 大连家长能秒懂</div>
-      <p>从星海湾到东软 · <b>路上能用一次免费票</b><br>问最少多少钱 · 这就是分层最短路</p>
-    </div>
-
-    <div class="code-card">
-      <span class="name">分层 Dijkstra · 核心转移</span>
-<pre><span class="kw">struct</span> State { ll d; <span class="kw">int</span> u, used; };
-priority_queue&lt;State, ..., greater&lt;&gt;&gt; pq;
-pq.<span class="fn">push</span>({<span class="lit">0</span>, s, <span class="lit">0</span>});  d[s][<span class="lit">0</span>] = <span class="lit">0</span>;
-
-<span class="kw">while</span> (!pq.<span class="fn">empty</span>()) {
-    <span class="kw">auto</span> [d_, u, used] = pq.<span class="fn">top</span>(); pq.<span class="fn">pop</span>();
-    <span class="kw">if</span> (d_ &gt; d[u][used]) <span class="kw">continue</span>;
-    <span class="kw">for</span> (<span class="kw">auto</span> [v, w] : adj[u]) {
-        <span class="cm">// 1. 普通转移：层不变</span>
-        <span class="kw">if</span> (d[u][used] + w &lt; d[v][used]) ...;
-        <span class="cm">// 2. 用免费边：层从 0 跳到 1</span>
-        <span class="kw">if</span> (used == <span class="lit">0</span> &amp;&amp; d[u][<span class="lit">0</span>] &lt; d[v][<span class="lit">1</span>]) ...;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.idea { position: absolute; top: 380px; left: 60px; right: 60px;
+background: #E3F2FD; border-left: 6px solid #0D47A1;
+padding: 20px 26px; border-radius: 8px; }
+.idea h3 { font-size: 24px; font-weight: 900; color: #0D47A1; margin-bottom: 8px; }
+.idea p { font-size: 18px; color: #1A1A1A; line-height: 1.6; font-weight: 700; }
+.idea p b { background: #FFF59D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
+.code { position: absolute; top: 600px; left: 60px; right: 60px;
+background: #1A1A1A; color: #BBDEFB;
+padding: 18px 24px; border-radius: 8px; }
+.code .name { display: inline-block;
+background: #2196F3; color: #FFFFFF;
+padding: 4px 12px; border-radius: 4px;
+font-size: 16px; font-weight: 900; margin-bottom: 10px; }
+.code pre { font-family: Consolas, monospace; font-size: 16px; line-height: 1.4;
+color: #BBDEFB; white-space: pre-wrap; }
+.code pre .kw { color: #FFE082; font-weight: 700; }
+.code pre .cm { color: #90A4AE; font-style: italic; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">METHOD · 分层 Dijkstra</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 关键 1 句话</div><h1>把<b>状态</b>加进图</h1></div>
+<div class="idea"><h3>核心思想</h3>
+<p>原图变不了 · 加一维状态就能解新题。<br>"路上能用 1 次免费票" → <b>图变成 N×K 个点</b> · 层间按状态转移</p></div>
+<div class="code">
+<span class="name">分层 Dijkstra · CSP-S 2025 完善 1 同款</span>
+<pre><span class="kw">struct</span> State { <span class="kw">int</span> d, u, used; };
+priority_queue&lt;State, vector&lt;State&gt;, greater&lt;&gt;&gt; pq;
+pq.push({0, s, 0}); d[s][0] = 0;
+<span class="kw">while</span> (!pq.empty()) {
+  <span class="kw">auto</span> [dv, u, used] = pq.top(); pq.pop();
+  <span class="cm">// 1. 普通转移层不变</span>
+  <span class="kw">if</span> (d[u][used] + w &lt; d[v][used]) ...
+  <span class="cm">// 2. 用免费边层从 0 跳到 1</span>
+  <span class="kw">if</span> (used == 0 &amp;&amp; d[u][0] &lt; d[v][1]) ...
 }</pre>
-    </div>
-
-    <div class="key">
-      <h2>记一句话<br><b>"图变成 N×K 个点"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+</div>
+<div class="pull"><h2>记一句话 · <b>"图变成 N×K 个点"</b><br>4 年题型再变 · 这思想不变</h2></div>
+<div class="footer"><span class="txt">认知大于刷题</span></div>
+</body></html>

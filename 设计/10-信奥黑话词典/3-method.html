@@ -1,105 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥黑话词典 · 易混淆</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>4 个家长场景 · 黑话怎么用</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #0A0A0A; color: #FFEB3B; position:relative;}
-  body::before {
-    content:""; position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 50% 0%, rgba(255,235,59,0.15) 0%, transparent 60%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FF1744; color:#FFF; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace;}
-  h1 { font-size: 76px; font-weight: 900; margin-top:18px; line-height:1.05; color:#FFEB3B;}
-  h1 em { font-style:normal; color:#00E5FF;}
-
-  .vs {
-    background: #2C2C2C;
-    border: 2px solid #FFEB3B;
-    border-radius: 16px; padding: 22px 26px;
-    margin-top: 22px;
-    box-shadow: 6px 6px 0 #FF1744;
-    position: relative;
-  }
-  .vs .pair {
-    display:flex; align-items: stretch; gap: 16px;
-  }
-  .vs .item { flex: 1; }
-  .vs .word {
-    font-family: "SF Mono", monospace;
-    font-size: 32px; font-weight: 900;
-    background: #FFEB3B; color: #1A1A1A;
-    padding: 6px 12px; border-radius: 6px; display: inline-block;
-    margin-bottom: 8px;
-  }
-  .vs .word.b { background: #00E5FF;}
-  .vs .item p {
-    font-size: 22px; line-height: 1.5;
-    color: #E0E0E0; font-weight: 600;
-  }
-  .vs .item p b { background:#FFEB3B; color:#1A1A1A; padding: 0 6px; border-radius:3px;}
-  .vs .vsign {
-    align-self: center;
-    color: #FF1744; font-size: 40px; font-weight: 900;
-    font-family: "SF Mono", monospace;
-  }
-
-  .pull {
-    margin-top: 28px;
-    background: linear-gradient(135deg, #FFEB3B, #FF1744);
-    color: #0A0A0A;
-    padding: 22px 26px; border-radius: 12px;
-    font-family: "SF Mono", monospace;
-    box-shadow: 6px 6px 0 #FFEB3B, 0 0 30px rgba(255,235,59,0.4);
-  }
-  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4;}
-  .pull h2 b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">{ DIFF } 易混淆</span>
-    <h1>这几对<br><em>不要再搞错</em></h1>
-
-    <div class="vs">
-      <div class="pair">
-        <div class="item"><div class="word">子串</div><p>必须 <b>连续</b><br>"abc" 是 "xabcx" 的子串</p></div>
-        <div class="vsign">VS</div>
-        <div class="item"><div class="word b">子序列</div><p>可以 <b>跳着选</b><br>"abc" 是 "axbxc" 的子序列</p></div>
-      </div>
-    </div>
-
-    <div class="vs">
-      <div class="pair">
-        <div class="item"><div class="word">DFS</div><p>用 <b>栈 / 递归</b><br>找一条路径 / 全排列</p></div>
-        <div class="vsign">VS</div>
-        <div class="item"><div class="word b">BFS</div><p>用 <b>队列</b><br>找<b>最短步数</b> / 最近</p></div>
-      </div>
-    </div>
-
-    <div class="vs">
-      <div class="pair">
-        <div class="item"><div class="word">前缀和</div><p>用来 <b>查询区间</b> 的和<br>O(1) 查询</p></div>
-        <div class="vsign">VS</div>
-        <div class="item"><div class="word b">差分</div><p>用来 <b>修改区间</b> 的值<br>O(1) 修改</p></div>
-      </div>
-    </div>
-
-    <div class="vs">
-      <div class="pair">
-        <div class="item"><div class="word">Dijkstra</div><p><b>不能</b>处理负权<br>稳定 O((n+m)log n)</p></div>
-        <div class="vsign">VS</div>
-        <div class="item"><div class="word b">SPFA</div><p>能处理负权<br>但 <b>易被卡</b> 到 O(nm)</p></div>
-      </div>
-    </div>
-
-    <div class="pull">
-      <h2>家长一句话<br><b>"听不懂没关系 · 别说错就行"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.scenes { position: absolute; top: 380px; left: 60px; right: 60px; }
+.sc { background: #FFFFFF; border: 3px solid #E3F2FD; border-radius: 12px;
+padding: 14px 20px; margin-bottom: 14px; }
+.sc .name { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 4px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.sc h3 { font-size: 22px; color: #0D47A1; font-weight: 900; }
+.sc .quote { font-size: 18px; color: #424242; margin-top: 6px; font-weight: 700;
+font-style: italic; }
+.sc .reply { font-size: 18px; color: #1A1A1A; margin-top: 6px; font-weight: 700;
+background: #FFF59D; padding: 6px 12px; border-radius: 6px; }
+.sc .reply b { color: #B71C1C; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">SCENE · 4 个家长场景</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 黑话怎么用 · 看场景套</div><h1>家长黑话<br>速成<b>场景</b></h1></div>
+<div class="scenes">
+<div class="sc"><span class="name">SCENE 1 · 大连娃放学回家</span>
+<h3>娃说今天讲了 LCA 和记忆化搜索</h3>
+<div class="quote">娃 · "今天那道题我用了记忆化搜索"</div>
+<div class="reply">家长答 · "嗯 · <b>DP</b> 的另一种写法对吧?"</div></div>
+<div class="sc"><span class="name">SCENE 2 · 信奥群里讨论</span>
+<h3>群友说这题 n=20 绝对是状压</h3>
+<div class="quote">群友 · "这题 n=20 · 绝对是状压"</div>
+<div class="reply">家长答 · "对 · <b>n ≤ 20</b> 就用 bitmask"</div></div>
+<div class="sc"><span class="name">SCENE 3 · 教练开家长会</span>
+<h3>教练说娃 LCA 板子还不熟</h3>
+<div class="quote">教练 · "你家娃 LCA 板子还不熟"</div>
+<div class="reply">家长答 · "回家就让他练<b>倍增 LCA</b>"</div></div>
+<div class="sc"><span class="name">SCENE 4 · 海事大学旁的奶茶店</span>
+<h3>娃今天碰到一道 MITM 题</h3>
+<div class="quote">娃 · "今天碰到一道 MITM 题"</div>
+<div class="reply">家长答 · "<b>2ⁿ 跑不动</b>就分两半 · 没毛病"</div></div>
+</div>
+<div class="pull"><h2>会黑话不重要 · <b>但听得懂娃在说啥很重要</b></h2></div>
+<div class="footer"><span class="txt">陪伴 · 也要跟得上</span></div>
+</body></html>

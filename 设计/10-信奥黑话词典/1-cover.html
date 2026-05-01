@@ -1,98 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥黑话词典 · 封面</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>信奥黑话词典</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body {
-    background: #0A0A0A;
-    color: #FFEB3B;
-    position:relative;
-  }
-  body::before {
-    content:"";
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(rgba(255,235,59,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,235,59,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  body::after {
-    content:""; position:absolute; bottom:0; left:0; right:0; height:50%;
-    background: radial-gradient(ellipse at center bottom, rgba(255,235,59,0.18) 0%, transparent 70%);
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .tag {
-    display:inline-block; background:#FFEB3B; color:#0A0A0A; padding:14px 32px;
-    border-radius:6px; font-size:30px; font-weight:900; letter-spacing:3px; margin-bottom: 50px;
-    font-family: "SF Mono", "Consolas", monospace;
-    box-shadow: 0 0 30px rgba(255,235,59,0.6);
-  }
-  .pre {
-    font-family: "SF Mono", "Consolas", monospace;
-    font-size: 36px; color: #00E5FF; font-weight: 900;
-    margin-bottom: 18px;
-  }
-  .title {
-    font-size: 168px; font-weight: 900; line-height: 0.95;
-    color: #FFEB3B;
-    text-shadow:
-      0 0 20px rgba(255,235,59,0.5),
-      6px 6px 0 #FF1744;
-    letter-spacing: -4px;
-  }
-  .title em {
-    font-style:normal; color:#FF1744;
-    text-shadow: 6px 6px 0 #FFEB3B;
-  }
-  .sub {
-    margin-top: 36px;
-    font-family: "SF Mono", "Consolas", monospace;
-    background:#FFEB3B; color:#0A0A0A;
-    padding: 18px 24px; border-radius: 6px;
-    font-size: 32px; font-weight: 900; display:inline-block;
-    line-height: 1.4;
-    box-shadow: 6px 6px 0 #FF1744;
-  }
-  .sub b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px; }
-  .footer {
-    position:absolute; bottom:0; left:70px; right:70px;
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:28px; color:#FFEB3B; font-weight:800; font-family: "SF Mono", monospace;
-  }
-  .stamp {
-    background:#FF1744; color:#FFEB3B;
-    padding:14px 24px; border-radius:6px;
-    transform:rotate(-5deg); font-weight:900;
-    font-family: "SF Mono", monospace;
-  }
-  .num {
-    position:absolute; top: 60px; right: 0;
-    font-size: 200px; color: rgba(255,235,59,0.15);
-    font-weight:900; line-height: 1;
-    font-family: "SF Mono", monospace;
-  }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="num">{ 12 }</div>
-    <div class="tag">$ DICT.cpp · OI 黑话</div>
-    <div class="pre">// 一句话讲明白</div>
-    <div class="title">
-      DP / KMP /<br>
-      <em>Trie</em>
-    </div>
-    <div class="sub">
-      陪娃讨论 OI 不再尬聊<br>
-      <b>家长收藏卡片</b>
-    </div>
-  </div>
-  <div class="footer">
-    <span># 词典 # 信奥 # 大连家长</span>
-    <span class="stamp">{ 收藏 }</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 64px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.cards { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 12px; }
+.card { flex: 1 1 calc(33% - 8px);
+background: #FFFFFF; border: 3px solid #E3F2FD;
+padding: 12px 14px; border-radius: 10px; }
+.card .term { font-size: 22px; font-weight: 900; color: #0D47A1; }
+.card .en { font-size: 12px; color: #2196F3; font-weight: 700; margin-top: 2px; }
+.card p { font-size: 14px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card.dp { border-color: #FCE4EC; }
+.card.search { border-color: #FFF8E1; }
+.card.tree { border-color: #E8F5E9; }
+.card.misc { border-color: #E3F2FD; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">DICT · 12 个黑话</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 家长扫盲卡 · 收藏不亏</div><h1>陪娃讨论 OI<br>不再 <b>尴聊</b></h1></div>
+<div class="cards">
+<div class="card dp"><div class="term">DP</div><div class="en">Dynamic Programming</div><p>把问题拆成子问题 · 答案存起来</p></div>
+<div class="card search"><div class="term">DFS</div><div class="en">Depth-First Search</div><p>递归一条路走到黑 · 然后回头</p></div>
+<div class="card search"><div class="term">BFS</div><div class="en">Breadth-First Search</div><p>用队列 · 一圈一圈向外扩</p></div>
+<div class="card misc"><div class="term">KMP</div><div class="en">字符串匹配</div><p>用 next 数组跳过失败位置</p></div>
+<div class="card tree"><div class="term">Trie</div><div class="en">前缀树</div><p>每节点存一个字母 · 查前缀超快</p></div>
+<div class="card tree"><div class="term">LCA</div><div class="en">最近公共祖先</div><p>树上两点共同祖先中最深的那个</p></div>
+<div class="card tree"><div class="term">MST</div><div class="en">最小生成树</div><p>连通所有点 · 边权和最小</p></div>
+<div class="card dp"><div class="term">LIS</div><div class="en">最长上升子序列</div><p>数组里保持递增最多能选几个</p></div>
+<div class="card dp"><div class="term">LCS</div><div class="en">最长公共子序列</div><p>两串里最长的相同片段 · 可不连续</p></div>
+<div class="card misc"><div class="term">DSU</div><div class="en">并查集</div><p>快速判断"两个东西是不是一伙的"</p></div>
+<div class="card misc"><div class="term">RMQ</div><div class="en">区间最值查询</div><p>问区间最大/最小 · ST 表 O(1)</p></div>
+<div class="card misc"><div class="term">MITM</div><div class="en">折半搜索</div><p>2ⁿ 跑不动 · 分两半各跑 2^(n/2)</p></div>
+</div>
+<div class="pull"><h2>这 12 词覆盖 <b>CSP-J/S 80%</b> 的算法术语</h2></div>
+<div class="footer"><span class="txt">听不懂没关系 · 别说错就行</span></div>
+</body></html>

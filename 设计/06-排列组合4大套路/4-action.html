@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><title>4 道经典最短路题</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>5 道经典题</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 1080px; height: 1440px; overflow: hidden;
@@ -15,15 +15,13 @@ border-radius: 8px; font-size: 28px; font-weight: 900; }
 .h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
 .h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
 .qs { position: absolute; top: 380px; left: 60px; right: 60px; }
-.q { display: flex; align-items: center; padding: 14px 20px;
+.q { display: flex; align-items: center; padding: 12px 20px;
 margin-bottom: 12px; border-radius: 12px;
 background: #E3F2FD; border-left: 6px solid #0D47A1; }
 .q .num { flex: 0 0 60px; font-size: 28px; font-weight: 900; color: #0D47A1; }
 .q .body h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
 .q .body p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; }
-.q .body p b { background: #FFF59D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
-.q .body p .code { background: #0D47A1; color: #FFFFFF;
-padding: 1px 8px; border-radius: 3px; font-family: Consolas, monospace; font-size: 14px; }
+.q .body p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
 .pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
 background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
 .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
@@ -32,14 +30,15 @@ background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
 background: #0D47A1; display: flex; align-items: center; justify-content: center; }
 .footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 </style></head><body>
-<div class="top"><span class="badge">PRACTICE · 4 道阶梯</span><span class="right">因诺信奥 · 大连</span></div>
-<div class="h1"><div class="pre">// 从板子到拆点</div><h1>4 题 1 周<br>最短路 <b>稳了</b></h1></div>
+<div class="top"><span class="badge">PRACTICE · 5 道经典</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 4 大套路 · 一题一练</div><h1>背完<br>立刻 <b>开练</b></h1></div>
 <div class="qs">
-<div class="q"><div class="num">1</div><div class="body"><h3><span class="code">P4779</span> · 标准 Dijkstra</h3><p>堆优化板子题 · <b>必拿满分</b> · 链式前向星 + priority_queue</p></div></div>
-<div class="q"><div class="num">2</div><div class="body"><h3><span class="code">P1144</span> · 最短路计数</h3><p>Dijkstra + 计数 DP · <b>拓展套路</b></p></div></div>
-<div class="q"><div class="num">3</div><div class="body"><h3><span class="code">P4568</span> · 飞行路线</h3><p>分层最短路经典题 · k 次免费 · <b>与 CSP-S 2025 完善 1 同源</b></p></div></div>
-<div class="q"><div class="num">4</div><div class="body"><h3>CSP-S 2024 完善 2 · 次短路</h3><p>真题硬核 · 对照本号 2024 分析 · <b>把 5 个空全部理解</b></p></div></div>
+<div class="q"><div class="num">1</div><div class="body"><h3>球放盒</h3><p>n 同球放 k 同盒 / 不同盒 / 至少 1 / 可空 · <b>4 种组合都要会</b></p></div></div>
+<div class="q"><div class="num">2</div><div class="body"><h3>站队问题</h3><p>必相邻 = 捆绑 · 不相邻 = 插空 · <b>双胞胎相邻必考</b> (CSP-J 2020)</p></div></div>
+<div class="q"><div class="num">3</div><div class="body"><h3>整除计数</h3><p>1~N 中某数整除 / 不被整除 · <b>容斥三集合公式必默</b></p></div></div>
+<div class="q"><div class="num">4</div><div class="body"><h3>路径计数</h3><p>从 (0,0) 到 (m,n) 只能向右上 → <b>C(m+n, m)</b> 条路径</p></div></div>
+<div class="q"><div class="num">5</div><div class="body"><h3>错排经典</h3><p>5 人寄信送错 → D(5) = 44 · 必背 <b>D(1)~D(6)</b></p></div></div>
 </div>
-<div class="pull"><h2>这模板背熟 · <b>初赛和复赛</b>都吃</h2></div>
-<div class="footer"><span class="txt">背完 · 4 年都不慌</span></div>
+<div class="pull"><h2>5 道做完 · 组合题再不丢分<br>对照本号 CSP-J 2019-2025 单选 7/10/12/13 各题</h2></div>
+<div class="footer"><span class="txt">练完 · 单选必拿</span></div>
 </body></html>

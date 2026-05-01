@@ -1,74 +1,57 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥黑话词典 · 高频词</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>常错对照</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#1A1A1A; color:#FFEB3B; position:relative;}
-  body::before {
-    content:""; position:absolute; inset:0;
-    background-image:
-      linear-gradient(rgba(255,235,59,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,235,59,0.04) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFEB3B; color:#1A1A1A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace;}
-  h1 { font-size: 70px; font-weight: 900; margin-top:18px; line-height:1.1; color:#FFEB3B;}
-  h1 em { font-style:normal; color:#FF1744;}
-
-  .grid { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .card {
-    background:#2C2C2C;
-    border: 2px solid #FFEB3B;
-    border-radius: 12px; padding: 16px 20px;
-    box-shadow: 4px 4px 0 #FF1744;
-  }
-  .card .word {
-    font-family: "SF Mono", "Consolas", monospace;
-    font-size: 28px; font-weight: 900; color: #00E5FF;
-    margin-bottom: 4px;
-  }
-  .card .full { font-size: 16px; color:#9E9E9E; font-style: italic; margin-bottom: 8px; }
-  .card .def {
-    font-size: 22px; line-height: 1.4; color: #E0E0E0; font-weight: 600;
-  }
-  .card .def b { background:#FFEB3B; color:#1A1A1A; padding: 0 6px; border-radius: 3px; }
-
-  .legend {
-    margin-top: 24px;
-    background:#FFEB3B; color:#1A1A1A;
-    padding: 18px 24px; border-radius: 8px;
-    font-family: "SF Mono", monospace;
-    font-size: 24px; font-weight: 900;
-    box-shadow: 6px 6px 0 #FF1744;
-  }
-  .legend b { color: #FF1744; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">{ DICT } 12 个黑话</span>
-    <h1>家长扫盲卡<br><em>收藏不亏</em></h1>
-
-    <div class="grid">
-      <div class="card"><div class="word">DP</div><div class="full">Dynamic Programming</div><div class="def">把问题拆成 <b>子问题</b> · 把子问题答案存起来</div></div>
-      <div class="card"><div class="word">DFS</div><div class="full">Depth-First Search</div><div class="def">递归 <b>一条道走到黑</b> · 然后回头</div></div>
-      <div class="card"><div class="word">BFS</div><div class="full">Breadth-First Search</div><div class="def">用队列 · 一圈一圈 <b>向外扩</b></div></div>
-      <div class="card"><div class="word">KMP</div><div class="full">字符串匹配</div><div class="def">用 <b>next 数组</b> 跳过失败位置</div></div>
-      <div class="card"><div class="word">Trie</div><div class="full">前缀树</div><div class="def"><b>每个节点存一个字母</b> · 查前缀超快</div></div>
-      <div class="card"><div class="word">LCA</div><div class="full">最近公共祖先</div><div class="def">树上两个节点 <b>共同的祖先</b> 中最深的那个</div></div>
-      <div class="card"><div class="word">MST</div><div class="full">最小生成树</div><div class="def">连通所有点 · <b>边权和最小</b> 的方案</div></div>
-      <div class="card"><div class="word">LIS</div><div class="full">最长上升子序列</div><div class="def">数组里 <b>选一些保持递增</b> 最多能选几个</div></div>
-      <div class="card"><div class="word">LCS</div><div class="full">最长公共子序列</div><div class="def">两串里 <b>最长的相同片段</b>（可不连续）</div></div>
-      <div class="card"><div class="word">DSU</div><div class="full">并查集</div><div class="def">快速判断 <b>两个东西是不是一伙的</b></div></div>
-      <div class="card"><div class="word">RMQ</div><div class="full">区间最值查询</div><div class="def">问 <b>区间内最大/最小</b> 用 ST 表 O(1) 答</div></div>
-      <div class="card"><div class="word">MITM</div><div class="full">折半搜索</div><div class="def">2ⁿ 跑不动 · <b>分两半各跑 2^(n/2)</b></div></div>
-    </div>
-
-    <div class="legend">{ Tip } 这 12 词覆盖 <b>CSP-J/S 80%</b> 的算法术语</div>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pairs { position: absolute; top: 380px; left: 60px; right: 60px; }
+.pair { display: flex; align-items: stretch; margin-bottom: 16px; }
+.pair .left, .pair .right {
+flex: 1; padding: 14px 18px; border-radius: 10px; }
+.pair .left { background: #E3F2FD; margin-right: 12px; }
+.pair .right { background: #FFEBEE; }
+.pair h3 { font-size: 22px; font-weight: 900; color: #0D47A1; }
+.pair .right h3 { color: #B71C1C; }
+.pair p { font-size: 16px; color: #424242; margin-top: 4px; font-weight: 700; }
+.pair p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+</style></head><body>
+<div class="top"><span class="badge">CONFUSE · 易混对照</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 这几对家长背一下</div><h1>容易<b>搞混</b><br>4 对术语</h1></div>
+<div class="pairs">
+<div class="pair">
+<div class="left"><h3>子串</h3><p>必须 <b>连续</b> · "abc" 是 "xabcx" 的子串</p></div>
+<div class="right"><h3>子序列</h3><p>可以 <b>挑着选</b> · "abc" 是 "axbxc" 的子序列</p></div>
+</div>
+<div class="pair">
+<div class="left"><h3>DFS</h3><p>用栈 / 递归找一条路径或全排列</p></div>
+<div class="right"><h3>BFS</h3><p>用队列找最短步数或最近</p></div>
+</div>
+<div class="pair">
+<div class="left"><h3>前缀和</h3><p>查询区间的<b>和</b> · 不修改</p></div>
+<div class="right"><h3>差分</h3><p>修改区间的<b>值</b> · 不查询</p></div>
+</div>
+<div class="pair">
+<div class="left"><h3>Dijkstra</h3><p><b>不能</b>处理负权 · 稳 O((n+m) log n)</p></div>
+<div class="right"><h3>SPFA</h3><p>能处理负权 · 但<b>易卡</b>到 O(nm)</p></div>
+</div>
+</div>
+<div class="pull"><h2>家长一句话 · <b>"听不懂没关系 · 别说错就行"</b></h2></div>
+<div class="footer"><span class="txt">陪娃讨论 OI 不尴聊</span></div>
+</body></html>
