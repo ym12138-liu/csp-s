@@ -1,79 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥是什么 · 解读</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>Q&A · 4 个常见问</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#FFF8E1; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #BF360C, #FFEB3B); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #BF360C); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#BF360C; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 56px; font-weight:900; margin-top:14px; line-height:1.1; color:#BF360C; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding:0 6px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .qa {
-    background:#FFF; border-radius: 16px;
-    padding: 14px 20px; margin-top: 12px;
-    border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #FF8A65;
-  }
-  .qa .q {
-    background:#1A1A1A; color:#FFEB3B;
-    padding: 5px 14px; border-radius: 6px;
-    font-size: 22px; font-weight: 900;
-    display: inline-block;
-  }
-  .qa h3 { font-size: 26px; font-weight: 900; color: #1A1A1A; margin-top: 6px; line-height: 1.3; }
-  .qa p { font-size: 20px; color: #424242; line-height: 1.45; margin-top: 6px; }
-  .qa p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #B71C1C; }
-
-  .key {
-    margin-top: 14px; padding: 16px 22px;
-    background: linear-gradient(135deg, #BF360C, #FFEB3B);
-    color: #FFFFFF; border-radius: 14px;
-    box-shadow: 6px 6px 0 #1A1A1A;
-    text-shadow: 2px 2px 0 #1A1A1A;
-  }
-  .key .lbl { font-size: 20px; opacity: .9; letter-spacing: 2px; font-weight: 700; }
-  .key h2 { font-size: 28px; font-weight: 900; line-height: 1.4; margin-top: 4px; }
-  .key h2 b { color: #FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">5 分钟扫盲</span>
-    <h1>信奥 = <em>编程奥赛</em></h1>
-
-    <div class="qa">
-      <span class="q">Q1</span>
-      <h3>奥数？奥英？信奥又是啥？</h3>
-      <p>"信奥" = <b>信息学奥林匹克竞赛</b><br>简单说：用电脑写程序解题的奥赛。<br>跟奥数比脑子、跟奥英比单词不同 · <b>这个比写代码</b>。</p>
-    </div>
-
-    <div class="qa">
-      <span class="q">Q2</span>
-      <h3>谁主办？正规吗？</h3>
-      <p>主办方 = <b>中国计算机学会（CCF）</b> · 国家一级学会。<br>从 1984 年办到今天 · 教育部、科协背书 · <b>是国家正规赛事</b>。</p>
-    </div>
-
-    <div class="qa">
-      <span class="q">Q3</span>
-      <h3>每年多少娃在考？</h3>
-      <p>CSP（信奥初赛）每年 <b>20 万 +</b> 娃报名<br>NOIP（信奥联赛）每年 <b>5 万 +</b> 娃复赛<br>规模 ≈ 全国奥数 1/3 · <b>已是主流学科竞赛之一</b>。</p>
-    </div>
-
-    <div class="qa">
-      <span class="q">Q4</span>
-      <h3>跟"少儿编程"啥关系？</h3>
-      <p>少儿编程是<b>启蒙</b>（玩 Scratch 等）<br>信奥是<b>竞技</b>（用 C++ 解算法题）<br>简言之：<b>少儿编程是入门 · 信奥是赛道</b>。</p>
-    </div>
-
-    <div class="key">
-      <div class="lbl">CORE</div>
-      <h2>信奥 = <b>用代码解奥数题</b><br>是科学竞赛 · 不是兴趣班</h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">Q&A · 4 个常见问</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 主办方 / 规模 / 跟少儿编程区别</div><h1>4 个问<br>说<b>清楚</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>谁主办?</h3><p>中国计算机学会 CCF · 国家一级学会 · 1984 年办到今天</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>多少人考?</h3><p>CSP 每年 20 万 + 报名 · NOIP 每年 5 万 + 复赛</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>跟少儿编程啥关系?</h3><p>少儿编程是入门 · 信奥是赛道 · 不一样</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>要 C++ 吗?</h3><p>是 · 信奥唯一指定语言 · 别学其他语言备考</p></div></div>
+<div class="pull"><h2>主流学科竞赛之一 · <b>不是野赛</b></h2></div>
+<div class="footer"><span class="txt">不被忽悠 · 看清规则</span></div>
+</body></html>

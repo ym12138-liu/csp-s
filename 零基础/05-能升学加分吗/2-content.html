@@ -1,62 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>能升学加分吗 · 路径</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>CASE · 4 类升学路</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#FFEBEE; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #B71C1C, #FFD700); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFD700, #B71C1C); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#B71C1C; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 56px; font-weight:900; margin-top:14px; line-height:1.1; color:#B71C1C; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFD700 60%); padding: 0 6px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .case { background:#FFF; border-radius: 16px; padding: 14px 20px; margin-top: 12px; border: 3px solid #1A1A1A; box-shadow: 5px 5px 0 #B71C1C; position: relative; }
-  .case .level { display:inline-block; background:#B71C1C; color:#FFD700; padding:4px 14px; border-radius: 6px; font-weight:900; font-size: 20px; }
-  .case h3 { font-size: 24px; font-weight: 900; color: #1A1A1A; margin-top: 6px; }
-  .case .can { background:#E8F5E9; padding: 6px 14px; border-radius: 8px; border-left: 5px solid #4CAF50; font-size: 19px; font-weight: 800; color: #2E7D32; margin-top: 6px; }
-  .case .can b { color: #B71C1C; }
-  .case .cannot { background:#FFEBEE; padding: 6px 14px; border-radius: 8px; border-left: 5px solid #B71C1C; font-size: 19px; font-weight: 800; color: #B71C1C; margin-top: 6px; }
-
-  .key { margin-top: 14px; padding: 16px 22px; background: #1A1A1A; color: #FFD700; border-radius: 14px; box-shadow: 6px 6px 0 #FF7043; }
-  .key h2 { font-size: 26px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .key h2 b { color: #FFD700; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">3 种情况 · 实事求是</span>
-    <h1>升学加分<em>分情况</em></h1>
-
-    <div class="case">
-      <span class="level">情况 1 · GESP / CSP-J 拿奖</span>
-      <h3>能加分吗？</h3>
-      <div class="can">[对] 部分省份小升初 / 中考<b>综合素质</b>加分</div>
-      <div class="cannot">[错] 直接保送 / 大学加分 = 不能</div>
-    </div>
-
-    <div class="case">
-      <span class="level">情况 2 · CSP-S / NOIP 省一</span>
-      <h3>能加分吗？</h3>
-      <div class="can">[对] 强基计划报名<b>条件之一</b>（要高考分够）</div>
-      <div class="can">[对] 部分高中<b>自主招生</b>认可</div>
-      <div class="cannot">[错] 高考直接加分 = 早就取消了</div>
-    </div>
-
-    <div class="case">
-      <span class="level">情况 3 · NOI 银牌以上</span>
-      <h3>能加分吗？</h3>
-      <div class="can">[对] <b>清华北大签约</b>降一本线录取</div>
-      <div class="can">[对] <b>国家集训队</b>直接保送</div>
-      <div class="can">[对] 全国不到 100 人 · 真正"金字塔顶"</div>
-    </div>
-
-    <div class="key">
-      <h2>核心 ·<br><b>普通省一 ≠ 升学硬通货</b><br>NOI 银牌以上才是真"通行证"</h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">CASE · 4 类升学路</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 不同奖项对应不同路径</div><h1>4 种奖<br>对应<b>4 条路</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>GESP 1-4 级</h3><p><b>升学价值有限</b> · 当过级证书 + 培训机构水平证明用</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>GESP 5-8 级 / CSP-J 三等</h3><p>小升初<b>科技特长生候选</b> · 大连个别学校认可</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>CSP-S 省一 / NOIP 省一</h3><p><b>强基计划入场券</b> · 高考分够还得校测过关</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>NOI 金银铜</h3><p><b>清北签约 + 集训队保送</b> · 全国 100 人级别 · 真的金字塔顶</p></div></div>
+<div class="pull"><h2><b>奖牌等级</b>决定升学价值 · 拿到啥级别说啥话</h2></div>
+<div class="footer"><span class="txt">实事求是 · 不夸大</span></div>
+</body></html>

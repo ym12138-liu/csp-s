@@ -1,80 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>编程语言怎么选 · 对比</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>USE · 3 种语言玩什么</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#E8EAF6; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #1A237E, #FFEB3B); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFEB3B, #1A237E); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#1A237E; color:#FFEB3B; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#1A237E; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFEB3B 60%); padding: 0 6px; }
-  .row { display:flex; align-items:center; padding: 18px 22px; background:#FFF; border-radius: 16px; margin-top: 16px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #3F51B5; }
-  .row .lang { flex: 0 0 130px; height: 90px; border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:900; color:#FFF; margin-right: 18px; box-shadow: 3px 3px 0 #1A1A1A; }
-  .l1 { background: #FF8A65; }
-  .l2 { background: #66BB6A; }
-  .l3 { background: #5C6BC0; }
-  .row .lang .v { font-size: 26px; line-height: 1; }
-  .row .lang .l { font-size: 14px; opacity: 0.9; margin-top: 4px; }
-  .row .body { flex: 1; }
-  .row .body h3 { font-size: 28px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
-  .row .body p { font-size: 22px; color: #424242; margin-top: 4px; line-height: 1.4; }
-  .row .body p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #1A237E; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .stat-box { margin-top: 22px; background:#FFFFFF; border: 4px solid #1A1A1A; border-radius: 16px; padding: 16px 22px; box-shadow: 6px 6px 0 #FFEB3B; }
-  .stat-box h2 { font-size: 28px; font-weight: 900; color: #1A237E; margin-bottom: 10px; }
-  .stat-row { display:flex; align-items:center; padding: 8px 0; border-bottom: 1px dashed #C5CAE9; font-size: 22px; }
-  .stat-row:last-child { border-bottom:none; }
-  .stat-row .k { flex: 0 0 100px; font-weight:900; color:#1A237E; }
-  .stat-row .v { color: #424242; font-weight:700; }
-  .stat-row .v b { color: #B71C1C; }
-
-  .key { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFEB3B; border-radius: 16px; box-shadow: 8px 8px 0 #3F51B5; }
-  .key h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .key h2 b { color: #FFEB3B; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">3 种语言 · 对比一目了然</span>
-    <h1>每种语言<em>对应阶段</em></h1>
-
-    <div class="row">
-      <div class="lang l1"><div class="v">Scratch</div><div class="l">7-9 岁</div></div>
-      <div class="body">
-        <h3>拖积木式编程</h3>
-        <p>不打字 · 拖拽完成 · <b>10 分钟做小动画</b><br>主要练逻辑思维 / 不能去比赛</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="lang l2"><div class="v">Python</div><div class="l">10+ 岁</div></div>
-      <div class="body">
-        <h3>最易学的真代码</h3>
-        <p>语法简洁 · 错误提示友好 · <b>能做爬虫 / AI / 数据分析</b><br>但 GESP / CSP 不主推</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="lang l3"><div class="v">C++</div><div class="l">10+ 岁</div></div>
-      <div class="body">
-        <h3>信奥唯一指定</h3>
-        <p>语法严格 · 学起来累 · <b>但 CSP-J/S / NOIP 都用它</b><br>想走信奥赛道 → C++ 早晚要学</p>
-      </div>
-    </div>
-
-    <div class="stat-box">
-      <h2>大连家长真实选择 · 数据</h2>
-      <div class="stat-row"><div class="k">7-9 岁</div><div class="v">90% 选 <b>Scratch</b> 入门</div></div>
-      <div class="stat-row"><div class="k">10-12 岁</div><div class="v">想冲信奥 → 直接 <b>C++</b> · 不冲 → <b>Python</b></div></div>
-      <div class="stat-row"><div class="k">初中</div><div class="v">几乎都 <b>C++</b> · 冲 NOIP</div></div>
-    </div>
-
-    <div class="key">
-      <h2>记一句<br><b>不冲信奥 = Python · 冲信奥 = C++</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">USE · 3 种语言玩什么</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 各有各的场景</div><h1>3 种语言<br>各有<b>所长</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>Scratch (7-9 岁)</h3><p>不打字 · 拖完成 · 10 分钟做小动画 · 主练 <b>逻辑思维</b></p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>Python (10+ 岁)</h3><p>语法简洁 · 能做<b>爬虫 / AI / 数据分析</b> · 但 GESP / CSP 不主推</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>C++ (10+ 岁)</h3><p>语法严 · 学起来累 · 但<b>信奥唯一指定</b> · 想冲赛事必须学</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>真实选择(大连家长)</h3><p>7-9 岁 90% 选 Scratch · 10-12 岁想冲信奥直接 C++ · 不冲选 Python</p></div></div>
+<div class="pull"><h2>不混着学 · <b>选准一条路走</b></h2></div>
+<div class="footer"><span class="txt">不浪费时间在不感兴趣的语言上</span></div>
+</body></html>

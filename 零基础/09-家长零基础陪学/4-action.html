@@ -1,46 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>家长零基础陪学 · 行动</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>PRINCIPLE · 4 个心法</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#BF360C; color:#FFF; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 80%, rgba(255,202,40,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,235,59,0.4) 0%, transparent 50%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFEB3B; color:#BF360C; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; }
-  h1 em { font-style:normal; color:#FFEB3B; }
-  .min { background:#2C2C2C; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border-left: 10px solid #FFCA28; position: relative; }
-  .min::before { content: attr(data-t); position:absolute; left: -32px; top: -16px; padding: 8px 14px; border-radius: 12px; background:#FFEB3B; color:#BF360C; font-weight:900; font-size:22px; box-shadow: 4px 4px 0 #1A1A1A; }
-  .min h3 { font-size: 30px; color:#FFEB3B; font-weight:900; padding-left: 60px; }
-  .min p { font-size: 24px; color:#E0E0E0; margin-top: 6px; line-height: 1.5; }
-  .min p b { background:#FFEB3B; padding: 0 6px; border-radius: 4px; color: #BF360C; }
-  .pull { margin-top: 26px; padding: 24px 28px; background: linear-gradient(135deg, #FFCA28, #FFEB3B); color:#1A1A1A; border-radius: 18px; box-shadow: 8px 8px 0 #FFFFFF; }
-  .pull h2 { font-size: 38px; font-weight:900; line-height: 1.35; }
-  .pull h2 b { color: #B71C1C; }
-  .pull p { font-size: 22px; font-weight:700; margin-top: 8px; }
-  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; }
-  .pill { background:#FFEB3B; color:#BF360C; padding:10px 22px; border-radius:100px; font-weight:900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">每天 5 分钟陪学法</span>
-    <h1>每天 5 分钟<br><em>就能陪</em></h1>
-    <div class="min" data-t="0-1 分"><h3>问 · 今天写啥代码</h3><p>娃简单说 · 你不用懂细节 · <b>关键听他能不能讲清楚</b></p></div>
-    <div class="min" data-t="1-3 分"><h3>看 · 程序跑起来啥效果</h3><p>请娃<b>当面跑一遍</b> · 你看到结果即可<br>不用懂代码 · 看效果对不对即可</p></div>
-    <div class="min" data-t="3-4 分"><h3>问 · 有没有遇到 bug</h3><p>关键问题：<b>"哪一步卡住了"</b><br>娃边讲边理 · 90% 自己能想明白</p></div>
-    <div class="min" data-t="4-5 分"><h3>赞 · 具体表扬</h3><p>不说"你真棒" · 说<b>"今天这个循环写得很巧"</b><br>具体表扬比泛泛夸奖管用 10 倍</p></div>
-    <div class="pull">
-      <h2>大连家长真心话<br><b>"5 分钟 × 365 天 > 1 小时 × 1 次"</b></h2>
-      <p>陪伴的关键是稳定 · 不是时长</p>
-    </div>
-  </div>
-  <div class="cta">
-    <span>#家长陪学 #5分钟 #大连</span>
-    <span class="pill">收藏</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">PRINCIPLE · 4 个心法</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 长期陪学的底层逻辑</div><h1>4 句话<br>陪伴<b>底层</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>"娃讲我听"原则</h3><p>娃当老师 · 你当学生 · <b>讲一遍他自己也懂</b> · 这比看课更有效</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>"过程比结果重要"</h3><p>关注 "哪一步想到了" · 不关注 "对不对" · <b>逻辑过程才是真能力</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>"中断不可怕"原则</h3><p>考试周 / 假期 / 病假 · <b>暂停 1 周很正常</b> · 编程是技能 · 不会忘</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>"3 个月再判断"</h3><p>不要看一周效果就下结论 · <b>给娃 3 个月</b> · 喜欢就续 · 不喜欢就停</p></div></div>
+<div class="pull"><h2>陪伴的关键是 <b>稳定 + 见证</b></h2></div>
+<div class="footer"><span class="txt">不焦虑 · 才能久</span></div>
+</body></html>

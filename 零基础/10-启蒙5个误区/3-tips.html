@@ -1,53 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>启蒙 5 个误区 · 反例</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>TIPS · 5 个关键提醒</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#F8BBD0 0%, #FFE082 100%); color:#1A1A1A; position:relative; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#4A148C; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#4A148C; }
-  h1 em { font-style:normal; background:#FFD700; padding: 0 8px; box-shadow: 4px 4px 0 #1A1A1A; display:inline-block; }
-  .case { background:#FFFFFF; border-radius: 18px; padding: 20px 24px; margin-top: 18px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #C2185B; }
-  .case .head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-  .case .vs { background:#1A1A1A; color:#FFD700; padding:4px 12px; border-radius: 8px; font-size: 20px; font-weight: 900; }
-  .case .name { font-size: 26px; font-weight: 900; color: #4A148C; }
-  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .err { background: #FFEBEE; border-left: 6px solid #B71C1C; padding: 10px 14px; border-radius: 8px; font-size: 21px; font-weight: 700; color: #B71C1C; line-height: 1.45; }
-  .ok { background: #E8F5E9; border-left: 6px solid #4CAF50; padding: 10px 14px; border-radius: 8px; font-size: 21px; font-weight: 700; color: #2E7D32; line-height: 1.45; }
-  .ok b { background:#FFD700; padding: 0 6px; border-radius: 4px; color: #4A148C; }
-  .pull { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFD700; border-radius: 16px; box-shadow: 8px 8px 0 #C2185B; }
-  .pull h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { color: #FFD700; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">错 vs 对 · 一目了然</span>
-    <h1>错误 vs <em>正确</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="case"><div class="head"><span class="vs">误区 1</span><span class="name">越早越好</span></div>
-      <div class="pair"><div class="err">3 岁背 Python 语法</div><div class="ok">7 岁玩 <b>Scratch 拖积木</b></div></div>
-    </div>
-    <div class="case"><div class="head"><span class="vs">误区 2</span><span class="name">报班保过</span></div>
-      <div class="pair"><div class="err">立刻报全年 3 万课</div><div class="ok">先<b>试听 + 短期 3 个月</b></div></div>
-    </div>
-    <div class="case"><div class="head"><span class="vs">误区 3</span><span class="name">学多越好</span></div>
-      <div class="pair"><div class="err">每天 3 小时编程</div><div class="ok"><b>每天 30-45 分钟</b>就够</div></div>
-    </div>
-    <div class="case"><div class="head"><span class="vs">误区 4</span><span class="name">必须 C++</span></div>
-      <div class="pair"><div class="err">小学一上来 C++</div><div class="ok">小学 Scratch / Python · <b>初中转 C++</b></div></div>
-    </div>
-    <div class="case"><div class="head"><span class="vs">误区 5</span><span class="name">奖牌至上</span></div>
-      <div class="pair"><div class="err">每天问"啥时候省一"</div><div class="ok">关注娃<b>解题时的笑容</b></div></div>
-    </div>
-
-    <div class="pull">
-      <h2>大连家长真心话<br><b>"娃喜欢 + 节奏稳 = 可持续"</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">TIPS · 5 个关键提醒</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 实用 · 不空谈</div><h1>5 个<br><b>关键提醒</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>选机构 · 5 问对照</h3><p>老师能现场写真题吗 · 课程基于历年真题吗 · 班型按级别分吗 · 每周反馈吗 · 退费合理吗</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>陪娃 · 5 分钟法</h3><p>每天 5 分钟 · 听 / 看 / 追 / 赞 · <b>稳定胜过时长</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>选语言 · 3 问选好</h3><p>娃多大 · 想冲信奥吗 · 不冲信奥但想长期学 · <b>3 答出答案</b></p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>选赛事 · 顺序对</h3><p>GESP → CSP-J → CSP-S → NOIP · <b>不跳级</b></p></div><div class="card" style="border-color:#FCE4EC"><div class="num">5</div><h3>看时长 · 5 小时基线</h3><p>每周 ≤ 5 小时 = 健康 · 超过 10 小时 = 主科受影响</p></div></div>
+<div class="pull"><h2>不焦虑 + <b>有方法</b> · 启蒙就稳了</h2></div>
+<div class="footer"><span class="txt">收藏 · 反复看</span></div>
+</body></html>
