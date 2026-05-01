@@ -1,127 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · 4 段详解</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>DETAIL · 4 段详解</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFFBE5; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #1A1A1A; display: flex; align-items: center; padding: 0 60px; }
-  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
-  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 { font-size: 60px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D; padding: 0 12px;
-    box-shadow: 6px 6px 0 #1A1A1A; display: inline-block;
-  }
-
-  .seg-list { position: absolute; top: 360px; left: 60px; right: 60px; }
-  .seg {
-    background: #FFFFFF; border-radius: 14px;
-    padding: 16px 20px; margin-bottom: 14px;
-    border: 3px solid #1A1A1A;
-    box-shadow: 4px 4px 0 #FFD93D;
-    display: flex; align-items: stretch;
-  }
-  .seg .photo {
-    flex: 0 0 160px; height: 110px;
-    border-radius: 10px;
-    background-size: cover; background-position: center;
-    margin-right: 16px;
-    border: 3px solid #FFD93D;
-  }
-  .seg .body { flex: 1; }
-  .seg .body .top {
-    display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
-  }
-  .seg .body .num {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 4px 12px; border-radius: 6px;
-    font-size: 18px; font-weight: 900;
-  }
-  .seg .body .min {
-    background: #1A1A1A; color: #FFD93D;
-    padding: 4px 12px; border-radius: 6px;
-    font-size: 18px; font-weight: 900;
-  }
-  .seg .body h3 { font-size: 24px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
-  .seg .body p { font-size: 16px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.3; }
-  .seg .body p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
-
-  .pull {
-    position: absolute; bottom: 100px; left: 60px; right: 60px;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 20px 26px; border-radius: 16px;
-    border: 4px solid #FFD93D;
-    box-shadow: 8px 8px 0 #FFD93D;
-    text-align: center;
-  }
-  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-    background: #FFD93D; border-top: 4px solid #1A1A1A;
-    display: flex; align-items: center; justify-content: center; }
-  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">FLOW · 4 段详解</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>每个 20 分钟<em>干啥</em><br>家长能问到底</h1>
-  </div>
-
-  <div class="seg-list">
-    <div class="seg">
-      <div class="photo" style="background-image: url('../../因诺信奥图片/DSC_2843.JPG')"></div>
-      <div class="body">
-        <div class="top"><span class="num">段 1</span><span class="min">20 分钟</span></div>
-        <h3>讲解 · 把"为什么"说清楚</h3>
-        <p>不读 PPT·老师 <b>白板手写推导</b>·讲到学生听懂为止</p>
-      </div>
-    </div>
-    <div class="seg">
-      <div class="photo" style="background-image: url('../../因诺信奥图片/DSC_6665.JPG')"></div>
-      <div class="body">
-        <div class="top"><span class="num">段 2</span><span class="min">40 分钟</span></div>
-        <h3>练习 · 学生上机·老师巡场</h3>
-        <p>3-5 道分层题·遇到 bug <b>当场答</b>·不憋着</p>
-      </div>
-    </div>
-    <div class="seg">
-      <div class="photo" style="background-image: url('../../因诺信奥图片/DSC_2898.JPG')"></div>
-      <div class="body">
-        <div class="top"><span class="num">段 3</span><span class="min">20 分钟</span></div>
-        <h3>点评 · 老师改代码 + 讲思路</h3>
-        <p>挑 2-3 份代码<b>逐行评</b>·学生看到 "好代码长什么样"</p>
-      </div>
-    </div>
-    <div class="seg">
-      <div class="photo" style="background-image: url('../../因诺信奥图片/DSC_2885.JPG')"></div>
-      <div class="body">
-        <div class="top"><span class="num">段 4</span><span class="min">10 分钟</span></div>
-        <h3>布置 · 课后清单 + 家长反馈</h3>
-        <p>课后题 + 难度标注·<b>家长群同步</b>本节内容</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>不水课<br><b>每段都说清"娃要干啥"</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">90 分钟·分秒看得到</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">DETAIL · 4 段详解</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 家长能问到底</div><h1>每个 20 分钟<br><b>干啥</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>段 1 · 讲解</h3><p>不读 PPT · 老师<b>白板手写推导</b> · 讲到学生听懂为止</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>段 2 · 练习</h3><p>学生上机·老师巡场 · 3-5 道分层题 · <b>当场答 bug</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>段 3 · 点评</h3><p>老师改代码 + 讲思路 · 挑 2-3 份<b>逐行评</b></p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>段 4 · 布置</h3><p>课后清单 + 家长反馈 · <b>家长群同步</b></p></div></div>
+<div class="pull"><h2>不水课 · <b>每段都说清"娃要干啥"</b></h2></div>
+<div class="footer"><span class="txt">90 分钟 · 分秒看得到</span></div>
+</body></html>

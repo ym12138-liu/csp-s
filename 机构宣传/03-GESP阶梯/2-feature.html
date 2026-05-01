@@ -1,130 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · GESP 8 级路线</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>CLASS · 3 种班型</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFFBE5; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #1A1A1A; display: flex; align-items: center; padding: 0 60px; }
-  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
-  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 {
-    font-size: 60px; font-weight: 900; color: #1A1A1A;
-    line-height: 1.1; letter-spacing: 1px;
-  }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D;
-    padding: 0 12px; box-shadow: 6px 6px 0 #1A1A1A;
-    display: inline-block;
-  }
-
-  .roadmap { position: absolute; top: 340px; left: 60px; right: 60px; }
-  .stage {
-    background: #FFFFFF; border-radius: 12px;
-    padding: 8px 14px; margin-bottom: 8px;
-    border: 3px solid #1A1A1A;
-    display: flex; align-items: center;
-    box-shadow: 3px 3px 0 #FFD93D;
-  }
-  .stage .level {
-    flex: 0 0 90px; height: 50px; border-radius: 10px;
-    background: #FFD93D; color: #1A1A1A;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px; font-weight: 900;
-    border: 3px solid #1A1A1A;
-    margin-right: 14px;
-    text-align: center;
-  }
-  .stage.adv .level { background: #1A1A1A; color: #FFD93D; }
-  .stage .body { flex: 1; }
-  .stage .body h3 { font-size: 20px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
-  .stage .body p { font-size: 15px; color: #424242; font-weight: 700; margin-top: 2px; line-height: 1.25; }
-  .stage .body p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
-  .stage .week { flex: 0 0 80px; text-align: right;
-    font-size: 22px; font-weight: 900; color: #B71C1C; }
-
-  .pull {
-    position: absolute; top: 1130px; left: 60px; right: 60px;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 14px 22px; border-radius: 14px;
-    border: 3px solid #FFD93D;
-    box-shadow: 5px 5px 0 #FFD93D;
-  }
-  .pull h2 { font-size: 24px; font-weight: 900; line-height: 1.3; }
-  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
-    background: #FFD93D; border-top: 4px solid #1A1A1A;
-    display: flex; align-items: center; justify-content: center; }
-  .footer-band .txt { color: #1A1A1A; font-size: 28px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">ROADMAP · 1-8 级</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>每级<em>练啥</em><br>多少周通关</h1>
-  </div>
-
-  <div class="roadmap">
-    <div class="stage">
-      <div class="level">1 级<br>入门</div>
-      <div class="body"><h3>表达式 + 流程控制</h3><p>取模 / for / if · <b>4 周过</b></p></div>
-      <div class="week">4 周</div>
-    </div>
-    <div class="stage">
-      <div class="level">2 级<br>数组</div>
-      <div class="body"><h3>一维数组 + 嵌套循环</h3><p>遍历 / 字符图形</p></div>
-      <div class="week">6 周</div>
-    </div>
-    <div class="stage">
-      <div class="level">3 级<br>进制</div>
-      <div class="body"><h3>进制 + 位运算 + 字符串</h3><p>2/8/16 转换 · <b>第一道坎</b></p></div>
-      <div class="week">8 周</div>
-    </div>
-    <div class="stage">
-      <div class="level">4 级<br>指针</div>
-      <div class="body"><h3>指针 + 函数 + 排序</h3><p>三种排序必默 · <b>大关</b></p></div>
-      <div class="week">12 周</div>
-    </div>
-    <div class="stage adv">
-      <div class="level">5 级<br>链表</div>
-      <div class="body"><h3>链表 + 二分 + 数论</h3><p>归并 + 快排 + gcd</p></div>
-      <div class="week">16 周</div>
-    </div>
-    <div class="stage adv">
-      <div class="level">6 级<br>树</div>
-      <div class="body"><h3>二叉树 + DP + OOP</h3><p>三种遍历 · 0-1 背包</p></div>
-      <div class="week">16 周</div>
-    </div>
-    <div class="stage adv">
-      <div class="level">7 级<br>图论</div>
-      <div class="body"><h3>图论 + 哈希</h3><p>BFS / DFS / 邻接表</p></div>
-      <div class="week">20 周</div>
-    </div>
-    <div class="stage adv">
-      <div class="level">8 级<br>顶级</div>
-      <div class="body"><h3>四大图算法 + 高级 DP</h3><p>Kruskal / Prim / Dijkstra / Floyd</p></div>
-      <div class="week">24 周</div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>核心 ·<br><b>不跳级 · 一级稳了再下一级</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">每升 1 级·能力可见</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">CLASS · 3 种班型</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 按级别配课</div><h1>3 种班型<br>不<b>错配</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>入门班 (7-9 岁)</h3><p>启蒙 → GESP 2 级 · 从 Scratch 过渡 · <b>表达式 + 循环</b></p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>进阶班 (9-12 岁)</h3><p>GESP 3-5 级 · 位运算 / 函数 / 排序 · <b>第一道大关</b></p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>高阶班 (12-16 岁)</h3><p>GESP 6-8 级 + CSP-J · 树 / 图 / DP · <b>对接信奥</b></p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>班型怎么定?</h3><p>不按年龄一刀切 · <b>看娃实际水平</b>分班 · 测一测就知道</p></div></div>
+<div class="pull"><h2><b>分级清晰</b> · 按级别配课</h2></div>
+<div class="footer"><span class="txt">小班 3 人 · 真题驱动</span></div>
+</body></html>

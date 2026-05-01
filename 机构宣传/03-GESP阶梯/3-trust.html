@@ -1,125 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · GESP 班型</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>TEST · 5 题速测</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #1A1A1A; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #FFD93D; display: flex; align-items: center; padding: 0 60px;
-    border-bottom: 4px solid #1A1A1A; }
-  .h-tag { background: #1A1A1A; color: #FFD93D; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
-  .right { margin-left: auto; color: #1A1A1A; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 { font-size: 60px; font-weight: 900; color: #FFFFFF; line-height: 1.1; }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D; color: #1A1A1A;
-    padding: 0 12px; box-shadow: 6px 6px 0 #FFFFFF;
-    display: inline-block;
-  }
-
-  .photo-strip { position: absolute; top: 340px; left: 60px; right: 60px;
-    display: flex; gap: 14px; }
-  .p { flex: 1; height: 200px; border-radius: 12px; overflow: hidden;
-    border: 4px solid #FFD93D; }
-  .p1 { background: url("../../因诺信奥图片/DSC_2812.JPG") center/cover no-repeat; }
-  .p2 { background: url("../../因诺信奥图片/DSC_2898.JPG") center/cover no-repeat; }
-
-  .classes { position: absolute; top: 580px; left: 60px; right: 60px; }
-  .classes .lbl {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 8px 22px; border-radius: 8px;
-    font-size: 24px; font-weight: 900; letter-spacing: 2px;
-    display: inline-block; margin-bottom: 14px;
-  }
-  .row { display: flex; gap: 14px; margin-bottom: 12px; }
-  .cls {
-    flex: 1; background: #FFFFFF;
-    border-radius: 14px; padding: 16px 18px;
-    border: 3px solid #FFD93D;
-    box-shadow: 4px 4px 0 #FFD93D;
-  }
-  .cls .top {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
-  }
-  .cls .top .tag {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 4px 12px; border-radius: 6px;
-    font-size: 18px; font-weight: 900;
-  }
-  .cls .top .age { color: #424242; font-size: 16px; font-weight: 700; }
-  .cls h3 { font-size: 22px; font-weight: 900; color: #1A1A1A; line-height: 1.2; }
-  .cls p { font-size: 16px; font-weight: 700; color: #424242; margin-top: 4px; line-height: 1.3; }
-  .cls p b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
-
-  .pull {
-    position: absolute; bottom: 100px; left: 60px; right: 60px;
-    background: #FFD93D; color: #1A1A1A;
-    padding: 22px 28px; border-radius: 16px;
-    border: 4px solid #FFFFFF;
-    box-shadow: 8px 8px 0 #FFFFFF;
-    text-align: center;
-  }
-  .pull h2 { font-size: 30px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background: #1A1A1A; color: #FFD93D; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-    background: #FFD93D; border-top: 4px solid #FFFFFF;
-    display: flex; align-items: center; justify-content: center; }
-  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">CLASS · 班型分层</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>3 种<em>班型</em><br>对应不同娃</h1>
-  </div>
-
-  <div class="photo-strip">
-    <div class="p p1"></div>
-    <div class="p p2"></div>
-  </div>
-
-  <div class="classes">
-    <span class="lbl">班型 · 配级别 · 配节奏</span>
-    <div class="row">
-      <div class="cls">
-        <div class="top"><span class="tag">入门班</span><span class="age">7-9 岁 / 一二年级</span></div>
-        <h3>启蒙 → GESP 2 级</h3>
-        <p>从 Scratch 过渡 · 上手 <b>表达式 + 循环</b></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cls">
-        <div class="top"><span class="tag">进阶班</span><span class="age">9-12 岁 / 三-五年级</span></div>
-        <h3>GESP 3 → 5 级</h3>
-        <p>位运算 / 函数 / 排序 · <b>第一道大关</b></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="cls">
-        <div class="top"><span class="tag">高阶班</span><span class="age">12-16 岁 / 六-初三</span></div>
-        <h3>GESP 6 → 8 级 + CSP-J</h3>
-        <p>树 / 图 / DP · <b>对接信奥</b></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>不按年龄一刀切<br><b>看娃实际水平</b>分班</h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">分级清晰·按级别配课</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">TEST · 5 题速测</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 1 分钟知娃在哪一级</div><h1>5 题<br>速<b>测级</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>Q1</h3><p>会用 for / while 写循环吗? · 会 = 至少 1 级</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>Q2</h3><p>会做 2 进制 / 16 进制转换吗? · 会 = 至少 3 级</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>Q3</h3><p>能默冒泡 / 选择 / 插入排序吗? · 能 = 至少 4 级</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>Q4</h3><p>知道二叉树 3 种遍历吗? · 知道 = 至少 6 级</p></div><div class="card" style="border-color:#FCE4EC"><div class="num">5</div><h3>Q5</h3><p>会写 BFS / DFS 模板吗? · 会 = 至少 7 级</p></div></div>
+<div class="pull"><h2>主页私信"<b>测级</b>" · 送 5 题诊断 + 班型建议</h2></div>
+<div class="footer"><span class="txt">不冲动报班 · 先测水平</span></div>
+</body></html>

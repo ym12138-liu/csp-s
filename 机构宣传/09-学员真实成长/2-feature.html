@@ -1,154 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>因诺信奥 · 成长路径案例</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>CASE · 3 个真实路径</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #FFFBE5; position: relative; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-  .top-band { position: absolute; top: 0; left: 0; right: 0; height: 150px;
-    background: #1A1A1A; display: flex; align-items: center; padding: 0 60px; }
-  .h-tag { background: #FFD93D; color: #1A1A1A; padding: 12px 24px; border-radius: 8px;
-    font-size: 28px; font-weight: 900; letter-spacing: 2px; }
-  .right { margin-left: auto; color: #FFD93D; font-size: 24px; font-weight: 800; letter-spacing: 2px; }
-
-  .title-area { position: absolute; top: 180px; left: 60px; right: 60px; }
-  .title-area h1 { font-size: 60px; font-weight: 900; color: #1A1A1A; line-height: 1.1; }
-  .title-area h1 em {
-    font-style: normal; background: #FFD93D; padding: 0 12px;
-    box-shadow: 6px 6px 0 #1A1A1A; display: inline-block;
-  }
-
-  .cases { position: absolute; top: 360px; left: 60px; right: 60px; }
-  .case {
-    background: #FFFFFF; border-radius: 14px;
-    padding: 18px 22px; margin-bottom: 16px;
-    border: 3px solid #1A1A1A;
-    box-shadow: 5px 5px 0 #FFD93D;
-  }
-  .case .top {
-    display: flex; align-items: center; margin-bottom: 8px;
-  }
-  .case .name {
-    background: #FFD93D; color: #1A1A1A;
-    padding: 6px 14px; border-radius: 8px;
-    font-size: 22px; font-weight: 900;
-    border: 2px solid #1A1A1A;
-    margin-right: 12px;
-  }
-  .case .grade {
-    color: #424242; font-size: 16px; font-weight: 700;
-  }
-  .case .arrow {
-    margin-left: auto;
-    color: #B71C1C; font-size: 18px; font-weight: 900;
-  }
-  .case .progress {
-    display: flex; align-items: center; gap: 10px;
-    margin-top: 6px;
-  }
-  .case .pt {
-    flex: 1;
-    background: #FFFBE5; border: 2px solid #FFD93D;
-    border-radius: 10px; padding: 10px 12px;
-  }
-  .case .pt h4 { font-size: 18px; font-weight: 900; color: #1A1A1A; }
-  .case .pt p { font-size: 14px; font-weight: 700; color: #424242; margin-top: 2px; line-height: 1.3; }
-  .case .pt.now { background: #FFD93D; }
-  .case .progress .ar {
-    color: #1A1A1A; font-size: 22px; font-weight: 900;
-  }
-  .case .note {
-    margin-top: 8px;
-    font-size: 16px; color: #424242; font-weight: 700;
-    background: #FFFBE5; padding: 8px 12px;
-    border-left: 4px solid #FFD93D; border-radius: 4px;
-  }
-  .case .note b { background: #FFD93D; color: #B71C1C; padding: 0 4px; border-radius: 3px; }
-
-  .pull {
-    position: absolute; bottom: 100px; left: 60px; right: 60px;
-    background: #1A1A1A; color: #FFFFFF;
-    padding: 22px 28px; border-radius: 16px;
-    border: 4px solid #FFD93D;
-    box-shadow: 8px 8px 0 #FFD93D;
-    text-align: center;
-  }
-  .pull h2 { font-size: 28px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background: #FFD93D; color: #1A1A1A; padding: 0 8px; border-radius: 4px; }
-
-  .footer-band { position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-    background: #FFD93D; border-top: 4px solid #1A1A1A;
-    display: flex; align-items: center; justify-content: center; }
-  .footer-band .txt { color: #1A1A1A; font-size: 26px; font-weight: 900; letter-spacing: 3px; }
-</style>
-</head>
-<body>
-  <div class="top-band">
-    <span class="h-tag">CASE · 3 个学员真实路径</span>
-    <span class="right">因诺信奥 · 大连</span>
-  </div>
-
-  <div class="title-area">
-    <h1>看 3 个娃<em>怎么走</em><br>真实节奏</h1>
-  </div>
-
-  <div class="cases">
-    <div class="case">
-      <div class="top">
-        <span class="name">小 W</span>
-        <span class="grade">三年级入学·五年级现状</span>
-        <span class="arrow">2 年</span>
-      </div>
-      <div class="progress">
-        <div class="pt"><h4>0 基础</h4><p>三年级</p></div>
-        <span class="ar">→</span>
-        <div class="pt"><h4>GESP 4</h4><p>四年级</p></div>
-        <span class="ar">→</span>
-        <div class="pt now"><h4>GESP 6</h4><p>五年级</p></div>
-      </div>
-      <div class="note">从 Scratch 开始 · <b>稳步过级</b> · 没跳级 · 现在准备冲 CSP-J</div>
-    </div>
-    <div class="case">
-      <div class="top">
-        <span class="name">小 L</span>
-        <span class="grade">六年级入学·初二现状</span>
-        <span class="arrow">2 年</span>
-      </div>
-      <div class="progress">
-        <div class="pt"><h4>会基础 C++</h4><p>六年级</p></div>
-        <span class="ar">→</span>
-        <div class="pt"><h4>GESP 5</h4><p>初一</p></div>
-        <span class="ar">→</span>
-        <div class="pt now"><h4>CSP-J 60+</h4><p>初二</p></div>
-      </div>
-      <div class="note">直接从 GESP 起步 · <b>真题驱动 6 个月</b> · 拿到大连 24 中科技特长生资格</div>
-    </div>
-    <div class="case">
-      <div class="top">
-        <span class="name">小 Z</span>
-        <span class="grade">初一入学·初三现状</span>
-        <span class="arrow">2 年</span>
-      </div>
-      <div class="progress">
-        <div class="pt"><h4>有 J 基础</h4><p>初一</p></div>
-        <span class="ar">→</span>
-        <div class="pt"><h4>CSP-J 70+</h4><p>初二</p></div>
-        <span class="ar">→</span>
-        <div class="pt now"><h4>CSP-S 过线</h4><p>初三</p></div>
-      </div>
-      <div class="note">从 CSP-J 直接冲 S · <b>图论 + DP 重点补</b> · 高中科技特长生在线</div>
-    </div>
-  </div>
-
-  <div class="pull">
-    <h2>每个娃的节奏不一样<br><b>但都是稳步过 · 不跳级</b></h2>
-  </div>
-
-  <div class="footer-band">
-    <span class="txt">真实学员·真实成长·已脱敏</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">CASE · 3 个真实路径</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 姓名脱敏 · 数据真实</div><h1>3 个娃<br>怎么<b>走</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>小 W (三年级零基础)</h3><p>四年级 GESP 4 → 五年级 GESP 6 · 2 年从 Scratch 一路稳到 6 级</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>小 L (六年级会基础 C++)</h3><p>初一 GESP 5 → 初二 CSP-J 60+ · 顺手拿到大连 24 中科特生资格</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>小 Z (初一有 J 基础)</h3><p>初二 J 70+ → 初三 S 过线 · 高中科特生在线</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>共同点</h3><p><b>起步早 + 节奏稳 + 不跳级</b> · 都是普娃 · 不是天才</p></div></div>
+<div class="pull"><h2>机构能做的就是<b>把路捋清 · 把课讲明</b></h2></div>
+<div class="footer"><span class="txt">剩下看娃 · 不是机构</span></div>
+</body></html>
