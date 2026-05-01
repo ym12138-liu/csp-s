@@ -1,54 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>AI 时代稀缺能力 · 详解</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>DEEP · 3 项详解</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#F3E5F5; color:#1A1A1A; position:relative; }
-  body::before { content:""; position:absolute; top:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #4A148C, #FFD700); }
-  body::after  { content:""; position:absolute; bottom:0; left:0; right:0; height: 80px; background: linear-gradient(90deg, #FFD700, #4A148C); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#4A148C; color:#FFD700; padding:10px 26px; border-radius:8px; font-weight:900; font-size:28px; }
-  h1 { font-size: 70px; font-weight:900; margin-top:18px; line-height:1.1; color:#4A148C; }
-  h1 em { font-style:normal; background: linear-gradient(transparent 60%, #FFD700 60%); padding: 0 6px; }
-  .case { background:#FFFFFF; border-radius: 18px; padding: 22px 26px; margin-top: 18px; border: 4px solid #1A1A1A; box-shadow: 6px 6px 0 #4A148C; }
-  .case .num { display:inline-block; background:#4A148C; color:#FFD700; padding:6px 16px; border-radius: 8px; font-weight:900; font-size:24px; }
-  .case h3 { font-size: 30px; font-weight: 900; color: #1A1A1A; margin-top: 8px; }
-  .case .why { background:#FFF8E1; padding: 12px 16px; border-radius: 10px; border-left: 6px solid #FFD700; font-size: 22px; font-weight: 700; color: #1A1A1A; line-height: 1.5; margin-top: 8px; }
-  .case .why b { background:#4A148C; color:#FFD700; padding: 0 6px; border-radius: 4px; }
-  .key { margin-top: 22px; padding: 22px 26px; background: #1A1A1A; color: #FFD700; border-radius: 16px; box-shadow: 8px 8px 0 #4A148C; }
-  .key h2 { font-size: 32px; color: #FFFFFF; font-weight: 900; line-height: 1.4; }
-  .key h2 b { color: #FFD700; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">3 项稀缺能力 · 详解</span>
-    <h1>3 个能力<em>AI 永远学不会</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="case">
-      <span class="num">能力 1</span>
-      <h3>提问力 · 决定 AI 给你啥</h3>
-      <div class="why">AI 答案 = 提问质量的镜子<br><b>问得粗糙 → 答案垃圾</b> · 问得精准 → 答案值万元</div>
-    </div>
-
-    <div class="case">
-      <span class="num">能力 2</span>
-      <h3>批判力 · 不被 AI 骗</h3>
-      <div class="why">AI 会自信地胡说<br><b>10% 答案是错的</b> · 没有批判力的人会被带偏</div>
-    </div>
-
-    <div class="case">
-      <span class="num">能力 3</span>
-      <h3>创造力 · AI 只能"组合已有"</h3>
-      <div class="why">AI = 把人类已有的东西<b>重新组合</b><br>"从 0 到 1"的真创新 · 永远要靠人</div>
-    </div>
-
-    <div class="key">
-      <h2>核心 ·<br><b>提问 + 批判 + 创造 = AI 时代高薪岗位的底层</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">DEEP · 3 项详解</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 每项怎么练</div><h1>3 项稀缺力<br>详细<b>说</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>提问力</h3><p>AI 答案 = 提问质量的镜子 · <b>问得粗糙 → 答案垃圾</b> · 问得精准 → 答案值万元</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>判断力</h3><p>AI 会自信地胡说 · <b>10% 答案是错的</b> · 没有判断力的人会被带偏</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>创造力</h3><p>AI = 把人类已有的东西<b>重新组合</b> · "0 到 1" 的真创新永远要靠人</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>总结</h3><p>提问 + 判断 + 创造 = <b>AI 时代高薪岗位的底层</b></p></div></div>
+<div class="pull"><h2>这 3 项 · <b>AI 一辈子学不会</b></h2></div>
+<div class="footer"><span class="txt">稀缺 · 才值钱</span></div>
+</body></html>

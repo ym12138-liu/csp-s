@@ -1,36 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>ChatGPT 娃怎么用 · 封面</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>USE · 同样问 AI</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: #0A1F0A; color:#00FF41; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(0,255,65,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.06) 1px, transparent 1px); background-size: 40px 40px; }
-  body::after { content:""; position:absolute; bottom:0; left:0; right:0; height:50%; background: radial-gradient(ellipse at center bottom, rgba(0,255,65,0.25) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .badge { display:inline-block; background:#00FF41; color:#0A1F0A; padding:14px 32px; border-radius:6px; font-size:30px; font-weight:900; letter-spacing:3px; margin-bottom: 50px; font-family: "SF Mono", monospace; box-shadow: 0 0 30px rgba(0,255,65,0.6); }
-  .pre { font-family: "SF Mono", monospace; font-size: 36px; color: #FFEB3B; font-weight: 900; margin-bottom: 18px; }
-  .title { font-size: 156px; font-weight:900; line-height:0.95; color:#00FF41; text-shadow: 0 0 30px rgba(0,255,65,0.5), 6px 6px 0 #003300; letter-spacing: -4px; }
-  .title em { font-style:normal; color:#FFEB3B; text-shadow: 6px 6px 0 #B71C1C; }
-  .qmark { font-size: 200px; font-weight: 900; color: #FFEB3B; text-shadow: 0 0 40px rgba(255,235,59,0.5); line-height: 1; }
-  .sub { margin-top: 36px; font-family: "SF Mono", monospace; background:#FFEB3B; color:#0A1F0A; padding: 18px 24px; border-radius: 6px; font-size: 32px; font-weight: 900; display:inline-block; line-height: 1.4; box-shadow: 6px 6px 0 #00FF41; }
-  .sub b { background:#0A1F0A; color:#00FF41; padding: 0 8px; }
-  .footer { position:absolute; bottom:0; left:70px; right:70px; display:flex; justify-content:space-between; align-items:center; font-size:28px; color:#00FF41; font-weight:800; font-family: "SF Mono", monospace; }
-  .stamp { background:#FFEB3B; color:#0A1F0A; padding:14px 24px; border-radius:6px; transform:rotate(-5deg); font-weight:900; font-family: "SF Mono", monospace; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="badge">$ AI.tools / 第 5 篇</div>
-    <div class="pre">// 娃用 ChatGPT 是开挂还是作弊?</div>
-    <div class="title">怎么用<br><em>不作弊</em><span class="qmark">?</span></div>
-    <div class="sub">用对了 = <b>外挂大脑</b><br>用错了 = 作弊抄作业</div>
-  </div>
-  <div class="footer">
-    <span># ChatGPT # 娃用法 # 大连家长</span>
-    <span class="stamp">{ 收藏 }</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.vs { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; align-items: stretch; gap: 16px; }
+.col { flex: 1; padding: 18px 20px; border-radius: 14px; }
+.col.l { background: #E3F2FD; border: 3px solid #0D47A1; }
+.col.r { background: #FFEBEE; border: 3px solid #B71C1C; }
+.col h3 { font-size: 22px; font-weight: 900; text-align: center;
+padding: 8px 0; margin-bottom: 12px; border-radius: 6px; color: #FFFFFF; }
+.col.l h3 { background: #0D47A1; }
+.col.r h3 { background: #B71C1C; }
+.col p { font-size: 16px; padding: 6px 0; color: #1A1A1A; font-weight: 700;
+border-bottom: 1px dashed rgba(0,0,0,0.15); line-height: 1.4; }
+.col p:last-child { border-bottom: none; }
+</style></head><body><div class="top"><span class="badge">USE · 同样问 AI</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 用法决定价值</div><h1>同样问 AI<br>结果<b>差天地</b></h1></div>
+<div class="vs">
+<div class="col l"><h3>错的用法</h3><p>"帮我写作文"</p><p>"答案是啥"</p><p>"写一段代码"</p><p>"帮我做这道题"</p><p>抄完就交 = 0 收获</p></div>
+<div class="col r"><h3>对的用法</h3><p>"我的作文哪里弱"</p><p>"为什么是这答案"</p><p>"我代码报错帮看哪错"</p><p>"X 题讲思路 不要直接答"</p><p>追问 → 真懂</p></div>
+</div>
+<div class="pull"><h2>错用法 = 让 AI 替娃做 · <b>对用法 = 让 AI 陪娃成长</b></h2></div>
+<div class="footer"><span class="txt">同一工具 · 用法决定价值</span></div>
+</body></html>

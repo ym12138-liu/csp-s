@@ -1,48 +1,41 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>ChatGPT 娃怎么用 · 行动</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>SCENE · 4 个学习场景</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#0A1F0A; color:#00FF41; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(0,255,65,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,65,0.04) 1px, transparent 1px); background-size: 50px 50px; }
-  body::after { content:""; position:absolute; bottom:0; left:0; right:0; height:50%; background: radial-gradient(ellipse at center bottom, rgba(255,235,59,0.2) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FFEB3B; color:#0A1F0A; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#00FF41; }
-  h1 em { font-style:normal; color:#FFEB3B; }
-  .prompt { background:#1A1A1A; border:2px solid #00FF41; border-radius: 10px; padding: 14px 18px; margin-top: 12px; font-family: "SF Mono", monospace; box-shadow: 4px 4px 0 #00FF41; }
-  .prompt .lbl { font-size: 18px; color: #FFEB3B; font-weight: 900; margin-bottom: 4px; }
-  .prompt .text { font-size: 22px; color: #00FF41; font-weight: 700; line-height: 1.4; }
-  .prompt .text b { background:#FFEB3B; color:#0A1F0A; padding: 0 6px; border-radius: 3px; }
-  .pull { margin-top: 24px; padding: 22px 26px; background: linear-gradient(135deg, #00FF41, #FFEB3B); color: #0A1F0A; border-radius: 12px; font-family: "SF Mono", monospace; box-shadow: 0 0 40px rgba(0,255,65,0.5); }
-  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4; }
-  .pull h2 b { background:#0A1F0A; color:#00FF41; padding: 0 8px; }
-  .cta { position:absolute; bottom:0; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; font-size:24px; color:#FFEB3B; font-weight:700; font-family:"SF Mono",monospace; }
-  .pill { background:#FFEB3B; color:#0A1F0A; padding:10px 22px; border-radius:6px; font-weight:900; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">{ PROMPTS } 6 个学习用</span>
-    <h1>给娃<br>抄这 <em>6 个</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="prompt"><div class="lbl">1 · 学知识</div><div class="text">"我想学 X · 帮我用 <b>5 个例子</b>解释 · 由浅到深"</div></div>
-    <div class="prompt"><div class="lbl">2 · 找错</div><div class="text">"这是我写的 X · 帮我找<b>3 个可以改进的地方</b>"</div></div>
-    <div class="prompt"><div class="lbl">3 · 解题</div><div class="text">"X 题目 · 帮我<b>讲思路 · 不要直接给答案</b>"</div></div>
-    <div class="prompt"><div class="lbl">4 · 对比</div><div class="text">"X 和 Y 有什么区别 · 用<b>表格列出来</b>"</div></div>
-    <div class="prompt"><div class="lbl">5 · 检查</div><div class="text">"我的理解是 X · <b>对吗 · 哪里错了</b>"</div></div>
-    <div class="prompt"><div class="lbl">6 · 拓展</div><div class="text">"X 学完了 · <b>下一步该学什么</b>"</div></div>
-
-    <div class="pull">
-      <h2>// 大连家长真心话<br><b>"6 个 prompt = 娃的随身 1 对 1 老师"</b></h2>
-    </div>
-  </div>
-  <div class="cta">
-    <span># prompt # ChatGPT # 大连娃</span>
-    <span class="pill">{ 收藏 }</span>
-  </div>
-</body>
-</html>
+.cards { position: absolute; top: 400px; left: 60px; right: 60px;
+display: flex; flex-wrap: wrap; gap: 14px; }
+.card { flex: 1 1 calc(50% - 7px);
+background: #FFFFFF; border: 4px solid;
+padding: 16px 20px; border-radius: 14px; }
+.card .num { display: inline-block;
+background: #0D47A1; color: #FFFFFF;
+padding: 4px 12px; border-radius: 6px;
+font-size: 16px; font-weight: 900; margin-bottom: 8px; }
+.card h3 { font-size: 22px; font-weight: 900; color: #0D47A1; line-height: 1.2; }
+.card p { font-size: 16px; color: #424242; margin-top: 6px; line-height: 1.4; font-weight: 700; }
+.card p b { background: #FFF59D; padding: 0 4px; color: #B71C1C; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">SCENE · 4 个学习场景</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 不同科目 AI 怎么用</div><h1>4 个场景<br><b>实战用法</b></h1></div>
+<div class="cards"><div class="card" style="border-color:#FCE4EC"><div class="num">1</div><h3>数学应用题</h3><p>不抄答案 · 让 AI <b>讲 3 种思路</b> · 自己挑一种做</p></div><div class="card" style="border-color:#FFF8E1"><div class="num">2</div><h3>英语作文</h3><p>自己写完 · 让 AI 找<b>语法错 + 用词错</b> · 别让它重写</p></div><div class="card" style="border-color:#E8F5E9"><div class="num">3</div><h3>编程 bug</h3><p>贴报错信息 · 问"<b>哪一步出错了</b>" · 不问"帮我改"</p></div><div class="card" style="border-color:#E3F2FD"><div class="num">4</div><h3>科普探索</h3><p>"X 是什么 · 给我 5 个深入问题让我继续问" · <b>无限延展</b></p></div></div>
+<div class="pull"><h2>不替你做 · <b>陪你做</b></h2></div>
+<div class="footer"><span class="txt">AI 是脚手架 · 不是答案表</span></div>
+</body></html>

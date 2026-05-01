@@ -1,53 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>AI 时代还学编程吗 · 误区</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>MYTH · 3 个想法过时了</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background: linear-gradient(180deg,#1A1A1A 0%, #4A148C 100%); color:#FFEB3B; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,235,59,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,235,59,0.04) 1px, transparent 1px); background-size: 50px 50px; }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 60px; }
-  .h-tag { display:inline-block; background:#FF1744; color:#FFFFFF; padding:10px 26px; border-radius:6px; font-weight:900; font-size:28px; font-family:"SF Mono",monospace; }
-  h1 { font-size: 76px; font-weight:900; margin-top:18px; line-height:1.05; color:#FFEB3B; }
-  h1 em { font-style:normal; color:#00E5FF; }
-  .myth { background:#1A1A1A; border:2px solid #FFEB3B; border-radius: 14px; padding: 22px 26px; margin-top: 18px; box-shadow: 5px 5px 0 #FF1744; position: relative; }
-  .myth .x { position: absolute; top: -16px; left: -16px; width: 56px; height: 56px; border-radius:50%; background:#FF1744; color:#FFEB3B; font-weight:900; font-size:32px; display:flex; align-items:center; justify-content:center; box-shadow: 0 0 20px rgba(255,23,68,0.6); }
-  .myth .lie { font-size: 28px; color: #FF1744; font-weight: 900; text-decoration: line-through; padding-left: 50px; }
-  .myth .truth { font-size: 26px; color: #FFFFFF; font-weight: 700; line-height: 1.5; margin-top: 8px; }
-  .myth .truth b { background:#FFEB3B; color:#0A0A0A; padding: 0 6px; border-radius: 4px; }
-  .pull { margin-top: 22px; padding: 22px 26px; background: linear-gradient(135deg, #FFEB3B, #FF1744); color: #0A0A0A; border-radius: 12px; font-family: "SF Mono", monospace; box-shadow: 0 0 30px rgba(255,235,59,0.4); }
-  .pull h2 { font-size: 32px; font-weight: 900; line-height: 1.4;}
-  .pull h2 b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px;}
-</style>
-</head>
-<body>
-  <div class="safe">
-    <span class="h-tag">$ MYTH.busted</span>
-    <h1>这 3 个想法<br><em>都过时了</em></h1>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
 
-    <div class="myth">
-      <div class="x">×</div>
-      <div class="lie">"AI 都能写代码 · 学编程没用"</div>
-      <div class="truth">AI 写代码 = <b>初级抄写员</b> · 真正的"设计师"还得是人<br>不会编程的人 → <b>看不懂 AI 写的对不对</b></div>
-    </div>
-
-    <div class="myth">
-      <div class="x">×</div>
-      <div class="lie">"会用 ChatGPT 就够了"</div>
-      <div class="truth">用 AI = 提问能力 · <b>问得不对得到的也是垃圾</b><br>会编程的孩子 → 提问会更精准 → AI 给的答案更值钱</div>
-    </div>
-
-    <div class="myth">
-      <div class="x">×</div>
-      <div class="lie">"未来都是 AI · 学了也被淘汰"</div>
-      <div class="truth">每次技术革命 · <b>新工种比旧工种多 10 倍</b><br>不会编程的人 = 工业革命时不会用机器的人</div>
-    </div>
-
-    <div class="pull">
-      <h2>// CORE<br><b>不是 AI 替代你 · 是会 AI 的人替代不会的</b></h2>
-    </div>
-  </div>
-</body>
-</html>
+.myths { position: absolute; top: 380px; left: 60px; right: 60px; }
+.myth { background: #FFFFFF; border: 3px solid #FFEBEE; border-left: 8px solid #B71C1C;
+padding: 14px 20px; margin-bottom: 14px; border-radius: 6px; position: relative; }
+.myth .x { position: absolute; top: -12px; left: -12px;
+width: 36px; height: 36px; border-radius: 50%;
+background: #B71C1C; color: #FFFFFF;
+display: flex; align-items: center; justify-content: center;
+font-size: 20px; font-weight: 900; }
+.myth .lie { font-size: 20px; color: #B71C1C; font-weight: 900;
+text-decoration: line-through; padding-left: 36px; }
+.myth .truth { font-size: 17px; color: #1A1A1A; margin-top: 6px; font-weight: 700;
+line-height: 1.4; }
+.myth .truth b { background: #FFF59D; padding: 0 4px; color: #2E7D32; border-radius: 3px; }
+</style></head><body><div class="top"><span class="badge">MYTH · 3 个想法过时了</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 朋友圈又刷屏的错误判断</div><h1>3 个想法<br><b>都过时了</b></h1></div>
+<div class="myths"><div class="myth"><div class="x">!</div><div class="lie">"AI 都能写代码 · 学编程没用"</div><div class="truth">AI 写代码 = 初级抄写员 · <b>真正的"设计师"还得是人</b> · 不会编程的人看不懂 AI 给的对不对</div></div><div class="myth"><div class="x">!</div><div class="lie">"会用 ChatGPT 就够了"</div><div class="truth">用 AI = 提问能力 · 问得不对得到的也是垃圾 · <b>会编程的孩子提问会更精准</b> → AI 给的答案更值钱</div></div><div class="myth"><div class="x">!</div><div class="lie">"未来都是 AI · 学了也被淘汰"</div><div class="truth">每次技术革命 · <b>新工种比旧工种多 10 倍</b> · 不会编程的人 = 工业革命时不会用机器的人</div></div></div>
+<div class="pull"><h2>不是 AI 替代你 · <b>是会 AI 的人替代不会的</b></h2></div>
+<div class="footer"><span class="txt">别把 AI 当威胁 · 当工具</span></div>
+</body></html>

@@ -1,44 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>信奥 VS AI 课 · 封面</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>VS · 信奥 vs AI 课</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 1080px; height: 1440px; overflow: hidden; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
-  body { background:#0A0A0A; color:#FFEB3B; position:relative; }
-  body::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,235,59,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,235,59,0.05) 1px, transparent 1px); background-size: 50px 50px; }
-  body::after { content:""; position:absolute; bottom:0; left:0; right:0; height:50%; background: radial-gradient(ellipse at center bottom, rgba(255,23,68,0.3) 0%, transparent 70%); }
-  .safe { position:absolute; top:150px; bottom:150px; left:0; right:0; padding:0 70px; }
-  .badge { display:inline-block; background:#FFEB3B; color:#0A0A0A; padding:14px 32px; border-radius:6px; font-size:30px; font-weight:900; letter-spacing:3px; margin-bottom: 50px; font-family: "SF Mono", monospace; box-shadow: 0 0 30px rgba(255,235,59,0.5); }
-  .pre { font-family: "SF Mono", monospace; font-size: 36px; color: #00E5FF; font-weight: 900; margin-bottom: 18px; }
-  .vs-row { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
-  .opt { flex: 1; background:#FFFFFF; color:#0A0A0A; padding: 22px 16px; border-radius: 14px; font-size: 48px; font-weight: 900; border: 4px solid #FFEB3B; box-shadow: 8px 8px 0 #FFEB3B; text-align: center; }
-  .opt.b { background:#FFEB3B; color:#B71C1C; }
-  .vsm { font-size: 60px; font-weight:900; color:#FF1744; text-shadow: 0 0 30px rgba(255,23,68,0.6); }
-  .question { font-size: 96px; font-weight: 900; color: #FFEB3B; line-height: 1; text-shadow: 6px 6px 0 #B71C1C; }
-  .question em { font-style:normal; background:#FF1744; color:#FFFFFF; padding: 0 12px; box-shadow: 6px 6px 0 #1A1A1A; display: inline-block; }
-  .sub { margin-top: 36px; background:#FFEB3B; color:#0A0A0A; padding: 18px 26px; border-radius: 14px; font-family: "SF Mono", monospace; font-size: 32px; font-weight: 900; line-height: 1.4; display: inline-block; box-shadow: 6px 6px 0 #FF1744; }
-  .sub b { background:#0A0A0A; color:#FFEB3B; padding: 0 8px; }
-  .footer { position:absolute; bottom:0; left:70px; right:70px; display:flex; justify-content:space-between; align-items:center; font-size:28px; color:#FFEB3B; font-weight:800; font-family: "SF Mono", monospace; }
-  .stamp { background:#FF1744; color:#FFEB3B; padding:14px 24px; border-radius:6px; transform:rotate(-5deg); font-weight:900; font-family:"SF Mono",monospace; }
-</style>
-</head>
-<body>
-  <div class="safe">
-    <div class="badge">$ DECISION / 第 7 篇</div>
-    <div class="pre">// "信奥 vs AI 课" 选哪个</div>
-    <div class="vs-row">
-      <div class="opt">信奥</div>
-      <div class="vsm">VS</div>
-      <div class="opt b">AI 课</div>
-    </div>
-    <div class="question">怎么 <em>选</em></div>
-    <div class="sub">不是单选题<br><b>3 种娃 · 3 种选法</b></div>
-  </div>
-  <div class="footer">
-    <span># 信奥 vs AI # 决策 # 大连娃</span>
-    <span class="stamp">{ 收藏 }</span>
-  </div>
-</body>
-</html>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden;
+font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+background: #FFFFFF; color: #1A1A1A; }
+.top { position: absolute; top: 0; left: 0; right: 0; height: 150px;
+background: #0D47A1; display: flex; align-items: center; padding: 0 60px; }
+.top .badge { background: #FFFFFF; color: #0D47A1; padding: 12px 24px;
+border-radius: 8px; font-size: 28px; font-weight: 900; }
+.top .right { margin-left: auto; color: #FFFFFF; font-size: 22px; font-weight: 800; }
+.h1 { position: absolute; top: 200px; left: 60px; right: 60px; }
+.h1 .pre { color: #2196F3; font-size: 26px; font-weight: 800; letter-spacing: 3px; margin-bottom: 10px; }
+.h1 h1 { font-size: 60px; font-weight: 900; color: #0D47A1; line-height: 1.1; }
+.h1 h1 b { background: #2196F3; color: #FFFFFF; padding: 0 12px; border-radius: 6px; }
+.pull { position: absolute; bottom: 200px; left: 60px; right: 60px;
+background: #0D47A1; color: #FFFFFF; padding: 22px 28px; border-radius: 16px; }
+.pull h2 { font-size: 26px; font-weight: 900; line-height: 1.4; }
+.pull h2 b { background: #2196F3; padding: 0 8px; border-radius: 4px; }
+.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+background: #0D47A1; display: flex; align-items: center; justify-content: center; }
+.footer .txt { color: #FFFFFF; font-size: 22px; font-weight: 900; letter-spacing: 4px; }
+
+.vs { position: absolute; top: 460px; left: 60px; right: 60px;
+display: flex; align-items: stretch; gap: 16px; }
+.col { flex: 1; padding: 18px 20px; border-radius: 14px; }
+.col.l { background: #E3F2FD; border: 3px solid #0D47A1; }
+.col.r { background: #FFEBEE; border: 3px solid #B71C1C; }
+.col h3 { font-size: 22px; font-weight: 900; text-align: center;
+padding: 8px 0; margin-bottom: 12px; border-radius: 6px; color: #FFFFFF; }
+.col.l h3 { background: #0D47A1; }
+.col.r h3 { background: #B71C1C; }
+.col p { font-size: 16px; padding: 6px 0; color: #1A1A1A; font-weight: 700;
+border-bottom: 1px dashed rgba(0,0,0,0.15); line-height: 1.4; }
+.col p:last-child { border-bottom: none; }
+</style></head><body><div class="top"><span class="badge">VS · 信奥 vs AI 课</span><span class="right">因诺信奥 · 大连</span></div>
+<div class="h1"><div class="pre">// 二选一?其实不冲突</div><h1>信奥 vs AI 课<br><b>怎么选</b></h1></div>
+<div class="vs">
+<div class="col l"><h3>信奥</h3><p>练算法 / 数学思维</p><p>明确赛道有省一 / NOIP</p><p>升学硬通货顶级</p><p>难度高时间投入大</p><p>适合数学好 / 抽象强</p></div>
+<div class="col r"><h3>AI 课</h3><p>练项目 / 应用思维</p><p>无统一赛事自由探索</p><p>实用 / 升学加分弱</p><p>容易上手兴趣驱动</p><p>适合动手强 / 创意多</p></div>
+</div>
+<div class="pull"><h2><b>不是二选一</b> · 是先后顺序 · 信奥练根 · AI 开花</h2></div>
+<div class="footer"><span class="txt">看娃 · 不一刀切</span></div>
+</body></html>
